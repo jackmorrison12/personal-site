@@ -98,12 +98,6 @@
     transition: max-height 3s ease-out;
   }
   
-  .reading-progress-bar {
-    position: fixed;
-    height: 5px;
-    @extend .is-pink-bg-always
-  }
-  
   
   .pulse {
     animation: pulse 2s infinite;
