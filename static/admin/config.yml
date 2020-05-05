@@ -14,7 +14,7 @@ show_preview_links: true
 
 collections:
     - name: "blog"
-      label: "Blog"
+      label: "Blog Post"
       description: "Some daily writing"
       folder: "content/blog"
       create: true
@@ -27,8 +27,8 @@ collections:
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
-    - name: "articles"
-      label: "Articles"
+    - name: "article"
+      label: "Article"
       description: "More formal writing"
       folder: "content/articles"
       create: true
@@ -41,8 +41,8 @@ collections:
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
-    - name: "projects"
-      label: "Projects"
+    - name: "project"
+      label: "Project"
       description: "Any cool things I've worked on"
       folder: "content/projects"
       create: true
