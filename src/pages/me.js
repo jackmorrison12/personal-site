@@ -8,11 +8,7 @@ import SEO from "../components/seo"
 const MePage = () => (
   <Layout>
     <SEO title="Me" />
-    <h1>About me</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+    <div className="row container pad-10-t pad-5-lr">
     </div>
   </Layout>
 )
