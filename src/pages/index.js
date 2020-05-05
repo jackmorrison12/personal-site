@@ -34,13 +34,33 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="is-white-bg is-black">
-      <div className="row container-small pad-20-t pad-10-b">
-        <div className="col-xs-12 col-sm-6 pad-5-lr">
-          
+      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+        <div className="col-xs-12">
+          <h2>Projects I've been working on</h2>
         </div>
       </div>
     </div>
-
+    <div className="is-light-grey-bg is-black">
+      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+        <div className="col-xs-12">
+          <h2>My Latest Blog Posts</h2>
+        </div>
+      </div>
+    </div>
+    <div className="is-white-bg is-black">
+      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+        <div className="col-xs-12">
+          <h2>My Latest Articles</h2>
+        </div>
+      </div>
+    </div>
+    <div className="is-light-grey-bg is-black">
+      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+        <div className="col-xs-12">
+          <h2>Want to know more?</h2>
+        </div>
+      </div>
+    </div>
 
 
   </Layout>
