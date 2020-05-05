@@ -23,7 +23,7 @@ collections:
         preview: true
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "slug" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
@@ -38,7 +38,7 @@ collections:
         preview: true
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "slug" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
@@ -53,7 +53,7 @@ collections:
         preview: true
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
+        - { label: "Slug", name: "slug", widget: "slug" }
         - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Tech", name: "tech", widget: "list" }
