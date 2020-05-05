@@ -1,11 +1,21 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jack Morrison`,
+    description: `Personal Website`,
+    author: `@jackmorrison12`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: "gatsby-plugin-use-dark-mode",
+      options: {
+        classNameDark: "dark-mode",
+        classNameLight: "light-mode",
+        storageKey: "darkMode",
+        minify: true,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

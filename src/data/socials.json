@@ -1,0 +1,32 @@
+[
+	{
+		"url": "mailto:jack1morrison@icloud.com",
+		"icon": "at",
+		"home": false
+	},
+	{
+		"url": "sms:+447775101516",
+		"icon": "mobile",
+		"home": false
+	},
+	{
+		"url": "https://github.com/jackmorrison12",
+		"icon": "github",
+		"home": true
+	},
+	{
+		"url": "https://gitlab.doc.ic.ac.uk/jsm1317",
+		"icon": "gitlab",
+		"home": true
+	},
+	{
+		"url": "https://twitter.com/jsm_ic",
+		"icon": "twitter",
+		"home": true
+	},
+	{
+		"url": "https://www.linkedin.com/in/jackmorrison12/",
+		"icon": "linkedin-in",
+		"home": true
+	}
+]

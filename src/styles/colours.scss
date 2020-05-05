@@ -1,0 +1,41 @@
+$brand-colors: 
+  ('white', white, #1c1c1c), 
+  ('black', #1c1c1c, white),
+  ('light-grey', #E4DFDA, #121212),
+  ('dark-blue', #274690, white),
+  ('medium-blue', #3772ff, #3772ff),
+  ('red', #f4442e, #000), 
+;
+
+@each $color in $brand-colors {
+  .is-#{nth($color,1)}-bg {
+    background-color: nth($color, 2);
+  }
+  .is-#{nth($color,1)}-border {
+    border-color: nth($color, 2);
+  }
+  .is-#{nth($color,1)} {
+    color: nth($color, 2);
+  }
+  .is-#{nth($color,1)}-bg-always {
+    background-color: nth($color, 2) !important;
+  }
+  .is-#{nth($color,1)}-border-always {
+    border-color: nth($color, 2) !important;
+  }
+  .is-#{nth($color,1)}-always {
+    color: nth($color, 2) !important;
+  }
+
+  body.dark-mode {
+    .is-#{nth($color,1)} {
+      color: nth($color, 3);
+    }
+    .is-#{nth($color,1)}-bg {
+      background-color: nth($color, 3);
+    }
+    .is-#{nth($color,1)}-border {
+      border-color: nth($color, 3);
+    }
+  }
+}

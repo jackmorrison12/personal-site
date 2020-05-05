@@ -1,0 +1,25 @@
+[
+	{
+		"name": "🏠 Home",
+		"link": "/"
+	},{
+		"name": "👨‍💻 Me",
+		"link": "/me"
+	},
+	{
+		"name": "📚 Articles",
+		"link": "/articles"
+	},
+	{
+		"name": "📝 Blog",
+		"link": "/blog"
+	},
+	{
+		"name": "🖥 Projects",
+		"link": "/projects"
+	},
+	{
+		"name": "📈 Stats",
+		"link": "/stats"
+	}
+]
