@@ -1,8 +1,18 @@
 ---
-title: '"Developing My Ideal Personal Portfolio Website - Part 1: Introduction'
+title: "Developing My Ideal Personal Portfolio Website - Part 1: Introduction"
+slug: portfolio-introduction
 date: 2020-03-05T21:00:00.000Z
 description: The first blog post in my series documenting the creation of my new
   personal website
+topics:
+  - Personal Portfolio
+  - HTML
+  - CSS
+  - JavaScript
+  - React
+  - Jekyll
+  - GitHub Pages
+  - UI
 ---
 # Developing my Ideal Personal Portfolio Website
 
