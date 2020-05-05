@@ -18,7 +18,7 @@ collections:
       description: "Some daily writing"
       folder: "content/blog"
       create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       editor:
         preview: true
       fields:
@@ -33,7 +33,7 @@ collections:
       description: "More formal writing"
       folder: "content/articles"
       create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{fields.slug}}"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       editor:
         preview: true
       fields:
@@ -48,7 +48,7 @@ collections:
       description: "Any cool things I've worked on"
       folder: "content/projects"
       create: true
-      slug: "{{fields.slug}}"
+      slug: "{{slug}}"
       editor:
         preview: true
       fields:
