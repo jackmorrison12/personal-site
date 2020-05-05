@@ -7,7 +7,7 @@ tech:
   - Swift
   - XCode
   - CRDTs
-startdate: 2019-01-10T00:00:00.000Z
+startdate: 2019-09-30T23:00:00.000Z
 enddate: 2020-01-01T00:00:00.000Z
 sources:
   - name: GitHub
