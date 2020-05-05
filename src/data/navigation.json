@@ -1,26 +1,25 @@
 [
 	{
-		"name": "Home",
+		"name": "🏠 Home",
 		"link": "/"
+	},{
+		"name": "👨‍💻 Me",
+		"link": "/me"
 	},
 	{
-		"name": "CV",
-		"link": "/cv"
+		"name": "📚 Articles",
+		"link": "/articles"
 	},
 	{
-		"name": "Experience",
-		"link": "/experience"
+		"name": "📝 Blog",
+		"link": "/blog"
 	},
 	{
-		"name": "Education",
-		"link": "/education"
-	},
-	{
-		"name": "Projects",
+		"name": "🖥 Projects",
 		"link": "/projects"
 	},
 	{
-		"name": "Me",
-		"link": "/me"
+		"name": "📈 Stats",
+		"link": "/stats"
 	}
 ]

@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:500&display=swap);
+
 //files;
 @import './layout';
 @import './colours';
@@ -17,7 +19,7 @@ html {
 }
 
 main {
-  min-height: calc(100vh - 150px);
+  min-height: calc(100vh - 126px);
 }
 
 body {
@@ -26,14 +28,14 @@ body {
 }
 
 p {
-  font-family: Lato;
+  font-family: Poppins;
   font-weight: lighter;
 }
 
 
 h1 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 2em;
   font-weight: bold;
   margin-bottom: 0.67em;
@@ -44,7 +46,7 @@ h1 {
 
 h2 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 0.83em;
@@ -55,7 +57,7 @@ h2 {
 
 h3 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 1.17em;
   font-weight: bold;
   margin-bottom: 1em;
@@ -66,7 +68,7 @@ h3 {
 
 h4 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 1.33em;
@@ -77,7 +79,7 @@ h4 {
 
 h5 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 0.83em;
   font-weight: bold;
   margin-bottom: 1.67em;
@@ -88,7 +90,7 @@ h5 {
 
 h6 {
   display: block;
-  font-family: Lato;
+  font-family: Poppins;
   font-size: 0.67em;
   font-weight: bold;
   margin-bottom: 2.33em;
@@ -107,7 +109,7 @@ div {
 }
 
 footer {
-  font-family: Lato;
+  font-family: Poppins;
   text-align: center;
 }
 

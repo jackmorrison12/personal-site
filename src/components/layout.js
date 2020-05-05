@@ -25,16 +25,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header/>
-      <div>
-        <main>{children}</main>
-        <footer>
-          Built with{" "}
-          <span role="img" aria-label="love">
-            ❤️
-          </span>{" "}
-          by Jack Morrison
-        </footer>
-      </div>
+      <main className="is-light-grey-bg is-black">{children}</main>
+      <footer className="is-white-bg is-black pad-2">
+        Built with{" "}
+        <span role="img" aria-label="love">
+          ❤️
+        </span>{" "}
+        by Jack Morrison
+      </footer>
     </>
   )
 }
