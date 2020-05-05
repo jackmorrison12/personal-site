@@ -15,7 +15,7 @@ show_preview_links: true
 collections:
     - name: "blog"
       label: "Blog"
-      description: "Blog Posts"
+      description: "Some daily writing"
       folder: "content/blog"
       create: true
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
@@ -25,4 +25,19 @@ collections:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Publish Date", name: "date", widget: "date" }
         - { label: "Description", name: "description", widget: "string" }
+        - { label: "Topics", name: "topics", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - name: "article"
+      label: "Article"
+      description: "More formal writing"
+      folder: "content/articles"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "date" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
