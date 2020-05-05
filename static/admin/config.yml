@@ -23,12 +23,12 @@ collections:
         preview: true
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "date" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
-    - name: "article"
-      label: "Article"
+    - name: "articles"
+      label: "Articles"
       description: "More formal writing"
       folder: "content/articles"
       create: true
@@ -37,7 +37,24 @@ collections:
         preview: true
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "date" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - name: "projects"
+      label: "Projects"
+      description: "Any cool things I've worked on"
+      folder: "content/projects"
+      create: true
+      slug: "{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Tech", name: "tech", widget: "list" }
+        - { label: "Start Date", name: "startdate", widget: "datetime" }
+        - { label: "End Date", name: "enddate", widget: "datetime" }
+        - { label: "Sources", name: "sources", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
