@@ -1,0 +1,126 @@
+.flex {
+    display: flex;
+  }
+  
+  .align-horizontal {
+    align-items: center;
+  }
+  
+  .align-vertical {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .text-align-right {
+    text-align: right;
+  }
+  
+  .text-align-center {
+    text-align: center;
+  }
+  
+  .lato {
+    font-family: Lato;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .line {
+    border-bottom: 7px solid;
+    max-width: 30%;
+  }
+  
+  .line-sm {
+    border-bottom: 3px solid;
+    max-width: 100%;
+    opacity: 0.5;
+  }
+  
+  
+  .grow {
+    transition: all 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+  
+  
+  .shadow {
+    -webkit-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+    -moz-box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.03);
+  }
+  
+  .hover:hover {
+    color: #ef6461;
+    cursor: pointer;
+  }
+  
+  .border-radius {
+    border-radius: 8px;
+  }
+  
+  .slick-slide {
+    pointer-events: none;
+  }
+  .slide-image-one {
+    background-image: url('https://ik.imagekit.io/sld/ICHACK_a2o31d1eR.png');
+    background-position: right;
+  }
+  
+  
+  .slide-image-two {
+    background-image: url('https://ik.imagekit.io/sld/HackKings_nVVodPVC9.jpeg');
+    background-position: center;
+  }
+  
+  .slide-image-three {
+    background-image: url('https://ik.imagekit.io/sld/AmexOnboarding_my-fjWmR6.jpeg');
+    background-position: right;
+  }
+  
+  .firework-window {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    z-index: 100;
+    height:  calc(100vh);
+    pointer-events: none;
+  }
+  
+  .animated-expansion{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 3s ease-out;
+  }
+  
+  .reading-progress-bar {
+    position: fixed;
+    height: 5px;
+    @extend .is-pink-bg-always
+  }
+  
+  
+  .pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  
+  @keyframes pulse {
+    0% {
+      -moz-box-shadow: 0 0 0 0 #ea4e68;
+      box-shadow: 0 0 0 0 #ea4e68;
+    }
+    70% {
+        -moz-box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+    }
+    100% {
+        -moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
+    }
+  }
