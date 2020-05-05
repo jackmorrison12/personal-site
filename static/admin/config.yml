@@ -1,0 +1,60 @@
+backend:
+    name: git-gateway
+    branch: master
+
+publish_mode: editorial_workflow
+  
+media_folder: static/img
+public_folder: /img
+
+site_url: https://jackmorrison.netlify.app
+display_url: https://jackmorrison.netlify.app
+
+show_preview_links: true
+
+collections:
+    - name: "blog"
+      label: "Blog Post"
+      description: "Some daily writing"
+      folder: "content/blog"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Topics", name: "topics", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - name: "article"
+      label: "Article"
+      description: "More formal writing"
+      folder: "content/articles"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Topics", name: "topics", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }
+    - name: "project"
+      label: "Project"
+      description: "Any cool things I've worked on"
+      folder: "content/projects"
+      create: true
+      slug: "{{slug}}"
+      editor:
+        preview: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
+        - { label: "Description", name: "description", widget: "string" }
+        - { label: "Tech", name: "tech", widget: "list" }
+        - { label: "Start Date", name: "startdate", widget: "datetime" }
+        - { label: "End Date", name: "enddate", widget: "datetime" }
+        - { label: "Sources", name: "sources", widget: "list" }
+        - { label: "Body", name: "body", widget: "markdown" }
