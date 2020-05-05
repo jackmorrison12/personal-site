@@ -56,8 +56,8 @@ collections:
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
         - { label: "Description", name: "description", widget: "string" }
-        - { label: "Tech", name: "tech", widget: "list" }
+        - { label: "Tech", name: "tech", widget: "list"}
         - { label: "Start Date", name: "startdate", widget: "datetime" }
         - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Sources", name: "sources", widget: "list" }
+        - { label: "Sources", name: "sources", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Url", name: "url", widget: "string"}, {label: "Icon", name: "icon", widget: "string"}] }
         - { label: "Body", name: "body", widget: "markdown" }
