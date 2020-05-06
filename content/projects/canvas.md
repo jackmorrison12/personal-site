@@ -1,6 +1,6 @@
 ---
 title: Canvas
-slug: canvas
+slug: /projects/canvas
 type: Uni Project
 description: A CRDT-powered collaborative drawing app
 tech:
