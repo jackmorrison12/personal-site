@@ -1,7 +1,7 @@
 ---
 title: "Developing my Ideal Personal Portfolio Website - Part 2: Choosing my
   Tech Stack"
-slug: portfolio-tech-stack
+slug: /blog/portfolio-tech-stack
 date: 2020-05-05T20:00:00.000Z
 description: The second blog post in my series documenting the creation of my
   new personal website, diving into the tech stack
@@ -14,11 +14,6 @@ topics:
   - Tailwind
   - Netlify
 ---
-# Developing my Ideal Personal Portfolio Website
-
-
-## Part 2: Choosing my Tech Stack
-
 One thing I new for this iteration of my personal website was that I was going to research my tech stack a lot more thoroughly than I had before.
 
 ### Framework
@@ -32,3 +27,7 @@ I ended up trolling a few [reddit threads](https://www.reddit.com/r/webdev/comme
 My next step was to find out which option would be best fo styling. I'd previously only ever written CSS as I was going along, having transition to using Sass in my most recent attempt at my personal site.
 
 I looked into a few options: Bulma, Tailwind and (of course) Bootstrap. I'd only ever heard of the latter, and pretty quickly realised it was not what I wanted for my design ideas. I looked into more detail at Bulma and Tailwind; Bulma seemed to look very easy to use, being based on Flex, but Tailwind seemed to be much more customisable.
+
+I then read lots of conflicting reviews in favour of each side, but I also read of a lot of people who just preferred to use sass. I found a good range of sass files which were open source, and allowed basic features like padding and colours to be implemented by just adding a class, and decided to take this route. 
+
+This was one change to how I had previously done things; I used to 
