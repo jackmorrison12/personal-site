@@ -15,11 +15,11 @@ library.add(fab);
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <div classNae=" is-light-grey-bg is-black">
+    <div className=" is-light-grey-bg is-black">
       <div className="row container-small pad-20-t pad-10-b">
         <div className="col-xs-12 col-sm-6 pad-5-lr">
           <h1 className="is-hero-menu margin-0">Jack Morrison</h1>
-          <h3 className="is-hero-sub-text">Computing Student @ <a className="is-medium-blue" href="https://www.imperial.ac.uk/computing" target="_blank">Imperial</a></h3>
+          <h3 className="is-hero-sub-text">Computing Student @ <a className="is-red" href="https://www.imperial.ac.uk/computing" target="_blank">Imperial</a></h3>
           <div className="line margin-10-t margin-10-b" />
           <div className="">
             {socials

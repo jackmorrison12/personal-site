@@ -1,0 +1,15 @@
+.blog {
+    @for $i from 1 through 6 {
+        h#{$i} {
+          @extend .is-red;
+        }
+      }
+
+    a {
+        @extend .is-medium-blue;
+    }
+
+    a:hover {
+        @extend .underline;
+    }
+}

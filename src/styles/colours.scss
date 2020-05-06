@@ -4,7 +4,7 @@ $brand-colors:
   ('light-grey', #E4DFDA, #121212),
   ('dark-blue', #274690, white),
   ('medium-blue', #3772ff, #3772ff),
-  ('red', #f4442e, #000), 
+  ('red', #f4442e, #f4442e), 
 ;
 
 @each $color in $brand-colors {

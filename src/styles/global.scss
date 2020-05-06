@@ -7,6 +7,8 @@
 @import './opacity';
 @import './utilities';
 @import './hero';
+@import './buttons';
+@import './blog';
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
