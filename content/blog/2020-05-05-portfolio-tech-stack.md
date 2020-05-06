@@ -16,13 +16,13 @@ topics:
 ---
 One thing I new for this iteration of my personal website was that I was going to research my tech stack a lot more thoroughly than I had before.
 
-### Framework
+## Framework
 
 So I knew I wanted my site to be fast, and so I thought about using s static site generator. I've experimented with Jekyll in the past, and loved how easy it was to pick up, but always felt very limited with what I could do. I had a look around at some frameworks and came across Hugo, Gatsby, Next.js and Nuxt.js (it took me a while to realise the latter two were actually different frameworks). After reading more into them, I knew it was between Gatsby and Hugo, since they seemed to be the most popular, and I wanted something which would have a relatively large user base and good documentation.
 
 I ended up trolling a few [reddit threads](https://www.reddit.com/r/webdev/comments/b0j9rs/infographic_gatsby_vs_hugo_vs_jekyll/) in order to get some honest reviews, and ultimately decided on Gatsby. This was mainly because it was built on top of React, which I'm now very familiar with, and Hugo is built using Go, which I've only touched briefly. Gatsby also seemed to have more extensions and plugins, which seemed like it could be useful in my quest to not create everything from scratch.
 
-### CSS
+## CSS
 
 My next step was to find out which option would be best fo styling. I'd previously only ever written CSS as I was going along, having transition to using Sass in my most recent attempt at my personal site.
 
@@ -30,4 +30,10 @@ I looked into a few options: Bulma, Tailwind and (of course) Bootstrap. I'd only
 
 I then read lots of conflicting reviews in favour of each side, but I also read of a lot of people who just preferred to use sass. I found a good range of sass files which were open source, and allowed basic features like padding and colours to be implemented by just adding a class, and decided to take this route. 
 
-This was one change to how I had previously done things; I used to 
+This was one change to how I had previously done things; I used to create a class for each item I was putting on the page, which meant that I had hundreds of lines of CSS cluttering up my repo. With this new approach, I'd have multiple classes per object, for example one to give it a colour, `is-black`, and one to give some padding `pad-10-t`.
+
+## Hosting
+
+With previous iterations, I've always 
+
+## CMS
