@@ -29,10 +29,6 @@ I ended up trolling a few [reddit threads](https://www.reddit.com/r/webdev/comme
 
 ### CSS
 
-
-
 My next step was to find out which option would be best fo styling. I'd previously only ever written CSS as I was going along, having transition to using Sass in my most recent attempt at my personal site.
 
-
-
-I looked into a few options: Bulma, Tailwind and (of course) Bootstrap. I'd only ever heard of the latter, and pretty quickly realised it was not what I wanted for my design ideas. I looked into more detail at Bulma an Tailwind; Bulma seemed to look very easy to use, being based on Flex, but Tailwind seemed to be much more customiseable.
+I looked into a few options: Bulma, Tailwind and (of course) Bootstrap. I'd only ever heard of the latter, and pretty quickly realised it was not what I wanted for my design ideas. I looked into more detail at Bulma and Tailwind; Bulma seemed to look very easy to use, being based on Flex, but Tailwind seemed to be much more customisable.
