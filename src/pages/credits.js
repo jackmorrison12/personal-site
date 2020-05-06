@@ -17,7 +17,21 @@ const CreditsPage = () => (
                     sources.map((item) => {
                         return(
                             <>
-                                <h2>{item.type}</h2>
+                                <h2 className="margin-1-b">{item.type}</h2>
+                                <h5 className="margin-0-t">
+                                    {item.description}
+                                    { 
+                                        (item.shoutout ? 
+                                            <>
+                                                <span>, with a significant shoutout to </span>
+                                                <a href={item.shoutout.url} className="is-medium-blue btn">{item.shoutout.name}</a>
+                                            </> 
+                                        : 
+                                            ""
+                                        )
+                                    }
+                                    
+                                </h5>
                                 <ul>
                                 {item.sources.map((item) => {
                                     return(
