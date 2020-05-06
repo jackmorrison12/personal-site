@@ -34,6 +34,14 @@ This was one change to how I had previously done things; I used to create a clas
 
 ## Hosting
 
-With previous iterations, I've always 
+With previous iterations, I've always used [GitHub Pages](https://pages.github.com/) to host my website, since it was free, integrated well, and was easy to use. However, I decided to research some alternatives. The main options I came across were [Netlify](https://www.netlify.com/), [Firebase](https://firebase.google.com/docs/hosting) and [Heroku](https://www.heroku.com/about).
+
+I'd used Heroku before, and knew that the free tier wouldn't suffice, since their dynos can take a while to start up. I also found the documentation for Firebase was lacking in comparison to Netlify, so I ended up going with them. This also linked into the next part, the CMS.
 
 ## CMS
+
+A content management system is a web interface you can use to populate your website. In fact, I'm using it right now to write this blog post! I thought that since I wanted to add blog posts and keep the website up-to-date with information, it would be hassle to go into the code to update things every time. That's why I decided to put any types of information which will need to be updated frequently (such as blog posts, articles and projects) into this CMS. I did look into alternatives, but since I was using Netlify to host, I decided it was best to stick in the same ecosystem since they integrated well.
+
+## Next time...
+
+Now that I've decided on my main tech stack, I'm going to start putting together a repo with the skeleton in, and set everything up to work together, before I get started on the main bulk of the website.
