@@ -14,7 +14,7 @@ topics:
   - Tailwind
   - Netlify
 ---
-One thing I new for this iteration of my personal website was that I was going to research my tech stack a lot more thoroughly than I had before.
+One thing I knew for this iteration of my personal website was that I was going to research my tech stack a lot more thoroughly than I had before. There were three key areas I wanted to look into: the framework, styling and hosting.
 
 ## Framework
 
@@ -22,7 +22,7 @@ So I knew I wanted my site to be fast, and so I thought about using s static sit
 
 I ended up trolling a few [reddit threads](https://www.reddit.com/r/webdev/comments/b0j9rs/infographic_gatsby_vs_hugo_vs_jekyll/) in order to get some honest reviews, and ultimately decided on Gatsby. This was mainly because it was built on top of React, which I'm now very familiar with, and Hugo is built using Go, which I've only touched briefly. Gatsby also seemed to have more extensions and plugins, which seemed like it could be useful in my quest to not create everything from scratch.
 
-## CSS
+## Styling
 
 My next step was to find out which option would be best for styling. I'd previously only ever written CSS as I was going along, having transition to using Sass in my most recent attempt at my personal site.
 
