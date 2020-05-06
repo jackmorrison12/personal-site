@@ -14,33 +14,29 @@ topics:
   - GitHub Pages
   - UI
 ---
-# Developing my Ideal Personal Portfolio Website
-
-## Part 1: Introduction
-
 Back in 2015, I decided that I wanted to create my own website; a place where I could share projects I'd worked on, and use as on "online CV" for future University and Job applications. I've worked on this concept of a personal portfolio over the years, but have always used it as a way to practice using new technologies, and never created a finished product I'm happy with. This means that every year, I decide I want to restart and make something completely different.
 
 However, now I'm coming to the end of my educational life, entering my final year of University, I've decided I want a personal page which looks the part, as well as teaching me a few things along the way.
 
-### A bit of context
+## A bit of context
 
 When I was in school, I remember first learning about HTML and CSS and thinking it was the best thing to ever exist. I couldn't wait to try and create my own site, and when my Computing teacher said we were going to have to do this as a project, I sunk hours of my free time playing around to create something I thought was amazing. I wrote every line of HTML and CSS by hand, and then ended up with what you see below.
 
-![First iteration of my website](site1.jpg "First iteration of my webiste")*First iteration of my website*
+![First iteration of my website](site1.jpg "First iteration of my website")*First iteration of my website*
 
 Yeah, I know. By 2020 standards, it's terrible. Lets be honest, by 2015 standards it's also not the best. But after this first attempt, I was hooked. I then went on to start Uni, and I wanted something a bit more flashy. So, I found some existing HTML and CSS, and got to work trying to make my site look a bit more *professional*.
 
-![Second iteration of my website](site2.jpg "Second iteration of my webiste")*Second iteration of my website*
+![Second iteration of my website](site2.jpg "Second iteration of my website")*Second iteration of my website*
 
 So this is what I came up with. Again, all in static HTML and CSS, probably with a little JS thrown in there for good measure. Then in 2019, after having learned a lot of techniques about good coding practices, I realised the site was completely out of date because I never wanted to open the mess of div tags to try and update anything. So, over the summer, I looked into ways to make it more maintainable. I came across the static site generator Jekyll. Since I was hosting the site on GitHub Pages, I thought it was perfect! So I got to work, transitioning the site above into a more maintainable version using Jekyll. After hours of work, I finally got it done, but the site looked no different. University started again for the year and I decided that it served it's purpose, and I could leave it as it is.
 
 Quite often, I'd think about the site and want to take it down, but I used it to reference projects I'd worked on, and I wanted to have a central place to access any work I did quickly and easily. Then in April 2020, as I'm pretty sure you know, we all got put under quarantine. Having finished University for the year, I thought I'd have a go of creating version 3.0 of my site. I saw that it was possible to deploy a React site to GitHub Pages, and decided to jump in and re-teach myself React. This resulted in the following:
 
-![Third iteration of my website](site3.jpg "Third iteration of my webiste")*Third iteration of my website, currently live at [jackmorrison.xyz](https://jackmorrison.xyz)*
+![Third iteration of my website](site3.jpg "Third iteration of my website")*Third iteration of my website, currently live at [jackmorrison.xyz](https://jackmorrison.xyz)*
 
 Now, it looks like my site's jumped forward 10 years! Although one problem, version 2 was stuck in 2005, so this site still looked 5 years out of date. I'd fallen into the habit of handwriting most of the HTML and CSS myself again, and after weeks of working, the site just wasn't giving me the professionally-made vibe I was looking for.
 
-### My current plan
+## My current plan
 
 So I've just spent the last month of my quarantine coming up with a site, and it's not reaching my standards for what I want it to be. Yes, the main purpose is for me to have a place to store any work I do for quick access, but as I create more content, I want to create more of a minimalist design which also looks fresh and modern. I want to work on my UI design and make something which will last for longer than a few months.
 
