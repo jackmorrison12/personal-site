@@ -17,8 +17,8 @@ export default function Template({
         <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t ">
           <div className="col-xs-12 pad-5-lr">
-            <Link to="/blog" className="">
-              <h2 className="is-medium-blue margin-0 margin-2-b btn pad-1-b inherit">{`< Blog`}</h2>
+            <Link to="/articles" className="">
+              <h2 className="is-medium-blue margin-0 margin-2-b btn pad-1-b inherit">{`< Articles`}</h2>
             </Link>
           </div>
 
