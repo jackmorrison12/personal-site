@@ -1,0 +1,72 @@
+[
+    {
+        "type" : "Framework",
+        "sources" : 
+            [
+                {
+                    "name" : "Gatsby Tutorial",
+                    "links" : 
+                        [
+                            "https://www.gatsbyjs.org/tutorial/"
+                        ]
+                }
+            ]
+    },
+    {
+        "type" : "Styling",
+        "sources" : 
+            [
+                {
+                    "name" : "Design Inspiration",
+                    "links" : 
+                        [
+                            "https://sld.codes"
+                        ]
+                },
+                {
+                    "name" : "CSS Skeletons",
+                    "links" : 
+                        [
+                            "https://github.com/slarsendisney/personal-site/tree/master/src/styles",
+                            "https://github.com/philipwalton/solved-by-flexbox",
+                            "https://github.com/hugeinc/flexboxgrid-sass/blob/master/flexboxgrid.scss",
+                            "https://gist.github.com/jacurtis/30da4bf9a6c9b9b5cc0aebac512ca7c9",
+                            "https://dev.to/lynnewritescode/colour-coding-with-scss-each-loops-31k"
+                        ]
+                },
+                {
+                    "name" : "Dark Mode Support",
+                    "links" : 
+                        [
+                            "https://sld.codes/articles/How-I-Added-Dark-Mode-In-20-Lines"
+                        ]
+                }
+            ]
+    },
+    {
+        "type" : "Hosting",
+        "sources" : 
+            [
+                {
+                    "name" : "Netlify Tutorial",
+                    "links" : 
+                        [
+                            "https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/"
+                        ]
+                }
+            ]
+    },
+    {
+        "type" : "CMS",
+        "sources" : 
+            [
+                {
+                    "name" : "Netlify CMS Tutorial from Okta",
+                    "links" : 
+                        [
+                            "https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify"
+                        ]
+                }
+            ]
+    }
+]

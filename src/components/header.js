@@ -22,7 +22,7 @@ const Header = () => (
               {navlinks
                 .map((item) => (
                   <div className="col-xs-6 col-md-2 col-lg-2">
-                    <h3 className="margin-0"><Link to={item.link} className="is-black"> {item.name} </Link></h3>
+                    <h3 className="margin-0"><Link to={item.link} activeClassName="underline" className="is-black"> {item.name} </Link></h3>
                   </div>
                 ))}
             </div>

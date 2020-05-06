@@ -1,3 +1,7 @@
+/**
+ * This file is based on code from https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify
+ */
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
@@ -9,30 +13,30 @@ class ArticleRoll extends React.Component {
 
     return (
         
-        <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
+      <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
         <div className="row container ">
           <div className="col-xs-12 ">
             <h1 className="is-hero-menu margin-0-t">I can be serious too...</h1>
             <div className="line margin-3-t margin-10-b" />
           </div>
           <div className="col-xs-12 col-md-12">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <Link to={"/" + post.frontmatter.slug} className="link" id="path">
-            <div className="grow row margin-5-b">
-              <div className="col-xs-12 margin-5-t">
-                <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
-                <p className="margin-0 margin-2-b is-black">
-                  {post.frontmatter.date}
-                </p>
-                <div className="line-sm is-black margin-3-b" />
-                <p className="margin-0 is-black">{post.excerpt}</p>
-              </div>
-            </div>
-          </Link>
-          ))}
-      </div>
-      </div>
+            {posts &&
+              posts.map(({ node: post }) => (
+                <Link to={"/" + post.frontmatter.slug} className="link" id="path">
+                  <div className="grow row margin-5-b">
+                    <div className="col-xs-12 margin-5-t">
+                      <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
+                      <p className="margin-0 margin-2-b is-black">
+                        {post.frontmatter.date}
+                      </p>
+                      <div className="line-sm is-black margin-3-b" />
+                      <p className="margin-0 is-black">{post.excerpt}</p>
+                    </div>
+                  </div>
+                </Link>
+            ))}
+          </div>
+        </div>
       </div>
     )
   }
