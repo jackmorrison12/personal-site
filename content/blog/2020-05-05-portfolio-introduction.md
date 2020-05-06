@@ -24,7 +24,7 @@ When I was in school, I remember first learning about HTML and CSS and thinking 
 
 ![First iteration of my website](/img/site1.jpg "First iteration of my website")*First iteration of my website*
 
-Yeah, I know. By 2020 standards, it's terrible. Lets be honest, by 2015 standards it's also not the best. But after this first attempt, I was hooked. I then went on to start Uni, and I wanted something a bit more flashy. So, I found some existing HTML and CSS, and got to work trying to make my site look a bit more *professional*.
+Yeah, I know. By 2020 standards, it's terrible. Lets be honest, by 2015 standards it's also not the best. But after this first attempt, I was hooked. I then went on to start Uni, and I wanted something a bit more flashy. So, I found some existing HTML and CSS, and got to work trying to make my site look a bit more professional.
 
 ![Second iteration of my website](/img/site2.jpg "Second iteration of my website")*Second iteration of my website*
 
