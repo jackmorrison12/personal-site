@@ -46,7 +46,10 @@ export default () => (
       query BlogRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {fileAbsolutePath: {regex: "/blog/"  }}
+          filter: {
+            fileAbsolutePath: {regex: "/blog/"  }
+            frontmatter: {hidden: {eq: false}}
+            }
         ) {
           edges {
             node {

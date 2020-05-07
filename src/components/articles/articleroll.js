@@ -44,7 +44,10 @@ export default () => (
       query ArticleRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {fileAbsolutePath: {regex: "/articles/"  }}
+          filter: {
+            fileAbsolutePath: {regex: "/articles/"  }
+            frontmatter: {hidden: {eq: false}}
+            }
         ) {
           edges {
             node {
