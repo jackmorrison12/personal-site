@@ -8,6 +8,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import ArticleRoll from "../components/articles/articleroll"
+import BlogRoll from "../components/blog/blogroll"
 
 import socials from "../data/socials.json"
 library.add(fab);
@@ -44,6 +46,7 @@ const IndexPage = () => (
       <div className="row container-small pad-10-t pad-3-lr pad-20-b">
         <div className="col-xs-12">
           <h2>My Latest Blog Posts</h2>
+          <BlogRoll />
         </div>
       </div>
     </div>
@@ -51,6 +54,7 @@ const IndexPage = () => (
       <div className="row container-small pad-10-t pad-3-lr pad-20-b">
         <div className="col-xs-12">
           <h2>My Latest Articles</h2>
+          <ArticleRoll />
         </div>
       </div>
     </div>

@@ -1,10 +1,7 @@
 /**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
+ * This file is based on code from https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify
  */
 
-// You can delete this file if you're not using it
 
 const path = require(`path`);
 
