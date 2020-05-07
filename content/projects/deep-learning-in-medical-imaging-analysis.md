@@ -3,6 +3,7 @@ title: Deep Learning in Medical Imaging Analysis
 slug: /projects/topics
 type: Uni Project
 homepage: false
+hidden: false
 description: A website discussing the uses of AI in Medical Imaging Analysis
 tech:
   - HTML
