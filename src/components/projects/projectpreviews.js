@@ -12,23 +12,27 @@ class ProjectPreviews extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      posts &&
-        posts.map(({ node: post }) => (
-          <Link to={"/" + post.frontmatter.slug} className="link" id="path">
-            <div className="grow row margin-5-b">
-              <div className="col-xs-12 col-md-6 margin-5-t">
-                <h1 className="margin-0 is-light-grey">{post.frontmatter.title}</h1>
-                <p className="margin-0 margin-2-b is-black">
-                  {post.frontmatter.date}
-                </p>
-                <div className="line-sm is-black margin-3-b" />
-                <p className="margin-0 is-black">{post.frontmatter.description}</p>
-                <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+      <div className="row margin-5-b">
+        {
+          posts &&
+            posts.map(({ node: post }) => (
+              <div className="grow col-xs-12 col-md-6 margin-5-t">
+              <Link to={"/" + post.frontmatter.slug} className="link" id="path">
 
+                    <h1 className="margin-0 is-light-grey">{post.frontmatter.title}</h1>
+                    <p className="margin-0 margin-2-b is-black">
+                      {post.frontmatter.date}
+                    </p>
+                    <div className="line-sm is-black margin-3-b" />
+                    <p className="margin-0 is-black">{post.frontmatter.description}</p>
+                    <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+
+
+              </Link>
               </div>
-            </div>
-          </Link>
-      ))
+          ))
+        }
+      </div>
     )
   }
 }
