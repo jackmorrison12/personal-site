@@ -2,6 +2,7 @@
 title: "Developing My Ideal Personal Portfolio Website - Part 1: Introduction"
 slug: /blog/portfolio-introduction
 date: 2020-05-03T20:30:00.000Z
+hidden: false
 description: The first blog post in my series documenting the creation of my new
   personal website
 topics:
