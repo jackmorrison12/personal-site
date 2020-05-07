@@ -17,8 +17,8 @@ class ProjectPreviews extends React.Component {
           posts &&
             posts.map(({ node: post }) => (
               <div className="grow col-xs-12 col-md-6 margin-5-t">
-              <Link to={"/" + post.frontmatter.slug} className="link" id="path">
-
+                <Link to={"/" + post.frontmatter.slug} className="link" id="path">
+                  <div className="col-xs-12 col-md-8">
                     <h1 className="margin-0 is-light-grey">{post.frontmatter.title}</h1>
                     <p className="margin-0 margin-2-b is-black">
                       {post.frontmatter.date}
@@ -26,9 +26,8 @@ class ProjectPreviews extends React.Component {
                     <div className="line-sm is-black margin-3-b" />
                     <p className="margin-0 is-black">{post.frontmatter.description}</p>
                     <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
-
-
-              </Link>
+                  </div>
+                </Link>
               </div>
           ))
         }
