@@ -10,11 +10,11 @@
 
 This is the git repo behind my personal site, hosted at [jackmorrison.xyz](https://jackmorrison.netlify.app)
 
-## 🛠How it's built
+## 🛠 How it's built
 
 The site is built using **Gatsby**, and hosted using **Netlify**.
 
-## 🎨Can I use this 
+## 🎨 Can I use this 
 
 Sure! This website is completely open source. The only thing I ask is that you link to my [sources page](https//jackmorrison.netlify.app/credits) so that the sources I've used are credited, as well as myself! ☺️
 
@@ -47,4 +47,4 @@ Sure! This website is completely open source. The only thing I ask is that you l
     
 1.  **Hosting**
 
-Follow [this great tutorial](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) to publish your site to Netlify!
+    Follow [this great tutorial](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) to publish your site to Netlify!
