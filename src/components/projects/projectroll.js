@@ -46,7 +46,10 @@ export default () => (
       query ProjectRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___startdate] }
-          filter: {fileAbsolutePath: {regex: "/projects/"  }}
+          filter: {
+            fileAbsolutePath: {regex: "/projects/"  }
+            frontmatter: {hidden: {eq: false}}
+            }
         ) {
           edges {
             node {
