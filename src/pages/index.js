@@ -35,38 +35,38 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <div className="is-white-bg is-black">
-      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+    <div className="is-red-bg is-black diagonal-box">
+      <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>Projects I've been working on</h2>
         </div>
       </div>
     </div>
-    <div className="is-light-grey-bg is-black">
-      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+    <div className="is-light-grey-bg is-black diagonal-box">
+      <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>My Latest Blog Posts</h2>
-          <BlogRoll />
+          <BlogRoll limit={1}/>
         </div>
       </div>
     </div>
-    <div className="is-white-bg is-black">
-      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+    <div className="is-red-bg is-black diagonal-box">
+      <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>My Latest Articles</h2>
           <ArticleRoll />
         </div>
       </div>
     </div>
-    <div className="is-light-grey-bg is-black">
-      <div className="row container-small pad-10-t pad-3-lr pad-20-b">
+    <div className="is-light-grey-bg is-black diagonal-box">
+      <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>Want to know more?</h2>
         </div>
       </div>
     </div>
 
-
+    <div className="margin-20-b"></div>
   </Layout>
 )
 

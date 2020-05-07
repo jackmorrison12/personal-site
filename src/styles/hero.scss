@@ -22,5 +22,12 @@
     margin-top: 0.67em;
   }
   
+  .diagonal-box {
+    transform: skewY(-6deg);
+    
+  }
   
-  
+  .content {
+    margin: 0 auto;
+    transform: skewY(6deg);
+  }

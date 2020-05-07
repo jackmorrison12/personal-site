@@ -10,7 +10,6 @@ class BlogRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
-
     return (
         
       posts &&
@@ -63,6 +62,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogRoll data={data} count={count}/>}
   />
 )
