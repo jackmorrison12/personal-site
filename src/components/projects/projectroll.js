@@ -6,7 +6,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 
-class ArticlePreviews extends React.Component {
+class ProjectRoll extends React.Component {
   render() {
     const { data } = this.props;
     const { edges: posts } = data.allMarkdownRemark;
@@ -17,12 +17,14 @@ class ArticlePreviews extends React.Component {
           <Link to={"/" + post.frontmatter.slug} className="link" id="path">
             <div className="grow row margin-5-b">
               <div className="col-xs-12 margin-5-t">
-                <h1 className="margin-0 is-light-grey">{post.frontmatter.title}</h1>
+                <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
                 <p className="margin-0 margin-2-b is-black">
                   {post.frontmatter.date}
                 </p>
                 <div className="line-sm is-black margin-3-b" />
-                <p className="margin-0 is-black">{post.excerpt}</p>
+                <p className="margin-0 is-black">{post.frontmatter.description}</p>
+                <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+
               </div>
             </div>
           </Link>
@@ -30,7 +32,7 @@ class ArticlePreviews extends React.Component {
     )
   }
 }
-ArticlePreviews.propTypes = {
+ProjectRoll.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -41,26 +43,26 @@ ArticlePreviews.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ArticlePreviewsQuery {
+      query ProjectRollQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {fileAbsolutePath: {regex: "/articles/"  }}
-          limit: 2
+          filter: {fileAbsolutePath: {regex: "/projects/"  }}
         ) {
           edges {
             node {
-              excerpt(pruneLength: 300)
               id
               frontmatter {
                 slug
                 title
                 date(formatString: "MMMM DD, YYYY")
+                description
+                tech 
               }
             }
           }
         }
       }
     `}
-    render={(data, count) => <ArticlePreviews data={data} count={count} />}
+    render={(data, count) => <ProjectRoll data={data} count={count} />}
   />
 )

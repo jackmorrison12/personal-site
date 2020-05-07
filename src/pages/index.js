@@ -10,6 +10,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import ArticlePreviews from "../components/articles/articlepreviews"
 import BlogPreviews from "../components/blog/blogpreviews"
+import ProjectPreviews from "../components/projects/projectpreviews"
 
 import socials from "../data/socials.json"
 library.add(fab);
@@ -39,6 +40,7 @@ const IndexPage = () => (
       <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>Projects I've been working on</h2>
+          <ProjectPreviews/>
         </div>
       </div>
     </div>
