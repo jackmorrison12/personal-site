@@ -44,13 +44,9 @@ const CreditsPage = () => (
                                         :
                                             item.links.map((link, i, links) => {
                                                 return(
-                                                    links.length - 1 === i 
-                                                    ?
-                                                        <>{" "}<a href={link} className="is-medium-blue btn">Source {i+1}</a></>
-                                                    :
-                                                        <>{" "}<a href={link} className="is-medium-blue btn">Source {i+1},</a></>
+                                                    <>{" "}<a href={link} className="is-medium-blue btn">Source {i+1}</a></> 
                                                 );
-                                            })}
+                                            }).reduce((prev, curr) => [prev, ' , ', curr])}
                                     </li>
                                     );
                                 })}
