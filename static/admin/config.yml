@@ -25,6 +25,7 @@ collections:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
@@ -40,6 +41,7 @@ collections:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
+        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
