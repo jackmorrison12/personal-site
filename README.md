@@ -6,12 +6,11 @@
 <h1 align="center">
   My Personal Webpage
 </h1>
-<div align="right">
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/3289fe4d-7b66-4f01-991c-74cc3e12074f/deploy-status)](https://app.netlify.com/sites/jackmorrison/deploys)
-</div>
-
 
 This is the git repo behind my personal site, hosted at [jackmorrison.xyz](https://jackmorrison.netlify.app)
+
+Current status:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3289fe4d-7b66-4f01-991c-74cc3e12074f/deploy-status)](https://app.netlify.com/sites/jackmorrison/deploys)
 
 ## 🛠 How it's built
 
