@@ -43,6 +43,13 @@
                         [
                             "https://sld.codes/articles/How-I-Added-Dark-Mode-In-20-Lines"
                         ]
+                }, 
+                {
+                    "name" : "Homepage Layout",
+                    "links" : 
+                        [
+                            "https://9elements.com/blog/pure-css-diagonal-layouts/"
+                        ]
                 }
             ]
     },
