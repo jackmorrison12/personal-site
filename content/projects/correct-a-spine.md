@@ -1,6 +1,6 @@
 ---
 title: Correct-a-Spine
-slug: correct-a-spine
+slug: /projects/correct-a-spine
 type: Hackathon
 homepage: false
 description: A device to prevent back pain
