@@ -15,6 +15,7 @@
 
     img, iframe {
         max-width: 80%;
+        max-height: 70vh;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -22,6 +23,7 @@
 
     .caption {
         padding-left: 10%;
+        padding-right: 10%;
         font-style: italic;
     }
 
