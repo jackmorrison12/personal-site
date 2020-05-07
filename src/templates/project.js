@@ -26,11 +26,14 @@ export default function Template({
           </div>
 
           <div className="col-xs-12 pad-5-lr">
-            <h1 className="is-hero-menu is-pink-always margin-1-t margin-5-b">
+            <h1 className="is-hero-menu is-pink-always margin-1-t margin-1-b">
               {frontmatter.title}
             </h1>
+            <h6 className="is-hero-sub-text margin-3-b italic">
+              {frontmatter.description}
+            </h6>
             <h6 className="is-hero-sub-text margin-3-b">
-              {frontmatter.date}
+              {frontmatter.startdate} - {frontmatter.enddate}
             </h6>
             <div className="line margin-5-tb is-red" />
             <div
@@ -49,9 +52,19 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $path} }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         slug
         title
+        type
+        description
+        tech
+        startdate(formatString: "MMMM YYYY")
+        enddate(formatString: "MMMM YYYY")
+        sources {
+          name
+          url
+          icon
+        }
+
       }
     }
   }

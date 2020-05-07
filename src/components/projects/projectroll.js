@@ -23,7 +23,7 @@ class ProjectRoll extends React.Component {
                 </p>
                 <div className="line-sm is-black margin-3-b" />
                 <p className="margin-0 is-black">{post.frontmatter.description}</p>
-                <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+                <p className="margin-0 is-red">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
 
               </div>
             </div>
@@ -45,7 +45,7 @@ export default () => (
     query={graphql`
       query ProjectRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___startdate] }
           filter: {fileAbsolutePath: {regex: "/projects/"  }}
         ) {
           edges {
@@ -54,7 +54,8 @@ export default () => (
               frontmatter {
                 slug
                 title
-                date(formatString: "MMMM DD, YYYY")
+                startdate(formatString: "MMMM YYYY")
+                enddate(formatString: "MMMM YYYY")
                 description
                 tech 
               }

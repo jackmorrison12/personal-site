@@ -25,7 +25,7 @@ class ProjectPreviews extends React.Component {
                     </p>
                     <div className="line-sm is-black margin-3-b" />
                     <p className="margin-0 is-black">{post.frontmatter.description}</p>
-                    <p className="margin-0 is-black">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+                    <p className="margin-0 is-light-grey">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
                   </div>
                 </Link>
               </div>
@@ -48,7 +48,7 @@ export default () => (
     query={graphql`
       query ProjectPreviewsQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___startdate] }
           filter: {
             fileAbsolutePath: {regex: "/projects/"  }
             frontmatter: {homepage: {eq: true}}
@@ -61,7 +61,6 @@ export default () => (
               frontmatter {
                 slug
                 title
-                date(formatString: "MMMM DD, YYYY")
                 description
                 tech 
               }
