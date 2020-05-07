@@ -3,6 +3,7 @@ title: Correct-a-Spine
 slug: /projects/correct-a-spine
 type: Hackathon
 homepage: false
+hidden: false
 description: A device to prevent back pain
 tech:
   - C
