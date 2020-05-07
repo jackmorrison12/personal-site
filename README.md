@@ -16,7 +16,7 @@ The site is built using **Gatsby**, and hosted using **Netlify**.
 
 ## 🎨 Can I use this 
 
-Sure! This website is completely open source. The only thing I ask is that you link to my [sources page](https//jackmorrison.netlify.app/credits) so that the sources I've used are credited, as well as myself! ☺️
+Sure! This website is completely open source. The only thing I ask is that you link to my [sources page](https://jackmorrison.netlify.app/credits) so that the sources I've used are credited, as well as myself! ☺️
 
 ## 🚀 How to use the site
 
