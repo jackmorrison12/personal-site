@@ -18,7 +18,7 @@ The first thing I did was find a [good tutorial on how to use Gatsby](https://ww
 
 ## Styling
 
-I then wanted to get some basic styling out of the way, so I added some Sass files which I’d found online (the links to which can be found at the tops of the files, and on the credits page I'll mention in a moment). I then tried using them to create a hero banner on my homepage, just to get used to how they worked. I also used [this article](https://sld.codes/articles/How-I-Added-Dark-Mode-In-20-Lines) to help me implement dark mode, so I didn’t have to stare at a light screen whilst developing!
+I then wanted to get some basic styling out of the way, so I added some Sass files which I’d found online (the links to which can be found at the top of the files, and on the credits page of my site). I then tried using them to create a hero banner on my homepage, just to get used to how they worked. I also used [this article](https://sld.codes/articles/How-I-Added-Dark-Mode-In-20-Lines) to help me implement dark mode, so I didn’t have to stare at a light screen whilst developing!
 
 ## Adding Content
 
