@@ -1,6 +1,6 @@
 ---
 title: ARM11 Emulator and Assembler
-slug: /projects/arl11
+slug: /projects/arm11
 type: Uni Project
 homepage: false
 hidden: true
