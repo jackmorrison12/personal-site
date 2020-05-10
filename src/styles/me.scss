@@ -1,3 +1,19 @@
 .me-hero {
-    height: calc(100vh - 126px);
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    width: 100vw;
+    height: calc((100vw/6) * 2);
+    display: table;
+}
+
+.me-hero-title {
+    display:table-cell; 
+    vertical-align:middle
+}
+
+@media only screen and (max-width: 48em) {
+    .me-hero {
+        height: calc((100vw/3) * 4);
+    }
 }
