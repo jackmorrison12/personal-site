@@ -29,7 +29,7 @@ const IndexPage = () => (
             .filter((item) => item.home)
             .map((item) => (
               <a href={item.url} className="is-black pad-2 col-xs-3">
-                <FontAwesomeIcon icon={['fab', item.icon]} size="2x" />
+                <FontAwesomeIcon icon={['fab', item.icon]} size="2x" className="grow-5" />
               </a>
             ))}
           </div>

@@ -14,6 +14,16 @@ export default ({ data }) => (
   <Layout>
     <SEO title="Me" />
     <div className="is-grey is-light-grey-bg ">
+      <div className=" pad-10-tb pad-3-lr">
+        <div className="row container ">
+          <div className="col-xs-12 ">
+            <h1 className="is-hero-menu margin-0-t">Hey 👋 I'm Jack</h1>
+            <div className="line margin-3-t margin-10-b" />
+          </div>
+          <div className="col-xs-12 col-md-12">
+          </div>
+        </div>
+      </div>
       <div className="row ">
           {data.allImageSharp.edges.map(edge => 
             <div className="col-xs-4 col-sm-2 pad-0">

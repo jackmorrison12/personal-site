@@ -53,6 +53,19 @@
     text-decoration: underline;
   }
   
+  $growamounts: (1.02, 1.05, 1.1, 1.2, 1.3, 1.5, 2, 5);
+
+  @for $i from 1 through length($growamounts) {
+    $grow: nth($growamounts, $i);
+
+    .grow-#{$i} {
+      transition: all 0.2s ease-in-out;
+    
+      &:hover {
+        transform: scale(#{$grow});
+      }
+    }
+}
   
   .grow {
     transition: all 0.2s ease-in-out;
