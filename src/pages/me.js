@@ -25,9 +25,9 @@ export default ({ data }) => (
         </div>
       </div>
       <div className="row ">
-          {data.allImageSharp.edges.map(edge => 
+          {data.allFile.edges.map(edge => 
             <div className="col-xs-4 col-sm-2 pad-0">
-              <Img style={{opacity: 0.2}} fluid={edge.node.fluid} />
+              <Img style={{opacity: 0.2}} fluid={edge.node.childImageSharp.fluid} />
             </div>
           )}     
       </div>
@@ -38,15 +38,18 @@ export default ({ data }) => (
 
 export const query = graphql`
   query {
-    allImageSharp {
+    allFile(filter: {relativeDirectory: {eq: "me-page"}}) {
       edges {
         node {
-          id
-          fluid(maxWidth: 400, maxHeight: 400, cropFocus: CENTER) {
-            ...GatsbyImageSharpFluid
+          childImageSharp {
+            id
+            fluid(cropFocus: CENTER, maxHeight: 400, maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
     }
   }
+  
 `
