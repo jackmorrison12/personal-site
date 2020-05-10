@@ -1,16 +1,42 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const MePage = () => (
+const imgGridStyle = {
+  display: 'grid',
+  gridTemplateColumns: `repeat(auto-fill, 200px)`
+};
+
+export default ({ data }) => (
   <Layout>
     <SEO title="Me" />
-    <div className="row container pad-10-t pad-5-lr">
+    <div className="is-grey is-light-grey-bg ">
+      <div className="row ">
+          {data.allImageSharp.edges.map(edge => 
+            <div className="col-xs-4 col-sm-2 pad-0">
+              <Img style={{opacity: 0.2}} fluid={edge.node.fluid} />
+            </div>
+          )}     
+      </div>
+      
     </div>
   </Layout>
 )
 
-export default MePage
+export const query = graphql`
+  query {
+    allImageSharp {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 400, maxHeight: 400, cropFocus: CENTER) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`

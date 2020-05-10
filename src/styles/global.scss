@@ -9,6 +9,7 @@
 @import './hero';
 @import './buttons';
 @import './blog';
+@import './me';
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
