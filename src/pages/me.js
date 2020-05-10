@@ -1,16 +1,54 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const MePage = () => (
+const imgGridStyle = {
+  display: 'grid',
+  gridTemplateColumns: `repeat(auto-fill, 200px)`
+};
+
+export default ({ data }) => (
   <Layout>
     <SEO title="Me" />
-    <div className="row container pad-10-t pad-5-lr">
+    <div className="is-grey is-light-grey-bg ">
+      <div className="me-hero">
+            <h1 className="me-hero-title is-hero-menu margin-0-t">Hey 👋 I'm Jack</h1>
+      </div>
+      <div className="row ">
+          {data.allFile.edges.map(edge => 
+            <div className="col-xs-4 col-sm-2 pad-0">
+              <Img style={{opacity: 0.4}} fluid={edge.node.childImageSharp.fluid} />
+            </div>
+          )}     
+      </div>
+      <div className="row container pad-10-tb pad-3-lr">
+        <div className="col-xs-12 col-md-12">
+          <h1 className="is-hero-menu margin-0-t">Want to know more?</h1>
+          <div className="line margin-3-t margin-10-b" />
+        </div>
+      </div>
+      
     </div>
   </Layout>
 )
 
-export default MePage
+export const query = graphql`
+  query {
+    allFile(filter: {relativeDirectory: {eq: "me-page"}}, sort: {fields: id}) {
+      edges {
+        node {
+          childImageSharp {
+            id
+            fluid(cropFocus: CENTER, maxHeight: 400, maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+  
+`

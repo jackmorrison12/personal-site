@@ -29,7 +29,7 @@ const IndexPage = () => (
             .filter((item) => item.home)
             .map((item) => (
               <a href={item.url} className="is-black pad-2 col-xs-3">
-                <FontAwesomeIcon icon={['fab', item.icon]} size="2x" />
+                <FontAwesomeIcon icon={['fab', item.icon]} size="2x" className="grow-5" />
               </a>
             ))}
           </div>
@@ -64,6 +64,7 @@ const IndexPage = () => (
       <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
           <h2>Want to know more?</h2>
+          <p>If you want to learn more about me, you can visit <Link to="/me" className="is-medium-blue">my about page</Link>, or have a look <Link to="/cv" className="is-medium-blue">at my CV</Link>.</p>
         </div>
       </div>
     </div>
