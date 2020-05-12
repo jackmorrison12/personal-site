@@ -39,11 +39,15 @@ export default ({ data }) => {
     }
   }
 
+  function makeLink(link, text, colour) {
+    return <span role="button" tabindex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"btn is-" + colour}>{text}</span>;
+  }
+
   return (
     <Layout>
       <SEO title="Me" />
         <div className="me-hero">
-              <h1 className="me-hero-title is-hero-menu margin-0-t">Hey 👋 I'm Jack</h1>
+              <h1 className="me-hero-title is-hero-menu margin-0-t">Hey <span role="img" aria-label="wave">👋</span> I'm Jack</h1>
         </div>
         <div className="row">
             {data.allFile.edges.map(edge => 
@@ -56,7 +60,7 @@ export default ({ data }) => {
           <div className="row container pad-10-tb pad-3-lr">
             <div className="col-xs-12 col-md-12">
               <h1 className="is-hero-menu margin-0-t">About me (in 40 words)</h1>
-              <h2> I'm a Software Engineer from London. I'm currently studying Computing at <span onClick={e => {setSection("EDUCATION"); setOpen(true)}} className="btn is-red">Imperial College London</span>. I've worked as a Software Engineer at <span onClick={e => {setSection("EXPERIENCE"); setOpen(true)}} className="btn is-medium-blue">NextJump</span> and <span onClick={e => {setSection("EXPERIENCE"); setOpen(true)}} className="btn is-medium-blue">Facebook</span>. I've dabbled in <span onClick={e => {setSection("TEACHING"); setOpen(true)}}className="btn is-red">teaching</span>. I enjoy <span onClick={e => {setSection("MUSIC"); setOpen(true)}}className="btn is-red">making music</span>, <span onClick={e => {setSection("MAP"); setOpen(true)}}className="btn is-red">travelling</span>, and am currently learning how to <span onClick={e => {setSection("SKYDIVING"); setOpen(true)}} className="btn is-red">skydive</span>.</h2>
+              <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "red")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "red")}.</h2>
               <p>Click any of the links above to find out more!</p>
             </div>
           </div>
@@ -65,7 +69,7 @@ export default ({ data }) => {
         <div className="is-white-bg">
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
-              <div onClick={e => setOpen(false)} className="btn is-medium-blue text-align-right">Close</div>
+              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue text-align-right">Close</div>
               {
                 sectionSwitch(section)
               }
