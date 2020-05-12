@@ -69,7 +69,7 @@ export default ({ data }) => {
         <div className="is-white-bg">
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
-              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue text-align-right">Close</div>
+              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue float-right">Close</div>
               {
                 sectionSwitch(section)
               }

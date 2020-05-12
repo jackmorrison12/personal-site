@@ -75,22 +75,5 @@
 				"date": 2014
 			}
 		]
-	},
-	{
-		"name": "ABRSM",
-		"subtitle" : "Music Exams",
-		"dates": "2012-2017",
-		"desc": "Outside of Computing, I also enjoy playing the piano. When I was younger, I used to take lessons towards earning my grades, which can be seen here, however since I've started uni, I now do it more in my free time. \nIn my third year, I took a course called 'Music Technology', where I got to learn about different ways of producing music, and got to revive some of my piano playing skills!",
-		"final":true,
-		"badges":["Grade 4 Piano"],
-		"commendations": [
-			{
-				"name": "Grade 4 Piano Merit",
-				"awarder": "ABRSM",
-				"date": "2017"
-			} 
-		
-			
-		]
 	}
 ]
