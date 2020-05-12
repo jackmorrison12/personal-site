@@ -33,7 +33,7 @@ export default function Template({
               {frontmatter.description}
             </h6>
             <h6 className="is-hero-sub-text margin-3-b">
-              {frontmatter.startdate != frontmatter.enddate ? frontmatter.startdate + " - " + frontmatter.enddate : frontmatter.startdate}
+              {frontmatter.startdate !== frontmatter.enddate ? frontmatter.startdate + " - " + frontmatter.enddate : frontmatter.startdate}
             </h6>
             <div className="line margin-5-tb is-red" />
             <div
