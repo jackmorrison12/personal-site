@@ -67,9 +67,13 @@ export default ({ data }) => {
         </div>
         <SlideDown closed={!open}>
         <div className="is-white-bg">
-          <div className="row container pad-10-tb pad-3-lr ">
+          <div className="row pad-10-t pad-3-lr container">
             <div className="col-xs-12 col-md-12">
               <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue float-right">Close</div>
+            </div>
+          </div>
+          <div className={"row pad-10-b pad-3-lr " + (section === "EXPERIENCE" || section === "EDUCATION" ? "" : "container")}>
+            <div className="col-xs-12 col-md-12">
               {
                 sectionSwitch(section)
               }

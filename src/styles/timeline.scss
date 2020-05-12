@@ -1,0 +1,12 @@
+/*
+* Overrides classes from the React Vertical Timeline plugin used
+*/
+
+.vertical-timeline-element-content {
+    @extend .is-red-bg-always;
+    box-shadow: none !important;
+}
+
+.vertical-timeline-element-icon {
+    @extend .is-red-bg-always;
+}

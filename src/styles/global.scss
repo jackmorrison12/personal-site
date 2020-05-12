@@ -10,6 +10,7 @@
 @import './buttons';
 @import './blog';
 @import './me';
+@import './timeline';
 
 @for $i from 1 through 6 {
   h#{7 - $i} {

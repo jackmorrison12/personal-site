@@ -25,19 +25,24 @@ export const ExperienceTimeline = () => {
             {experienceData.map((item, i) => (
                 <VerticalTimelineElement
                     className="vertical-timeline-element poppins"
-                    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                    contentStyle={{ color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid white'}}
                     date={item.dates}
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                    iconStyle={{ color: '#fff' }}
                     key={i}
                 >
-                    <h3 className="vertical-timeline-element-title">{item.name}</h3>
+                    <h2 className="vertical-timeline-element-title"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
                     <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
+                    <i>{item.dates}</i>
+{/* 
+                    {item.highlights.map((i) => (
+                        <p>{i.name}</p>
+                    ))} */}
                     
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn"}>Click to read more</div>
+                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
