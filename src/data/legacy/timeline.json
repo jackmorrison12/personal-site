@@ -1,0 +1,129 @@
+[
+    {
+		"title": "Imperial College London",
+		"url": "https://www.imperial.ac.uk/",
+        "subtitle": "MEng Computing",
+        "type" : "Education",
+		"dates": "2017-2021",
+		"desc": "Uni has been a great place for me to explore my love for Computing in more depth. If you'd have told me a few years ago the type of stuff I'd be doing now, well I mean I'd probably have believed you, since I've always enjoyed it. However, I've managed to do things such as creating a life-size arcade machine for the game Snake, to building an operating system, to creating my own programming language, and recently making an app researching technologies which had never been used before in that context!\n One very cool part of being at Imperial is the amount of group projects we get to work on. These range greatly in scale, from small Robotics projects, up to massive industry-scale webapps. These are the best part of my course, and you can see some of the awesome things we've come up with on my projects page! \n You can see below some of the achievements me and my groups have received whilst being at uni, and I hope to keep working on projects long after I finish my degree.\n I'm also a member of the Skydiving Society and Golf Society at Imperial - you can find more out about these on the 'Me' page.",
+		"badges":["1st - First Year", "1st - Second Year", "1st - Third Year"],
+		"highlights":[
+			{
+				"name": "Models of Computation Exam",
+				"score": "First (97.2%)"
+			},
+			{
+				"name": "WACC Project",
+				"score": "First (96.4%)"
+			}
+		],
+		"commendations": [
+			{
+				"name": "Best Group Project on Medical Imaging",
+				"awarder": "Dr Konstantinos Gkoutzis",
+				"date": "March 2018"
+			},
+			{
+				"name": "Best C Group Project Extension",
+				"awarder": "Dr Konstantinos Gkoutzis",
+				"date": "June 2018"
+			},
+			{
+				"name": "Runner-Up WebApps Group Project",
+				"awarder": "Dr Mark Wheelhouse",
+				"date": "June 2019"
+			}
+		]
+	},
+	{
+		"title": "Westcliff High School for Boys",
+        "subtitle" : "A Levels",
+        "type" : "Education",
+		"desc": "I had a great time at WHSB whilst I was studying for my A Levels. I moved here because my old school didn't offer Computer Science as an A Level, and I thought it was what I wanted to pursue. However, thanks to my Computing teacher (should out Mr Rahman), I knew it was for me. \n I started working on some programming projects whilst I was here (you can see one attempt on my projects page, if you can call it that), but I knew that I just wanted to keep trying and get better. \n At Sixth Form, I was a prefect, and helped to tutor maths students in the lower years, because I wanted to give back to the community which helped me so much.",
+		"dates": "2015-2017",
+		"badges":["A* Maths", "A* Further Maths", "A* Computing", "A* Physics", "A EPQ"],
+		"commendations": [
+			{
+				"name": "Bebras Challenge Finalist",
+				"awarder": "University of Oxford",
+				"date": 2016
+			}
+		],
+		"highlights":[
+			{
+				"name": "UKMT Senior Mathematics Challenge",
+				"score": "Gold"
+			}, 
+			{
+				"name": "Prefect"
+			}
+		]
+	},
+	{
+		"title": "The Billericay School",
+        "subtitle" : "GCSEs",
+        "type" : "Education",
+		"desc": "If you've made it this far, then you really are doing a thorough search. Back in school, I wasn't really sure what I wanted to do. To be honest, I didn't really know what Computing was. It wasn't until I was choosing my GCSEs that I saw it was an option. Speaking to my ICT teacher, she told me she didn't think I'd be able to handle Computing, so I decided to prove her wrong. So yes, I am where I am today out of pure spite. However, I do have to thank her, because I think it's been quite successful this far. \n  ",
+		"dates": "2010-2015",
+		"badges":["A* x 6", "A x 5"],
+		"commendations": [
+			{
+				"name": "Outstanding Achievement Award",
+				"awarder": "Mrs Sue Hammond",
+				"date": 2011
+			},
+			{
+				"name": "Best in Year:",
+				"awarder" : "UKMT Intermediate Mathematics Challenge",
+				"date": 2014
+			}
+		]
+	},
+	{
+		"title": "Nextjump",
+        "subtitle": "Software Engineering Intern",
+        "type" : "Experience",
+		"dates": "June 2019 - September 2019",
+		"logo": "https://upload.wikimedia.org/wikipedia/en/3/34/Full_Logo_Large.png",
+		"url": "https://www.nextjump.com/",
+		"desc": "I spent my summer of 2019 working at Nextjump as a Software Engineer. I worked on and took ownership of many large-scale projects, which were rolled out to millions of users. I primarily worked in PHP & Javascript, and wrote a lot of SQL. \n I also learnt a lot about workplace culture, running the London office's Adopt-a-School project. This was a place where I got to try out new ideas which could help me out with my work. For example, if I'm able to control a class of 20 screaming children, trying to get the attention of the office should be a breeze!",
+		"highlights": [
+			{
+				"name": "Ran UK Adopt-a-School Scheme"
+			},
+			{
+				"name": "Ran my first 5K! (credit to Becky, my running partner)"
+			},
+			{
+				"name": "Learned Go and PHP"
+			}
+		]
+	},
+	{
+		"title": "MyTutor",
+        "subtitle": "Mathematics and Computing Tutor",
+        "type" : "Experience",
+		"dates": "June 2018 - June 2019",
+		"logo": "https://www.besa.org.uk/wp-content/uploads/2019/02/MyTutor_Logo_Purple_RGB.png",
+		"url": "https://www.mytutor.co.uk/tutors/105683/",
+		"desc": "I was a tutor of Computing and Mathematics for A Level students alongside my studies. \nThrough doing this, I gained a lot of insight into different teaching styles and how to keep younger students engaged and interested. This is something which I find really interesting, and continued further by taking a module in my third year of uni called 'Communication Computer Science in Schools', where I got to teach a class of GCSE students programming. More info on this can be found on my projects page.",
+		"highlights": [
+			{
+				"name": "5 star rating!"
+			}
+		]
+	},
+	{
+		"title": "Facebook",
+		"subtitle": "Hack-a-Project Participant",
+		"dates": "October 2018 - November 2018",
+		"logo": "https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-1-1.png",
+		"url": "https://www.facebook.com/",
+		"desc": "Back in 2018, I participated in Facebook's Hack-a-Project scheme , where I was put in a group with 2 other Computing students, and we had to create a project with the aim of 'Bringing Communities Together'. We decided to create a mentoring app with a twist - it wasn't a paid application, instead it was more of a trade. We called it 'Mentorme'. You had to mentor someone in something and they'd do the same for you. It allowed people of all ages and abilities to connect. \nI learnt lots of new technologies, including React, MongoDB, NodeJS and Docker, which I have used in more projects since, including this site you're on right now! \nMore information on this project can be found on my project page..",
+		"highlights": [
+			{
+				"name": "Created first app using the MERN stack"
+			}
+		]
+	}
+]
