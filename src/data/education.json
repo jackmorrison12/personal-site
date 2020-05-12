@@ -36,6 +36,7 @@
 	},
 	{
 		"name": "Westcliff High School for Boys",
+		"url": "https://www.whsb.essex.sch.uk/",
 		"subtitle" : "A Levels",
 		"desc": "I had a great time at WHSB whilst I was studying for my A Levels. I moved here because my old school didn't offer Computer Science as an A Level, and I thought it was what I wanted to pursue. However, thanks to my Computing teacher (should out Mr Rahman), I knew it was for me. \n I started working on some programming projects whilst I was here (you can see one attempt on my projects page, if you can call it that), but I knew that I just wanted to keep trying and get better. \n At Sixth Form, I was a prefect, and helped to tutor maths students in the lower years, because I wanted to give back to the community which helped me so much.",
 		"dates": "2015-2017",
@@ -59,6 +60,7 @@
 	},
 	{
 		"name": "The Billericay School",
+		"url": "https://www.billericayschool.com",
 		"subtitle" : "GCSEs",
 		"desc": "If you've made it this far, then you really are doing a thorough search. Back in school, I wasn't really sure what I wanted to do. To be honest, I didn't really know what Computing was. It wasn't until I was choosing my GCSEs that I saw it was an option. Speaking to my ICT teacher, she told me she didn't think I'd be able to handle Computing, so I decided to prove her wrong. So yes, I am where I am today out of pure spite. However, I do have to thank her, because I think it's been quite successful this far. \n  ",
 		"dates": "2010-2015",
@@ -70,7 +72,7 @@
 				"date": 2011
 			},
 			{
-				"name": "Best in Year:",
+				"name": "Best in Year",
 				"awarder" : "UKMT Intermediate Mathematics Challenge",
 				"date": 2014
 			}

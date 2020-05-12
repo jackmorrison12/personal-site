@@ -5,8 +5,22 @@
 .vertical-timeline-element-content {
     @extend .is-red-bg-always;
     box-shadow: none !important;
+    font-weight: normal !important;
 }
 
 .vertical-timeline-element-icon {
     @extend .is-red-bg-always;
+}
+
+.vertical-timeline-element-badge {
+    @extend .margin-0;
+    font-size: 0.8rem !important;
+}
+
+.vertical-timeline-element-title {
+    font-size: 1.5em !important;
+}
+
+.vertical-timeline-element-subtitle {
+    font-weight: normal !important;
 }

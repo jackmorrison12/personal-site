@@ -31,13 +31,13 @@ export const ExperienceTimeline = () => {
                     iconStyle={{ color: '#fff' }}
                     key={i}
                 >
-                    <h2 className="vertical-timeline-element-title"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
                     <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
-                    <i>{item.dates}</i>
-{/* 
+                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
+
                     {item.highlights.map((i) => (
-                        <p>{i.name}</p>
-                    ))} */}
+                        <p className="vertical-timeline-element-badge"><span role="img" aria-label="star">⭐️</span> {i.name}</p>
+                    ))}
+                    {/* <p>{item.summary}</p> */}
                     
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
@@ -65,18 +65,37 @@ export const EducationTimeline = () => {
             {educationData.map((item, i) => (
                 <VerticalTimelineElement
                     className="vertical-timeline-element poppins"
-                    contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-                    contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                    contentStyle={{ color: '#fff' }}
+                    contentArrowStyle={{ borderRight: '7px solid white'}}
                     date={item.dates}
-                    iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                    iconStyle={{ color: '#fff' }}
                     key={i}
                 >
-                    <h3 className="vertical-timeline-element-title">{item.name}</h3>
                     <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
+                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
+
+                    {
+                        item.highlights ? 
+                            (item.highlights.map((i) => (
+                                <p className="vertical-timeline-element-badge"><span role="img" aria-label="star">⭐️</span> {i.name}: {i.score ? i.score: ""}</p>
+                            ))) 
+                        : 
+                            ""
+                    }
+
+{
+                        item.commendations ? 
+                            (item.commendations.map((i) => (
+                                <p className="vertical-timeline-element-badge"><span role="img" aria-label="trophy">🏆</span> {i.name} - <i>{i.awarder}</i></p>
+                            ))) 
+                        : 
+                            ""
+                    }
+                    
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn"}>Click to read more</div>
+                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>

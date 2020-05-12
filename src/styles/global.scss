@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:500&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap);
 
 //files;
 @import './layout';
@@ -39,12 +39,12 @@ body.dark-mode {
 
 p {
   font-family: Poppins;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 li {
   font-family: Poppins;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 
@@ -126,10 +126,6 @@ div {
 footer {
   font-family: Poppins;
   text-align: center;
-}
-
-.legal {
-  font-size: 10px;
 }
 
 a{
