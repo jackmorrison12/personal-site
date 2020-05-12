@@ -1,5 +1,7 @@
 import React from "react"
 
+import {EducationTimeline} from "./timelines"
+
 export default () => (
-    <h1>Education</h1>
+    <EducationTimeline />
 )
