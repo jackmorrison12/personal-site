@@ -13,7 +13,7 @@ export default () => (
                 I'm also the Skydiving Society Secretary for the 2020-21 year.
             </p>
         </div>
-        <div className="col-xs-12 col-md-6 text-align-right">        
+        <div className="col-xs-12 col-md-6 text-align-center">        
             <p>*Insert photo here of me (eventually) skydiving*</p>
         </div>
     </>

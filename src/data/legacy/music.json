@@ -1,26 +1,26 @@
 [
 	{
-		"filename": "Symphony_v3",
-		"name": "Symphony (Clean Bandit ft. Zara Larsson Remix)"
-	},
-	{
-		"filename": "Morrison_Jack_WIP",
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/JACK_MORRISON_FINAL1.mp3",
 		"name": "Symphony Instrumental (Clean Bandit ft. Zara Larsson Remix)"
 	},
 	{
-		"filename": "Trumpet song",
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/JACK_MORRISON_FINAL2.mp3",
+		"name": "Coronavirus Informational Trap Remix"
+	},
+	{
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Trumpet%20song.mp3",
 		"name": "Trumpet Song"
 	},
 	{
-		"filename": "Meme Song",
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Meme%20Song.mp3",
 		"name": "Into the Circus"
 	},
 	{
-		"filename": "Nonstop",
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Nonstop.mp3",
 		"name": "Nonstop (Drake Cover)"
-	},
+	}, 			
 	{
-		"filename": "Bojo_v4",
-		"name": "Coronavirus Informational Trap Remix"
+		"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Symphony_v3.mp3",
+		"name": "Symphony (Clean Bandit ft. Zara Larsson Remix)"
 	}
 ]
