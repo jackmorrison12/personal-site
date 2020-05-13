@@ -1,7 +1,7 @@
 import React from "react"
 import ReactAudioPlayer from 'react-audio-player';
 
-import musicData from "../../data/legacy/music.json"
+import musicData from "../../data/music.json"
 
 export default () => (
     <>

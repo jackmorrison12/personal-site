@@ -1,5 +1,5 @@
 import React from "react"
-import pythonData from "../../data/legacy/python.json"
+import pythonData from "../../data/python.json"
 
 export default () => (
     <>
