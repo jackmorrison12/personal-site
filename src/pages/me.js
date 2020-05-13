@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -40,7 +40,7 @@ export default ({ data }) => {
   }
 
   function makeLink(link, text, colour) {
-    return <span role="button" tabindex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"btn is-" + colour}>{text}</span>;
+    return <span role="button" tabindex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"link is-" + colour}>{text}</span>;
   }
 
   return (
@@ -69,7 +69,7 @@ export default ({ data }) => {
         <div className="is-white-bg">
           <div className="row pad-10-t pad-3-lr container">
             <div className="col-xs-12 col-md-12">
-              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue float-right">Close</div>
+              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="link is-medium-blue float-right">Close</div>
             </div>
           </div>
           <div className={"row pad-10-b pad-3-lr " + (section === "EXPERIENCE" || section === "EDUCATION" ? "" : "container")}>
@@ -79,11 +79,11 @@ export default ({ data }) => {
           </div>
         </div>
         </SlideDown>
-        <div className="is-light-grey-bg">
+        <div className="is-dark-blue-bg-always">
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
-              <h1 className="is-hero-menu margin-0-t text-align-center pad-10-tb">Want a familiar format?</h1>
-              <p className="btn text-align-center">Read my CV here</p>
+              <h1 className="is-hero-menu margin-0-t text-align-center is-white-always">Want a familiar format?</h1>
+              <div className="btn is-white-bg"><p className="margin-0"><Link to="/cv" className="is-black"> Read my CV</Link></p></div>
             </div>
           </div>
         </div>

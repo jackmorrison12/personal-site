@@ -21,7 +21,7 @@ const IndexPage = () => (
       <div className="row container-small pad-20-t pad-10-b">
         <div className="col-xs-12 col-sm-6 pad-5-lr">
           <h1 className="is-hero-menu margin-0">Jack Morrison</h1>
-          <h3 className="is-hero-sub-text">Computing Student @ <a className="is-red btn" href="https://www.imperial.ac.uk/computing" target="_blank" rel="noopener noreferrer">Imperial</a></h3>
+          <h3 className="is-hero-sub-text">Computing Student @ <a className="is-red link" href="https://www.imperial.ac.uk/computing" target="_blank" rel="noopener noreferrer">Imperial</a></h3>
           <div className="line margin-10-t margin-10-b" />
           <div className="">
             {socials

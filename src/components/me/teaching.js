@@ -8,7 +8,7 @@ export default () => (
         <div className="col-xs-12 col-md-6">
             <h1><Emoji symbol="👨‍🏫" label="teacher" /> Teaching</h1>
             <p>
-                I enjoy teaching, and have volunteered my skills teaching a Robotics Club at <a href="http://www.netley.camden.sch.uk/" className="is-medium-blue btn">Netley Primary School</a>, as well as for an introductory Python Course at <a href="https://www.cooperscoborn.org.uk/" className="is-medium-blue btn">The Coopers' Company and Coborn School</a>.
+                I enjoy teaching, and have volunteered my skills teaching a Robotics Club at <a href="http://www.netley.camden.sch.uk/" className="is-medium-blue link">Netley Primary School</a>, as well as for an introductory Python Course at <a href="https://www.cooperscoborn.org.uk/" className="is-medium-blue link">The Coopers' Company and Coborn School</a>.
                 <br /><br />
                 The course I taught at Coopers is completely open source, and the lesson plans and resources can be found below. Please feel free to use them and contribute any ideas!
             </p>

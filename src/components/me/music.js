@@ -10,7 +10,7 @@ export default () => (
     <div className="col-xs-12 col-md-6">
         
         <p>
-            I've always loved listening to music, and in 2019 I decided I wanted to learn how to make it too. I took a course called <a className="btn" href="https://www.imperial.ac.uk/horizons/module-options/2nd-year-undergraduates/music-technology/">Music Technology</a>.
+            I've always loved listening to music, and in 2019 I decided I wanted to learn how to make it too. I took a course called <a className="link" href="https://www.imperial.ac.uk/horizons/module-options/2nd-year-undergraduates/music-technology/">Music Technology</a>.
             <br />
             We covered many topics, starting off with the basics of how to use a Digital Audio Workstation, such as creating sounds using software instruments and MIDI keyboards. We then moved on to learn things like mixing and using inserts and sends.
             <br />
