@@ -1,11 +1,12 @@
 import React from "react"
+import Emoji from 'a11y-react-emoji'
 import ReactAudioPlayer from 'react-audio-player';
 
 import musicData from "../../data/music.json"
 
 export default () => (
     <>
-    <h1  className="col-xs-12"><span role="img" aria-label="guitar">🎸</span> Making Music</h1>
+    <h1  className="col-xs-12"><Emoji symbol="🎸" label="guitar" /> Making Music</h1>
     <div className="col-xs-12 col-md-6">
         
         <p>

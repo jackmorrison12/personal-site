@@ -1,5 +1,6 @@
 import React from "react"
+import Emoji from 'a11y-react-emoji'
 
 export default () => (
-    <h1>Map</h1>
+    <h1><Emoji symbol="📌" label="pin" /> Map</h1>
 )

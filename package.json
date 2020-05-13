@@ -9,6 +9,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
+    "a11y-react-emoji": "^1.1.2",
     "gatsby": "^2.21.0",
     "gatsby-cli": "^2.12.8",
     "gatsby-image": "^2.4.0",

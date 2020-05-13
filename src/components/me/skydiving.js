@@ -1,8 +1,10 @@
 import React from "react"
+import Emoji from 'a11y-react-emoji'
+
 
 export default () => (
     <>
-        <h1  className="col-xs-12">Skydiving</h1>
+        <h1 className="col-xs-12"><Emoji symbol="🪂" label="skydiver" /> Skydiving</h1>
         <div className="col-xs-12 col-md-6">
             
             <p>

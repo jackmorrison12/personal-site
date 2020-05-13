@@ -1,10 +1,12 @@
 import React from "react"
+import Emoji from 'a11y-react-emoji'
+
 import pythonData from "../../data/python.json"
 
 export default () => (
     <>
         <div className="col-xs-12 col-md-6">
-            <h1>Teaching</h1>
+            <h1><Emoji symbol="👨‍🏫" label="teacher" /> Teaching</h1>
             <p>
                 I enjoy teaching, and have volunteered my skills teaching a Robotics Club at <a href="http://www.netley.camden.sch.uk/" className="is-medium-blue btn">Netley Primary School</a>, as well as for an introductory Python Course at <a href="https://www.cooperscoborn.org.uk/" className="is-medium-blue btn">The Coopers' Company and Coborn School</a>.
                 <br /><br />
