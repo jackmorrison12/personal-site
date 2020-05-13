@@ -73,11 +73,9 @@ export default ({ data }) => {
             </div>
           </div>
           <div className={"row pad-10-b pad-3-lr " + (section === "EXPERIENCE" || section === "EDUCATION" ? "" : "container")}>
-            <div className="col-xs-12 col-md-12">
               {
                 sectionSwitch(section)
               }
-            </div>
           </div>
         </div>
         </SlideDown>
