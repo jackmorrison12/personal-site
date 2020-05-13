@@ -60,7 +60,7 @@ export default ({ data }) => {
           <div className="row container pad-10-tb pad-3-lr">
             <div className="col-xs-12 col-md-12">
               <h1 className="is-hero-menu margin-0-t">About me (in 40 words)</h1>
-              <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "red")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "red")}.</h2>
+              <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "medium-blue")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "medium-blue")}.</h2>
               <p>Click any of the links above to find out more!</p>
             </div>
           </div>
