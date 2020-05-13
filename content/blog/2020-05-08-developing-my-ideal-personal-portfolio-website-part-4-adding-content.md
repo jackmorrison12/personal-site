@@ -69,7 +69,7 @@ const { data } = this.props;
 const { edges: posts } = data.allMarkdownRemark;
 ```
 
-Finally I can access the stuff I need in my component by writing `{post.frontmatter.title}`. Easy!
+Finally I can access the stuff I need in my component by writing the code `{post.frontmatter.title}`. Easy!
 
 ## Next time
 
