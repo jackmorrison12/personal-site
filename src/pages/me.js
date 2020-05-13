@@ -83,7 +83,7 @@ export default ({ data }) => {
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
               <h1 className="is-hero-menu margin-0-t text-align-center is-white-always">Want a familiar format?</h1>
-              <div className="btn is-white-bg"><p className="margin-0"><Link to="/cv" className="is-black"> Read my CV</Link></p></div>
+              <Link to="/cv" className="btn-center is-white-bg is-black">Read my CV</Link>
             </div>
           </div>
         </div>

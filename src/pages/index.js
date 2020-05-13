@@ -59,16 +59,15 @@ const IndexPage = () => (
         </div>
       </div>
     </div>
-    <div className="is-light-grey-bg is-black diagonal-box">
-      <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
+    <div className="is-light-grey-bg is-black ">
+      <div className="row container-small pad-20-t pad-3-lr pad-10-b ">
         <div className="col-xs-12">
-          <h2>Want to know more?</h2>
-          <p>If you want to learn more about me, you can visit <Link to="/me" className="is-medium-blue">my about page</Link>, or have a look <Link to="/cv" className="is-medium-blue">at my CV</Link>.</p>
+          <h2 className="text-align-center">Want to know more?</h2>
+          <Link to="/cv" className="btn-center is-red-bg is-black">Read my CV</Link>
+
         </div>
       </div>
     </div>
-
-    <div className="margin-20-b"></div>
   </Layout>
 )
 

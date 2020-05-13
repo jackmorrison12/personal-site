@@ -8,14 +8,20 @@
 }
 
 .btn { 
-    // display:inline-block; 
     display: table;
-    margin: 0 auto;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 1.4rem;
+    @extend .poppins;
 }
+
+.btn-center {
+    margin: 0 auto;
+    @extend .btn;
+
+}
+
 .btn:after {
   display:block;
   content: '';
