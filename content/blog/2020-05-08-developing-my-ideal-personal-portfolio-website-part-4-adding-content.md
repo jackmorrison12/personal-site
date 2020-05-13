@@ -23,4 +23,54 @@ Since I had previous iterations of my site, I sourced the majority of the conten
 
 ## Displaying the Content
 
-To display the content on my site, I used GraphQL queries to get the files from the markdown files. 
+To display the content on my site, I used GraphQL queries to get the files from the markdown files. [GraphQL](https://graphql.org/) is a query language which is integrated into Gatsby. It allows queries to be executed when the site is built, which is a key to why Gatsby is so fast. An example of a query is this:
+
+```
+query BlogRollQuery {
+  allMarkdownRemark(
+    sort: { order: DESC, fields: [frontmatter___date] }
+    filter: {
+      fileAbsolutePath: {regex: "/blog/"  }
+      frontmatter: {hidden: {eq: false}}
+    }
+  ) {
+    edges {
+      node {
+        excerpt(pruneLength: 300)
+        id
+        frontmatter {
+          slug
+          title
+          date(formatString: "MMMM DD, YYYY")
+        }
+      }
+    }
+  }
+}
+```
+
+This fetches the data needed to show a summary of all of my blog posts on my site. It only requests the data needed, and all of this is accessible in the JSX file.
+You can set the props to be this data, like this:
+
+```
+BlogRoll.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+};
+```
+
+Then for simplicity I rename some things:
+
+```
+const { data } = this.props;
+const { edges: posts } = data.allMarkdownRemark;
+```
+
+Finally I can access the stuff I need in my component by writing `{post.frontmatter.title}`. Easy!
+
+## Next time
+
+The next thing I want to do is personalise my site! I'm going to look at adding some content to the 'About Me' page.
