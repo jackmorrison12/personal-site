@@ -14,7 +14,7 @@ class BlogRoll extends React.Component {
         
       posts &&
         posts.map(({ node: post }) => (
-          <Link to={"/" + post.frontmatter.slug} className="link" id="path">
+          <Link to={"/" + post.frontmatter.slug} className="" id="path">
             <div className="grow row margin-5-b">
               <div className="col-xs-12 margin-5-t">
                 <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
