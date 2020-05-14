@@ -11,7 +11,7 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
       module: {
         rules: [
           {
-            test: /\.canvas$/,
+            test: /canvas/,
             use: loaders.null(),
           },
         ],
