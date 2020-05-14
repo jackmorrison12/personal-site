@@ -40,7 +40,7 @@ export default ({ data }) => {
   }
 
   function makeLink(link, text, colour) {
-    return <span role="button" tabindex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"link is-" + colour}>{text}</span>;
+    return <span role="button" tabIndex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"link is-" + colour}>{text}</span>;
   }
 
   return (
@@ -50,8 +50,8 @@ export default ({ data }) => {
               <h1 className="me-hero-title is-hero-menu margin-0-t">Hey <span role="img" aria-label="wave">👋</span> I'm Jack</h1>
         </div>
         <div className="row">
-            {data.allFile.edges.map(edge => 
-              <div className="col-xs-4 col-sm-2 pad-0">
+            {data.allFile.edges.map((edge, i) => 
+              <div key={i} className="col-xs-4 col-sm-2 pad-0">
                 <Img style={{opacity: 0.4}} fluid={edge.node.childImageSharp.fluid} />
               </div>
             )}     
@@ -69,7 +69,7 @@ export default ({ data }) => {
         <div className="is-white-bg">
           <div className="row pad-10-t pad-3-lr container">
             <div className="col-xs-12 col-md-12">
-              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="link is-medium-blue float-right">Close</div>
+              <div role="button" tabIndex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="link is-medium-blue float-right">Close</div>
             </div>
           </div>
           <div className={"row pad-10-b pad-3-lr " + (section === "EXPERIENCE" || section === "EDUCATION" ? "" : "container")}>

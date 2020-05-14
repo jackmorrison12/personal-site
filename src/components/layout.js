@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <main className="is-light-grey-bg is-black">{children}</main>
       <footer className="is-white-bg is-black pad-2">
         Created by me, with help from {" "}
-        <Link to="/credits" activeClassName="is-black" class="is-medium-blue link">these people</Link>
+        <Link to="/credits" activeClassName="is-black" className="is-medium-blue link">these people</Link>
       </footer>
     </>
   )

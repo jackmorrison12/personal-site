@@ -42,7 +42,7 @@ export const ExperienceTimeline = () => {
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
+                    <div role="button" tabIndex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
@@ -95,7 +95,7 @@ export const EducationTimeline = () => {
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
+                    <div role="button" tabIndex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
