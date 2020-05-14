@@ -21,7 +21,7 @@
         margin-right: auto;
     }
     .gatsby-resp-image-wrapper {
-        max-width: 80% !important;
+        max-width: 60% !important;
         max-height: 70vh !important;
     }
 
@@ -35,13 +35,30 @@
     }
 
     .caption {
-        padding-left: 10%;
-        padding-right: 10%;
+        padding-left: 20%;
+        padding-right: 20%;
         font-style: italic;
     }
 
     .vid-caption {
         padding-left: calc((100% - 560px)/2);
         font-style: italic;
+    }
+
+    @media only screen and (max-width: 48em) {
+        .caption {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .vid-caption {
+            padding-left: 0;
+        }
+        iframe {
+            max-width: 100%;
+        }
+
+        .gatsby-resp-image-wrapper {
+            max-width: 100% !important;
+        }
     }
 }

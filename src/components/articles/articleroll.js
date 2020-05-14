@@ -5,6 +5,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+
 
 class ArticleRoll extends React.Component {
   render() {
@@ -16,7 +18,10 @@ class ArticleRoll extends React.Component {
         posts.map(({ node: post }) => (
           <Link to={"/" + post.frontmatter.slug} className="" id="path">
             <div className="grow row margin-5-b">
-              <div className="col-xs-12 margin-5-t">
+              <div className="col-xs-12 col-md-5 margin-5-t">
+                <div><Img fluid={post.frontmatter.hero.childImageSharp.fluid} /></div>
+              </div>
+              <div className="col-xs-12 col-md-6 margin-5-t">
                 <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
                 <p className="margin-0 margin-2-b is-black">
                   {post.frontmatter.date}
@@ -51,12 +56,19 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 300)
+              excerpt(pruneLength: 200)
               id
               frontmatter {
                 slug
                 title
                 date(formatString: "MMMM DD, YYYY")
+                hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
