@@ -1,3 +1,10 @@
+var netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+}
+
 module.exports = {
   siteMetadata: {
     title: `Jack Morrison`,
@@ -5,6 +12,7 @@ module.exports = {
     author: `@jackmorrison12`,
   },
   plugins: [
+    netlifyCmsPaths,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
@@ -16,6 +24,13 @@ module.exports = {
         storageKey: "darkMode",
         minify: true,
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+        options: {
+          path: `${__dirname}/static/img`,
+          name: 'img',
+        },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,7 +46,22 @@ module.exports = {
         path: `${__dirname}/content`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          netlifyCmsPaths,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1000,
+              backgroundColor: 'transparent', // required to display blurred image first
+              linkImagesToOriginal: false
+            },
+          },
+        ],
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
