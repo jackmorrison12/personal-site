@@ -6,8 +6,13 @@ import SEO from "../components/seo"
 const CVPage = () => (
   <Layout>
     <SEO title="CV" />
-    <div className="row container pad-10-t pad-5-lr">
-    </div>
+    <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
+        <div className="row container ">
+            <div className="col-xs-12 ">
+                <h1 className="is-hero-menu margin-0-t">CV</h1>
+            </div>
+        </div>  
+      </div>
   </Layout>
 )
 
