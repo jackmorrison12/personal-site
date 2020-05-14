@@ -23,7 +23,7 @@ const CreditsPage = () => (
                                         (item.shoutout ? 
                                             <>
                                                 <span>, with a significant shoutout to </span>
-                                                <a href={item.shoutout.url} className="is-medium-blue btn">{item.shoutout.name}</a>
+                                                <a href={item.shoutout.url} className="is-medium-blue link">{item.shoutout.name}</a>
                                             </> 
                                         : 
                                             ""
@@ -39,11 +39,11 @@ const CreditsPage = () => (
                                         { 
                                         item.links.length === 1 
                                         ? 
-                                            <>{" "}<a href={item.links[0]} className="is-medium-blue btn">Source</a></>
+                                            <>{" "}<a href={item.links[0]} className="is-medium-blue link">Source</a></>
                                         :
                                             item.links.map((link, i, links) => {
                                                 return(
-                                                    <>{" "}<a href={link} className="is-medium-blue btn">Source {i+1}</a></> 
+                                                    <>{" "}<a href={link} className="is-medium-blue link">Source {i+1}</a></> 
                                                 );
                                             }).reduce((prev, curr) => [prev, ' , ', curr])}
                                     </li>

@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -40,7 +40,7 @@ export default ({ data }) => {
   }
 
   function makeLink(link, text, colour) {
-    return <span role="button" tabindex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"btn is-" + colour}>{text}</span>;
+    return <span role="button" tabIndex="0" onClick={e => {setSection(link); setOpen(true)}} onKeyDown={e => { if (e.keyCode === 13) {setSection(link); setOpen(true)}}} className={"link is-" + colour}>{text}</span>;
   }
 
   return (
@@ -50,8 +50,8 @@ export default ({ data }) => {
               <h1 className="me-hero-title is-hero-menu margin-0-t">Hey <span role="img" aria-label="wave">👋</span> I'm Jack</h1>
         </div>
         <div className="row">
-            {data.allFile.edges.map(edge => 
-              <div className="col-xs-4 col-sm-2 pad-0">
+            {data.allFile.edges.map((edge, i) => 
+              <div key={i} className="col-xs-4 col-sm-2 pad-0">
                 <Img style={{opacity: 0.4}} fluid={edge.node.childImageSharp.fluid} />
               </div>
             )}     
@@ -60,7 +60,7 @@ export default ({ data }) => {
           <div className="row container pad-10-tb pad-3-lr">
             <div className="col-xs-12 col-md-12">
               <h1 className="is-hero-menu margin-0-t">About me (in 40 words)</h1>
-              <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "red")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "red")}.</h2>
+              <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "medium-blue")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "medium-blue")}.</h2>
               <p>Click any of the links above to find out more!</p>
             </div>
           </div>
@@ -69,23 +69,21 @@ export default ({ data }) => {
         <div className="is-white-bg">
           <div className="row pad-10-t pad-3-lr container">
             <div className="col-xs-12 col-md-12">
-              <div role="button" tabindex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="btn is-medium-blue float-right">Close</div>
+              <div role="button" tabIndex="0" onClick={e => setOpen(false)} onKeyDown={e => {if (e.keyCode === 13) {setOpen(false)}}} className="link is-medium-blue float-right">Close</div>
             </div>
           </div>
           <div className={"row pad-10-b pad-3-lr " + (section === "EXPERIENCE" || section === "EDUCATION" ? "" : "container")}>
-            <div className="col-xs-12 col-md-12">
               {
                 sectionSwitch(section)
               }
-            </div>
           </div>
         </div>
         </SlideDown>
-        <div className="is-light-grey-bg">
+        <div className="is-dark-blue-bg-always">
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
-              <h1 className="is-hero-menu margin-0-t text-align-center pad-10-tb">Want a familiar format?</h1>
-              <p className="btn text-align-center">Read my CV here</p>
+              <h1 className="is-hero-menu margin-0-t text-align-center is-white-always">Want a familiar format?</h1>
+              <Link to="/cv" className="btn-center is-white-bg is-black">Read my CV</Link>
             </div>
           </div>
         </div>

@@ -32,7 +32,7 @@ export const ExperienceTimeline = () => {
                     key={i}
                 >
                     <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
-                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
+                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="link is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
 
                     {item.highlights.map((i) => (
                         <p className="vertical-timeline-element-badge"><span role="img" aria-label="star">⭐️</span> {i.name}</p>
@@ -42,7 +42,7 @@ export const ExperienceTimeline = () => {
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
+                    <div role="button" tabIndex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>
@@ -72,7 +72,7 @@ export const EducationTimeline = () => {
                     key={i}
                 >
                     <h4 className="vertical-timeline-element-subtitle">{item.subtitle}</h4>
-                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="btn is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
+                    <h2 className="vertical-timeline-element-title pad-2-b"><a href={item.url} className="link is-black"target="_blank" rel="noopener noreferrer">{item.name}</a></h2>
 
                     {
                         item.highlights ? 
@@ -95,7 +95,7 @@ export const EducationTimeline = () => {
                     <SlideDown closed={!open[i]}>
                         <p>{item.desc}</p>
                     </SlideDown>
-                    <div role="button" tabindex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"btn float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
+                    <div role="button" tabIndex="0" onClick={e => flipOpen(i)} onKeyDown={e => { if (e.keyCode === 13) {flipOpen(i)}}} className={"link float-right"}>{open[i] ? "Read Less" : "Read More"}</div>
                 </VerticalTimelineElement>
             ))}
         </VerticalTimeline>

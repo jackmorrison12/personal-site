@@ -3,7 +3,7 @@
 //files;
 @import './layout';
 @import './colours';
-@import './margin_padding.scss';
+@import './margin_padding';
 @import './opacity';
 @import './utilities';
 @import './hero';
@@ -11,6 +11,7 @@
 @import './blog';
 @import './me';
 @import './timeline';
+@import './me-table';
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
@@ -41,6 +42,17 @@ p {
   font-family: Poppins;
   font-weight: normal;
 }
+
+a {
+  @extend .is-medium-blue;
+}
+
+tr {
+  font-family: Poppins;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
 
 li {
   font-family: Poppins;

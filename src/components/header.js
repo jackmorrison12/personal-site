@@ -20,8 +20,8 @@ const Header = () => (
         >
           <div className="row flex text-align-center">
               {navlinks
-                .map((item) => (
-                  <div className="col-xs-6 col-md-2 col-lg-2">
+                .map((item, i) => (
+                  <div key={i} className="col-xs-6 col-md-2 col-lg-2">
                     <h3 className="margin-0"><Link to={item.link} activeClassName="is-red" className="is-black"> {item.name} </Link></h3>
                   </div>
                 ))}
