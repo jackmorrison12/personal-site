@@ -26,6 +26,7 @@ collections:
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
+        - { label: "Hero Image", name: "hero", widget: "image", required: false}
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
@@ -42,6 +43,7 @@ collections:
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "Publish Date", name: "date", widget: "datetime" }
         - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
+        - { label: "Hero Image", name: "hero", widget: "image", required: false}
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Topics", name: "topics", widget: "list" }
         - { label: "Body", name: "body", widget: "markdown" }
@@ -59,6 +61,7 @@ collections:
         - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
         - { label: "Homepage", name: "homepage", widget: "boolean", default: false}
         - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
+        - { label: "Hero Image", name: "hero", widget: "image", required: false}
         - { label: "Description", name: "description", widget: "string" }
         - { label: "Tech", name: "tech", widget: "list"}
         - { label: "Start Date", name: "startdate", widget: "datetime" }
