@@ -10,6 +10,7 @@ const CVPage = () => (
         <div className="row container ">
             <div className="col-xs-12 ">
                 <h1 className="is-hero-menu margin-0-t">CV</h1>
+                <p>Coming soon!</p>
             </div>
         </div>  
       </div>
