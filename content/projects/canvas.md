@@ -4,6 +4,7 @@ slug: /projects/canvas
 type: Uni Project
 homepage: true
 hidden: false
+hero: /img/canvas-logo.png
 description: A CRDT-powered collaborative drawing app
 tech:
   - Swift
