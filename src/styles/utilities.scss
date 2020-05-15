@@ -146,6 +146,12 @@
   .pulse {
     animation: pulse 2s infinite;
   }
+
+@media only screen and (max-width: 47em) {
+    .mobile-hide {
+      display: none;
+    }
+}
   
   
   @keyframes pulse {
