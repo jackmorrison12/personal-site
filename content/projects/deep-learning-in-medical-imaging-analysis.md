@@ -4,6 +4,7 @@ slug: /projects/topics
 type: Uni Project
 homepage: false
 hidden: false
+hero: /img/topics-logo.png
 description: A website discussing the uses of AI in Medical Imaging Analysis
 tech:
   - HTML

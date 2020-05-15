@@ -4,6 +4,7 @@ slug: /projects/correct-a-spine
 type: Hackathon
 homepage: false
 hidden: false
+hero: /img/cas-logo.png
 description: A device to prevent back pain
 tech:
   - C

@@ -46,16 +46,16 @@ const IndexPage = () => (
     <div className="is-light-grey-bg is-black diagonal-box">
       <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
-          <h2>My Latest Blog Posts</h2>
-          <BlogPreviews/>
+          <h2>My Latest Articles</h2>
+          <ArticlePreviews/>
         </div>
       </div>
     </div>
     <div className="is-red-bg is-black diagonal-box">
       <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
         <div className="col-xs-12">
-          <h2>My Latest Articles</h2>
-          <ArticlePreviews />
+          <h2>My Latest Blog</h2>
+          <BlogPreviews />
         </div>
       </div>
     </div>
