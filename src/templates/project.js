@@ -38,7 +38,7 @@ export default function Template({
             <div className="line margin-5-tb is-red" />
           </div>
           <div className="col-xs-12 col-sm-2">
-            <div className="project-logo" ><Img fluid={frontmatter.hero.childImageSharp.fluid} /></div>
+            {frontmatter.hero ? <div className="project-logo" ><Img fluid={frontmatter.hero.childImageSharp.fluid} /></div> : ""}
           </div>
           <div className="col-xs-12 pad-5-lr">
             <div
