@@ -19,7 +19,7 @@ class ArticleRoll extends React.Component {
           <Link to={"/" + post.frontmatter.slug} className="" id="path">
             <div className="grow row margin-5-b">
               <div className="col-xs-12 col-md-5 margin-5-t">
-                <div><Img fluid={post.frontmatter.hero.childImageSharp.fluid} /></div>
+                <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
               </div>
               <div className="col-xs-12 col-md-6 margin-5-t">
                 <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>

@@ -5,6 +5,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from "gatsby-image"
 
 class ProjectPreviews extends React.Component {
   render() {
@@ -16,18 +17,27 @@ class ProjectPreviews extends React.Component {
         {
           posts &&
             posts.map(({ node: post }) => (
-              <div className="grow col-xs-12 col-md-6 margin-5-t">
-                <Link to={"/" + post.frontmatter.slug} className="" id="path">
-                  <div className="col-xs-12 col-md-8">
-                    <h1 className="margin-0 is-light-grey">{post.frontmatter.title}</h1>
-                    <p className="margin-0 margin-2-b is-black">
-                      {post.frontmatter.date}
-                    </p>
-                    <div className="line-sm is-black margin-3-b" />
-                    <p className="margin-0 is-black">{post.frontmatter.description}</p>
-                    <p className="margin-0 is-light-grey">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
-                  </div>
-                </Link>
+              <div className="col-xs-12 col-md-6 margin-3-b">
+                <div className="grow project is-light-grey-bg">
+                  <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                    <div className="row">
+                      <div className="col-xs-12 col-sm-4 pad-0">
+                        <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                      </div>
+                      <div className="col-xs-12 col-sm-8">
+                        <div className="pad-2 pad-5-t">
+                          <h2 className="is-red margin-0">{post.frontmatter.title}</h2>
+                          <p className=" margin-0-t margin-2-b is-black bold">
+                            {post.frontmatter.startdate !== post.frontmatter.enddate ? post.frontmatter.startdate + " - " + post.frontmatter.enddate : post.frontmatter.startdate}
+                          </p>
+                          <div className="line-sm is-black margin-3-b" />
+                          <p className="margin-0 is-black">{post.frontmatter.description}</p>
+                          <p className="margin-0 is-red">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
               </div>
           ))
         }
@@ -63,6 +73,13 @@ export default () => (
                 title
                 description
                 tech 
+                hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }

@@ -26,23 +26,23 @@ export default function Template({
               <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Articles`}</h2>
             </Link>
           </div>
-            <div className="col-xs-12 col-md-6">
-              <h1 className="is-hero-menu margin-1-t margin-5-b">
-                {frontmatter.title}
-              </h1>
-              <h6 className="is-hero-sub-text margin-3-b">
-                {frontmatter.date}
-              </h6>
-              <div className="line margin-5-tb is-red" />
+          <div className="col-xs-12 col-md-6">
+            <h1 className="is-hero-menu margin-1-t margin-5-b">
+              {frontmatter.title}
+            </h1>
+            <h6 className="is-hero-sub-text margin-3-b">
+              {frontmatter.date}
+            </h6>
+            <div className="line margin-5-tb is-red" />
 
-            </div>
-            <div className="col-xs-12 col-md-6">
-              <div ><Img fluid={frontmatter.hero.childImageSharp.fluid} /></div>
-            </div>
-            <div
-                className="blog"
-                dangerouslySetInnerHTML={{ __html: html }}
-                />
+          </div>
+          <div className="col-xs-12 col-md-6">
+            <div ><Img fluid={frontmatter.hero.childImageSharp.fluid} /></div>
+          </div>
+          <div
+              className="blog"
+              dangerouslySetInnerHTML={{ __html: html }}
+              />
           </div>
       </div>
     </Layout>

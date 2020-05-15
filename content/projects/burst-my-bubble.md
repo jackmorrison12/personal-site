@@ -4,6 +4,7 @@ slug: /projects/burst-my-bubble
 type: Uni Project
 homepage: true
 hidden: false
+hero: /img/bmb-logo.png
 description: An app to tackle the problem of confirmation bias in the current
   consumption of the news
 tech:

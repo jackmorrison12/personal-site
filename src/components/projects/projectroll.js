@@ -5,6 +5,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
+
 
 class ProjectRoll extends React.Component {
   render() {
@@ -12,23 +14,28 @@ class ProjectRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark;
 
     return (
-      posts &&
-        posts.map(({ node: post }) => (
-          <Link to={"/" + post.frontmatter.slug} className="" id="path">
-            <div className="grow row margin-5-b">
-              <div className="col-xs-12 margin-5-t">
-                <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
-                <p className="margin-0 margin-2-b is-black">
-                  {post.frontmatter.date}
-                </p>
-                <div className="line-sm is-black margin-3-b" />
-                <p className="margin-0 is-black">{post.frontmatter.description}</p>
-                <p className="margin-0 is-red">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+      <div className="row flex">
+        {posts &&
+          posts.map(({ node: post }) => (
+            <div className="col-xs-12 col-md-3 margin-3-b">
+              <div className="grow project is-white-bg">
+                <Link to={"/" + post.frontmatter.slug} className="" id="path">
 
+                  <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                  <div className="pad-2">
+                    <h2 className="is-red margin-0">{post.frontmatter.title}</h2>
+                    <p className=" margin-0-t margin-2-b is-black bold">
+                      {post.frontmatter.startdate !== post.frontmatter.enddate ? post.frontmatter.startdate + " - " + post.frontmatter.enddate : post.frontmatter.startdate}
+                    </p>
+                    <div className="line-sm is-black margin-3-b" />
+                    <p className="margin-0 is-black">{post.frontmatter.description}</p>
+                    <p className="margin-0 is-red">{post.frontmatter.tech.map((item) => (item)).join(', ')}</p>
+                  </div>
+                </Link>
               </div>
             </div>
-          </Link>
-      ))
+        ))}
+      </div>
     )
   }
 }
@@ -61,6 +68,13 @@ export default () => (
                 enddate(formatString: "MMMM YYYY")
                 description
                 tech 
+                hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
