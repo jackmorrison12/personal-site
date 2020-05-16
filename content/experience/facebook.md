@@ -7,9 +7,9 @@ subtitle: Hack-a-Project Participant
 url: https://www.facebook.com/
 startdate: 2018-10-01T01:01:31.560Z
 enddate: 2018-11-01T01:01:31.587Z
-short-highlights:
+shorthighlights:
   - highlight: Created first app using the MERN stack
-long-highlights:
+longhighlights:
   - highlight: Participated in an programme at Facebook with the goal of creating an application to 'Bring Communities 
       Together'
   - highlight: Created MentorMe, a mentoring app made in JavaScript using React and Node.js

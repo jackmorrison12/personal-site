@@ -109,6 +109,6 @@ collections:
         - { label: "URL", name: "url", widget: "string" }
         - { label: "Start Date", name: "startdate", widget: "datetime" }
         - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Short Highlights", name: "short-highlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
-        - { label: "Long Highlights", name: "long-highlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
+        - { label: "Short Highlights", name: "shorthighlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
+        - { label: "Long Highlights", name: "longhighlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
         - { label: "Body", name: "body", widget: "markdown" }
