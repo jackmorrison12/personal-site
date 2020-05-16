@@ -77,7 +77,7 @@ collections:
       editor:
         preview: true
       fields:
-        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "CV", name: "cv", widget: "boolean", default: true}
         - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
@@ -86,6 +86,7 @@ collections:
         - { label: "Start Date", name: "startdate", widget: "datetime" }
         - { label: "End Date", name: "enddate", widget: "datetime" }
         - { label: "Grades", name: "grades", widget: "list", fields: [{label: "Grade", name: "grade", widget: "string"}]}
+        - { label: "Grade Summaries", name: "grade-summaries", widget: "list", fields: [{label: "Grade", name: "grade", widget: "string"}]}
         - { label: "Highlights", name: "highlights", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Score", name: "score", widget: "string"}] }
         - { label: "Commendations", name: "commendations", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Awarder", name: "awarder", widget: "string"}, {label: "Date", name: "date", widget: "datetime"}] }
         - { label: "Body", name: "body", widget: "markdown" }
@@ -98,7 +99,7 @@ collections:
       editor:
         preview: true
       fields:
-        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Title", name: "title", widget: "string" }
         - { label: "Slug", name: "slug", widget: "string" }
         - { label: "CV", name: "cv", widget: "boolean", default: true}
         - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
@@ -106,7 +107,6 @@ collections:
         - { label: "URL", name: "url", widget: "string" }
         - { label: "Start Date", name: "startdate", widget: "datetime" }
         - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Grades", name: "grades", widget: "list", fields: [{label: "Grade", name: "grade", widget: "string"}]}
         - { label: "Short Highlights", name: "short-highlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
         - { label: "Long Highlights", name: "long-highlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
         - { label: "Body", name: "body", widget: "markdown" }

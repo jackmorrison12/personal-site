@@ -1,5 +1,5 @@
 ---
-name: Nextjump
+title: Nextjump
 slug: /experience/nextjump
 cv: true
 hidden: false
@@ -7,7 +7,6 @@ subtitle: Software Engineering Intern
 url: https://www.nextjump.com/
 startdate: 2019-06-05T01:01:31.560Z
 enddate: 2019-09-20T01:01:31.587Z
-grades: []
 short-highlights:
   - highlight: Ran UK Adopt-a-School Scheme
   - highlight: Ran my first 5K! (credit to Becky, my running partner)
