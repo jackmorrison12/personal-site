@@ -1,0 +1,105 @@
+[
+    {
+        "name": "Proficient",
+        "description": "Languages I am proficient in",
+        "languages": [
+            {
+                "name": "Java",
+                "cv": true
+            },
+            {
+                "name": "Swift",
+                "cv": true
+            },
+            {
+                "name": "JavaScript",
+                "cv": true
+            },
+            {
+                "name": "Python",
+                "cv": true
+            },
+            {
+                "name": "C",
+                "cv": true
+            },
+            {
+                "name": "PHP",
+                "cv": true
+            },
+            {
+                "name": "HTML",
+                "cv": true
+            },
+            {
+                "name": "CSS",
+                "cv": true
+            }
+        ]
+    },
+    {
+        "name": "Familiar",
+        "description": "Languages I am familar with",
+        "languages": [
+            {
+                "name": "Haskell",
+                "cv": true
+            },
+            {
+                "name": "C++",
+                "cv": true
+            },
+            {
+                "name": "Kotlin",
+                "cv": true
+            }
+        ]
+    },
+    {
+        "name": "Tools & Frameworks",
+        "description": "Some tools and frameworks I have worked with",
+        "languages": [
+            {
+                "name": "Git",
+                "cv": true
+            },
+            {
+                "name": "Vim",
+                "cv": true
+            },
+            {
+                "name": "SQL",
+                "cv": true
+            },
+            {
+                "name": "MongoDB",
+                "cv": true
+            },
+            {
+                "name": "LaTeX",
+                "cv": true
+            },
+            {
+                "name": "ReactJS",
+                "cv": true
+            },
+            {
+                "name": "GatsbyJS",
+                "cv": true
+            },
+            {
+                "name": "NodeJS",
+                "cv": true
+            },
+            {
+                "name": "JUnit",
+                "cv": true
+            },
+            {
+                "name": "Docker",
+                "cv": true
+            }
+            
+        ]
+    }
+]

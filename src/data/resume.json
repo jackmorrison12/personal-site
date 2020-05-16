@@ -1,0 +1,266 @@
+{
+  "basics": {
+    "name": "Jack Morrison",
+    "label": "Software Engineer",
+    "picture": "",
+    "email": "jack.morrison17@imperial.ac.uk",
+    "phone": "+447775101516",
+    "website": "https://jackmorrison.xyz",
+    "summary": "",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "GB",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "@jsm_ic",
+        "url": "https://twitter.com/jsm_ic"
+      },
+      {
+        "network": "GitHub",
+        "username": "jackmorrison12",
+        "url": "https://github.com/jackmorrison12"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "jackmorrison12",
+        "url": "https://www.linkedin.com/in/jackmorrison12/"
+      },
+      {
+        "network": "GitLab",
+        "username": "jsm1317",
+        "url": "https://gitlab.doc.ic.ac.uk/jsm1317"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Nextjump",
+      "position": "Software Engineering Intern",
+      "website": "https://www.nextjump.com/",
+      "startDate": "2019-06-01",
+      "endDate": "2019-09-01",
+      "summary": "",
+      "highlights": [
+        "Worked on the online platform PerksAtWork using PHP, JavaScript and Go",
+        "Managed & worked on many projects which were deployed to millions of users",
+        "Used the scrum agile methodology, working in 3-week sprints",
+        "Ran the UK Office's 'Adopt-a-School' scheme, teaching robotics, teamwork and public speaking to underprivileged children"
+      ]
+    },
+    {
+      "company": "MyTutor",
+      "position": "Software Engineering Intern",
+      "website": "https://www.mytutor.co.uk/tutors/105683/",
+      "startDate": "2018-06-01",
+      "endDate": "2019-06-01",
+      "summary": "",
+      "highlights": [
+        "Tutored A-Level students online for mathematics and computing"
+      ]
+    },
+    {
+      "company": "Facebook",
+      "position": "Hack-a-Project Participant",
+      "website": "https://www.facebook.com",
+      "startDate": "2018-10-01",
+      "endDate": "2018-01-01",
+      "summary": "",
+      "highlights": [
+        "Participated in an programme at Facebook with the goal of creating an application to 'Bring Communities Together'",
+        "Created MentorMe, a mentoring app made in JavaScript using React and Node.js",
+        "Worked in short 1-week sprints with students from other universities"
+      ]
+    }
+  ],
+  "volunteer": [
+  ],
+  "education": [
+    {
+      "institution": "Imperial College London",
+      "area": "Computing",
+      "studyType": "MEng",
+      "startDate": "2017-09-30",
+      "endDate": "2021-06-01",
+      "gpa": "First (77% Average)",
+      "courses": [
+      ]
+    },
+    {
+      "institution": "Westcliff High School for Boys",
+      "area": "Sixth Form",
+      "studyType": "A Levels",
+      "startDate": "2015-09-02",
+      "endDate": "2017-06-01",
+      "gpa": "A*A*A*A*A",
+      "courses": [
+        "A Levels (Mathematics, Further Maths,Computing, Physics): 4 A*",
+        "EPQ (Computer Assisted Proofs): A"
+      ]
+    }
+  ],
+  "awards": [
+  ],
+  "publications": [
+    {
+      "name": "Canvas",
+      "publisher": "",
+      "releaseDate": "2020-01-01",
+      "startDate": "2019-08-01",
+      "website": "https://jackmorrison.xyz/projects/canvas",
+      "summary": "",
+      "highlights" : [
+        "Created a collaborative drawing whiteboard application for iOS",
+        "Researched Conflict-free Replicated Data Types (CRDTs)",
+        "Used a mesh network topology to allow for decentralisation"
+      ]
+    },
+    {
+      "name": "Burst My Bubble",
+      "publisher": "",
+      "releaseDate": "2019-06-01",
+      "startDate": "2019-05-01",
+      "website": "https://jackmorrison.xyz/projects/bmb",
+      "summary": "",
+      "highlights" : [
+        "Created a webapp using React, Python, Java, MongoDB andMicrosoft Azure",
+        "Tackled the problem of confirmation bias in the current consumption of the news"
+      ]
+    },
+    {
+      "name": "WACC",
+      "publisher": "",
+      "releaseDate": "2019-01-01",
+      "startDate": "2019-03-01",
+      "website": "https://jackmorrison.xyz/projects/wacc",
+      "summary": "",
+      "highlights" : [
+        "Created a compiler for our own programming language, written in Kotlin",
+        "Worked in a group of 4 students, using DevOps technologies such as Docker"
+        ]
+    },
+    {
+      "name": "Deep Learning in Medical Imaging Analysis",
+      "publisher": "",
+      "releaseDate": "2018-03-01",
+      "startDate": "2018-01-01",
+      "website": "https://jackmorrison.xyz/projects/topics",
+      "summary": "",
+      "highlights" : [
+        "Researched the uses of AI in Medical Imaging Analysis, e.g. Image Segmentation",
+        "Created a website to discuss the findings and practice web development skills"
+        ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "German Language Proficiency",
+      "level": "B1+ Standard of Common European Framework of Reference",
+      "keywords": [
+      ]
+    },
+    {
+      "name": "Web Design",
+      "level": "Proficient",
+      "keywords": [
+        "GatsbyJS",
+        "React",
+        "PHP"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Java",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "Swift",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "HTML",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "CSS",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "JavaScript",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "PHP",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "C",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "Python",
+      "fluency": "Proficient"
+    },
+    {
+      "language": "Haskell",
+      "fluency": "Familiar"
+    },
+    {
+      "language": "C++",
+      "fluency": "Familiar"
+    },
+    {
+      "language": "Kotlin",
+      "fluency": "Familiar"
+    },
+    {
+      "language": "Git",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "Vim",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "SQL",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "MongoDB",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "JUnit",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "LaTeX",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "Docker",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "ReactJS",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "GatsbyJS",
+      "fluency": "Tools & Frameworks"
+    },
+    {
+      "language": "NodeJS",
+      "fluency": "Tools & Frameworks"
+    }
+  ],
+  "interests": [
+  ],
+  "references": [
+  ]
+}
