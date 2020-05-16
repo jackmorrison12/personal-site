@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import CV from "../components/cv/cv"
 
 const CVPage = () => (
   <Layout>
@@ -10,11 +11,12 @@ const CVPage = () => (
         <div className="row container ">
             <div className="col-xs-12 ">
                 <h1 className="is-hero-menu margin-0-t">CV</h1>
-                <p>Coming soon!</p>
+                <CV />
             </div>
         </div>  
       </div>
   </Layout>
 )
+
 
 export default CVPage
