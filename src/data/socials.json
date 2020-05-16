@@ -1,32 +1,50 @@
 [
 	{
-		"url": "mailto:jack1morrison@icloud.com",
+		"url": "mailto:jack.morrison17@imperial.ac.uk",
 		"icon": "at",
-		"home": false
+		"home": false,
+		"cv": true,
+		"name": "Email",
+		"username": "jack.morrison17@imperial.ac.uk"
 	},
 	{
 		"url": "sms:+447775101516",
 		"icon": "mobile",
-		"home": false
+		"home": false,
+		"cv": true,
+		"name": "SMS",
+		"username": "+447775101516"
 	},
 	{
 		"url": "https://github.com/jackmorrison12",
 		"icon": "github",
-		"home": true
+		"home": true,
+		"cv": true,
+		"name": "GitHub",
+		"username": "jackmorrison12"
 	},
 	{
 		"url": "https://gitlab.doc.ic.ac.uk/jsm1317",
 		"icon": "gitlab",
-		"home": true
+		"home": true,
+		"cv": false,
+		"name": "GitLab",
+		"username": "jsm1317"
 	},
 	{
 		"url": "https://twitter.com/jsm_ic",
 		"icon": "twitter",
-		"home": true
+		"home": true,
+		"cv": false,
+		"name": "Twitter",
+		"username": "@jsm_ic"
 	},
 	{
 		"url": "https://www.linkedin.com/in/jackmorrison12/",
 		"icon": "linkedin-in",
-		"home": true
+		"home": true,
+		"cv": true,
+		"name": "LinkedIn",
+		"username": "jackmorrison12"
 	}
 ]

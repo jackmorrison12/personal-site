@@ -1,0 +1,14 @@
+[
+    {
+      "name": "German Language Proficiency",
+      "level": "B1+ Standard of Common European Framework of Reference",
+      "summary": "I have achieved B1+ standard of the Common European Framework of Reference.",
+      "cv": true
+    },
+    {
+      "name": "Web Design",
+      "level": "Proficient",
+      "summary": "I have created websites for companies, increasing my familiarity with HTML, CSS, JavaScript and PHP.",
+      "cv": true
+    }
+  ]
