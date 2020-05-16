@@ -3,6 +3,7 @@ title: ARM11 Emulator and Assembler
 slug: /projects/arm11
 type: Uni Project
 homepage: false
+cv: false
 hidden: true
 description: An Emulator and Assembler for the ARM11 Programming Language
 tech:

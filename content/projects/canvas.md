@@ -3,6 +3,7 @@ title: Canvas
 slug: /projects/canvas
 type: Uni Project
 homepage: true
+cv: true
 hidden: false
 hero: /img/canvas-logo.png
 description: A CRDT-powered collaborative drawing app
@@ -16,6 +17,10 @@ sources:
   - name: GitHub
     url: https://github.com/mnckapilan/crdt-canvas
     icon: fab fa-github
+highlights:
+  - highlight: Created a collaborative drawing whiteboard application for iOS
+  - highlight: Researched Conflict-free Replicated Data Types (CRDTs)
+  - highlight: Used a mesh network topology to allow for decentralisation
 ---
 Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly. 
 

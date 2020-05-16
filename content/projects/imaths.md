@@ -3,6 +3,7 @@ title: iMaths
 slug: /projects/imaths
 type: School Project
 homepage: false
+cv: false
 hidden: true
 description: An app to teach students GCSE Maths
 tech:

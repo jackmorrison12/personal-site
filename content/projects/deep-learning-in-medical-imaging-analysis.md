@@ -3,6 +3,7 @@ title: Deep Learning in Medical Imaging Analysis
 slug: /projects/topics
 type: Uni Project
 homepage: false
+cv: true
 hidden: false
 hero: /img/topics-logo.png
 description: A website discussing the uses of AI in Medical Imaging Analysis
@@ -19,6 +20,9 @@ sources:
   - url: https://www.doc.ic.ac.uk/~jce317/
     name: Link
     icon: fas fa-link
+highlights:
+  - highlight: Researched the uses of AI in Medical Imaging Analysis, e.g. Image Segmentation
+  - highlight: Created a website to discuss the findings and practice web development skills
 ---
 This project was undertaken as my first year group project, and involved creating a website discussing the uses of AI in Medical Imaging Analysis, aimed at a specialist.
 

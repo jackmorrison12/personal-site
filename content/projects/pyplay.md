@@ -3,6 +3,7 @@ title: PyPlay
 slug: /projects/pyplay
 type: Hackathon
 homepage: false
+cv: false
 hidden: true
 description: An app to teach young coders the basics of Python
 tech:

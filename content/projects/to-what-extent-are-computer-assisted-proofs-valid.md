@@ -3,6 +3,7 @@ title: To What Extent are Computer-Assisted Proofs Valid?
 slug: /projects/epq
 type: School Project
 homepage: false
+cv: false
 hidden: true
 description: An essay discussing the controversy over computer-assisted proofs
 tech:

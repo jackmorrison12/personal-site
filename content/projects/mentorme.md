@@ -3,6 +3,7 @@ title: MentorMe
 slug: /projects/mentor-me
 type: Personal Project
 homepage: false
+cv: false
 hidden: true
 description: An app to 'Bring Communities Together'
 tech:

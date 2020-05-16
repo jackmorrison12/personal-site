@@ -3,6 +3,7 @@ title: Burst My Bubble
 slug: /projects/burst-my-bubble
 type: Uni Project
 homepage: true
+cv: true
 hidden: false
 hero: /img/bmb-logo.png
 description: An app to tackle the problem of confirmation bias in the current
@@ -18,6 +19,9 @@ sources:
   - name: GitLab
     url: https://gitlab.doc.ic.ac.uk/BurstMyBubble
     icon: fab fa-gitlab
+highlights:
+  - highlight: Created a webapp using React, Python, Java, MongoDB andMicrosoft Azure
+  - highlight: Tackled the problem of confirmation bias in the current consumption of the news
 ---
 The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together. Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online. One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments. Our own 'confirmation bias' means we're more likely to reading something that challenges our beliefs and content delivery algorithms on the internet have a vested interest in showing us what we like. It's becoming increasingly easy to live in a bubble (see what we did there?).
 

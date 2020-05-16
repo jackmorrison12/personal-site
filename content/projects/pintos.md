@@ -3,6 +3,7 @@ title: Pintos
 slug: /projects/pintos
 type: Uni Project
 homepage: false
+cv: false
 hidden: true
 description: An Operating System we helped complete
 tech:

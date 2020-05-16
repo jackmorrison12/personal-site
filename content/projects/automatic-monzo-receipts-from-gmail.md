@@ -3,6 +3,7 @@ title: Automatic Monzo Receipts from Gmail
 slug: /projects/monzo-receipts
 type: Hackathon
 homepage: false
+cv: false
 hidden: true
 description: Integrating Gmail receipts into the Monzo app
 tech:
