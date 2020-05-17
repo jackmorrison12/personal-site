@@ -16,12 +16,12 @@ class CVPage extends React.Component {
           <div className="row container ">
             <div className="col-xs-12 ">
               <h1 className="is-hero-menu margin-0-t">CV</h1>
-              <button className="k-button" onClick={this.exportPDFWithMethod}>
-                Export PDF
-              </button>
               <div ref={cv => (this.cv = cv)}>
                 <CV />
               </div>
+              <button className="btn-center is-red-bg is-black is-red-border margin-10-t" onClick={this.exportPDFWithMethod}>
+                Export PDF
+              </button>
             </div>
           </div>  
         </div>
