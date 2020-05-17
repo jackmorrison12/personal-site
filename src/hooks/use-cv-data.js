@@ -1,4 +1,3 @@
-import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 const useCvData = () => {
@@ -6,16 +5,13 @@ const useCvData = () => {
     {
       basics: dataJson {
         name
-        website
       }
       socials: allSocialsJson(filter: {cv: {eq: true}}) {
-        edges {
-          node {
-            username
-            url
-            name
-            icon
-          }
+        nodes {
+          username
+          url
+          name
+          icon
         }
       }
       education: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___enddate]}, filter: {fileAbsolutePath: {regex: "/education/"}, frontmatter: {cv: {eq: true}}}) {

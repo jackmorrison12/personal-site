@@ -13,15 +13,15 @@
 		"home": false,
 		"cv": true,
 		"name": "SMS",
-		"username": "+447775101516"
+		"username": "+447775 101 516"
 	},
 	{
 		"url": "https://github.com/jackmorrison12",
 		"icon": "github",
 		"home": true,
-		"cv": true,
+		"cv": false,
 		"name": "GitHub",
-		"username": "jackmorrison12"
+		"username": "github.com/jackmorrison12"
 	},
 	{
 		"url": "https://gitlab.doc.ic.ac.uk/jsm1317",
@@ -43,8 +43,17 @@
 		"url": "https://www.linkedin.com/in/jackmorrison12/",
 		"icon": "linkedin-in",
 		"home": true,
-		"cv": true,
+		"cv": false,
 		"name": "LinkedIn",
-		"username": "jackmorrison12"
+		"username": "linkedin.com/in/jackmorrison12"
+	}
+	,
+	{
+		"url": "https://jackmorrison.xyz",
+		"icon": "mouse-pointer",
+		"home": false,
+		"cv": true,
+		"name": "Wesbite",
+		"username": "jackmorrison.xyz"
 	}
 ]

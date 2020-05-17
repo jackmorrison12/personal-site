@@ -3,7 +3,7 @@ title: Westcliff High School for Boys
 slug: /education/whsb
 cv: true
 hidden: false
-subtitle: A Levels
+subtitle: Sixth Form
 url: https://www.whsb.essex.sch.uk/
 startdate: 2015-09-02T00:53:27.241Z
 enddate: 2017-06-01T00:53:27.291Z

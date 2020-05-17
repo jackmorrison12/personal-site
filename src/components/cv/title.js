@@ -1,10 +1,17 @@
 import React from "react"
-import Emoji from 'a11y-react-emoji'
 
 export default (props) => {
     return (
         <>
-            <p>{props.basics.website}</p>
+            <h1 className="text-align-left margin-0 margin-2-t">{props.basics.name}</h1>
+            <div className="is-dark-blue-always">
+                {
+                    props.socials.nodes.map ((item) => (
+                        <span><a className="is-dark-blue-always" href={item.url}> {item.username}</a></span>
+                    )).reduce((prev, curr) => [prev, '\xa0\xa0|\xa0\xa0', curr])
+                }
+            </div>
+            
         </>
     )
 }
