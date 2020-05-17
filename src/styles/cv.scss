@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap');  
+
+.mobile-hide {
+    display:block;
+}
+.mobile-show {
+    display:none;
+}  
+
+@media screen and (max-width: 210mm){
+    .mobile-hide {
+      display:none;
+    }
+    .mobile-show {
+        display:block;
+    }
+}
+
+
+.cv {
+    @extend .is-white-bg-always;
+    @extend .is-black-always;
+    width: 210mm;
+    height: 297mm;
+    margin: auto;
+    font-family: 'Muli', sans-serif;
+
+    @for $i from 1 through 6 {
+        h#{7 - $i} {
+          font-family: 'Muli', sans-serif;
+        }
+    }
+
+    .line {
+        border-bottom: 2px solid;
+        max-width: 100%;
+        @extend .is-light-grey-always;
+        @extend .margin-3-b;
+        @extend .margin-3-t;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        @extend .margin-0;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+        @extend .margin-0;
+    }
+    
+
+    p {
+        font-family: 'Muli', sans-serif;
+        font-size: 0.8rem;
+    }
+
+    .bullet {
+        text-indent: -10px;
+        padding-left: 10px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+
+    }
+    .bullet:before {
+        content:"- ";
+
+    }
+    li {
+        font-family: 'Muli', sans-serif;
+        font-size: 0.8rem;
+    }
+
+    svg {
+        @extend .is-dark-blue;
+    }
+    a {
+        font-family: 'Muli', sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+}

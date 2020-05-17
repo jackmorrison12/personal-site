@@ -3,7 +3,7 @@ title: The Billericay School
 slug: /education/imperial
 cv: false
 hidden: false
-subtitle: GCSEs
+subtitle: Secondary School
 url: https://www.billericayschool.com
 startdate: 2010-09-02T00:53:27.241Z
 enddate: 2015-07-01T00:53:27.291Z

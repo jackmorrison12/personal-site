@@ -13,6 +13,8 @@
 @import './timeline';
 @import './me-table';
 @import './projects';
+@import './cv';
+
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
