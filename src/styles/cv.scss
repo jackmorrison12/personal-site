@@ -1,4 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap');  
+
+.mobile-hide {
+    display:block;
+}
+.mobile-show {
+    display:none;
+}  
+
+@media screen and (max-width: 210mm){
+    .mobile-hide {
+      display:none;
+    }
+    .mobile-show {
+        display:block;
+    }
+}
+
+
 .cv {
     @extend .is-white-bg-always;
     @extend .is-black-always;
