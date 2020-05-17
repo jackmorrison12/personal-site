@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap');  
 .cv {
     @extend .is-white-bg-always;
     @extend .is-black-always;
@@ -35,6 +35,18 @@
     p {
         font-family: 'Muli', sans-serif;
         font-size: 0.8rem;
+    }
+
+    .bullet {
+        text-indent: -10px;
+        padding-left: 10px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+
+    }
+    .bullet:before {
+        content:"- ";
+
     }
     li {
         font-family: 'Muli', sans-serif;

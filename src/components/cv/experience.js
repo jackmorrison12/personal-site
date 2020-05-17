@@ -12,7 +12,7 @@ export default (props) => {
                         <p className="margin-0-t">{item.frontmatter.startdate} - {item.frontmatter.enddate}</p>
                         {
                             item.frontmatter.longhighlights.map((highlight) => (
-                                <li>{highlight.highlight}</li>
+                                <p className="bullet">{highlight.highlight}</p>
                             ))
                         }
 

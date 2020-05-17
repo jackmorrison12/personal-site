@@ -12,7 +12,7 @@ export default (props) => {
                         <p className="margin-0-t">{item.frontmatter.startdate} - {item.frontmatter.enddate}</p>
                         {
                             item.frontmatter.grade_summaries.map((grade) => (
-                                <li>{grade.grade}</li>
+                                <p className="bullet">{grade.grade}</p>
                             ))
                         }
 
