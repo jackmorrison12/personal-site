@@ -1,25 +1,43 @@
-@import url(https://fonts.googleapis.com/css?family=Questrial:300,400,500&display=swap);
-
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap');
 .cv {
     @extend .is-white-bg-always;
     @extend .is-black-always;
     width: 210mm;
     height: 297mm;
     margin: auto;
-    font-family: 'Questrial', sans-serif;
+    font-family: 'Muli', sans-serif;
 
     @for $i from 1 through 6 {
         h#{7 - $i} {
-          font-family: 'Questrial', sans-serif;
+          font-family: 'Muli', sans-serif;
         }
     }
 
+    .line {
+        border-bottom: 2px solid;
+        max-width: 100%;
+        @extend .is-light-grey-always;
+        @extend .margin-3-b;
+        @extend .margin-3-t;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+        @extend .margin-0;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+        @extend .margin-0;
+    }
+    
+
     p {
-        font-family: 'Questrial', sans-serif;
+        font-family: 'Muli', sans-serif;
         font-size: 0.8rem;
     }
     li {
-        font-family: 'Questrial', sans-serif;
+        font-family: 'Muli', sans-serif;
         font-size: 0.8rem;
     }
 
@@ -27,7 +45,7 @@
         @extend .is-dark-blue;
     }
     a {
-        font-family: 'Questrial', sans-serif;
+        font-family: 'Muli', sans-serif;
         font-size: 0.8rem;
         font-weight: bold;
     }
