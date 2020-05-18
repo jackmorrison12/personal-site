@@ -2,14 +2,12 @@
  *  This file is based on code from https://github.com/hugeinc/flexboxgrid-sass/blob/master/flexboxgrid.scss
  */
 
-@import './flex';
+@import "./flex";
 
 $flexboxgrid-grid-columns: 12 !default;
 $flexboxgrid-gutter-width: 1rem !default;
 $flexboxgrid-outer-margin: 2rem !default;
-$flexboxgrid-breakpoints: sm 48em 46rem,
-  md 62em 61rem,
-  lg 75em 71rem !default;
+$flexboxgrid-breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem !default;
 $flexboxgrid-max-width: 1200px !default;
 
 $gutter-compensation: $flexboxgrid-gutter-width * 0.5 * -1;
@@ -126,7 +124,6 @@ $name: xs;
   order: 1;
 }
 
-
 @each $breakpoint in $flexboxgrid-breakpoints {
   $name: nth($breakpoint, 1);
   $size: nth($breakpoint, 2);
@@ -139,7 +136,7 @@ $name: xs;
 
     .container-small {
       margin: auto;
-      max-width: $container*1.2;
+      max-width: $container * 1.2;
     }
 
     .col-#{$name} {

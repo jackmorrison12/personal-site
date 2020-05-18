@@ -3,21 +3,20 @@
  */
 
 .is-subtitle {
-    font-size: 1.25em;
-    line-height: 1em;
-    @extend .margin-0; 
+  font-size: 1.25em;
+  line-height: 1em;
+  @extend .margin-0;
 }
 
 .is-title {
-    font-size: 3em;
+  font-size: 3em;
 }
 
 .diagonal-box {
-    transform: skewY(-6deg);
-  
+  transform: skewY(-6deg);
 }
 
 .content {
-    margin: 0 auto;
-    transform: skewY(6deg);
+  margin: 0 auto;
+  transform: skewY(6deg);
 }
