@@ -5,7 +5,7 @@ export default props => {
     <>
       <h3 className="is-dark-blue-always">Skills</h3>
       {props.skills.nodes.map(item => (
-        <div className="pad-3-b">
+        <div className="margin-3-t">
           <h4 className="margin-0-b">{item.name}</h4>
           <p className="margin-0">{item.summary}</p>
         </div>

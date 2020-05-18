@@ -33,6 +33,10 @@ export default () => {
               <Experience experience={data.experience} />
               <div className="line is-light-grey-always margin-3-b margin-3-t" />
               <Projects projects={data.projects} />
+              <div className="line is-light-grey-always margin-3-b margin-3-t" />
+              <h4 className="is-dark-blue-always">
+                References can be supplied upon request
+              </h4>
             </div>
           </div>
         </div>

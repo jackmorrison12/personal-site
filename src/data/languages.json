@@ -52,6 +52,10 @@
       {
         "name": "Kotlin",
         "cv": true
+      },
+      {
+        "name": "Go",
+        "cv": true
       }
     ]
   },
@@ -92,7 +96,7 @@
         "cv": true
       },
       {
-        "name": "JUnit",
+        "name": "GraphQL",
         "cv": true
       },
       {

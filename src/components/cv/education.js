@@ -5,10 +5,10 @@ export default props => {
     <>
       <h3 className="is-dark-blue-always">Education</h3>
       {props.education.nodes.map(item => (
-        <div className="pad-3-b">
+        <div className="margin-3-t">
           <h4 className="margin-0-b">{item.frontmatter.title}</h4>
           <h5 className="margin-0">{item.frontmatter.subtitle}</h5>
-          <p className="margin-0-t">
+          <p className="margin-0-t italic">
             {item.frontmatter.startdate} - {item.frontmatter.enddate}
           </p>
           {item.frontmatter.grade_summaries.map(grade => (
