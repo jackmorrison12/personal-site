@@ -19,6 +19,7 @@
 }
 
 .cv {
+  -webkit-text-size-adjust: none;
   @extend .is-white-bg-always;
   @extend .is-black-always;
   width: 210mm;
@@ -49,6 +50,10 @@
   h4 {
     font-size: 13.28px;
     @extend .margin-0;
+  }
+
+  h5 {
+    font-size: 13.28px;
   }
 
   p {
