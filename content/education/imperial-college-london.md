@@ -29,6 +29,7 @@ commendations:
     name: Runner-Up WebApps Group Project
     awarder: Dr Mark Wheelhouse
 ---
+
 Uni has been a great place for me to explore my love for Computing in more depth. If you'd have told me a few years ago the type of stuff I'd be doing now, well I mean I'd probably have believed you, since I've always enjoyed it. However, I've managed to do things such as creating a life-size arcade machine for the game Snake, to building an operating system, to creating my own programming language, and recently making an app researching technologies which had never been used before in that context!
 
 One very cool part of being at Imperial is the amount of group projects we get to work on. These range greatly in scale, from small Robotics projects, up to massive industry-scale webapps. These are the best part of my course, and you can see some of the awesome things we've come up with on my projects page!

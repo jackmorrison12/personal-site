@@ -1,362 +1,368 @@
 [
-	{ 	"name": "Canvas",
-		"hidden": false,
-		"type": "Uni Project",
-		"tech" : ["Swift", "XCode", "CRDTs"],
-		"banner": "tbd",
-		"url": "canvas",
-		"dates": "October 2019 - January 2020",
-		"short_desc": "A CRDT-powered collaborative drawing app",
-		"long_desc": "Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly. \n We have created a resilient collaborative drawing app for iPadOS, using Conflict-free Replicated Data Types (CRDTs), that aims to prevent failures as listed previously from becoming an issue.\nOur app, which is optimised for iPads, is called Canvas. Canvas allows users to connect and draw at the same time. Changes are propagated in real time, so if a user becomes temporarily disconnected, on reconnection, the changes that they made during this period will sync up. Canvas offers features such as shape recognition and bluetooth network optimisation.\nCRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, so does not rely on one of the nodes to always be connected. CRDTs are currently an open research area, so this project started as a proof of concept to show that they could be used in this context. \nSince this was an iPadOS app, we created it in XCode, using Swift 5.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/mnckapilan/crdt-canvas"
-			}
-		]
-	},
-	{   "name": "Burst My Bubble",
-		"hidden": false,
-		"type": "Uni Project",
-		"tech" : ["React", "Java", "MongoDB"],
-		"url": "burst-my-bubble",
-		"dates": "May 2019 - June 2019",
-		"short_desc": "An app to tackle the problem of confirmation bias in the current consumption of the news",
-		"long_desc": " The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together. Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online. One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments. Our own 'confirmation bias' means we're more likely to reading something that challenges our beliefs and content delivery algorithms on the internet have a vested interest in showing us what we like. It's becoming increasingly easy to live in a bubble (see what we did there?).\nThe goal of 'Burst My Bubble' was to create a news feed with a difference; to encourage variety so people had a more broad consumption of the news. We use RSS feeds to aggregate articles from a wide variety of news feeds, and along with the user's reading history, we curate a diverse and confronting personalised news feed. Users can share their thoughts on articles, but instead of the traditional comments and replies format, can instead only write one opinion, which they're free to edit as their point of view matures.\nBurst My Bubble was awarded second best project for the year.\nWe wrote the frontend of the application using React, and used Python and Java for the backend. We also used a MongoDB database.",
-		"sources": [
-			{
-				"name": "fab fa-gitlab",
-				"url": "https://gitlab.doc.ic.ac.uk/BurstMyBubble"
-			}
-		],
-		"pictures": [
-			"bmb-1.png",
-			"bmb-2.png",
-			"bmb-3.png",
-			"bmb-4.png"
-		]
-	},
-	{	"name": "Snake Arcade Machine",
-		"hidden": false,
-		"type": "Uni Project",
-		"tech" : ["C"],
-		"url": "snake",
-		"dates": "May 2018 - June 2018",
-		"short_desc": "A recreation of the classic game of Snake on a 32x32 LED matrix",
-		"long_desc": "AS part of our first year C project, we recreated the classic game of snake, on a 32x32 LED matrix. The project definition was pretty open-ended, allowing us to create anything, as long as it was written in C, and since we were all fond of old-fashioned games, we thought this would be a fun idea. However, it also gave us some new challenges we didn't expect, and really improved our knowledge of C.\n We created the machine by connecting the matrix to a Raspberry Pi, using a hat, and then built the box out of cardboard (and a lot of tape!).\n The game has 4 modes, one of which was an Artificial Intelligence, that was pretty good by the end of it. We also created all of our own sounds using GarageBand! You can see some live demos linked on this page.\nThis project won the prize for the best group project extension, judged by the creators of the Raspberry Pi themselves.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/et-tamen-compilat/snake"
-			}
-		],
-		"videos": [
-			{
-				"title": "Startup",
-				"id": "j-aXoEqF7yU"
-			},
-			{
-				"title": "Classic Mode",
-				"id": "072oDonJBBU"
-			},
-			{
-				"title": "Crazy Mode",
-				"id": "l9AlzzPRaXk"
-			},
-			{
-				"title": "Maze Mode",
-				"id": "DRKbVj0Y6U0"
-			},
-			{
-				"title": "AI Timelapse",
-				"id": "h3LU4xwfbko"
-			}
-		]
-	},
-	{	"name": "Deep Learning in Medical Imaging Analysis",
-		"hidden": false,
-		"type": "Uni Project",
-		"tech" : ["HTML", "CSS", "Pandoc"],
-		"url": "topics",
-		"dates": "January 2018 - March 2018",
-		"short_desc": "A website discussing the uses of AI in Medical Imaging Analysis",
-		"long_desc": "This project was undertaken as my first year group project, and involved creating a website discussing the uses of AI in Medical Imaging Analysis, aimed at a non-specilist.\nOur main areas of research were to look into the history and evolution of medical imaging and machine learning as separate topics, and then find areas in which they overlapped. We looked at Convolutional Neural Networks, along with Semantic Segmentation, as these are the most commmonplace in medical imaging. We then looked at overlapping topics, these being the uses of AI in radiology, and a deeper case study into the user for detection of lung cancer.\n Getting to know all of this information about AI was great, but we also had to present it in the form of a website. We had to create the site from scratch (without using a framework, such as Wordpress). We wrote the in Markdown, and used a Bash script (which invoked Pandoc) compiled it to HTML. Since we didn't use a web framework to write the CSS, it increased the challenge, but also meant that after the project, we had a more thorough understanding of CSS. Mobile optimisation was one particular challenge we found difficult. \n We won the prize for the best project in our category of AI in Medical Imaging, and second best project overall.",
-		
-		"sources": [
-			{
-				"name": "fas fa-link",
-				"url": "https://www.doc.ic.ac.uk/~jce317/"
-			},
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/et-tamen-compilat/medical-image-computing"
-			}
-		]
-	},
-	{	"name": "Music Technology",
-		"hidden": true,
-		"type": "Uni Project",
-		"tech" : ["Cubase", "Logic"],
-		"url": "musictech",
-		"dates": "October 2019 - May 2020",
-		"short_desc": "An introduction into the production of music",
-		"long_desc": "I really enjoy listening to music, and so I thought that I'd enjoy taking a course in music technology, where I could learn how to produce my own music. I took this as one of my courses in my third year of uni. \n We covered many topics, starting off with the basics of how to use a Digital Audio Workstation, such as creating sounds using software instruments and MIDI keyboards. We then moved on to learn things like mixing and using inserts and sends. \n We used Cubase in class, however due to coronavirus, I had to teach myself how to use Logic Pro X in order to be able to create and submit my work. \n For the course assessment, we had to create two compositions. You can find both of mine on this page, as well as some other things I created along the way!",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/jackmorrison12/musictech"
-			}
-		],
-		"music": [
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Symphony_v6.mp3",
-				"name": "Symphony Instrumental (Clean Bandit ft. Zara Larsson Remix)"
-			},
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Bojo_v8.mp3",
-				"name": "Coronavirus Informational Trap Remix"
-			},
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Trumpet%20song.mp3",
-				"name": "Trumpet Song"
-			},
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Meme%20Song.mp3",
-				"name": "Into the Circus"
-			},
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Nonstop.mp3",
-				"name": "Nonstop (Drake Cover)"
-			}, 			
-			{
-				"filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Symphony_v3.mp3",
-				"name": "Symphony (Clean Bandit ft. Zara Larsson Remix)"
-			}
-		]
-	},
-	{	"name": "Python Teaching Project",
-		"hidden": true,
-		"type": "Uni Project",
-		"tech" : ["Python", "Teaching"],
-		"url": "python",
-		"dates": "January 2020 - March 2020",
-		"short_desc": "A crash course in Python designed for Year 10 students",
-		"long_desc": "I taught a course on the basics of Python Programming to some Year 10 students at The Coopers' Company and Coborn School in Upminster. This was as part of my module 'Communication Computer Science in Schools'.\n They already had a basic knowledge of Python, so I expanded upon this by teaching them topics such as 2D Arrays, For and While Loops, Functions and Built-in Methods. \n You can see a detailed report of my experience at the school linked above, along with the presentation I gave about my time there. As you'll see, I enjoyed my experience very much, and I learned a lot about how to communicate effectively, and convey technical knowledge to people. \n I created lots of teaching resources for my course, including a system to allow students to compete at coding challenges, which was a combination of HackerRank and Kahoot. More detail on this, along with a technical implementation, can be found in the report above. All of my slides, worksheets and other teaching resources can also be found on this page, if you're wanting to learn Python yourself! Please feel free to use them if you would like, and let me know how you find them - I'd love to hear if they come in useful!",
-		"sources": [
-			{
-				"name": "fas fa-file-alt",
-				"url": "/files/ccsis_report.pdf"
-			},
-			{
-				"name": "fas fa-file-powerpoint",
-				"url": "https://docs.google.com/presentation/d/1zXWeOgT8CM1S1xCVTR7GiagKBdyYYHyicyfPka6YC0o/edit?usp=sharing"
-			}
-		],
-		"python" : [
-			{
-				"name": "Arrays",
-				"teacher_slides": "https://drive.google.com/open?id=1wAICQLQgKJDobOBg5VQp_zmmnPen3G4iG5nu8kqdPDM",
-				"student_slides": "https://drive.google.com/open?id=1wAICQLQgKJDobOBg5VQp_zmmnPen3G4iG5nu8kqdPDM",
-				"worksheet": "https://drive.google.com/open?id=1RIzQOVTxlaaYSMx3hX3YaW2ii8lxLdEHRlMPUsx7EDY",
-				"answers": "https://drive.google.com/open?id=1DJKULCtjQvyJV_ZBwkhIZLVd_ietQL_Xw2bzePYVeq8",
-				"kahoot": "https://create.kahoot.it/share/arrays/c1d3d51b-fcdc-477d-b461-e0d92abfd2cf",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet1"
-			},
-			{
-				"name": "For Loops vs. While Loops",
-				"teacher_slides": "https://drive.google.com/open?id=1-tZ_STalggj4xmw3JCNfU-c0DH3noFgk-Jqe9Jo0ZVE",
-				"student_slides": "https://drive.google.com/open?id=19btFi3Ws_dW9Jvo_mMcK88ax_hmCyCFb7IYYdUzFQTQ",
-				"worksheet": "https://drive.google.com/open?id=1Dv0ZS4xKo8E7FenGmfXQkM3t6ByL9UyUfsHVG5hlNrw",
-				"answers": "https://drive.google.com/open?id=1VpOs3gYA-RePBWrBxGqcOGabSvWrizT9-MHtUC9ntyw",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet2"
-			},
-			{
-				"name": "Encryption",
-				"teacher_slides": "https://drive.google.com/open?id=1kA-EadiqELULi2SbUgUNUp2tybyvnIVOrj0VrmV1zBo",
-				"student_slides": "https://drive.google.com/open?id=1wQFnfciXf6FtUq7aB0xJQzTy019L6FlsiD8ePDSxKYg",
-				"worksheet": "https://drive.google.com/open?id=19mpxMxMLemz10qNY_dVvlI-WO21oINHN5tlBvT-9qLU",
-				"answers": "https://docs.google.com/document/d/1OIrJy_TReGCYz1rvDJvfGTKbkkmJWjotvzmCSq1NqS8/edit?usp=sharing",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet3"
-			},
-			{
-				"name": "Functions",
-				"teacher_slides": "https://docs.google.com/presentation/d/1edOf1TxEebL1I_67jf5LmOS8LOAw3HSjAPGmbeQwDno/edit?usp=sharing",
-				"student_slides": "https://docs.google.com/presentation/d/1edOf1TxEebL1I_67jf5LmOS8LOAw3HSjAPGmbeQwDno/edit?usp=sharing",
-				"notebook": "https://colab.research.google.com/drive/1ItGkTD73Qq3_3B7w0Xgh8R3_yebrgvrC",
-				"worksheet": "https://docs.google.com/document/d/1RZ-iN0jMcjl8v1sDmrOvCqiF8a-iLDHnr7r4J8Pshz0/edit?usp=sharing",
-				"answers": "https://colab.research.google.com/drive/14S7RYR5mkXp0FnwR0dMcMbSA8ujSfOqy",
-				"leaderboard": "https://vast-depths-77634.herokuapp.com/",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet4"
-			},
-			{
-				"name": "Further Functions",
-				"teacher_slides": "https://docs.google.com/presentation/d/1CTdWDJ7JeQR6tYDsZjlO9eaTMwamrPz-EqJ8iVWReu4/edit?usp=sharing",
-				"student_slides": "https://docs.google.com/presentation/d/1CTdWDJ7JeQR6tYDsZjlO9eaTMwamrPz-EqJ8iVWReu4/edit?usp=sharing",
-				"notebook": "https://colab.research.google.com/drive/1KIDB0_jgUiX8IaeZJXvxr_UhvOpzn0pN",
-				"worksheet": "https://docs.google.com/document/d/107M6veI3oqabC6_K-PfhIOu2jNh2L5AV-WAszYzNvS0/edit?usp=sharing",
-				"answers": "https://colab.research.google.com/drive/1QxLkNb_XF1qxBY-IOmOZCoOmj2QP6yln",
-				"leaderboard": "https://vast-depths-77634.herokuapp.com/",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet5",
-				"kahoot": "https://create.kahoot.it/details/functions/691478ff-8e60-4255-99b4-0aeb1e67e58d"
-			},
-			{
-				"name": "Methods",
-				"teacher_slides": "https://docs.google.com/presentation/d/1T_UcJSjM6U-HoXkHj9Y8eFjn3TJnx_Y6ZPKaXBKbbGI/edit?usp=sharing",
-				"student_slides": "https://docs.google.com/presentation/d/1T_UcJSjM6U-HoXkHj9Y8eFjn3TJnx_Y6ZPKaXBKbbGI/edit?usp=sharing",
-				"notebook": "https://colab.research.google.com/drive/1a9A2TbbjbRN_IkXya6H-uZmczz5G7kAR",
-				"worksheet": "https://docs.google.com/document/d/1WU2V3AxwN1WNibP8hjVyfbUpndBOJ3FK_P6QirjGyP0/edit?usp=sharing",
-				"answers": "https://colab.research.google.com/drive/1Al2l40Ltvo6I-Ww7lhfEgJOGxTWyBZKV",
-				"leaderboard": "https://vast-depths-77634.herokuapp.com/",
-				"github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet6",
-				"kahoot": "https://create.kahoot.it/details/methods/5831e8e5-9bac-4803-a8a1-9bee7cf8ab48"
-			}
-		]
-	},
-	{	"name": "Correct-a-Spine",
-		"hidden": true,
-		"type": "Hackathon",
-		"tech" : ["C", "Swift", "Arduino"],
-		"url": "correct-a-spine",
-		"dates": "March 2019",
-		"short_desc": "A device to prevent back pain",
-		"long_desc": "Correct-a-Spine was a hackathon entry for Imperial College Health Hack 19. \nProblems with posture arise because of upper and lower back problems, but the current technologies only focus on monitoring one of these. This means that parients with chronic back pain are not getting the information they need to improve their posture and reduce their pain. Therefore, we decided to use an accelerometer and flex sensor to measure both upper and lower back position, in order to prevent both kinds of back pain with a single device. \n This resulted in Correct-a-Spine, an iOS app which can monitor and help you correct your posture to reduce back pain. \nThe app worked by connecting to an Ardino, which sent data via Bluetooth to the iOS device. Using this data, we could advise the user on how they should change their posture in order to reduce the risk of back pain. \nSince this was only a Hackathon project, we only created a rough v1, as you can see in the images, however if continued, Correct-a-Spine would incorporate machine learning in order to learn about its user and give them the best possible advice. We'd achieve this by working alongside medical professionals.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/ricardomokhtari/HealthHack2019"
-			},
-			{
-				"name": "devpost",
-				"url": "https://devpost.com/software/correct-a-spine"
-			}
-		],
-		"pictures": [
-			"cas-1.jpg",
-			"cas-2.jpg",
-			"cas-3.jpg",
-			"cas-4.jpg",
-			"cas-5.png"
-		]
-	}, 
-	{	"name": "WACC",
-		"hidden": true,
-		"type": "Uni Project",
-		"tech" : ["Kotlin", "ANTLR"],
-		"url": "wacc",
-		"dates": "January 2019 - March 2019",
-		"short_desc": "A compiler created for our own programming language",
-		"long_desc": "This is our second year compilers project, where we are creating a compiler for a programming language. We wrote the compiler in Kotlin.\nUnfortunately, the code for this project cannot be shared, as the task will be reused in future years."
-	},
-	{	"name": "Pintos",
-		
-		"hidden": true,
-		"type": "Uni Project",
-		"tech" : ["C"],
-		"url": "pintos",
-		"dates": "October 2018 - December 2018",
-		"short_desc": "An Operating System we helped complete",
-		"long_desc": "This was our 2nd year operating systems project, where the task was to implement different parts of an operating system, including scheduling, user programs and virtual memory. This project was written entirely in C.\nUnfortunately, the code for this project cannot be shared, as the task will be reused in future years."
-	},
-	{	"name": "ARM11 Emulator and Assembler",
-		"hidden": true,
-		"type": "Uni Project",
-		"tech" : ["C"],
-		"url": "arm11",
-		"dates": "May 2018 - June 2018",
-		"short_desc": "An ARM11 Emulator and Assembler",
-		"long_desc": "This project was completed in the final term of my first year undergraduate studies. It entailed creating an ARM11 Emulator and Assembler in C, then using these in combination with a Raspberry Pi to control an LED.\nUnfortunately the code for the emulator and assembler cannot be shared here as the task will be reused in future years."
-	},
-	{	"name": "PyPlay",
-		"hidden": true,
-		"type": "Hackathon",
-		"tech" : ["Python", "Heroku", "HTML5"],
-		"url": "pyplay",
-		"dates": "February 2020",
-		"short_desc": "An app to teach young coders the basics of Python",
-		"long_desc": "Creativity, Curiosity, Coding! Those are our three C's, our core values here at PyPlay. We wanted to create an application to teach young coders the basics of Python. We want to provide an easy-to-use interface, where kids can write code, and visually see their code come to life. Unlike other platforms, where you drag-and-drop blocks, with PyPlay, you're actually writing real Python code! We created this for IC Hack 2020.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/jackmorrison12/pyplay"
-			},
-			{
-				"name": "devpost",
-				"url": "https://devpost.com/software/pyplay"
-			},
-			{
-				"name": "fas fa-link",
-				"url": "http://code.pyplay.co.uk/"
-			}
-		],
-		"pictures": [
-			"pyplay-1.jpg"
-		]
-	},
-	{	"name": "Automatic Monzo Receipts from Gmail",
-		"hidden": true,
-		"type": "Hackathon",
-		"tech" : ["Python", "Flask", "SQLite"],
-		"url": "monzo-receipts",
-		"dates": "January 2019",
-		"short_desc": "Integrating Gmail receipts into the Monzo app",
-		"long_desc": "This app was created as part of Cambridge Hack 4D. \nIt displays recent transactions to the user, and if the user clicks the \"Add Receipt\" button, then it will use the Gmail API to scan their emails, find the correct one, and gather the receipt data, adding this to the Monzo application. \nIt is also possible to have pictures of receipts if they are physical and not in the emails, and then the same algorithm is run on the text data gathered from the receipt using Microsoft Azrure OCR to get the equivalent information and add it to the transaction in the Monzo app.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/et-tamen-compilat/monzo-receipts"
-			},
-			{
-				"name": "devpost",
-				"url": "https://devpost.com/software/monzo-receipts"
-			}
-		],
-		"pictures": [
-			"monzo-receipts.png"
-		]
-	},
-	{	"name": "MentorMe",
-		"hidden": true,
-		"type": "External Project",
-		"tech" : [ "React", "Node", "MongoDB"],
-		"url": "mentor-me",
-		"dates": "September 2018 - November 2018",
-		"short_desc": "An app to 'Bring Communities Together'",
-		"long_desc": "We created a project as part of the Facebook Hack-a-Project with the aim of \"Bringing Communities Together\". Our application is a mentoring application which allows people with valuable skills and experiences to trade that knowledge for knowledge from others. It was built using the MERN stack (MongoDB, Express, React and Node.js).",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/HashimR/mentorme"
-			}
-		]
-	},
-	{	"name": "To What Extent are Computer-Assisted Proofs Valid?",
-		"hidden": true,
-		"type": "School Project",
-		"tech" : ["Extended Writing"],
-		"url": "epq",
-		"dates": "September 2016 - May 2017",
-		"short_desc": "An essay discussing the controversy over computer-assisted proofs",
-		"long_desc": "This project was completed as my Extended Project during my A Level studies, and discussed the controversy over computer-assisted proofs.\nAt the start of this project, I was unfamiliar with the area of computer-assisted proofs, and mathematical proofs in general for that matter. I decided on the topic because my mathematics teacher had discussed it in a lesson and I was curious to find out more. He mentioned that many mathematicians, to my surprise, did not agree that a theorem which had been proved using proof by exhaustion on a computer was legitimate. I did not understand their reasoning behind it not being a proof, because I presumed that if every case was proved to be true, then the proof would have to be valid. That is why I became interested in the subject, and when that chance to write a project on the topic arose, I decided I wanted to consider it further.",
-		"sources": [
-			{
-				"name": "fas fa-file-pdf",
-				"url": "/files/epq.pdf"
-			}
-		]
-	},
-	{	"name": "iMaths",
-		"hidden": true,
-		"type": "School Project",
-		"tech" : ["Swift", "XCode"],
-		"url": "imaths",
-		"dates": "June 2016 - March 2017",
-		"short_desc": "An app to teach students GCSE Maths",
-		"long_desc": "This project was mainly undertaken during the second year of my A Level Computing studies, with the task to create a mobile application.\nI decided to create an app which could generate random GCSE-level mathematics questions for students so that they could test their knowledge. It could also check to see if their answers were correct, and had other features such as a leaderboard with friends, and streaks to encourage daily use. I made the application for iOS devices, and so had a lot of experience with the Swift programming language and XCode. This project was a fun way of teaching myself a new programming language from scratch, as I was never taught it in a formal environment. This meant I became used to using manuals for the language to look up syntax and specific features of the language, which was a great learning experience.",
-		"sources": [
-			{
-				"name": "fab fa-github",
-				"url": "https://github.com/jackmorrison12/ALevelCoursework"
-			}
-		]
-	}
+  {
+    "name": "Canvas",
+    "hidden": false,
+    "type": "Uni Project",
+    "tech": ["Swift", "XCode", "CRDTs"],
+    "banner": "tbd",
+    "url": "canvas",
+    "dates": "October 2019 - January 2020",
+    "short_desc": "A CRDT-powered collaborative drawing app",
+    "long_desc": "Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly. \n We have created a resilient collaborative drawing app for iPadOS, using Conflict-free Replicated Data Types (CRDTs), that aims to prevent failures as listed previously from becoming an issue.\nOur app, which is optimised for iPads, is called Canvas. Canvas allows users to connect and draw at the same time. Changes are propagated in real time, so if a user becomes temporarily disconnected, on reconnection, the changes that they made during this period will sync up. Canvas offers features such as shape recognition and bluetooth network optimisation.\nCRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, so does not rely on one of the nodes to always be connected. CRDTs are currently an open research area, so this project started as a proof of concept to show that they could be used in this context. \nSince this was an iPadOS app, we created it in XCode, using Swift 5.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/mnckapilan/crdt-canvas"
+      }
+    ]
+  },
+  {
+    "name": "Burst My Bubble",
+    "hidden": false,
+    "type": "Uni Project",
+    "tech": ["React", "Java", "MongoDB"],
+    "url": "burst-my-bubble",
+    "dates": "May 2019 - June 2019",
+    "short_desc": "An app to tackle the problem of confirmation bias in the current consumption of the news",
+    "long_desc": " The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together. Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online. One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments. Our own 'confirmation bias' means we're more likely to reading something that challenges our beliefs and content delivery algorithms on the internet have a vested interest in showing us what we like. It's becoming increasingly easy to live in a bubble (see what we did there?).\nThe goal of 'Burst My Bubble' was to create a news feed with a difference; to encourage variety so people had a more broad consumption of the news. We use RSS feeds to aggregate articles from a wide variety of news feeds, and along with the user's reading history, we curate a diverse and confronting personalised news feed. Users can share their thoughts on articles, but instead of the traditional comments and replies format, can instead only write one opinion, which they're free to edit as their point of view matures.\nBurst My Bubble was awarded second best project for the year.\nWe wrote the frontend of the application using React, and used Python and Java for the backend. We also used a MongoDB database.",
+    "sources": [
+      {
+        "name": "fab fa-gitlab",
+        "url": "https://gitlab.doc.ic.ac.uk/BurstMyBubble"
+      }
+    ],
+    "pictures": ["bmb-1.png", "bmb-2.png", "bmb-3.png", "bmb-4.png"]
+  },
+  {
+    "name": "Snake Arcade Machine",
+    "hidden": false,
+    "type": "Uni Project",
+    "tech": ["C"],
+    "url": "snake",
+    "dates": "May 2018 - June 2018",
+    "short_desc": "A recreation of the classic game of Snake on a 32x32 LED matrix",
+    "long_desc": "AS part of our first year C project, we recreated the classic game of snake, on a 32x32 LED matrix. The project definition was pretty open-ended, allowing us to create anything, as long as it was written in C, and since we were all fond of old-fashioned games, we thought this would be a fun idea. However, it also gave us some new challenges we didn't expect, and really improved our knowledge of C.\n We created the machine by connecting the matrix to a Raspberry Pi, using a hat, and then built the box out of cardboard (and a lot of tape!).\n The game has 4 modes, one of which was an Artificial Intelligence, that was pretty good by the end of it. We also created all of our own sounds using GarageBand! You can see some live demos linked on this page.\nThis project won the prize for the best group project extension, judged by the creators of the Raspberry Pi themselves.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/et-tamen-compilat/snake"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Startup",
+        "id": "j-aXoEqF7yU"
+      },
+      {
+        "title": "Classic Mode",
+        "id": "072oDonJBBU"
+      },
+      {
+        "title": "Crazy Mode",
+        "id": "l9AlzzPRaXk"
+      },
+      {
+        "title": "Maze Mode",
+        "id": "DRKbVj0Y6U0"
+      },
+      {
+        "title": "AI Timelapse",
+        "id": "h3LU4xwfbko"
+      }
+    ]
+  },
+  {
+    "name": "Deep Learning in Medical Imaging Analysis",
+    "hidden": false,
+    "type": "Uni Project",
+    "tech": ["HTML", "CSS", "Pandoc"],
+    "url": "topics",
+    "dates": "January 2018 - March 2018",
+    "short_desc": "A website discussing the uses of AI in Medical Imaging Analysis",
+    "long_desc": "This project was undertaken as my first year group project, and involved creating a website discussing the uses of AI in Medical Imaging Analysis, aimed at a non-specilist.\nOur main areas of research were to look into the history and evolution of medical imaging and machine learning as separate topics, and then find areas in which they overlapped. We looked at Convolutional Neural Networks, along with Semantic Segmentation, as these are the most commmonplace in medical imaging. We then looked at overlapping topics, these being the uses of AI in radiology, and a deeper case study into the user for detection of lung cancer.\n Getting to know all of this information about AI was great, but we also had to present it in the form of a website. We had to create the site from scratch (without using a framework, such as Wordpress). We wrote the in Markdown, and used a Bash script (which invoked Pandoc) compiled it to HTML. Since we didn't use a web framework to write the CSS, it increased the challenge, but also meant that after the project, we had a more thorough understanding of CSS. Mobile optimisation was one particular challenge we found difficult. \n We won the prize for the best project in our category of AI in Medical Imaging, and second best project overall.",
+
+    "sources": [
+      {
+        "name": "fas fa-link",
+        "url": "https://www.doc.ic.ac.uk/~jce317/"
+      },
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/et-tamen-compilat/medical-image-computing"
+      }
+    ]
+  },
+  {
+    "name": "Music Technology",
+    "hidden": true,
+    "type": "Uni Project",
+    "tech": ["Cubase", "Logic"],
+    "url": "musictech",
+    "dates": "October 2019 - May 2020",
+    "short_desc": "An introduction into the production of music",
+    "long_desc": "I really enjoy listening to music, and so I thought that I'd enjoy taking a course in music technology, where I could learn how to produce my own music. I took this as one of my courses in my third year of uni. \n We covered many topics, starting off with the basics of how to use a Digital Audio Workstation, such as creating sounds using software instruments and MIDI keyboards. We then moved on to learn things like mixing and using inserts and sends. \n We used Cubase in class, however due to coronavirus, I had to teach myself how to use Logic Pro X in order to be able to create and submit my work. \n For the course assessment, we had to create two compositions. You can find both of mine on this page, as well as some other things I created along the way!",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/jackmorrison12/musictech"
+      }
+    ],
+    "music": [
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Symphony_v6.mp3",
+        "name": "Symphony Instrumental (Clean Bandit ft. Zara Larsson Remix)"
+      },
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Bojo_v8.mp3",
+        "name": "Coronavirus Informational Trap Remix"
+      },
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Trumpet%20song.mp3",
+        "name": "Trumpet Song"
+      },
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Meme%20Song.mp3",
+        "name": "Into the Circus"
+      },
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Nonstop.mp3",
+        "name": "Nonstop (Drake Cover)"
+      },
+      {
+        "filename": "https://raw.githubusercontent.com/jackmorrison12/musictech/master/mp3s/Symphony_v3.mp3",
+        "name": "Symphony (Clean Bandit ft. Zara Larsson Remix)"
+      }
+    ]
+  },
+  {
+    "name": "Python Teaching Project",
+    "hidden": true,
+    "type": "Uni Project",
+    "tech": ["Python", "Teaching"],
+    "url": "python",
+    "dates": "January 2020 - March 2020",
+    "short_desc": "A crash course in Python designed for Year 10 students",
+    "long_desc": "I taught a course on the basics of Python Programming to some Year 10 students at The Coopers' Company and Coborn School in Upminster. This was as part of my module 'Communication Computer Science in Schools'.\n They already had a basic knowledge of Python, so I expanded upon this by teaching them topics such as 2D Arrays, For and While Loops, Functions and Built-in Methods. \n You can see a detailed report of my experience at the school linked above, along with the presentation I gave about my time there. As you'll see, I enjoyed my experience very much, and I learned a lot about how to communicate effectively, and convey technical knowledge to people. \n I created lots of teaching resources for my course, including a system to allow students to compete at coding challenges, which was a combination of HackerRank and Kahoot. More detail on this, along with a technical implementation, can be found in the report above. All of my slides, worksheets and other teaching resources can also be found on this page, if you're wanting to learn Python yourself! Please feel free to use them if you would like, and let me know how you find them - I'd love to hear if they come in useful!",
+    "sources": [
+      {
+        "name": "fas fa-file-alt",
+        "url": "/files/ccsis_report.pdf"
+      },
+      {
+        "name": "fas fa-file-powerpoint",
+        "url": "https://docs.google.com/presentation/d/1zXWeOgT8CM1S1xCVTR7GiagKBdyYYHyicyfPka6YC0o/edit?usp=sharing"
+      }
+    ],
+    "python": [
+      {
+        "name": "Arrays",
+        "teacher_slides": "https://drive.google.com/open?id=1wAICQLQgKJDobOBg5VQp_zmmnPen3G4iG5nu8kqdPDM",
+        "student_slides": "https://drive.google.com/open?id=1wAICQLQgKJDobOBg5VQp_zmmnPen3G4iG5nu8kqdPDM",
+        "worksheet": "https://drive.google.com/open?id=1RIzQOVTxlaaYSMx3hX3YaW2ii8lxLdEHRlMPUsx7EDY",
+        "answers": "https://drive.google.com/open?id=1DJKULCtjQvyJV_ZBwkhIZLVd_ietQL_Xw2bzePYVeq8",
+        "kahoot": "https://create.kahoot.it/share/arrays/c1d3d51b-fcdc-477d-b461-e0d92abfd2cf",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet1"
+      },
+      {
+        "name": "For Loops vs. While Loops",
+        "teacher_slides": "https://drive.google.com/open?id=1-tZ_STalggj4xmw3JCNfU-c0DH3noFgk-Jqe9Jo0ZVE",
+        "student_slides": "https://drive.google.com/open?id=19btFi3Ws_dW9Jvo_mMcK88ax_hmCyCFb7IYYdUzFQTQ",
+        "worksheet": "https://drive.google.com/open?id=1Dv0ZS4xKo8E7FenGmfXQkM3t6ByL9UyUfsHVG5hlNrw",
+        "answers": "https://drive.google.com/open?id=1VpOs3gYA-RePBWrBxGqcOGabSvWrizT9-MHtUC9ntyw",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet2"
+      },
+      {
+        "name": "Encryption",
+        "teacher_slides": "https://drive.google.com/open?id=1kA-EadiqELULi2SbUgUNUp2tybyvnIVOrj0VrmV1zBo",
+        "student_slides": "https://drive.google.com/open?id=1wQFnfciXf6FtUq7aB0xJQzTy019L6FlsiD8ePDSxKYg",
+        "worksheet": "https://drive.google.com/open?id=19mpxMxMLemz10qNY_dVvlI-WO21oINHN5tlBvT-9qLU",
+        "answers": "https://docs.google.com/document/d/1OIrJy_TReGCYz1rvDJvfGTKbkkmJWjotvzmCSq1NqS8/edit?usp=sharing",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet3"
+      },
+      {
+        "name": "Functions",
+        "teacher_slides": "https://docs.google.com/presentation/d/1edOf1TxEebL1I_67jf5LmOS8LOAw3HSjAPGmbeQwDno/edit?usp=sharing",
+        "student_slides": "https://docs.google.com/presentation/d/1edOf1TxEebL1I_67jf5LmOS8LOAw3HSjAPGmbeQwDno/edit?usp=sharing",
+        "notebook": "https://colab.research.google.com/drive/1ItGkTD73Qq3_3B7w0Xgh8R3_yebrgvrC",
+        "worksheet": "https://docs.google.com/document/d/1RZ-iN0jMcjl8v1sDmrOvCqiF8a-iLDHnr7r4J8Pshz0/edit?usp=sharing",
+        "answers": "https://colab.research.google.com/drive/14S7RYR5mkXp0FnwR0dMcMbSA8ujSfOqy",
+        "leaderboard": "https://vast-depths-77634.herokuapp.com/",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet4"
+      },
+      {
+        "name": "Further Functions",
+        "teacher_slides": "https://docs.google.com/presentation/d/1CTdWDJ7JeQR6tYDsZjlO9eaTMwamrPz-EqJ8iVWReu4/edit?usp=sharing",
+        "student_slides": "https://docs.google.com/presentation/d/1CTdWDJ7JeQR6tYDsZjlO9eaTMwamrPz-EqJ8iVWReu4/edit?usp=sharing",
+        "notebook": "https://colab.research.google.com/drive/1KIDB0_jgUiX8IaeZJXvxr_UhvOpzn0pN",
+        "worksheet": "https://docs.google.com/document/d/107M6veI3oqabC6_K-PfhIOu2jNh2L5AV-WAszYzNvS0/edit?usp=sharing",
+        "answers": "https://colab.research.google.com/drive/1QxLkNb_XF1qxBY-IOmOZCoOmj2QP6yln",
+        "leaderboard": "https://vast-depths-77634.herokuapp.com/",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet5",
+        "kahoot": "https://create.kahoot.it/details/functions/691478ff-8e60-4255-99b4-0aeb1e67e58d"
+      },
+      {
+        "name": "Methods",
+        "teacher_slides": "https://docs.google.com/presentation/d/1T_UcJSjM6U-HoXkHj9Y8eFjn3TJnx_Y6ZPKaXBKbbGI/edit?usp=sharing",
+        "student_slides": "https://docs.google.com/presentation/d/1T_UcJSjM6U-HoXkHj9Y8eFjn3TJnx_Y6ZPKaXBKbbGI/edit?usp=sharing",
+        "notebook": "https://colab.research.google.com/drive/1a9A2TbbjbRN_IkXya6H-uZmczz5G7kAR",
+        "worksheet": "https://docs.google.com/document/d/1WU2V3AxwN1WNibP8hjVyfbUpndBOJ3FK_P6QirjGyP0/edit?usp=sharing",
+        "answers": "https://colab.research.google.com/drive/1Al2l40Ltvo6I-Ww7lhfEgJOGxTWyBZKV",
+        "leaderboard": "https://vast-depths-77634.herokuapp.com/",
+        "github": "https://github.com/jackmorrison12/python-tutorial/tree/master/worksheet6",
+        "kahoot": "https://create.kahoot.it/details/methods/5831e8e5-9bac-4803-a8a1-9bee7cf8ab48"
+      }
+    ]
+  },
+  {
+    "name": "Correct-a-Spine",
+    "hidden": true,
+    "type": "Hackathon",
+    "tech": ["C", "Swift", "Arduino"],
+    "url": "correct-a-spine",
+    "dates": "March 2019",
+    "short_desc": "A device to prevent back pain",
+    "long_desc": "Correct-a-Spine was a hackathon entry for Imperial College Health Hack 19. \nProblems with posture arise because of upper and lower back problems, but the current technologies only focus on monitoring one of these. This means that parients with chronic back pain are not getting the information they need to improve their posture and reduce their pain. Therefore, we decided to use an accelerometer and flex sensor to measure both upper and lower back position, in order to prevent both kinds of back pain with a single device. \n This resulted in Correct-a-Spine, an iOS app which can monitor and help you correct your posture to reduce back pain. \nThe app worked by connecting to an Ardino, which sent data via Bluetooth to the iOS device. Using this data, we could advise the user on how they should change their posture in order to reduce the risk of back pain. \nSince this was only a Hackathon project, we only created a rough v1, as you can see in the images, however if continued, Correct-a-Spine would incorporate machine learning in order to learn about its user and give them the best possible advice. We'd achieve this by working alongside medical professionals.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/ricardomokhtari/HealthHack2019"
+      },
+      {
+        "name": "devpost",
+        "url": "https://devpost.com/software/correct-a-spine"
+      }
+    ],
+    "pictures": [
+      "cas-1.jpg",
+      "cas-2.jpg",
+      "cas-3.jpg",
+      "cas-4.jpg",
+      "cas-5.png"
+    ]
+  },
+  {
+    "name": "WACC",
+    "hidden": true,
+    "type": "Uni Project",
+    "tech": ["Kotlin", "ANTLR"],
+    "url": "wacc",
+    "dates": "January 2019 - March 2019",
+    "short_desc": "A compiler created for our own programming language",
+    "long_desc": "This is our second year compilers project, where we are creating a compiler for a programming language. We wrote the compiler in Kotlin.\nUnfortunately, the code for this project cannot be shared, as the task will be reused in future years."
+  },
+  {
+    "name": "Pintos",
+
+    "hidden": true,
+    "type": "Uni Project",
+    "tech": ["C"],
+    "url": "pintos",
+    "dates": "October 2018 - December 2018",
+    "short_desc": "An Operating System we helped complete",
+    "long_desc": "This was our 2nd year operating systems project, where the task was to implement different parts of an operating system, including scheduling, user programs and virtual memory. This project was written entirely in C.\nUnfortunately, the code for this project cannot be shared, as the task will be reused in future years."
+  },
+  {
+    "name": "ARM11 Emulator and Assembler",
+    "hidden": true,
+    "type": "Uni Project",
+    "tech": ["C"],
+    "url": "arm11",
+    "dates": "May 2018 - June 2018",
+    "short_desc": "An ARM11 Emulator and Assembler",
+    "long_desc": "This project was completed in the final term of my first year undergraduate studies. It entailed creating an ARM11 Emulator and Assembler in C, then using these in combination with a Raspberry Pi to control an LED.\nUnfortunately the code for the emulator and assembler cannot be shared here as the task will be reused in future years."
+  },
+  {
+    "name": "PyPlay",
+    "hidden": true,
+    "type": "Hackathon",
+    "tech": ["Python", "Heroku", "HTML5"],
+    "url": "pyplay",
+    "dates": "February 2020",
+    "short_desc": "An app to teach young coders the basics of Python",
+    "long_desc": "Creativity, Curiosity, Coding! Those are our three C's, our core values here at PyPlay. We wanted to create an application to teach young coders the basics of Python. We want to provide an easy-to-use interface, where kids can write code, and visually see their code come to life. Unlike other platforms, where you drag-and-drop blocks, with PyPlay, you're actually writing real Python code! We created this for IC Hack 2020.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/jackmorrison12/pyplay"
+      },
+      {
+        "name": "devpost",
+        "url": "https://devpost.com/software/pyplay"
+      },
+      {
+        "name": "fas fa-link",
+        "url": "http://code.pyplay.co.uk/"
+      }
+    ],
+    "pictures": ["pyplay-1.jpg"]
+  },
+  {
+    "name": "Automatic Monzo Receipts from Gmail",
+    "hidden": true,
+    "type": "Hackathon",
+    "tech": ["Python", "Flask", "SQLite"],
+    "url": "monzo-receipts",
+    "dates": "January 2019",
+    "short_desc": "Integrating Gmail receipts into the Monzo app",
+    "long_desc": "This app was created as part of Cambridge Hack 4D. \nIt displays recent transactions to the user, and if the user clicks the \"Add Receipt\" button, then it will use the Gmail API to scan their emails, find the correct one, and gather the receipt data, adding this to the Monzo application. \nIt is also possible to have pictures of receipts if they are physical and not in the emails, and then the same algorithm is run on the text data gathered from the receipt using Microsoft Azrure OCR to get the equivalent information and add it to the transaction in the Monzo app.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/et-tamen-compilat/monzo-receipts"
+      },
+      {
+        "name": "devpost",
+        "url": "https://devpost.com/software/monzo-receipts"
+      }
+    ],
+    "pictures": ["monzo-receipts.png"]
+  },
+  {
+    "name": "MentorMe",
+    "hidden": true,
+    "type": "External Project",
+    "tech": ["React", "Node", "MongoDB"],
+    "url": "mentor-me",
+    "dates": "September 2018 - November 2018",
+    "short_desc": "An app to 'Bring Communities Together'",
+    "long_desc": "We created a project as part of the Facebook Hack-a-Project with the aim of \"Bringing Communities Together\". Our application is a mentoring application which allows people with valuable skills and experiences to trade that knowledge for knowledge from others. It was built using the MERN stack (MongoDB, Express, React and Node.js).",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/HashimR/mentorme"
+      }
+    ]
+  },
+  {
+    "name": "To What Extent are Computer-Assisted Proofs Valid?",
+    "hidden": true,
+    "type": "School Project",
+    "tech": ["Extended Writing"],
+    "url": "epq",
+    "dates": "September 2016 - May 2017",
+    "short_desc": "An essay discussing the controversy over computer-assisted proofs",
+    "long_desc": "This project was completed as my Extended Project during my A Level studies, and discussed the controversy over computer-assisted proofs.\nAt the start of this project, I was unfamiliar with the area of computer-assisted proofs, and mathematical proofs in general for that matter. I decided on the topic because my mathematics teacher had discussed it in a lesson and I was curious to find out more. He mentioned that many mathematicians, to my surprise, did not agree that a theorem which had been proved using proof by exhaustion on a computer was legitimate. I did not understand their reasoning behind it not being a proof, because I presumed that if every case was proved to be true, then the proof would have to be valid. That is why I became interested in the subject, and when that chance to write a project on the topic arose, I decided I wanted to consider it further.",
+    "sources": [
+      {
+        "name": "fas fa-file-pdf",
+        "url": "/files/epq.pdf"
+      }
+    ]
+  },
+  {
+    "name": "iMaths",
+    "hidden": true,
+    "type": "School Project",
+    "tech": ["Swift", "XCode"],
+    "url": "imaths",
+    "dates": "June 2016 - March 2017",
+    "short_desc": "An app to teach students GCSE Maths",
+    "long_desc": "This project was mainly undertaken during the second year of my A Level Computing studies, with the task to create a mobile application.\nI decided to create an app which could generate random GCSE-level mathematics questions for students so that they could test their knowledge. It could also check to see if their answers were correct, and had other features such as a leaderboard with friends, and streaks to encourage daily use. I made the application for iOS devices, and so had a lot of experience with the Swift programming language and XCode. This project was a fun way of teaching myself a new programming language from scratch, as I was never taught it in a formal environment. This meant I became used to using manuals for the language to look up syntax and specific features of the language, which was a great learning experience.",
+    "sources": [
+      {
+        "name": "fab fa-github",
+        "url": "https://github.com/jackmorrison12/ALevelCoursework"
+      }
+    ]
+  }
 ]

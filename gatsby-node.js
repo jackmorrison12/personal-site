@@ -2,16 +2,14 @@
  * This file is based on code from https://developer.okta.com/blog/2020/02/18/gatsby-react-netlify
  */
 
+const path = require(`path`)
 
-const path = require(`path`);
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
 
-exports.createPages = async ({actions, graphql, reporter}) => {
-  const {createPage} = actions;
-
-  const blogPostTemplate = path.resolve(`src/templates/blog.js`);
-  const articleTemplate = path.resolve(`src/templates/article.js`);
-  const projectTemplate = path.resolve(`src/templates/project.js`);
-
+  const blogPostTemplate = path.resolve(`src/templates/blog.js`)
+  const articleTemplate = path.resolve(`src/templates/article.js`)
+  const projectTemplate = path.resolve(`src/templates/project.js`)
 
   const result = await graphql(`
     {
@@ -28,19 +26,23 @@ exports.createPages = async ({actions, graphql, reporter}) => {
         }
       }
     }
-  `);
+  `)
 
   // Handle errors
   if (result.errors) {
-    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({node}) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.slug,
-      component: (node.frontmatter.slug.includes("/blog/") ? blogPostTemplate : (node.frontmatter.slug.includes("/articles/") ? articleTemplate : projectTemplate)),
+      component: node.frontmatter.slug.includes("/blog/")
+        ? blogPostTemplate
+        : node.frontmatter.slug.includes("/articles/")
+        ? articleTemplate
+        : projectTemplate,
       context: {}, // additional data can be passed via context
     })
   })
-};
+}

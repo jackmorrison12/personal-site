@@ -1,25 +1,26 @@
 [
-	{
-		"name": "🏠 Home",
-		"link": "/"
-	},{
-		"name": "👨‍💻 Me",
-		"link": "/me"
-	},
-	{
-		"name": "📚 Articles",
-		"link": "/articles"
-	},
-	{
-		"name": "📝 Blog",
-		"link": "/blog"
-	},
-	{
-		"name": "🖥 Projects",
-		"link": "/projects"
-	},
-	{
-		"name": "📈 Stats",
-		"link": "/stats"
-	}
+  {
+    "name": "🏠 Home",
+    "link": "/"
+  },
+  {
+    "name": "👨‍💻 Me",
+    "link": "/me"
+  },
+  {
+    "name": "📄 CV",
+    "link": "/cv"
+  },
+  {
+    "name": "🖥 Projects",
+    "link": "/projects"
+  },
+  {
+    "name": "📚 Articles",
+    "link": "/writing"
+  },
+  {
+    "name": "🎉 Fun Stuff",
+    "link": "/data"
+  }
 ]

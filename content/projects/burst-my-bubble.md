@@ -23,6 +23,7 @@ highlights:
   - highlight: Created a webapp using React, Python, Java, MongoDB andMicrosoft Azure
   - highlight: Tackled the problem of confirmation bias in the current consumption of the news
 ---
+
 The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together. Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online. One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments. Our own 'confirmation bias' means we're more likely to reading something that challenges our beliefs and content delivery algorithms on the internet have a vested interest in showing us what we like. It's becoming increasingly easy to live in a bubble (see what we did there?).
 
 The goal of 'Burst My Bubble' was to create a news feed with a difference; to encourage variety so people had a more broad consumption of the news. We use RSS feeds to aggregate articles from a wide variety of news feeds, and along with the user's reading history, we curate a diverse and confronting personalised news feed.

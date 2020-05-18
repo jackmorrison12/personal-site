@@ -1,27 +1,25 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap);
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap");
 
 //files;
-@import './layout';
-@import './colours';
-@import './margin_padding';
-@import './opacity';
-@import './utilities';
-@import './hero';
-@import './buttons';
-@import './blog';
-@import './me';
-@import './timeline';
-@import './me-table';
-@import './projects';
-@import './cv';
-
+@import "./layout";
+@import "./colours";
+@import "./margin_padding";
+@import "./opacity";
+@import "./utilities";
+@import "./hero";
+@import "./buttons";
+@import "./blog";
+@import "./me";
+@import "./timeline";
+@import "./me-table";
+@import "./projects";
+@import "./cv";
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
     font-size: $i * 1.4em;
   }
 }
-
 
 html {
   max-width: 100vw;
@@ -57,12 +55,10 @@ tr {
   font-size: 0.8em;
 }
 
-
 li {
   font-family: Poppins;
   font-weight: normal;
 }
-
 
 h1 {
   display: block;
@@ -140,7 +136,7 @@ footer {
   text-align: center;
 }
 
-a{
+a {
   text-decoration: none;
 }
 

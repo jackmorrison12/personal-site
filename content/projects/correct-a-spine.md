@@ -21,6 +21,7 @@ sources:
     url: https://github.com/ricardomokhtari/HealthHack2019
     icon: fab fa-github
 ---
+
 Correct-a-Spine was a hackathon entry for Imperial College Health Hack 19.
 
 Problems with posture arise because of upper and lower back problems, but the current technologies only focus on monitoring one of these. This means that patients with chronic back pain are not getting the information they need to improve their posture and reduce their pain. Therefore, we decided to use an accelerometer and flex sensor to measure both upper and lower back position, in order to prevent both kinds of back pain with a single device.

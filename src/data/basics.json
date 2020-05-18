@@ -1,12 +1,12 @@
 {
-    "name": "Jack Morrison",
-    "first-name" : "Jack",
-    "label": "Software Engineer",
-    "email": "jack.morrison17@imperial.ac.uk",
-    "phone": "+447775101516",
-    "website": "https://jackmorrison.xyz",
-    "website_short": "jackmorrison.xyz",
-    "title": "Computing Student",
-    "company-short": "Imperial",
-    "company" : "Imperial College London"
+  "name": "Jack Morrison",
+  "first-name": "Jack",
+  "label": "Software Engineer",
+  "email": "jack.morrison17@imperial.ac.uk",
+  "phone": "+447775101516",
+  "website": "https://jackmorrison.xyz",
+  "website_short": "jackmorrison.xyz",
+  "title": "Computing Student",
+  "company-short": "Imperial",
+  "company": "Imperial College London"
 }

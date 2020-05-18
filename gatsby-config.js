@@ -27,10 +27,10 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/static/img`,
-          name: 'img',
-        },
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "img",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -62,8 +62,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
-              backgroundColor: 'transparent', // required to display blurred image first
-              linkImagesToOriginal: false
+              backgroundColor: "transparent", // required to display blurred image first
+              linkImagesToOriginal: false,
             },
           },
         ],
@@ -74,11 +74,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `jack-morrison-personal-site`,
+        short_name: `Jack's Site`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `black`,
+        theme_color: `white`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },

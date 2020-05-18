@@ -10,15 +10,16 @@ topics:
   - Netlify
   - IFTTT
 ---
+
 When I was making my Gatsby site, I had to keep logging into the Netlify interface to see if my site was deploying, and if there were any bugs. I wanted to find a way to remove this minor inconvenience from my life. It also meant that if I have scripts which automatically build my site, I can see if the build ever fails.
 
 I initially thought this could be a good use for a slackbot, but this requires the premium tier of Netlify. However, when looking, I saw you could set up an outgoing webhook whenever a deploy is started, finishes, or fails. I also remembered there is an [IFTTT service for webhooks](https://ifttt.com/maker_webhooks), and so I got to work.
 
-First, I had to create the url to send the POST request to on IFTTT. This is simple. Just log into IFTTT (I did it on the web) and find the webhooks service. Go to settings, and then to the webhook maker URL. Here you can make a trigger. I made one called `site_build_succeeded`. 
+First, I had to create the url to send the POST request to on IFTTT. This is simple. Just log into IFTTT (I did it on the web) and find the webhooks service. Go to settings, and then to the webhook maker URL. Here you can make a trigger. I made one called `site_build_succeeded`.
 
 ![Create URL to send POST request to](/img/notifications-1.jpg "Create URL to send POST request to")<p class="caption">Create URL to send POST request to</p>
 
-Then I set up an IFTTT which when received a webhook with this trigger, sends me a rich iOS notification saying the time the site was built, and links to the site. 
+Then I set up an IFTTT which when received a webhook with this trigger, sends me a rich iOS notification saying the time the site was built, and links to the site.
 
 ![Set up IFTTT Webhook](/img/notifications-2.jpg "Set up IFTTT Webhook")<p class="caption">Set up IFTTT Webhook</p>
 
@@ -26,6 +27,6 @@ The last thing to do was to actually call this endpoint. To do this, I logged in
 
 ![Call the endpoint from Netlify](/img/notifications-3.jpg "Call the endpoint from Netlify")<p class="caption">Call the endpoint from Netlify</p>
 
-There you have it! Whenever my site builds, I'm the first to know. I also set one up for build failures, with a link to the Netlify 'Deploys' page, so I can quickly see why it failed. 
+There you have it! Whenever my site builds, I'm the first to know. I also set one up for build failures, with a link to the Netlify 'Deploys' page, so I can quickly see why it failed.
 
 ![Site Build Succeeded Notification](/img/notifications-4.png "Site Build Succeeded Notification")<p class="caption">Site Build Succeeded Notification</p>

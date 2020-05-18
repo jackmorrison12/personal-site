@@ -10,11 +10,12 @@ topics:
   - Netlify
   - SASS
 ---
+
 Now I've decided what tech I want to use, but where do I start? Starting off a project always seems daunting, especially when you've never used the technologies before, but I find that a good tutorial can get you up to grips and feeling confident quickly.
 
 ## The Initial Setup
 
-The first thing I did was find a [good tutorial on how to use Gatsby](https://www.gatsbyjs.org/tutorial/), and read through it. I didn’t actually code it out, since it was well written and easy to follow. However, once I’d done this, I did go back and do the initial Gatsby setup. I then followed [this tutorial](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) to connect it to Netlify, and got my basic ‘Hello World’ page deploying. 
+The first thing I did was find a [good tutorial on how to use Gatsby](https://www.gatsbyjs.org/tutorial/), and read through it. I didn’t actually code it out, since it was well written and easy to follow. However, once I’d done this, I did go back and do the initial Gatsby setup. I then followed [this tutorial](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) to connect it to Netlify, and got my basic ‘Hello World’ page deploying.
 
 ## Styling
 

@@ -6,7 +6,7 @@ const useCvData = () => {
       basics: dataJson {
         name
       }
-      socials: allSocialsJson(filter: {cv: {eq: true}}) {
+      socials: allSocialsJson(filter: { cv: { eq: true } }) {
         nodes {
           username
           url
@@ -14,7 +14,13 @@ const useCvData = () => {
           icon
         }
       }
-      education: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___enddate]}, filter: {fileAbsolutePath: {regex: "/education/"}, frontmatter: {cv: {eq: true}}}) {
+      education: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___enddate] }
+        filter: {
+          fileAbsolutePath: { regex: "/education/" }
+          frontmatter: { cv: { eq: true } }
+        }
+      ) {
         nodes {
           frontmatter {
             title
@@ -28,7 +34,13 @@ const useCvData = () => {
           }
         }
       }
-      experience: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___enddate]}, filter: {fileAbsolutePath: {regex: "/experience/"}, frontmatter: {cv: {eq: true}}}) {
+      experience: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___enddate] }
+        filter: {
+          fileAbsolutePath: { regex: "/experience/" }
+          frontmatter: { cv: { eq: true } }
+        }
+      ) {
         nodes {
           frontmatter {
             title
@@ -42,7 +54,9 @@ const useCvData = () => {
           }
         }
       }
-      languages: allLanguagesJson(filter: {languages: {elemMatch: {cv: {eq: true}}}}) {
+      languages: allLanguagesJson(
+        filter: { languages: { elemMatch: { cv: { eq: true } } } }
+      ) {
         nodes {
           languages {
             name
@@ -50,13 +64,19 @@ const useCvData = () => {
           name
         }
       }
-      skills: allSkillsJson(filter: {cv: {eq: true}}) {
+      skills: allSkillsJson(filter: { cv: { eq: true } }) {
         nodes {
           summary
           name
         }
       }
-      projects: allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___enddate]}, filter: {fileAbsolutePath: {regex: "/projects/"}, frontmatter: {cv: {eq: true}}}) {
+      projects: allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___enddate] }
+        filter: {
+          fileAbsolutePath: { regex: "/projects/" }
+          frontmatter: { cv: { eq: true } }
+        }
+      ) {
         nodes {
           frontmatter {
             title

@@ -16,7 +16,7 @@ Current status:
 
 The site is built using **Gatsby**, and hosted using **Netlify**.
 
-## 🎨 Can I use this 
+## 🎨 Can I use this
 
 Sure! This website is completely open source. The only thing I ask is that you link to my [sources page](https://jackmorrison.netlify.app/credits) so that the sources I've used are credited, as well as myself! ☺️
 
@@ -31,7 +31,7 @@ Sure! This website is completely open source. The only thing I ask is that you l
     ```shell
     npm install -g gatsby-cli
     ```
-    
+
 1.  **Start developing**
 
     Navigate into your new site’s directory and start it up.
@@ -46,7 +46,7 @@ Sure! This website is completely open source. The only thing I ask is that you l
     Your site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
-    
+
 1.  **Hosting**
 
     Follow [this great tutorial](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/) to publish your site to Netlify!
