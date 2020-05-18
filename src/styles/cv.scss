@@ -9,7 +9,9 @@
 
 @media screen and (max-width: 210mm){
     .mobile-hide {
-      display:none;
+        position: absolute;
+        left: -2000px;
+        overflow: hidden;
     }
     .mobile-show {
         display:block;

@@ -22,8 +22,8 @@ class CVPage extends React.Component {
                 <CV />
               </div>
               <div className="mobile-show">
-                <p>Unfortunately, it looks like your screen is a little too small to display my CV <Emoji symbol="😢" label="sad" />. Maybe come back and take a look when you find a bigger screen!</p>
-                <p>You can download a PDF copy instead if you'd like <Emoji symbol="😍" label="heart-eyes" /></p>
+                <p>Unfortunately, it looks like your screen is a little too small to display my CV <Emoji symbol="😢" label="sad" />. Maybe come back and take a look if you find a bigger screen!</p>
+                <p>You can download a PDF copy instead if you'd like, but please save the trees and only print it if really necessary <Emoji symbol="🌳" label="trees" /></p>
               </div>
               <button className="btn-center is-red-bg is-black is-red-border margin-10-t" onClick={this.exportPDFWithMethod}>
                 Download CV

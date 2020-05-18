@@ -50,6 +50,13 @@
                         [
                             "https://9elements.com/blog/pure-css-diagonal-layouts/"
                         ]
+                },
+                {
+                    "name" : "React CV",
+                    "links" :
+                    [
+                        "https://www.telerik.com/kendo-react-ui/components/pdfprocessing/"
+                    ]
                 }
             ]
     },
