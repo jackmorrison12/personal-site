@@ -26,13 +26,13 @@ export default function Template({
             </Link>
           </div>
           <div className="col-xs-12 col-sm-10 pad-5-lr">
-            <h1 className="is-hero-menu margin-1-t margin-1-b">
+            <h1 className="is-title margin-1-t margin-1-b">
               {frontmatter.title}
             </h1>
-            <h6 className="is-hero-sub-text margin-3-b italic">
+            <h6 className="is-subtitle margin-3-b italic">
               {frontmatter.description}
             </h6>
-            <h6 className="is-hero-sub-text margin-3-b">
+            <h6 className="is-subtitle margin-3-b">
               {frontmatter.startdate !== frontmatter.enddate ? frontmatter.startdate + " - " + frontmatter.enddate : frontmatter.startdate}
             </h6>
             <div className="line margin-5-tb is-red" />

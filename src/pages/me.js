@@ -47,7 +47,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Me" />
         <div className="me-hero">
-              <h1 className="me-hero-title is-hero-menu margin-0-t">Hey <span role="img" aria-label="wave">👋</span> I'm Jack</h1>
+              <h1 className="me-hero-title is-title margin-0-t">Hey <span role="img" aria-label="wave">👋</span> I'm Jack</h1>
         </div>
         <div className="row">
             {data.allFile.edges.map((edge, i) => 
@@ -59,7 +59,7 @@ export default ({ data }) => {
         <div className="is-light-grey-bg">
           <div className="row container pad-10-tb pad-3-lr">
             <div className="col-xs-12 col-md-12">
-              <h1 className="is-hero-menu margin-0-t">About me (in 40 words)</h1>
+              <h1 className="is-title margin-0-t">About me (in 40 words)</h1>
               <h2> I'm a Software Engineer from London. I'm currently studying Computing at {makeLink("EDUCATION", "Imperial College London", "red")}. I've worked as a Software Engineer at {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled in {makeLink("TEACHING", "teaching", "red")}. I enjoy {makeLink("MUSIC", "making music", "medium-blue")}, {makeLink("MAP", "travelling", "red")}, and am currently learning how to {makeLink("SKYDIVING", "skydive", "medium-blue")}.</h2>
               <p>Click any of the links above to find out more!</p>
             </div>
@@ -82,7 +82,7 @@ export default ({ data }) => {
         <div className="is-dark-blue-bg-always">
           <div className="row container pad-10-tb pad-3-lr ">
             <div className="col-xs-12 col-md-12">
-              <h1 className="is-hero-menu margin-0-t text-align-center is-white-always">Want a familiar format?</h1>
+              <h1 className="is-title margin-0-t text-align-center is-white-always">Want a familiar format?</h1>
               <Link to="/cv" className="btn-center is-white-bg is-black">Read my CV</Link>
             </div>
           </div>
