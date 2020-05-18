@@ -41,18 +41,18 @@
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1em;
     @extend .margin-0-t;
   }
 
   h4 {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     @extend .margin-0;
   }
 
   p {
     font-family: "Muli", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 
   .bullet {
@@ -66,7 +66,7 @@
   }
   li {
     font-family: "Muli", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.8em;
   }
 
   svg {
@@ -74,7 +74,7 @@
   }
   a {
     font-family: "Muli", sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     font-weight: bold;
   }
 }
