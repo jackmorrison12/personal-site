@@ -36,23 +36,25 @@
     border-bottom: 2px solid;
     max-width: 100%;
     @extend .is-light-grey-always;
-    @extend .margin-3-b;
-    @extend .margin-3-t;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
 
   h3 {
-    font-size: 1em;
+    font-size: 16px;
     @extend .margin-0-t;
+    // margin-bottom: 16px;
   }
 
   h4 {
-    font-size: 0.9em;
+    font-size: 13.28px;
     @extend .margin-0;
   }
 
   p {
     font-family: "Muli", sans-serif;
-    font-size: 0.8em;
+    font-size: 12.8px;
+    margin-bottom: 12.8px;
   }
 
   .bullet {
@@ -66,7 +68,7 @@
   }
   li {
     font-family: "Muli", sans-serif;
-    font-size: 0.8em;
+    font-size: 12.8px;
   }
 
   svg {
@@ -74,7 +76,7 @@
   }
   a {
     font-family: "Muli", sans-serif;
-    font-size: 0.8em;
+    font-size: 12.8px;
     font-weight: bold;
   }
 }
