@@ -15,6 +15,7 @@ highlights:
   - highlight: Created a compiler for our own programming language, written in Kotlin
   - highlight: Worked in a group of 4 students, using DevOps technologies such as Docker
 ---
+
 This is our second year compilers project, where we are creating a compiler for a programming language. We wrote the compiler in Kotlin.
 
 Unfortunately, the code for this project cannot be shared, as the task will be reused in future years.

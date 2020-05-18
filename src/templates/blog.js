@@ -16,8 +16,8 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-        <SEO title={frontmatter.title} />
-        <div className="is-grey is-light-grey-bg">
+      <SEO title={frontmatter.title} />
+      <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t ">
           <div className="col-xs-12 pad-5-lr">
             <Link to="/blog" className="">
@@ -29,24 +29,18 @@ export default function Template({
             <h1 className="is-title margin-1-t margin-5-b">
               {frontmatter.title}
             </h1>
-            <h6 className="is-subtitle margin-3-b">
-              {frontmatter.date}
-            </h6>
+            <h6 className="is-subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="line margin-5-tb is-red" />
-            <div
-                className="blog"
-                dangerouslySetInnerHTML={{ __html: html }}
-                />
+            <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
       </div>
     </Layout>
-
   )
 }
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path} }) {
+    markdownRemark(frontmatter: { slug: { eq: $path } }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

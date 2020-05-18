@@ -27,10 +27,10 @@ module.exports = {
     },
     {
       resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/static/img`,
-          name: 'img',
-        },
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "img",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -62,8 +62,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1000,
-              backgroundColor: 'transparent', // required to display blurred image first
-              linkImagesToOriginal: false
+              backgroundColor: "transparent", // required to display blurred image first
+              linkImagesToOriginal: false,
             },
           },
         ],

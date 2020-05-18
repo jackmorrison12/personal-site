@@ -7,7 +7,8 @@ description: The fourth iteration of my personal portfolio series
 topics:
   - Adding Content
 ---
-The next stage of creating the site: adding content! 
+
+The next stage of creating the site: adding content!
 
 ## What is a CMS
 
@@ -15,7 +16,7 @@ A [Content Management System (CMS)](https://en.wikipedia.org/wiki/Content_manage
 
 ## Choosing Content for CMS
 
-Firstly, as I mentioned last time, I needed to choose which content to integrate with my CMS. To start off, I added the main content areas which I knew would be updated most frequently: projects, articles and blog posts. I chose to separate articles from blog posts since I wanted to get into writing a lot more frequently, and therefore I could have more informal blog posts, with key articles about things I found much more interesting. 
+Firstly, as I mentioned last time, I needed to choose which content to integrate with my CMS. To start off, I added the main content areas which I knew would be updated most frequently: projects, articles and blog posts. I chose to separate articles from blog posts since I wanted to get into writing a lot more frequently, and therefore I could have more informal blog posts, with key articles about things I found much more interesting.
 
 ## Writing the Content
 

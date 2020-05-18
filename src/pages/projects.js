@@ -14,7 +14,7 @@ const ProjectsPage = () => (
           <div className="line margin-3-t margin-10-b" />
         </div>
         <div className="col-xs-12 col-md-12">
-          <ProjectRoll />  
+          <ProjectRoll />
         </div>
       </div>
     </div>

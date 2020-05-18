@@ -18,6 +18,7 @@ longhighlights:
   - highlight: Ran the UK Office's 'Adopt-a-School' scheme, teaching robotics,
       teamwork and public speaking to underprivileged children
 ---
-I spent my summer of 2019 working at Nextjump as a Software Engineer. I worked on and took ownership of many large-scale projects, which were rolled out to millions of users. I primarily worked in PHP & Javascript, and wrote a lot of SQL. 
+
+I spent my summer of 2019 working at Nextjump as a Software Engineer. I worked on and took ownership of many large-scale projects, which were rolled out to millions of users. I primarily worked in PHP & Javascript, and wrote a lot of SQL.
 
 I also learnt a lot about workplace culture, running the London office's Adopt-a-School project. This was a place where I got to try out new ideas which could help me out with my work. For example, if I'm able to control a class of 20 screaming children, trying to get the attention of the office should be a breeze!

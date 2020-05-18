@@ -15,6 +15,7 @@ topics:
   - Tailwind
   - Netlify
 ---
+
 One thing I knew for this iteration of my personal website was that I was going to research my tech stack a lot more thoroughly than I had before. There were three key areas I wanted to look into: the framework, styling and hosting.
 
 ## Framework
@@ -29,7 +30,7 @@ My next step was to find out which option would be best for styling. I'd previou
 
 I looked into a few options: [Bulma](https://bulma.io/), [Tailwind](https://tailwindcss.com/) and (of course) [Bootstrap](https://getbootstrap.com/). I'd only ever heard of the latter, and pretty quickly realised it was not what I wanted for my design ideas. I looked into more detail at Bulma and Tailwind; Bulma seemed to look very easy to use, being based on Flex, but Tailwind seemed to be much more customisable.
 
-I then read lots of conflicting reviews in favour of each side, but I also read of a lot of people who just preferred to use sass. I found a good range of sass files which were open source, and allowed basic features like padding and colours to be implemented by just adding a class, and decided to take this route. 
+I then read lots of conflicting reviews in favour of each side, but I also read of a lot of people who just preferred to use sass. I found a good range of sass files which were open source, and allowed basic features like padding and colours to be implemented by just adding a class, and decided to take this route.
 
 This was one change to how I had previously done things; I used to create a class for each item I was putting on the page, which meant that I had hundreds of lines of CSS cluttering up my repo. With this new approach, I'd have multiple classes per object, for example one to give it a colour, `is-black`, and one to give some padding `pad-10-t`.
 

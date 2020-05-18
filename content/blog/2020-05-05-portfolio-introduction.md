@@ -15,6 +15,7 @@ topics:
   - GitHub Pages
   - UI
 ---
+
 Back in 2015, I decided that I wanted to create my own website; a place where I could share projects I'd worked on, and use as on "online CV" for future University and Job applications. I've worked on this concept of a personal portfolio over the years, but have always used it as a way to practice using new technologies, and never created a finished product I'm happy with. This means that every year, I decide I want to restart and make something completely different.
 
 However, now I'm coming to the end of my educational life, entering my final year of University, I've decided I want a personal page which looks the part, as well as teaching me a few things along the way.

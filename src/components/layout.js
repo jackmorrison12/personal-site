@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 // import { useStaticQuery, graphql, Link } from "gatsby"
 import { Link } from "gatsby"
 
-
 import Header from "./header"
 
 const Layout = ({ children }) => {
@@ -26,11 +25,17 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header/>
+      <Header />
       <main className="is-light-grey-bg is-black">{children}</main>
       <footer className="is-white-bg is-black pad-2">
-        Created by me, with help from {" "}
-        <Link to="/credits" activeClassName="is-black" className="is-medium-blue link">these people</Link>
+        Created by me, with help from{" "}
+        <Link
+          to="/credits"
+          activeClassName="is-black"
+          className="is-medium-blue link"
+        >
+          these people
+        </Link>
       </footer>
     </>
   )

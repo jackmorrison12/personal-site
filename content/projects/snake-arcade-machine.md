@@ -17,6 +17,7 @@ sources:
     url: https://github.com/et-tamen-compilat/snake
     icon: fab fa-github
 ---
+
 As part of our first year C project, we recreated the classic game of snake, on a 32x32 LED matrix. The project definition was pretty open-ended, allowing us to create anything, as long as it was written in C, and since we were all fond of old-fashioned games, we thought this would be a fun idea. However, it also gave us some new challenges we didn't expect, and really improved our knowledge of C.
 
 We created the machine by connecting the matrix to a Raspberry Pi, using a hat, and then built the box out of cardboard (and a lot of tape!).
