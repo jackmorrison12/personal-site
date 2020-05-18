@@ -6,7 +6,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 
-class BlogRoll extends React.Component {
+class BlogArchive extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
@@ -30,7 +30,7 @@ class BlogRoll extends React.Component {
   }
 }
 
-BlogRoll.propTypes = {
+BlogArchive.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
@@ -41,14 +41,10 @@ BlogRoll.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query BlogRollQuery {
+      query BlogArchiveQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: {
-            fileAbsolutePath: { regex: "/blog/" }
-            frontmatter: { hidden: { eq: false } }
-          }
-          limit: 5
+          filter: { fileAbsolutePath: { regex: "/blog/" } }
         ) {
           edges {
             node {
@@ -64,6 +60,6 @@ export default () => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} />}
+    render={(data, count) => <BlogArchive data={data} count={count} />}
   />
 )

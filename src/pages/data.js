@@ -16,14 +16,16 @@ const DataPage = () => (
           </h1>
         </div>
       </div>
+    </div>
+    <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
       <div className="row container ">
         <div className="col-xs-12 ">
-          <p className="margin-0">
-            I also love creating things. <br />
-            I wanted to combine loads of APIs I have access to, and see what I
-            could create. <br />
-            This page is generated on ever site build
+          <h1>What is this page?</h1>
+          <p>
+            I love creating things. I wanted to combine loads of APIs I have
+            access to, and see what I could create.{" "}
           </p>
+          <p>This page is generated on every site build</p>
         </div>
       </div>
     </div>

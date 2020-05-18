@@ -8,19 +8,19 @@
     "link": "/me"
   },
   {
-    "name": "📚 Articles",
-    "link": "/articles"
-  },
-  {
-    "name": "📝 Blog",
-    "link": "/blog"
+    "name": "📄 CV",
+    "link": "/cv"
   },
   {
     "name": "🖥 Projects",
     "link": "/projects"
   },
   {
-    "name": "📈 Data",
+    "name": "📚 Articles",
+    "link": "/writing"
+  },
+  {
+    "name": "🎉 Fun Stuff",
     "link": "/data"
   }
 ]
