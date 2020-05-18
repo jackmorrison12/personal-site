@@ -2,6 +2,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import FileTypes from "../components/data/file-type-stats"
 
 import Emoji from "a11y-react-emoji"
 
@@ -36,6 +37,13 @@ const DataPage = () => (
           <p>
             <Emoji symbol="🎸" label="guitar" /> Provided by the Last FM API
           </p>
+        </div>
+      </div>
+    </div>
+    <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
+      <div className="row container ">
+        <div className="col-xs-12 ">
+          <FileTypes />
         </div>
       </div>
     </div>

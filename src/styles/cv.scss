@@ -27,12 +27,6 @@
   margin: auto;
   font-family: "Muli", sans-serif;
 
-  @for $i from 1 through 6 {
-    h#{7 - $i} {
-      font-family: "Muli", sans-serif;
-    }
-  }
-
   .line {
     border-bottom: 2px solid;
     max-width: 100%;
@@ -57,7 +51,6 @@
   }
 
   p {
-    font-family: "Muli", sans-serif;
     font-size: 12.8px;
     margin-bottom: 12.8px;
   }
@@ -72,7 +65,6 @@
     content: "- ";
   }
   li {
-    font-family: "Muli", sans-serif;
     font-size: 12.8px;
   }
 
@@ -80,7 +72,6 @@
     @extend .is-dark-blue;
   }
   a {
-    font-family: "Muli", sans-serif;
     font-size: 12.8px;
     font-weight: bold;
   }
