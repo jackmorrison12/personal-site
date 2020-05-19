@@ -53,6 +53,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-json`,
+    `gatsby-transformer-yaml`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
