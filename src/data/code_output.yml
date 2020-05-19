@@ -2,11 +2,11 @@
 header:
   url: https://github.com/boyter/scc/
   version: 2.12.0
-  elapsed_seconds: 0.013000000000000001
-  n_files: 103
-  n_lines: 5548
-  files_per_second: 7923.076923076922
-  lines_per_second: 426769.23076923075
+  elapsed_seconds: 0.019
+  n_files: 102
+  n_lines: 5546
+  files_per_second: 5368.421052631579
+  lines_per_second: 291894.7368421053
 JSON:
   name: JSON
   code: 376
@@ -43,12 +43,6 @@ Shell:
   comment: 1
   blank: 0
   nFiles: 1
-TOML:
-  name: TOML
-  code: 2
-  comment: 0
-  blank: 0
-  nFiles: 1
 YAML:
   name: YAML
   code: 109
@@ -62,8 +56,8 @@ gitignore:
   blank: 18
   nFiles: 1
 SUM:
-  code: 4716
+  code: 4714
   comment: 322
   blank: 510
-  nFiles: 103
+  nFiles: 102
 
