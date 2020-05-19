@@ -19,11 +19,11 @@ export default () => {
     <>
       <h2>
         This website consists of{" "}
-        <span className="is-red">{main_data.n_files}</span> files and{" "}
-        <span className="is-red">{main_data.n_lines}</span> lines of code.
+        <span className="is-red">{main_data.n_lines}</span> lines of code over{" "}
+        <span className="is-red">{main_data.n_files}</span> files.
       </h2>
       <h2>
-        This website it mainly written with{" "}
+        It's mainly written with{" "}
         <span className="is-red">{Object.keys(language_data).length}</span>{" "}
         languages:{" "}
         {Object.entries(language_data)
@@ -90,8 +90,11 @@ export default () => {
         })}
       </div>
       <p>
-        <Emoji symbol="💻" label="laptop" /> Data sourced using scc terminal
-        command
+        <Emoji symbol="💻" label="laptop" /> Data sourced using{" "}
+        <a className="link" href="https://github.com/boyter/scc/">
+          scc terminal command
+        </a>
+        , accurate as of last build
       </p>
       <ReactTooltip />
     </>
