@@ -1,0 +1,4 @@
+#!/bin/sh
+npm run stats
+git add ./src/data/code_output.yml     
+exit 0
