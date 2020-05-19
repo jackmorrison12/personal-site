@@ -30,7 +30,7 @@ const DataPage = () => (
             <span className="is-red">Zara Larsson</span>.
           </h2>
           <h2>
-            I've listened to it <span className="is-red">17</span> times this
+            I've listened to it <span className="is-red">27</span> times this
             week, <span className="is-red">23</span> times this month and{" "}
             <span className="is-red">170</span> times since tracking began.
           </h2>
