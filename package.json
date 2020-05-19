@@ -57,7 +57,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "stats": "scc -f cloc-yaml -M package . > src/data/code_output.yml"
+    "stats": "echo 📈 Updating stats... && scc -f cloc-yaml -M package . > src/data/code_output.yml"
   },
   "repository": {
     "type": "git",
