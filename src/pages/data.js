@@ -3,8 +3,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import FileTypes from "../components/data/file-type-stats"
-
-import Emoji from "a11y-react-emoji"
+import LastFmStats from "../components/data/last-fm-stats"
 
 const DataPage = () => (
   <Layout>
@@ -24,26 +23,14 @@ const DataPage = () => (
     <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
       <div className="row container ">
         <div className="col-xs-12 ">
-          <h2>
-            My most listened to song this week is{" "}
-            <span className="is-red">Dont Worry Bout Me</span> by{" "}
-            <span className="is-red">Zara Larsson</span>.
-          </h2>
-          <h2>
-            I've listened to it <span className="is-red">27</span> times this
-            week, <span className="is-red">23</span> times this month and{" "}
-            <span className="is-red">170</span> times since tracking began.
-          </h2>
-          <p>
-            <Emoji symbol="🎸" label="guitar" /> Provided by the Last FM API
-          </p>
+          <FileTypes />
         </div>
       </div>
     </div>
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
       <div className="row container ">
         <div className="col-xs-12 ">
-          <FileTypes />
+          <LastFmStats />
         </div>
       </div>
     </div>
