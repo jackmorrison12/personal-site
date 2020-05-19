@@ -24,6 +24,12 @@ Sure! This website is completely open source. The only thing I ask is that you l
 
 1.  **Clone the repo**
 
+    If you want to use some of the git hooks I've set up (to automatically generate site stats), run the following:
+
+    ```shell
+    npm run repo-init
+    ```
+
 1.  **Install Gatsby CLI**
 
     Install the Gatsby CLI globally
