@@ -5,7 +5,7 @@ import Emoji from "a11y-react-emoji"
 
 export default () => {
   const data = useStatsData()
-  const main_data = data.header.header
+  const main_data = data.header.SUM
   const language_data = data.languages
   let colours = [
     ["pink", "white"],
@@ -14,13 +14,18 @@ export default () => {
     ["yellow", "black"],
     ["cyan", "black"],
   ]
-  console.log(data)
+  var other_lines = main_data.code
+  var other_files = main_data.nFiles
+  for (const property in language_data) {
+    other_lines -= language_data[property].code
+    other_files -= language_data[property].nFiles
+  }
   return (
     <>
       <h2>
         This website consists of{" "}
-        <span className="is-red">{main_data.n_lines}</span> lines of code over{" "}
-        <span className="is-red">{main_data.n_files}</span> files.
+        <span className="is-red">{main_data.code}</span> lines of code over{" "}
+        <span className="is-red">{main_data.nFiles}</span> files.
       </h2>
       <h2>
         It's mainly written with{" "}
@@ -49,7 +54,7 @@ export default () => {
         {Object.entries(language_data).map((item, i) => {
           return (
             <section
-              style={{ width: (item[1].code / main_data.n_lines) * 100 + "%" }}
+              style={{ width: (item[1].code / main_data.code) * 100 + "%" }}
               className={
                 "is-" +
                 colours[i][0] +
@@ -74,6 +79,25 @@ export default () => {
             </section>
           )
         })}
+        <section
+          style={{ width: (other_lines / main_data.code) * 100 + "%" }}
+          className={
+            "is-" +
+            colours[Object.keys(language_data).length][0] +
+            "-bg-always is-" +
+            colours[Object.keys(language_data).length][1] +
+            "-always"
+          }
+        >
+          <p
+            className="margin-0 mobile-hide"
+            data-tip={
+              "Other: " + other_lines + " lines in " + other_files + " files"
+            }
+          >
+            {"..."}
+          </p>
+        </section>
       </div>
       <div className="pad-3-t mobile-show">
         {Object.entries(language_data).map((item, i) => {
@@ -88,6 +112,18 @@ export default () => {
             </div>
           )
         })}
+        <div className="">
+          <span
+            className={
+              "dot is-" +
+              colours[Object.keys(language_data).length][0] +
+              "-bg-always margin-3-r"
+            }
+          ></span>
+          <span>
+            Other - {other_lines} lines in {other_files} files
+          </span>
+        </div>
       </div>
       <p>
         <Emoji symbol="💻" label="laptop" /> Data sourced using{" "}

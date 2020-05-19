@@ -5,9 +5,9 @@ const useStatsData = () => {
   const data = useStaticQuery(graphql`
     {
       header: dataYaml {
-        header {
-          n_files
-          n_lines
+        SUM {
+          code
+          nFiles
         }
       }
       languages: dataYaml {
@@ -18,11 +18,11 @@ const useStatsData = () => {
           code
           blank
         }
-        JSON {
+        Sass {
           blank
-          nFiles
           code
           comment
+          nFiles
           name
         }
         Markdown {
@@ -32,11 +32,11 @@ const useStatsData = () => {
           nFiles
           name
         }
-        Sass {
+        JSON {
           blank
+          nFiles
           code
           comment
-          nFiles
           name
         }
       }

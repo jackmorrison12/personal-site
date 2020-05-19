@@ -2,8 +2,8 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import FileTypes from "../components/data/file-type-stats"
-import LastFmStats from "../components/data/last-fm-stats"
+import FileTypes from "../components/stats/file-type-stats"
+import LastFmStats from "../components/stats/last-fm-stats"
 
 const DataPage = () => (
   <Layout>
