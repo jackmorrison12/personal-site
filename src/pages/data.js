@@ -26,7 +26,7 @@ const DataPage = () => (
         <div className="col-xs-12 ">
           <h2>
             My most listened to song this week is{" "}
-            <span className="is-red">Ruin My Life</span> by{" "}
+            <span className="is-red">Dont Worry Bout Me</span> by{" "}
             <span className="is-red">Zara Larsson</span>.
           </h2>
           <h2>
