@@ -50,46 +50,57 @@ export default function Template({
           </div>
           <div className="col-xs-12 pad-5-lr">
             <div className="float-right margin-3 pad-5-lr col-xs-12 col-sm-4 is-white-bg">
-              <p>
-                Source code/examples can be found on{" "}
-                {frontmatter.sources
-                  .map(item => (
-                    <span className="link">
-                      <a href={item.url}>{item.name}</a>
-                    </span>
-                  ))
-                  .reduce((acc, curr, i) =>
-                    i !== 0
-                      ? [
-                          acc,
-                          `${
-                            Object.entries(frontmatter.sources).length - 1 === i
-                              ? ` and  `
-                              : ", "
-                          }`,
-                          curr,
-                        ]
-                      : curr
-                  )}
-              </p>
-              <p>
-                Written using{" "}
-                {frontmatter.tech
-                  .map(item => <span className="is-red">{item}</span>)
-                  .reduce((acc, curr, i) =>
-                    i !== 0
-                      ? [
-                          acc,
-                          `${
-                            Object.entries(frontmatter.tech).length - 1 === i
-                              ? ` and  `
-                              : ", "
-                          }`,
-                          curr,
-                        ]
-                      : curr
-                  )}
-              </p>
+              {frontmatter.sources ? (
+                <p>
+                  Source code/examples can be found on{" "}
+                  {frontmatter.sources
+                    .map(item => (
+                      <span className="link">
+                        <a href={item.url}>{item.name}</a>
+                      </span>
+                    ))
+                    .reduce((acc, curr, i) =>
+                      i !== 0
+                        ? [
+                            acc,
+                            `${
+                              Object.entries(frontmatter.sources).length - 1 ===
+                              i
+                                ? ` and`
+                                : ", "
+                            }
+                  `,
+                            curr,
+                          ]
+                        : curr
+                    )}
+                </p>
+              ) : (
+                ""
+              )}
+
+              {frontmatter.tech ? (
+                <p>
+                  Written using{" "}
+                  {frontmatter.tech
+                    .map(item => <span className="is-red">{item}</span>)
+                    .reduce((acc, curr, i) =>
+                      i !== 0
+                        ? [
+                            acc,
+                            `${
+                              Object.entries(frontmatter.tech).length - 1 === i
+                                ? ` and  `
+                                : ", "
+                            }`,
+                            curr,
+                          ]
+                        : curr
+                    )}{" "}
+                </p>
+              ) : (
+                ""
+              )}
             </div>
             <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
