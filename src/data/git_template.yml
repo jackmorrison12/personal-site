@@ -1,0 +1,4 @@
+stats:
+  commits: "${git_commits}"
+  username: "${git_date}"
+  machines: "${git_message}"

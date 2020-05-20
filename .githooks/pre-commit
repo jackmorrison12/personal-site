@@ -1,4 +1,21 @@
 #!/bin/sh
 npm run stats
 git add ./src/data/code_output.yml     
+
+export git_commits="100"
+export git_dates="10/12"
+export git_message="test"
+
+cd src/data 
+
+rm -f git_stats.yml temp.yml  
+( echo "cat &lt;&lt;EOF &gt;git_stats.yml";
+  cat git_template.yml;
+  echo "EOF";
+) >temp.yml
+. temp.yml
+cat git_stats.yml
+
+cd ../..
+
 exit 0
