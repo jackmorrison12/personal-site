@@ -8,13 +8,16 @@ export git_message="test"
 
 cd src/data 
 
-rm -f git_stats.yml temp.yml  
-( echo "cat &lt;&lt;EOF &gt;git_stats.yml";
-  cat git_template.yml;
-  echo "EOF";
-) >temp.yml
-. temp.yml
-cat git_stats.yml
+echo -e "\nGenerating git stats file"
+
+# Generate the file
+cat > git_stats.yml <<EOL
+git-data:
+  commits: ${git_commits}
+  dates: ${git_dates}
+  message: ${git_message}
+
+EOL
 
 cd ../..
 
