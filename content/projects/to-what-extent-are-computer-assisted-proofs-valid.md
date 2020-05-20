@@ -12,7 +12,7 @@ startdate: 2016-08-31T23:51:00.000Z
 enddate: 2017-04-30T23:51:00.000Z
 sources:
   - icon: fas fa-file-pdf
-    name: File
+    name: in this file
     url: epq.pdf
 ---
 

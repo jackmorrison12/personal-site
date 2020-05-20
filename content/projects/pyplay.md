@@ -16,7 +16,7 @@ sources:
   - name: GitHub
     url: https://github.com/jackmorrison12/pyplay
     icon: fab fa-github
-  - name: Link
+  - name: at this link
     url: http://code.pyplay.co.uk/
     icon: fas fa-link
   - name: Devpost
