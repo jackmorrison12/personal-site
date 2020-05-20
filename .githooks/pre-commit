@@ -2,13 +2,13 @@
 npm run stats
 git add ./src/data/code_output.yml     
 
-export git_commits="100"
-export git_dates="10/12"
-export git_message="test"
+export git_commits=$(git rev-list --count HEAD)
+export git_dates=$(git log -1 --format=%cd )
+export git_message=$(git log -1 --pretty=%B)
 
 cd src/data 
 
-echo -e "\nGenerating git stats file"
+echo "Generating git stats file..."
 
 # Generate the file
 cat > git_stats.yml <<EOL
