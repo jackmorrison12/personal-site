@@ -4,13 +4,13 @@ import { useStaticQuery, graphql } from "gatsby"
 const useStatsData = () => {
   const data = useStaticQuery(graphql`
     {
-      header: dataYaml {
+      header: dataYaml(SUM: { code: { gt: 1 } }) {
         SUM {
           code
           nFiles
         }
       }
-      languages: dataYaml {
+      languages: dataYaml(JavaScript: { code: { gt: 1 } }) {
         JavaScript {
           name
           nFiles
