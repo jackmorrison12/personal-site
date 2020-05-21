@@ -9,6 +9,7 @@ const useGitStatsData = () => {
           message
           date
           commits
+          hash
         }
       }
     }

@@ -1,5 +1,6 @@
 git_stats:
-  commits: 312
-  date: Thursday, 21 May at 01:16
-  message: Adds git stats to data page
+  commits: 313
+  date: Thursday, 21 May at 01:24
+  message: Updates git stats script to use correct shell syntax
+  hash: 6c9dd107b0c79e9799af7c9417c3b2c88035c1b0
 

@@ -5,13 +5,53 @@ import Emoji from "a11y-react-emoji"
 export default () => {
   var data = useGitStatsData()
   data = data.main.git_stats
+  const repo_name = "personal-site"
+  const github_username = "jackmorrison12"
   return (
     <>
       <h2>
-        This repo has <span className="is-green">{data.commits}</span> commits.
-        The most recent commit was on{" "}
-        <span className="is-green">{data.date}</span> and it{" "}
-        <span className="is-green">{data.message.toLowerCase()}</span>.
+        This repo has{" "}
+        <a
+          href={
+            "https://github.com/" +
+            github_username +
+            "/" +
+            repo_name +
+            "/commits/master"
+          }
+          className="link is-green"
+        >
+          <span className="is-green">{data.commits}</span>
+        </a>{" "}
+        commits. The most recent commit was on{" "}
+        <a
+          href={
+            "https://github.com/" +
+            github_username +
+            "/" +
+            repo_name +
+            "/commit/" +
+            data.hash
+          }
+          className="link is-green"
+        >
+          <span className="is-green">{data.date}</span>
+        </a>{" "}
+        and it{" "}
+        <a
+          href={
+            "https://github.com/" +
+            github_username +
+            "/" +
+            repo_name +
+            "/commit/" +
+            data.hash
+          }
+          className="link is-green"
+        >
+          <span className="is-green">{data.message.toLowerCase()}</span>
+        </a>
+        .
       </h2>
       <p>
         <Emoji symbol="😻" label="cat" /> Data sourced using{" "}
