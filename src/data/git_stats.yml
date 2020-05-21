@@ -1,5 +1,5 @@
-git-data:
-  commits: 310
-  dates: Thursday, 21 May at 00:28:53
-  message: Gets actual git stats
+git_stats:
+  commits: 311
+  date: Thursday, 21 May at 00:41
+  message: Adds git stats script to run before build
 
