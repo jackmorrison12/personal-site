@@ -23,3 +23,18 @@
   border-radius: 50%;
   display: inline-block;
 }
+
+.bar-vertical {
+  width: 50px;
+  height: 20vh;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-vertical section {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
