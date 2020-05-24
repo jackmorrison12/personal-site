@@ -9,7 +9,7 @@ export default () => {
   let topTrack = data.topTrack.topTrack
   let topArtists = data.topArtists.topArtists
   let topAlbums = data.topAlbums.topAlbums
-  let albumImages = data.albumImages.nodes
+  let albumImages = data.albumImages.edges
   return (
     <>
       <h2>
@@ -70,7 +70,7 @@ export default () => {
           <div className="col-xs-6 col-sm-2">
             <a href={item.url}>
               <div className="grow">
-                <Img fluid={albumImages[i].childImageSharp.fluid} />
+                <Img fluid={albumImages[i].node.childImageSharp.fluid} />
               </div>
               <p className="link bold is-yellow text-align-center margin-0-b">
                 {item.name}
