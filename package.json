@@ -51,7 +51,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild" : "npm run git-stats",
+    "prebuild" : "npm run git-stats && npm run lastfm-stats",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md,scss}\"",
@@ -61,7 +61,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "repo-init" : "  git config core.hooksPath .githooks",
     "stats": "echo 📈 Updating stats... && scc -f cloc-yaml -M package . > src/data/code_output.yml",
-    "git-stats" : "./src/scripts/git-stats.sh"
+    "git-stats" : "./src/scripts/git-stats.sh",
+    "lastfm-stats" : "node src/scripts/lastfm-stats.js"
   },
   "repository": {
     "type": "git",

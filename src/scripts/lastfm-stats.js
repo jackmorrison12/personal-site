@@ -12,7 +12,6 @@ function wait(ms) {
     end = new Date().getTime()
   }
 }
-console.log(process.env)
 var lastfm = new LastFmNode({
   api_key: process.env.GATSBY_LASTFM_API_KEY,
   secret: process.env.GATSBY_LASTFM_SECRET,
@@ -34,7 +33,7 @@ var request = lastfm.request("user.getTopTracks", {
         lastfmdata.topTrack.playCount = data.toptracks.track[0].playcount
         jsonString = JSON.stringify(lastfmdata, null, 2)
         fs.writeFileSync("./src/data/lastfm.json", jsonString)
-        console.log("Top Track Data written")
+        console.log("🥇 Top Track Data written")
       } catch (err) {
         console.log(err)
         return
@@ -61,7 +60,7 @@ var request = lastfm.request("user.getRecentTracks", {
           data.recenttracks.track[0].artist["#text"]
         jsonString = JSON.stringify(lastfmdata, null, 2)
         fs.writeFileSync("./src/data/lastfm.json", jsonString)
-        console.log("Recent Track Data written")
+        console.log("🕐 Recent Track Data written")
       } catch (err) {
         console.log(err)
         return
@@ -90,7 +89,7 @@ var request = lastfm.request("user.getTopArtists", {
         }
         jsonString = JSON.stringify(lastfmdata, null, 2)
         fs.writeFileSync("./src/data/lastfm.json", jsonString)
-        console.log("Top Artist Data written")
+        console.log("🧑‍🎤 Top Artist Data written")
       } catch (err) {
         console.log(err)
         return
@@ -127,13 +126,13 @@ var request = lastfm.request("user.getTopAlbums", {
           download
             .image(options)
             .then(({ filename }) => {
-              console.log("Saved to", filename)
+              console.log("Saved image to", filename)
             })
             .catch(err => console.error(err))
         }
         jsonString = JSON.stringify(lastfmdata, null, 2)
         fs.writeFileSync("./src/data/lastfm.json", jsonString)
-        console.log("Top Album Data written")
+        console.log("💽 Top Album Data written")
       } catch (err) {
         console.log(err)
         return

@@ -1,6 +1,6 @@
 git_stats:
-  commits: 313
-  date: Thursday, 21 May at 01:24
-  message: Updates git stats script to use correct shell syntax
-  hash: 6c9dd107b0c79e9799af7c9417c3b2c88035c1b0
+  commits: 316
+  date: Sunday, 24 May at 03:07
+  message: Adds a script to get last-fm data from api and display it on 'fun stuff' page
+  hash: ae7907c73bdde9e51642b8c29bb788998accb7f6
 
