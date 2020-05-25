@@ -16,8 +16,6 @@ export const ExperienceTimeline = () => {
   const [open, setOpen] = useState(new Array(data.length).fill(false))
 
   function flipOpen(index) {
-    console.log("index: " + index)
-    console.log("open: " + open)
     let newArr = [...open]
     newArr[index] = !open[index]
     setOpen(newArr)
@@ -88,8 +86,6 @@ export const EducationTimeline = () => {
   const [open, setOpen] = useState(new Array(data.length).fill(false))
 
   function flipOpen(index) {
-    console.log("index: " + index)
-    console.log("open: " + open)
     let newArr = [...open]
     newArr[index] = !open[index]
     setOpen(newArr)

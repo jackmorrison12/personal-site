@@ -91,12 +91,12 @@ export default ({ data }) => {
               Computing at{" "}
               {makeLink("EDUCATION", "Imperial College London", "red")}. I've
               worked as a Software Engineer at{" "}
-              {makeLink("EXPERIENCE", "NextJump", "medium-blue")} and{" "}
-              {makeLink("EXPERIENCE", "Facebook", "medium-blue")}. I've dabbled
-              in {makeLink("TEACHING", "teaching", "red")}. I enjoy{" "}
-              {makeLink("MUSIC", "making music", "medium-blue")},{" "}
+              {makeLink("EXPERIENCE", "NextJump", "red")} and{" "}
+              {makeLink("EXPERIENCE", "Facebook", "red")}. I've dabbled in{" "}
+              {makeLink("TEACHING", "teaching", "red")}. I enjoy{" "}
+              {makeLink("MUSIC", "making music", "red")},{" "}
               {makeLink("MAP", "travelling", "red")}, and am currently learning
-              how to {makeLink("SKYDIVING", "skydive", "medium-blue")}.
+              how to {makeLink("SKYDIVING", "skydive", "red")}.
             </h2>
             <p>Click any of the links above to find out more!</p>
           </div>
@@ -133,7 +133,7 @@ export default ({ data }) => {
           </div>
         </div>
       </SlideDown>
-      <div className="is-dark-blue-bg-always">
+      <div className="is-red-bg-always">
         <div className="row container pad-10-tb pad-3-lr ">
           <div className="col-xs-12 col-md-12">
             <h1 className="is-title margin-0-t text-align-center is-white-always">
