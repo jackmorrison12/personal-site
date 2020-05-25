@@ -1,7 +1,7 @@
 ---
 title: "Developing my Ideal Personal Portfolio Website - Part 6: Coding a CV in React"
 slug: /blog/portfolio-cv
-date: 2020-05-25T01:41:44.394Z
+date: 2020-05-18T01:41:44.394Z
 hidden: false
 description: The sixth iteration of my personal portfolio series
 topics:
