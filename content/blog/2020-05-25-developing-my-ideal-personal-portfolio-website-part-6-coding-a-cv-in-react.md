@@ -8,3 +8,7 @@ topics:
   - CV
 ---
 Everyone has a CV, and I've had many iterations over the years. Most recently, I'd been using [FlowCV](https://flowcv.io/) to build mine. This was working really well, however it was a pain to update. Every time I changed something, I had to log in, change the details, check the layout still worked and fix if needed, download the PDF, then upload this to my site and rebuild. It was a long process, and I wanted to streamline it. I already had basically all of the content for my CV on my site, so I thought, why not use it?
+
+## Where to start
+
+I was simultaneously excited and nervous to start this part of my site. I knew it was something which would look really good, but I also wasn't sure how well I could execute it. I started off by looking around and seeing if there were any examples online.
