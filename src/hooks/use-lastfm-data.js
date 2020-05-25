@@ -42,15 +42,13 @@ const useLastFMData = () => {
       }
       albumImages: allFile(
         filter: { relativeDirectory: { eq: "lastfm" } }
-        sort: { fields: childImageSharp___fluid___originalName }
+        sort: { fields: name }
       ) {
-        edges {
-          node {
-            childImageSharp {
-              id
-              fluid(maxHeight: 200, maxWidth: 200) {
-                ...GatsbyImageSharpFluid
-              }
+        nodes {
+          childImageSharp {
+            id
+            fluid(maxHeight: 200, maxWidth: 200) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

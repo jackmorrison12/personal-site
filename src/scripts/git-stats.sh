@@ -1,7 +1,7 @@
 #!/bin/sh
 git_commits=$(git rev-list --count HEAD)
 git_dates=$(git log -1 --date=format:'%A, %d %B at %H:%M' --pretty=format:%cd)
-git_message=$(git log -1 --pretty=%b)
+git_message=$(git log -1 --pretty=%s)
 git_hash=$(git rev-parse HEAD)  
 
 cd src/data 
