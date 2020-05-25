@@ -31,3 +31,12 @@ For the Education and Experience sections, I decided to bite the bullet and conn
 
 I also used [`react-audio-player`](https://www.npmjs.com/package/react-audio-player) on my music creation page, in order to sample some of the songs I'd made. I chose this because I could link songs from external sources, so in this case I used the git repo I had with my music backed up into, since this saved copying them into the repo. 
 
+The final thing I wanted to include was a map of places I've travelled. I stared off my using one by [amCharts](https://www.amcharts.com/), however, it was tripling my build time, so I'm currently searching for an alternative.
+
+## Possible Improvements
+
+One thing I'd like to be able to do is link to each of the sections independently using a different URL, for example by appending `#experience` to the end. This is something I want to look into in the future.
+
+## What next?
+
+Well the next thing any professional portfolio needs is a link to your CV! However, I wanted to put my React skills to the test and code my own.
