@@ -17,6 +17,7 @@ const useLastFMData = () => {
           artist
           playCount
           url
+          artistUrl
         }
       }
       topAlbums: dataJson(

@@ -17,8 +17,12 @@ export default () => {
         <a href={topTrack.url} className="link is-yellow">
           <span className="is-yellow">{topTrack.name}</span>
         </a>{" "}
-        by <span className="is-yellow">{topTrack.artist}</span>. I've listened
-        to it <span className="is-yellow">{topTrack.playCount}</span> times!
+        by{" "}
+        <a href={topTrack.artistUrl} className="link is-yellow">
+          <span className="is-yellow">{topTrack.artist}</span>
+        </a>
+        . I've listened to it{" "}
+        <span className="is-yellow">{topTrack.playCount}</span> times!
       </h2>
       <h2>
         This month, I've been listening to a lot of{" "}
@@ -55,15 +59,15 @@ export default () => {
         ))}
       </div>
       <h2>
-        I'd also have to recommend these albums by{" "}
+        Some of my top albums from the last year are by{" "}
         <a href={topAlbums[0].url} className="link is-yellow">
           <span className="is-yellow">{topAlbums[0].artist}</span>
-        </a>
-        ,{" "}
+        </a>{" "}
+        and{" "}
         <a href={topAlbums[1].url} className="link is-yellow">
           <span className="is-yellow">{topAlbums[1].artist}</span>
-        </a>{" "}
-        and more this month.
+        </a>
+        .
       </h2>
       <div className="row pad-5-t">
         {topAlbums.map((item, i) => (

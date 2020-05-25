@@ -4,7 +4,6 @@ const download = require("image-downloader")
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-
 function wait(ms) {
   var start = new Date().getTime()
   var end = start
@@ -29,6 +28,7 @@ var request = lastfm.request("user.getTopTracks", {
         const lastfmdata = JSON.parse(jsonString)
         lastfmdata.topTrack.name = data.toptracks.track[0].name
         lastfmdata.topTrack.artist = data.toptracks.track[0].artist.name
+        lastfmdata.topTrack.artistUrl = data.toptracks.track[0].artist.url
         lastfmdata.topTrack.url = data.toptracks.track[0].url
         lastfmdata.topTrack.playCount = data.toptracks.track[0].playcount
         jsonString = JSON.stringify(lastfmdata, null, 2)
@@ -103,7 +103,7 @@ var request = lastfm.request("user.getTopArtists", {
 
 var request = lastfm.request("user.getTopAlbums", {
   user: "jackmorrison12",
-  period: "1month",
+  period: "12month",
   limit: 6,
   handlers: {
     success: function (data) {

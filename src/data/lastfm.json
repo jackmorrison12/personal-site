@@ -2,13 +2,14 @@
   "topTrack": {
     "name": "sTuCK wItH u (wItH jUstIn bIEbEr)",
     "artist": "Ariana Grande",
-    "playCount": "35",
-    "url": "https://www.last.fm/music/Ariana+Grande/_/sTuCK+wItH+u+(wItH+jUstIn+bIEbEr)"
+    "playCount": "29",
+    "url": "https://www.last.fm/music/Ariana+Grande/_/sTuCK+wItH+u+(wItH+jUstIn+bIEbEr)",
+    "artistUrl": "https://www.last.fm/music/Ariana+Grande"
   },
   "recentTrack": {
-    "name": "This Love Isn't Crazy",
-    "artist": "Carly Rae Jepsen",
-    "url": "https://www.last.fm/music/Carly+Rae+Jepsen/_/This+Love+Isn%27t+Crazy"
+    "name": "rAIn oN mE (with aRIaNa gRAndE)",
+    "artist": "Lady Gaga",
+    "url": "https://www.last.fm/music/Lady+Gaga/_/rAIn+oN+mE+(with+aRIaNa+gRAndE)"
   },
   "topArtists": [
     {
@@ -22,74 +23,74 @@
       "url": "https://www.last.fm/music/Conan+Gray"
     },
     {
+      "name": "Ariana Grande",
+      "playCount": "88",
+      "url": "https://www.last.fm/music/Ariana+Grande"
+    },
+    {
+      "name": "Dua Lipa",
+      "playCount": "79",
+      "url": "https://www.last.fm/music/Dua+Lipa"
+    },
+    {
       "name": "Alex Newell",
       "playCount": "65",
       "url": "https://www.last.fm/music/Alex+Newell"
     },
     {
-      "name": "Ariana Grande",
-      "playCount": "62",
-      "url": "https://www.last.fm/music/Ariana+Grande"
-    },
-    {
-      "name": "Dua Lipa",
-      "playCount": "55",
-      "url": "https://www.last.fm/music/Dua+Lipa"
-    },
-    {
       "name": "Megan Thee Stallion",
-      "playCount": "55",
+      "playCount": "54",
       "url": "https://www.last.fm/music/Megan+Thee+Stallion"
     }
   ],
   "topAlbums": [
     {
-      "name": "Say So (feat. Nicki Minaj)",
-      "playCount": "115",
-      "url": "https://www.last.fm/music/Doja+Cat/Say+So+(feat.+Nicki+Minaj)",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/3dadd697b5e24a45d8d7090dc663ab25.png",
-      "artist": "Doja Cat",
-      "artistUrl": "https://www.last.fm/music/Doja+Cat"
+      "name": "Lover",
+      "playCount": "555",
+      "url": "https://www.last.fm/music/Taylor+Swift/Lover",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/13c3fd969ea2d962c92d064884086e46.png",
+      "artist": "Taylor Swift",
+      "artistUrl": "https://www.last.fm/music/Taylor+Swift"
     },
     {
-      "name": "kid krow",
-      "playCount": "81",
-      "url": "https://www.last.fm/music/Conan+Gray/kid+krow",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/4f133a7c64471f91a30bf6ae80946c8c.jpg",
-      "artist": "Conan Gray",
-      "artistUrl": "https://www.last.fm/music/Conan+Gray"
+      "name": "Treat Myself",
+      "playCount": "467",
+      "url": "https://www.last.fm/music/Meghan+Trainor/Treat+Myself",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/14372eeb2724498cdb16f6fdb8c6742f.jpg",
+      "artist": "Meghan Trainor",
+      "artistUrl": "https://www.last.fm/music/Meghan+Trainor"
     },
     {
-      "name": "Kill The Lights (with Nile Rodgers) [Remixes]",
-      "playCount": "64",
-      "url": "https://www.last.fm/music/Alex+Newell/Kill+The+Lights+(with+Nile+Rodgers)+%5BRemixes%5D",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/3d198cd020c61341d513b8dbd7dc4d3b.jpg",
-      "artist": "Alex Newell",
-      "artistUrl": "https://www.last.fm/music/Alex+Newell"
+      "name": "So Good",
+      "playCount": "411",
+      "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
+      "artist": "Zara Larsson",
+      "artistUrl": "https://www.last.fm/music/Zara+Larsson"
     },
     {
-      "name": "Savage Remix (feat. Beyoncé)",
-      "playCount": "52",
-      "url": "https://www.last.fm/music/Megan+Thee+Stallion/Savage+Remix+(feat.+Beyonc%C3%A9)",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/e7ad60d994388f57ff60d5c3a8ffb2f3.jpg",
-      "artist": "Megan Thee Stallion",
-      "artistUrl": "https://www.last.fm/music/Megan+Thee+Stallion"
-    },
-    {
-      "name": "sTuCK wItH u",
-      "playCount": "40",
-      "url": "https://www.last.fm/music/Ariana+Grande/sTuCK+wItH+u",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/5c0e9aed48693cc2b21f193e3d43d669.jpg",
+      "name": "thank u, next",
+      "playCount": "328",
+      "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/404b81cd632ba51b63fb4ec5a29eb513.jpg",
       "artist": "Ariana Grande",
       "artistUrl": "https://www.last.fm/music/Ariana+Grande"
     },
     {
-      "name": "Maniac",
-      "playCount": "37",
-      "url": "https://www.last.fm/music/Conan+Gray/Maniac",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/6ac6e532fb29e840683c6ae3dbef9137.jpg",
-      "artist": "Conan Gray",
-      "artistUrl": "https://www.last.fm/music/Conan+Gray"
+      "name": "Future Nostalgia",
+      "playCount": "322",
+      "url": "https://www.last.fm/music/Dua+Lipa/Future+Nostalgia",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/e4901b067675378333d26240239fda6a.png",
+      "artist": "Dua Lipa",
+      "artistUrl": "https://www.last.fm/music/Dua+Lipa"
+    },
+    {
+      "name": "Sweetener",
+      "playCount": "312",
+      "url": "https://www.last.fm/music/Ariana+Grande/Sweetener",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8c3b74f6b3e288d8f7baab0542f105df.png",
+      "artist": "Ariana Grande",
+      "artistUrl": "https://www.last.fm/music/Ariana+Grande"
     }
   ]
 }
