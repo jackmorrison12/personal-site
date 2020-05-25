@@ -1,6 +1,6 @@
 git_stats:
-  commits: 321
-  date: Monday, 25 May at 01:57
-  message: "Fixes bugs in lastfm and git stats scripts"
-  hash: 0372a9bf87753eaa4655ca091c1261e4d3ea4c5d
+  commits: 328
+  date: Monday, 25 May at 02:41
+  message: "Adds a blog post"
+  hash: 16f392b77b03ae3bde0de6b2ab76ed88f339c30b
 

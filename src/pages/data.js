@@ -32,7 +32,9 @@ const DataPage = () => (
     </div>
     <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
       <div className="row container ">
-        <div className="col-xs-12 "></div>
+        <div className="col-xs-12">
+          <h2>More data sources to be added soon!</h2>
+        </div>
       </div>
     </div>
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">

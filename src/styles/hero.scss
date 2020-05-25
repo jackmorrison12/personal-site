@@ -12,6 +12,12 @@
   font-size: 3em;
 }
 
+@media screen and (max-width: 481px) {
+  .is-title {
+    font-size: 2em;
+  }
+}
+
 .diagonal-box {
   transform: skewY(-6deg);
 }
