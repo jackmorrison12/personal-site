@@ -21,4 +21,13 @@ I wanted to make the page feel like it was made by me, but also look professiona
 
 ### Displaying Content
 
-Once I created the header, I moved on to how I would display the content. 
+Once I created the header, I moved on to how I would display the content. I didn't want a cluttered design, but I also didn't want to have to create a separate page for all of the content I listed above. I decided that I'd try to meet in the middle - I'd give a highlight of everything in a short paragraph (max 50 words), and then link the keywords to show a component with more detailed information in. This means that people can click more if they'd like to know more, and don't have to sift through a load of useless information they don't want to read.
+
+To show the content, I had to make use of state hooks to keep track of which section the user had clicked on, and make sure the corresponding React component was displayed.
+
+### Libraries Used
+
+For the Education and Experience sections, I decided to bite the bullet and connect these to the Netlify CMS. I also did my projects at the same time. I knew this would take a while, but eventually it would mean I could update them a lot easier. I decided to use [`react-vertical-timeline-component`](https://www.npmjs.com/package/react-vertical-timeline-component). This allowed me to display the information in a nice format with minimal effort. I also wanted to collapse more detailed information here, in case someone was looking for a brief overview. I did this using a state hook as I did for the components above.
+
+I also used [`react-audio-player`](https://www.npmjs.com/package/react-audio-player) on my music creation page, in order to sample some of the songs I'd made. I chose this because I could link songs from external sources, so in this case I used the git repo I had with my music backed up into, since this saved copying them into the repo. 
+
