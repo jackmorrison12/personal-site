@@ -8,8 +8,10 @@ var netlifyCmsPaths = {
 module.exports = {
   siteMetadata: {
     title: `Jack Morrison`,
-    description: `Personal Website`,
+    description: `Jack Morrison - Personal Website`,
     author: `@jackmorrison12`,
+    image: "/favicon-32x32.png",
+    url: "https://www.jackmorrison.netlify.com",
   },
   plugins: [
     netlifyCmsPaths,

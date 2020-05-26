@@ -19,6 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            defaultImage: image
+            url
           }
         }
       }
@@ -67,6 +69,10 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `image`,
+          content: `${site.siteMetadata.url}${site.siteMetadata.defaultImage}`,
+        },
       ].concat(meta)}
     />
   )
@@ -76,6 +82,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   description: ``,
+  image: null,
 }
 
 SEO.propTypes = {
@@ -83,6 +90,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
+  image: PropTypes.string,
 }
 
 export default SEO
