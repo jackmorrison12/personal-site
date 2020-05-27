@@ -1,15 +1,15 @@
 {
   "topTrack": {
-    "name": "rAIn oN mE (with aRIaNa gRAndE)",
+    "name": "Rain on Me (with Ariana Grande)",
     "artist": "Lady Gaga",
-    "playCount": "40",
-    "url": "https://www.last.fm/music/Lady+Gaga/_/rAIn+oN+mE+(with+aRIaNa+gRAndE)",
+    "playCount": "48",
+    "url": "https://www.last.fm/music/Lady+Gaga/_/Rain+on+Me+(with+Ariana+Grande)",
     "artistUrl": "https://www.last.fm/music/Lady+Gaga"
   },
   "recentTrack": {
-    "name": "I Don't Know Why",
-    "artist": "NOTD",
-    "url": "https://www.last.fm/music/NOTD/_/I+Don%27t+Know+Why"
+    "name": "Rain On Me",
+    "artist": "Lady Gaga & Ariana Grande",
+    "url": "https://www.last.fm/music/Lady+Gaga+&+Ariana+Grande/_/Rain+On+Me"
   },
   "topArtists": [
     {
@@ -24,12 +24,12 @@
     },
     {
       "name": "Ariana Grande",
-      "playCount": "90",
+      "playCount": "88",
       "url": "https://www.last.fm/music/Ariana+Grande"
     },
     {
       "name": "Dua Lipa",
-      "playCount": "79",
+      "playCount": "75",
       "url": "https://www.last.fm/music/Dua+Lipa"
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "name": "So Good",
-      "playCount": "411",
+      "playCount": "422",
       "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
       "artist": "Zara Larsson",
@@ -70,7 +70,7 @@
     },
     {
       "name": "thank u, next",
-      "playCount": "328",
+      "playCount": "327",
       "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/404b81cd632ba51b63fb4ec5a29eb513.jpg",
       "artist": "Ariana Grande",
