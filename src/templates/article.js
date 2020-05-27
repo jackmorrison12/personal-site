@@ -17,7 +17,11 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO
+        title={frontmatter.title}
+        image={"/img/" + frontmatter.hero.childImageSharp.fluid.originalName}
+        description={frontmatter.description}
+      />
       <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t pad-5-lr">
           <div className="col-xs-12">
@@ -51,10 +55,12 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
+        description
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
+              originalName
             }
           }
         }

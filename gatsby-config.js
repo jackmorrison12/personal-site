@@ -9,9 +9,9 @@ module.exports = {
   siteMetadata: {
     title: `Jack Morrison`,
     description: `Jack Morrison - Personal Website`,
-    author: `@jackmorrison12`,
-    image: "/favicon-32x32.png",
-    url: "https://www.jackmorrison.netlify.com",
+    author: `@jsm_ic`,
+    image: "/img/banner2.png",
+    url: "https://jackmorrison.netlify.app",
   },
   plugins: [
     netlifyCmsPaths,
