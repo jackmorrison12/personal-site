@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 git_commits=$(git rev-list --count HEAD)
 git_dates=$(git log -1 --date=format:'%A, %d %B at %H:%M' --pretty=format:%cd)
 git_message=$(git log -1 --pretty=%s)
@@ -21,7 +21,7 @@ then
   git_message="Adds some work experience"
 elif [[ $git_message == Merge* ]];
 then
-  git_message="Merges a pull request"
+git_message=$(git log -1 --pretty=%b)
 fi
 
 cd src/data 

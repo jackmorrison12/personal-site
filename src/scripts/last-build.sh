@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 time=$(date +%s000)
 
 cd src/data 
