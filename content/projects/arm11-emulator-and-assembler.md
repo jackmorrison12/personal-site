@@ -4,7 +4,9 @@ slug: /projects/arm11
 type: Uni Project
 homepage: false
 cv: false
-hidden: true
+featured: false
+hidden: false
+hero: /img/arm11-logo.png
 description: An Emulator and Assembler for the ARM11 Programming Language
 tech:
   - C

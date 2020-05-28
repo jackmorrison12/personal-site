@@ -4,7 +4,9 @@ slug: /projects/pyplay
 type: Hackathon
 homepage: false
 cv: false
-hidden: true
+featured: false
+hidden: false
+hero: /img/pyplay-logo.png
 description: An app to teach young coders the basics of Python
 tech:
   - Python

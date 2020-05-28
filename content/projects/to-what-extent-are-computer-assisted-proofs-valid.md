@@ -1,18 +1,20 @@
 ---
-title: To What Extent are Computer-Assisted Proofs Valid?
+title: Computer-Assisted Proofs
 slug: /projects/epq
 type: School Project
 homepage: false
 cv: false
-hidden: true
-description: An essay discussing the controversy over computer-assisted proofs
+featured: false
+hidden: false
+hero: /img/epq-logo.png
+description: An essay discussing the validity of computer-assisted proofs
 tech:
   - Extended Writing
 startdate: 2016-08-31T23:51:00.000Z
 enddate: 2017-04-30T23:51:00.000Z
 sources:
   - icon: fas fa-file-pdf
-    name: in this file
+    name: this file
     url: epq.pdf
 ---
 

@@ -4,7 +4,9 @@ slug: /projects/mentor-me
 type: Personal Project
 homepage: false
 cv: false
-hidden: true
+featured: false
+hidden: false
+hero: /img/mentor-me-logo.png
 description: An app to 'Bring Communities Together'
 tech:
   - React

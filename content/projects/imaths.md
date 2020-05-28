@@ -4,7 +4,9 @@ slug: /projects/imaths
 type: School Project
 homepage: false
 cv: false
-hidden: true
+featured: false
+hidden: false
+hero: /img/imaths-logo.png
 description: An app to teach students GCSE Maths
 tech:
   - Swift

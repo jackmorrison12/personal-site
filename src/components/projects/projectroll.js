@@ -10,40 +10,83 @@ import Img from "gatsby-image"
 class ProjectRoll extends React.Component {
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: featured } = data.featured
+    const { edges: non_featured } = data.non_featured
 
     return (
-      <div className="row flex">
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className="col-xs-12 col-md-3 margin-3-b">
-              <div className="grow project is-white-bg">
-                <Link to={"/" + post.frontmatter.slug} className="" id="path">
-                  <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
-                  <div className="pad-2">
-                    <h2 className="is-red margin-0">
-                      {post.frontmatter.title}
-                    </h2>
-                    <p className=" margin-0-t margin-2-b is-black bold">
-                      {post.frontmatter.startdate !== post.frontmatter.enddate
-                        ? post.frontmatter.startdate +
-                          " - " +
-                          post.frontmatter.enddate
-                        : post.frontmatter.startdate}
-                    </p>
-                    <div className="line-sm is-black margin-3-b" />
-                    <p className="margin-0 is-black">
-                      {post.frontmatter.description}
-                    </p>
-                    <p className="margin-0 is-red">
-                      {post.frontmatter.tech.map(item => item).join(", ")}
-                    </p>
-                  </div>
-                </Link>
+      <>
+        <div className="row flex">
+          {featured &&
+            featured.map(({ node: post }) => (
+              <div className="col-xs-12 col-sm-6 col-md-3 margin-3-b pad-5-lr">
+                <div className="grow project featured is-white-bg">
+                  <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                    <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                    <div className="pad-2">
+                      <h2 className="is-red margin-0">
+                        {post.frontmatter.title}
+                      </h2>
+                      <p className=" margin-0-t margin-2-b is-black bold">
+                        {post.frontmatter.startdate !== post.frontmatter.enddate
+                          ? post.frontmatter.startdate +
+                            " - " +
+                            post.frontmatter.enddate
+                          : post.frontmatter.startdate}
+                      </p>
+                      <div className="line-sm is-black margin-3-b" />
+                      <p className="margin-0 is-black">
+                        {post.frontmatter.description}
+                      </p>
+                      <p className="margin-0 is-red">
+                        {post.frontmatter.tech.map(item => item).join(", ")}
+                      </p>
+                    </div>
+                  </Link>
+                </div>
               </div>
-            </div>
-          ))}
-      </div>
+            ))}
+        </div>
+        <div className="row flex">
+          {non_featured &&
+            non_featured.map(({ node: post }) => (
+              <div className="col-xs-12 col-md-6 margin-3-b pad-5-lr">
+                <div className="grow project non-featured is-white-bg">
+                  <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                    <div className="row">
+                      <div className="col-xs-12 col-sm-4 pad-0">
+                        <Img
+                          fluid={post.frontmatter.hero.childImageSharp.fluid}
+                        />
+                      </div>
+                      <div className="col-xs-12 col-sm-8">
+                        <div className="pad-2 pad-5-t">
+                          <h2 className="is-red margin-0">
+                            {post.frontmatter.title}
+                          </h2>
+                          <p className=" margin-0-t margin-2-b is-black bold">
+                            {post.frontmatter.startdate !==
+                            post.frontmatter.enddate
+                              ? post.frontmatter.startdate +
+                                " - " +
+                                post.frontmatter.enddate
+                              : post.frontmatter.startdate}
+                          </p>
+                          <div className="line-sm is-black margin-3-b" />
+                          <p className="margin-0 is-black">
+                            {post.frontmatter.description}
+                          </p>
+                          <p className="margin-0 is-red">
+                            {post.frontmatter.tech.map(item => item).join(", ")}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            ))}
+        </div>
+      </>
     )
   }
 }
@@ -59,11 +102,39 @@ export default () => (
   <StaticQuery
     query={graphql`
       query ProjectRollQuery {
-        allMarkdownRemark(
+        featured: allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___startdate] }
           filter: {
             fileAbsolutePath: { regex: "/projects/" }
-            frontmatter: { hidden: { eq: false } }
+            frontmatter: { featured: { eq: true } }
+          }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                slug
+                title
+                startdate(formatString: "MMMM YYYY")
+                enddate(formatString: "MMMM YYYY")
+                description
+                tech
+                hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        non_featured: allMarkdownRemark(
+          sort: { order: DESC, fields: [frontmatter___startdate] }
+          filter: {
+            fileAbsolutePath: { regex: "/projects/" }
+            frontmatter: { featured: { eq: false }, hidden: { eq: false } }
           }
         ) {
           edges {

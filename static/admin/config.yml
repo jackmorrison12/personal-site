@@ -1,9 +1,9 @@
 backend:
-    name: git-gateway
-    branch: master
+  name: git-gateway
+  branch: master
 
 publish_mode: editorial_workflow
-  
+
 media_folder: static/img
 public_folder: /img
 
@@ -13,102 +13,173 @@ display_url: https://jackmorrison.netlify.app
 show_preview_links: true
 
 collections:
-    - name: "blog"
-      label: "Blog Post"
-      description: "Some daily writing"
-      folder: "content/blog"
-      create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-      editor:
-        preview: true
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
-        - { label: "Hero Image", name: "hero", widget: "image", required: false}
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Topics", name: "topics", widget: "list" }
-        - { label: "Body", name: "body", widget: "markdown" }
-    - name: "article"
-      label: "Article"
-      description: "More formal writing"
-      folder: "content/articles"
-      create: true
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-      editor:
-        preview: true
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "Publish Date", name: "date", widget: "datetime" }
-        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
-        - { label: "Hero Image", name: "hero", widget: "image", required: false}
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Topics", name: "topics", widget: "list" }
-        - { label: "Body", name: "body", widget: "markdown" }
-    - name: "project"
-      label: "Project"
-      description: "Any cool things I've worked on"
-      folder: "content/projects"
-      create: true
-      slug: "{{slug}}"
-      editor:
-        preview: true
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "Type", name: "type", widget: "select", options: ["Hackathon", "School Project", "Uni Project", "Personal Project"] }
-        - { label: "Homepage", name: "homepage", widget: "boolean", default: false}
-        - { label: "CV", name: "cv", widget: "boolean", default: true}
-        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
-        - { label: "Hero Image", name: "hero", widget: "image", required: false}
-        - { label: "Description", name: "description", widget: "string" }
-        - { label: "Tech", name: "tech", widget: "list"}
-        - { label: "Start Date", name: "startdate", widget: "datetime" }
-        - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Sources", name: "sources", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Url", name: "url", widget: "string"}, {label: "Icon", name: "icon", widget: "string"}] }
-        - { label: "Highlights", name: "highlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
-        - { label: "Body", name: "body", widget: "markdown" }
-    - name: "education"
-      label: "Education"
-      description: "Educational Institutions"
-      folder: "content/education"
-      create: true
-      slug: "{{slug}}"
-      editor:
-        preview: true
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "CV", name: "cv", widget: "boolean", default: true}
-        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
-        - { label: "Subtitle", name: "subtitle", widget: "string" }
-        - { label: "URL", name: "url", widget: "string" }
-        - { label: "Start Date", name: "startdate", widget: "datetime" }
-        - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Grades", name: "grades", widget: "list", fields: [{label: "Grade", name: "grade", widget: "string"}]}
-        - { label: "Grade Summaries", name: "grade-summaries", widget: "list", fields: [{label: "Grade", name: "grade", widget: "string"}]}
-        - { label: "Highlights", name: "highlights", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Score", name: "score", widget: "string"}] }
-        - { label: "Commendations", name: "commendations", widget: "list", fields: [{label: "Name", name: "name", widget: "string"}, {label: "Awarder", name: "awarder", widget: "string"}, {label: "Date", name: "date", widget: "datetime"}] }
-        - { label: "Body", name: "body", widget: "markdown" }
-    - name: "experience"
-      label: "Experience"
-      description: "Work Experience"
-      folder: "content/experience"
-      create: true
-      slug: "{{slug}}"
-      editor:
-        preview: true
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Slug", name: "slug", widget: "string" }
-        - { label: "CV", name: "cv", widget: "boolean", default: true}
-        - { label: "Hidden", name: "hidden", widget: "boolean", default: false}
-        - { label: "Subtitle", name: "subtitle", widget: "string" }
-        - { label: "URL", name: "url", widget: "string" }
-        - { label: "Start Date", name: "startdate", widget: "datetime" }
-        - { label: "End Date", name: "enddate", widget: "datetime" }
-        - { label: "Short Highlights", name: "shorthighlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
-        - { label: "Long Highlights", name: "longhighlights", widget: "list", fields: [{label: "Highlight", name: "highlight", widget: "string"}] }
-        - { label: "Body", name: "body", widget: "markdown" }
+  - name: "blog"
+    label: "Blog Post"
+    description: "Some daily writing"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Topics", name: "topics", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "article"
+    label: "Article"
+    description: "More formal writing"
+    folder: "content/articles"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Topics", name: "topics", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "project"
+    label: "Project"
+    description: "Any cool things I've worked on"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - {
+          label: "Type",
+          name: "type",
+          widget: "select",
+          options:
+            ["Hackathon", "School Project", "Uni Project", "Personal Project"],
+        }
+      - {
+          label: "Homepage",
+          name: "homepage",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "CV", name: "cv", widget: "boolean", default: true }
+      - {
+          label: "Featured",
+          name: "featured",
+          widget: "boolean",
+          default: false,
+        }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tech", name: "tech", widget: "list" }
+      - { label: "Start Date", name: "startdate", widget: "datetime" }
+      - { label: "End Date", name: "enddate", widget: "datetime" }
+      - {
+          label: "Sources",
+          name: "sources",
+          widget: "list",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Url", name: "url", widget: "string" },
+              { label: "Icon", name: "icon", widget: "string" },
+            ],
+        }
+      - {
+          label: "Highlights",
+          name: "highlights",
+          widget: "list",
+          fields: [{ label: "Highlight", name: "highlight", widget: "string" }],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "education"
+    label: "Education"
+    description: "Educational Institutions"
+    folder: "content/education"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "CV", name: "cv", widget: "boolean", default: true }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Start Date", name: "startdate", widget: "datetime" }
+      - { label: "End Date", name: "enddate", widget: "datetime" }
+      - {
+          label: "Grades",
+          name: "grades",
+          widget: "list",
+          fields: [{ label: "Grade", name: "grade", widget: "string" }],
+        }
+      - {
+          label: "Grade Summaries",
+          name: "grade-summaries",
+          widget: "list",
+          fields: [{ label: "Grade", name: "grade", widget: "string" }],
+        }
+      - {
+          label: "Highlights",
+          name: "highlights",
+          widget: "list",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Score", name: "score", widget: "string" },
+            ],
+        }
+      - {
+          label: "Commendations",
+          name: "commendations",
+          widget: "list",
+          fields:
+            [
+              { label: "Name", name: "name", widget: "string" },
+              { label: "Awarder", name: "awarder", widget: "string" },
+              { label: "Date", name: "date", widget: "datetime" },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "experience"
+    label: "Experience"
+    description: "Work Experience"
+    folder: "content/experience"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "CV", name: "cv", widget: "boolean", default: true }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Start Date", name: "startdate", widget: "datetime" }
+      - { label: "End Date", name: "enddate", widget: "datetime" }
+      - {
+          label: "Short Highlights",
+          name: "shorthighlights",
+          widget: "list",
+          fields: [{ label: "Highlight", name: "highlight", widget: "string" }],
+        }
+      - {
+          label: "Long Highlights",
+          name: "longhighlights",
+          widget: "list",
+          fields: [{ label: "Highlight", name: "highlight", widget: "string" }],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }

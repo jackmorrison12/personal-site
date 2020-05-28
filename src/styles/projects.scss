@@ -1,5 +1,22 @@
 .project {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
+  .gatsby-image-wrapper {
+    border-top-left-radius: 15px;
+  }
+}
+
+.featured {
+  .gatsby-image-wrapper {
+    border-top-right-radius: 15px;
+  }
+}
+
+.non-featured {
+  .gatsby-image-wrapper {
+    border-bottom-left-radius: 15px;
+  }
 }
 
 .project:hover {

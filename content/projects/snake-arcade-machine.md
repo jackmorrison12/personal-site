@@ -4,6 +4,7 @@ slug: /projects/snake
 type: Uni Project
 homepage: false
 cv: false
+featured: true
 hidden: false
 hero: /img/snake-logo.png
 description: A recreation of the classic game Snake on a 32x32 LED matrix

@@ -4,7 +4,9 @@ slug: /projects/wacc
 type: Uni Project
 homepage: false
 cv: true
-hidden: true
+featured: false
+hidden: false
+hero: /img/wacc-logo.png
 description: A compiler created for our own programming language
 tech:
   - Kotlin

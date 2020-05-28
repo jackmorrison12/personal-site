@@ -4,7 +4,9 @@ slug: /projects/pintos
 type: Uni Project
 homepage: false
 cv: false
-hidden: true
+featured: false
+hidden: false
+hero: /img/pintos-logo.png
 description: An Operating System we helped complete
 tech:
   - C

@@ -17,7 +17,7 @@ class ProjectPreviews extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="col-xs-12 col-md-6 margin-3-b">
-              <div className="grow project is-light-grey-bg">
+              <div className="grow project non-featured is-light-grey-bg">
                 <Link to={"/" + post.frontmatter.slug} className="" id="path">
                   <div className="row">
                     <div className="col-xs-12 col-sm-4 pad-0">
