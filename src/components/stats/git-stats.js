@@ -1,8 +1,9 @@
 import React from "react"
 import useGitStatsData from "../../hooks/use-git-stats-data"
 import Emoji from "a11y-react-emoji"
+import TimeAgo from "react-timeago"
 
-export default () => {
+export default props => {
   var data = useGitStatsData()
   data = data.main.git_stats
   const repo_name = "personal-site"
@@ -61,7 +62,7 @@ export default () => {
         >
           git terminal commands & a shell script
         </a>
-        , accurate as of last build
+        , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
     </>
   )

@@ -1,10 +1,11 @@
 import React from "react"
 import Emoji from "a11y-react-emoji"
 import Img from "gatsby-image"
+import TimeAgo from "react-timeago"
 
 import useLastFMData from "../../hooks/use-lastfm-data"
 
-export default () => {
+export default props => {
   var data = useLastFMData()
   let topTrack = data.topTrack.topTrack
   let topArtists = data.topArtists.topArtists
@@ -96,7 +97,7 @@ export default () => {
         <a className="link" href="https://www.last.fm/api/intro">
           Last FM API
         </a>
-        , accurate as of last build
+        , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
     </>
   )

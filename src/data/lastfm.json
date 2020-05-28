@@ -14,22 +14,22 @@
   "topArtists": [
     {
       "name": "Doja Cat",
-      "playCount": "169",
+      "playCount": "167",
       "url": "https://www.last.fm/music/Doja+Cat"
     },
     {
       "name": "Conan Gray",
-      "playCount": "118",
+      "playCount": "117",
       "url": "https://www.last.fm/music/Conan+Gray"
     },
     {
       "name": "Ariana Grande",
-      "playCount": "88",
+      "playCount": "86",
       "url": "https://www.last.fm/music/Ariana+Grande"
     },
     {
       "name": "Dua Lipa",
-      "playCount": "75",
+      "playCount": "71",
       "url": "https://www.last.fm/music/Dua+Lipa"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "name": "Megan Thee Stallion",
-      "playCount": "54",
+      "playCount": "53",
       "url": "https://www.last.fm/music/Megan+Thee+Stallion"
     }
   ],
