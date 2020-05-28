@@ -4,13 +4,7 @@ const download = require("image-downloader")
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-function wait(ms) {
-  var start = new Date().getTime()
-  var end = start
-  while (end < start + ms) {
-    end = new Date().getTime()
-  }
-}
+
 var lastfm = new LastFmNode({
   api_key: process.env.GATSBY_LASTFM_API_KEY,
   secret: process.env.GATSBY_LASTFM_SECRET,

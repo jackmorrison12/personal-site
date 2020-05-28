@@ -39,6 +39,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
     "react-slidedown": "^2.4.5",
+    "react-timeago": "^4.4.0",
     "react-tooltip": "^4.2.6",
     "react-vertical-timeline-component": "^2.6.2",
     "use-dark-mode": "^2.3.1"
@@ -51,7 +52,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "prebuild" : "npm run git-stats && npm run lastfm-stats",
+    "prebuild": "npm run git-stats && npm run lastfm-stats && npm run last-build",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md,scss}\"",
@@ -59,10 +60,11 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "repo-init" : "  git config core.hooksPath .githooks",
+    "repo-init": "  git config core.hooksPath .githooks",
     "stats": "echo 📈 Updating stats... && scc -f cloc-yaml -M package . > src/data/code_output.yml",
-    "git-stats" : "./src/scripts/git-stats.sh",
-    "lastfm-stats" : "node src/scripts/lastfm-stats.js"
+    "git-stats": "./src/scripts/git-stats.sh",
+    "last-build": "./src/scripts/last-build.sh",
+    "lastfm-stats": "node src/scripts/lastfm-stats.js"
   },
   "repository": {
     "type": "git",

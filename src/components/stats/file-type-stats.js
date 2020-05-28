@@ -2,8 +2,9 @@ import React from "react"
 import useStatsData from "../../hooks/use-stats-data"
 import ReactTooltip from "react-tooltip"
 import Emoji from "a11y-react-emoji"
+import TimeAgo from "react-timeago"
 
-export default () => {
+export default props => {
   const data = useStatsData()
   const main_data = data.header.SUM
   const language_data = data.languages
@@ -130,7 +131,7 @@ export default () => {
         <a className="link" href="https://github.com/boyter/scc/">
           scc terminal command
         </a>
-        , accurate as of last build
+        , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
       <ReactTooltip />
     </>
