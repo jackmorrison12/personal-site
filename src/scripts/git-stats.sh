@@ -21,7 +21,7 @@ then
   git_message="Adds some work experience"
 elif [[ $git_message == Merge* ]];
 then
-git_message=$(git log -1 --pretty=%b)
+  git_message=$(git log -1 --pretty=%b)
 fi
 
 cd src/data 
