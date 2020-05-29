@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,27 +24,30 @@ const IndexPage = () => (
           <h1 className="is-title margin-0">Jack Morrison</h1>
           <h3 className="is-subtitle">
             Computing Student @{" "}
-            <a
+            <OutboundLink
               className="is-red link"
               href="https://www.imperial.ac.uk/computing"
               target="_blank"
               rel="noopener noreferrer"
             >
               Imperial
-            </a>
+            </OutboundLink>
           </h3>
           <div className="line margin-10-t margin-10-b" />
           <div className="">
             {socials
               .filter(item => item.home)
               .map(item => (
-                <a href={item.url} className="is-black pad-2 col-xs-3">
+                <OutboundLink
+                  href={item.url}
+                  className="is-black pad-2 col-xs-3"
+                >
                   <FontAwesomeIcon
                     icon={["fab", item.icon]}
                     size="2x"
                     className="grow-5"
                   />
-                </a>
+                </OutboundLink>
               ))}
           </div>
         </div>

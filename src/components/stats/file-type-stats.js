@@ -3,6 +3,7 @@ import useStatsData from "../../hooks/use-stats-data"
 import ReactTooltip from "react-tooltip"
 import Emoji from "a11y-react-emoji"
 import TimeAgo from "react-timeago"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default props => {
   const data = useStatsData()
@@ -128,9 +129,9 @@ export default props => {
       </div>
       <p>
         <Emoji symbol="💻" label="laptop" /> Data sourced using{" "}
-        <a className="link" href="https://github.com/boyter/scc/">
+        <OutboundLink className="link" href="https://github.com/boyter/scc/">
           scc terminal command
-        </a>
+        </OutboundLink>
         , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
       <ReactTooltip />

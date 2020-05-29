@@ -2,6 +2,7 @@ import React from "react"
 import useGitStatsData from "../../hooks/use-git-stats-data"
 import Emoji from "a11y-react-emoji"
 import TimeAgo from "react-timeago"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default props => {
   var data = useGitStatsData()
@@ -12,7 +13,7 @@ export default props => {
     <>
       <h2>
         This repo has{" "}
-        <a
+        <OutboundLink
           href={
             "https://github.com/" +
             github_username +
@@ -23,9 +24,9 @@ export default props => {
           className="link is-green"
         >
           <span className="is-green">{data.commits}</span>
-        </a>{" "}
+        </OutboundLink>{" "}
         commits. The most recent commit was on{" "}
-        <a
+        <OutboundLink
           href={
             "https://github.com/" +
             github_username +
@@ -37,9 +38,9 @@ export default props => {
           className="link is-green"
         >
           <span className="is-green">{data.date}</span>
-        </a>{" "}
+        </OutboundLink>{" "}
         and it{" "}
-        <a
+        <OutboundLink
           href={
             "https://github.com/" +
             github_username +
@@ -51,17 +52,17 @@ export default props => {
           className="link is-green"
         >
           <span className="is-green">{data.message.toLowerCase()}</span>
-        </a>
+        </OutboundLink>
         .
       </h2>
       <p>
         <Emoji symbol="😻" label="cat" /> Data sourced using{" "}
-        <a
+        <OutboundLink
           className="link"
           href="https://github.com/jackmorrison12/personal-site/blob/master/src/scripts/git-stats.sh"
         >
           git terminal commands & a shell script
-        </a>
+        </OutboundLink>
         , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
     </>

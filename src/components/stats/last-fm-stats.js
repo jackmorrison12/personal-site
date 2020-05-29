@@ -2,6 +2,7 @@ import React from "react"
 import Emoji from "a11y-react-emoji"
 import Img from "gatsby-image"
 import TimeAgo from "react-timeago"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import useLastFMData from "../../hooks/use-lastfm-data"
 
@@ -15,25 +16,25 @@ export default props => {
     <>
       <h2>
         My most listened to song this week is{" "}
-        <a href={topTrack.url} className="link is-yellow">
+        <OutboundLink href={topTrack.url} className="link is-yellow">
           <span className="is-yellow">{topTrack.name}</span>
-        </a>{" "}
+        </OutboundLink>{" "}
         by{" "}
-        <a href={topTrack.artistUrl} className="link is-yellow">
+        <OutboundLink href={topTrack.artistUrl} className="link is-yellow">
           <span className="is-yellow">{topTrack.artist}</span>
-        </a>
+        </OutboundLink>
         . I've listened to it{" "}
         <span className="is-yellow">{topTrack.playCount}</span> times!
       </h2>
       <h2>
         This month, I've been listening to a lot of{" "}
-        <a href={topArtists[0].url} className="link is-yellow">
+        <OutboundLink href={topArtists[0].url} className="link is-yellow">
           <span className="is-yellow">{topArtists[0].name}</span>
-        </a>{" "}
+        </OutboundLink>{" "}
         and{" "}
-        <a href={topArtists[1].url} className="link is-yellow">
+        <OutboundLink href={topArtists[1].url} className="link is-yellow">
           <span className="is-yellow">{topArtists[1].name}</span>
-        </a>
+        </OutboundLink>
         .
       </h2>
       <div className="row pad-5-t">
@@ -48,11 +49,11 @@ export default props => {
                 }}
               ></section>
             </div>
-            <a href={item.url} className="link is-yellow">
+            <OutboundLink href={item.url} className="link is-yellow">
               <p className="is-yellow text-align-center margin-0-b">
                 {item.name}
               </p>
-            </a>
+            </OutboundLink>
             <p className="is-pink text-align-center margin-0-t">
               {item.playCount} plays
             </p>
@@ -61,31 +62,31 @@ export default props => {
       </div>
       <h2>
         Some of my top albums from the last year are by{" "}
-        <a href={topAlbums[0].url} className="link is-yellow">
+        <OutboundLink href={topAlbums[0].url} className="link is-yellow">
           <span className="is-yellow">{topAlbums[0].artist}</span>
-        </a>{" "}
+        </OutboundLink>{" "}
         and{" "}
-        <a href={topAlbums[1].url} className="link is-yellow">
+        <OutboundLink href={topAlbums[1].url} className="link is-yellow">
           <span className="is-yellow">{topAlbums[1].artist}</span>
-        </a>
+        </OutboundLink>
         .
       </h2>
       <div className="row pad-5-t">
         {topAlbums.map((item, i) => (
           <div className="col-xs-6 col-sm-2">
-            <a href={item.url}>
+            <OutboundLink href={item.url}>
               <div className="grow">
                 <Img fluid={albumImages[i].childImageSharp.fluid} />
               </div>
               <p className="link bold is-yellow text-align-center margin-0-b">
                 {item.name}
               </p>
-            </a>
-            <a href={item.artistUrl} className="link is-yellow">
+            </OutboundLink>
+            <OutboundLink href={item.artistUrl} className="link is-yellow">
               <p className="is-yellow text-align-center margin-0-tb">
                 {item.artist}
               </p>
-            </a>
+            </OutboundLink>
             <p className="is-pink text-align-center margin-0-t">
               {item.playCount} plays
             </p>
@@ -94,9 +95,9 @@ export default props => {
       </div>
       <p>
         <Emoji symbol="🎸" label="guitar" /> Provided by the{" "}
-        <a className="link" href="https://www.last.fm/api/intro">
+        <OutboundLink className="link" href="https://www.last.fm/api/intro">
           Last FM API
-        </a>
+        </OutboundLink>
         , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
     </>
