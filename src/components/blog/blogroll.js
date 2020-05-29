@@ -11,21 +11,23 @@ class BlogRoll extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     return (
-      posts &&
-      posts.map(({ node: post }) => (
-        <Link to={"/" + post.frontmatter.slug} className="" id="path">
-          <div className="grow row margin-5-b">
-            <div className="col-xs-12 margin-5-t">
+      <div className="row">
+        {posts &&
+          posts.map(({ node: post }) => (
+            <Link
+              to={"/" + post.frontmatter.slug}
+              className="grow margin-5-b col-xs-12 col-sm-6 margin-5-t"
+              id="path"
+            >
               <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
               <p className="margin-0 margin-2-b is-black">
                 {post.frontmatter.date}
               </p>
               <div className="line-sm is-black margin-3-b" />
               <p className="margin-0 is-black">{post.excerpt}</p>
-            </div>
-          </div>
-        </Link>
-      ))
+            </Link>
+          ))}
+      </div>
     )
   }
 }
@@ -48,7 +50,7 @@ export default () => (
             fileAbsolutePath: { regex: "/blog/" }
             frontmatter: { hidden: { eq: false } }
           }
-          limit: 5
+          limit: 4
         ) {
           edges {
             node {

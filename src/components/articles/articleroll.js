@@ -13,24 +13,30 @@ class ArticleRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      posts &&
-      posts.map(({ node: post }) => (
-        <Link to={"/" + post.frontmatter.slug} className="" id="path">
-          <div className="grow row margin-5-b">
-            <div className="col-xs-12 col-md-5 margin-5-t">
-              <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
-            </div>
-            <div className="col-xs-12 col-md-6 margin-5-t">
-              <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
-              <p className="margin-0 margin-2-b is-black">
-                {post.frontmatter.date}
-              </p>
-              <div className="line-sm is-black margin-3-b" />
-              <p className="margin-0 is-black">{post.excerpt}</p>
-            </div>
-          </div>
-        </Link>
-      ))
+      <div className="row">
+        {posts &&
+          posts.map(({ node: post }) => (
+            <Link
+              to={"/" + post.frontmatter.slug}
+              className="grow margin-5-b col-xs-12"
+              id="path"
+            >
+              <div className="row">
+                <div className="col-xs-12 col-sm-6 col-md-4 margin-5-t">
+                  <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                </div>
+                <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">
+                  <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
+                  <p className="margin-0 margin-2-b is-black">
+                    {post.frontmatter.date}
+                  </p>
+                  <div className="line-sm is-black margin-3-b" />
+                  <p className="margin-0 is-black">{post.excerpt}</p>
+                </div>
+              </div>
+            </Link>
+          ))}
+      </div>
     )
   }
 }

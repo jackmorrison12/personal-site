@@ -10,7 +10,7 @@ const WritingPage = () => (
   <Layout>
     <SEO title="Articles" />
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
-      <div className="row container">
+      <div className="row container-small">
         <div className="col-xs-12 col-md-12">
           <h1 className="is-title margin-0-t">I like to write</h1>
           <div className="line margin-3-t" />
@@ -27,9 +27,9 @@ const WritingPage = () => (
       </div>
     </div>
     <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
-      <div className="row container ">
+      <div className="row container-small ">
         <div className="col-xs-12 col-md-12">
-          <h1>... and some blog posts</h1>
+          <h1>... and some recent blog posts</h1>
           <BlogRoll />
           <h3 className="pad-5-t margin-0">
             Looking for something older? Go to the{" "}
@@ -42,7 +42,7 @@ const WritingPage = () => (
       </div>
     </div>
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
-      <div className="row container ">
+      <div className="row container-small ">
         <div className="col-xs-12 col-md-12">
           <h1>What's the difference?</h1>
           <p>
