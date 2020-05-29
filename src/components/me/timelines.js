@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useEducationData } from "../../hooks/use-education-data"
 import { useExperienceData } from "../../hooks/use-experience-data"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import {
   VerticalTimeline,
@@ -38,14 +39,14 @@ export const ExperienceTimeline = () => {
               {data.subtitle}
             </h4>
             <h2 className="vertical-timeline-element-title pad-2-b">
-              <a
+              <OutboundLink
                 href={data.url}
                 className="link is-black"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {data.title}
-              </a>
+              </OutboundLink>
             </h2>
 
             {data.shorthighlights.map(i => (
@@ -108,14 +109,14 @@ export const EducationTimeline = () => {
               {data.subtitle}
             </h4>
             <h2 className="vertical-timeline-element-title pad-2-b">
-              <a
+              <OutboundLink
                 href={data.url}
                 className="link is-black"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {data.title}
-              </a>
+              </OutboundLink>
             </h2>
 
             {data.highlights

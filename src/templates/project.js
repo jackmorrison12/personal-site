@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -56,7 +57,7 @@ export default function Template({
                   {frontmatter.sources
                     .map(item => (
                       <span className="link">
-                        <a href={item.url}>{item.name}</a>
+                        <OutboundLink href={item.url}>{item.name}</OutboundLink>
                       </span>
                     ))
                     .reduce((acc, curr, i) =>

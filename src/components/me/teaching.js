@@ -1,5 +1,6 @@
 import React from "react"
 import Emoji from "a11y-react-emoji"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import pythonData from "../../data/python.json"
 
@@ -12,19 +13,19 @@ export default () => (
       <p>
         I enjoy teaching, and have volunteered my skills teaching a Robotics
         Club at{" "}
-        <a
+        <OutboundLink
           href="http://www.netley.camden.sch.uk/"
           className="is-medium-blue link"
         >
           Netley Primary School
-        </a>
+        </OutboundLink>
         , as well as for an introductory Python Course at{" "}
-        <a
+        <OutboundLink
           href="https://www.cooperscoborn.org.uk/"
           className="is-medium-blue link"
         >
           The Coopers' Company and Coborn School
-        </a>
+        </OutboundLink>
         .
         <br />
         <br />
@@ -51,42 +52,54 @@ export default () => (
             <tr>
               <td>{item.name}</td>
               <td>
-                <a href={item.teacher_slides}>Teacher Slides {i + 1}</a>
+                <OutboundLink href={item.teacher_slides}>
+                  Teacher Slides {i + 1}
+                </OutboundLink>
               </td>
               <td>
-                <a href={item.student_slides}>Student Slides {i + 1}</a>
+                <OutboundLink href={item.student_slides}>
+                  Student Slides {i + 1}
+                </OutboundLink>
               </td>
               <td>
-                <a href={item.worksheet}>Worksheet {i + 1}</a>
+                <OutboundLink href={item.worksheet}>
+                  Worksheet {i + 1}
+                </OutboundLink>
               </td>
               <td>
-                <a href={item.answers}>Worksheet Answers {i + 1}</a>
+                <OutboundLink href={item.answers}>
+                  Worksheet Answers {i + 1}
+                </OutboundLink>
               </td>
               {item.notebook ? (
                 <td>
-                  <a href={item.notebook}>Jupyter Notebook {i + 1}</a>
+                  <OutboundLink href={item.notebook}>
+                    Jupyter Notebook {i + 1}
+                  </OutboundLink>
                 </td>
               ) : (
                 <td class="teaching-table-empty"></td>
               )}
               {item.leaderboard ? (
                 <td>
-                  <a href={item.leaderboard}>Leaderboard {i + 1}</a>
+                  <OutboundLink href={item.leaderboard}>
+                    Leaderboard {i + 1}
+                  </OutboundLink>
                 </td>
               ) : (
                 <td class="teaching-table-empty"></td>
               )}
               {item.kahoot ? (
                 <td>
-                  <a href={item.kahoot}>Kahoot {i + 1}</a>
+                  <OutboundLink href={item.kahoot}>Kahoot {i + 1}</OutboundLink>
                 </td>
               ) : (
                 <td class="teaching-table-empty"></td>
               )}
               <td>
-                <a href={item.github} className="icon">
+                <OutboundLink href={item.github} className="icon">
                   Source {i + 1}
-                </a>
+                </OutboundLink>
               </td>
             </tr>
           )
@@ -100,21 +113,29 @@ export default () => (
                 Week {i + 1} - {item.name}
               </h4>
               <p>
-                <a href={item.teacher_slides}>Teacher Slides</a>
+                <OutboundLink href={item.teacher_slides}>
+                  Teacher Slides
+                </OutboundLink>
               </p>
               <p>
-                <a href={item.student_slides}>Student Slides</a>
+                <OutboundLink href={item.student_slides}>
+                  Student Slides
+                </OutboundLink>
               </p>
               <p>
-                <a href={item.worksheet}>Worksheet</a>
+                <OutboundLink href={item.worksheet}>Worksheet</OutboundLink>
               </p>
               <p>
-                <a href={item.answers}>Worksheet Answers</a>
+                <OutboundLink href={item.answers}>
+                  Worksheet Answers
+                </OutboundLink>
               </p>
               {item.notebook ? (
                 <>
                   <p>
-                    <a href={item.notebook}>Jupyter Notebook</a>
+                    <OutboundLink href={item.notebook}>
+                      Jupyter Notebook
+                    </OutboundLink>
                   </p>
                 </>
               ) : (
@@ -123,7 +144,9 @@ export default () => (
               {item.leaderboard ? (
                 <>
                   <p>
-                    <a href={item.leaderboard}>Leaderboard</a>
+                    <OutboundLink href={item.leaderboard}>
+                      Leaderboard
+                    </OutboundLink>
                   </p>
                 </>
               ) : (
@@ -132,14 +155,14 @@ export default () => (
               {item.kahoot ? (
                 <>
                   <p>
-                    <a href={item.kahoot}>Kahoot</a>
+                    <OutboundLink href={item.kahoot}>Kahoot</OutboundLink>
                   </p>
                 </>
               ) : (
                 ""
               )}
               <p>
-                <a href={item.github}>Source Code</a>
+                <OutboundLink href={item.github}>Source Code</OutboundLink>
               </p>
             </>
           )

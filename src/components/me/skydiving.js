@@ -1,5 +1,6 @@
 import React from "react"
 import Emoji from "a11y-react-emoji"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default () => (
   <>
@@ -10,12 +11,12 @@ export default () => (
       <p>
         In 2019, I decided that I wanted to learn how to skydive, so I joined my
         Uni's{" "}
-        <a
+        <OutboundLink
           className="link"
           href="https://www.imperialcollegeunion.org/activities/a-to-z/skydiving"
         >
           Skydiving Society
-        </a>
+        </OutboundLink>
         .
         <br />
         Unfortunately, due to Covid-19, I didn't get to go on the annual trip to

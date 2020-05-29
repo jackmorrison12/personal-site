@@ -1,6 +1,7 @@
 import React from "react"
 import Emoji from "a11y-react-emoji"
 import ReactAudioPlayer from "react-audio-player"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import musicData from "../../data/music.json"
 
@@ -13,12 +14,12 @@ export default () => (
       <p>
         I've always loved listening to music, and in 2019 I decided I wanted to
         learn how to make it too. I took a course called{" "}
-        <a
+        <OutboundLink
           className="link"
           href="https://www.imperial.ac.uk/horizons/module-options/2nd-year-undergraduates/music-technology/"
         >
           Music Technology
-        </a>
+        </OutboundLink>
         .
         <br />
         We covered many topics, starting off with the basics of how to use a

@@ -3,6 +3,8 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import sources from "../data/sources.json"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
+
 
 const CreditsPage = () => (
   <Layout>
@@ -25,12 +27,12 @@ const CreditsPage = () => (
                   {item.shoutout ? (
                     <>
                       <span>, with a significant shoutout to </span>
-                      <a
+                      <OutboundLink
                         href={item.shoutout.url}
                         className="is-medium-blue link"
                       >
                         {item.shoutout.name}
-                      </a>
+                      </OutboundLink>
                     </>
                   ) : (
                     ""
@@ -44,12 +46,12 @@ const CreditsPage = () => (
                         {item.links.length === 1 ? (
                           <>
                             {" "}
-                            <a
+                            <OutboundLink
                               href={item.links[0]}
                               className="is-medium-blue link"
                             >
                               Source
-                            </a>
+                            </OutboundLink>
                           </>
                         ) : (
                           item.links
@@ -57,12 +59,12 @@ const CreditsPage = () => (
                               return (
                                 <>
                                   {" "}
-                                  <a
+                                  <OutboundLink
                                     href={link}
                                     className="is-medium-blue link"
                                   >
                                     Source {i + 1}
-                                  </a>
+                                  </OutboundLink>
                                 </>
                               )
                             })
