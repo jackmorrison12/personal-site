@@ -91,8 +91,6 @@ module.exports = {
       options: {
         trackingId: "UA-69344812-3",
         head: true,
-        anonymize: true,
-        respectDNT: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
