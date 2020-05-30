@@ -4,8 +4,41 @@
 
 const path = require(`path`)
 
+const redirects = [
+  {
+    fromPath: "/music",
+    toPath: "/me#music",
+    isPermanent: true,
+  },
+  {
+    fromPath: "/python",
+    toPath: "/me#teaching",
+    isPermanent: true,
+  },
+  {
+    fromPath: "/projects/python",
+    toPath: "/me#teaching",
+    isPermanent: true,
+  },
+  {
+    fromPath: "/projects/musictech",
+    toPath: "/me#music",
+    isPermanent: true,
+  },
+  {
+    fromPath: "/education",
+    toPath: "/me#education",
+    isPermanent: true,
+  },
+  {
+    fromPath: "/experience",
+    toPath: "/me#experience",
+    isPermanent: true,
+  },
+]
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blog.js`)
   const articleTemplate = path.resolve(`src/templates/article.js`)
@@ -34,6 +67,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
+
+  redirects.forEach(redirect => createRedirect(redirect))
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
