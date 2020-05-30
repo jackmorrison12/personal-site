@@ -33,3 +33,6 @@ Now I had my CV displaying on my site - cool! However, what if someone wanted to
 
 Once I implemented this, I then made a few adjustments to make sure the CV was hidden on smaller devices, and voila... my CV page is complete!
 
+## The last steps
+
+Now that my CV is complete, the last thing to do is to add some finishing touched, and then make the site live, which is what I'll talk about next time!
