@@ -41,7 +41,8 @@
       {
         "name": "React CV",
         "links": [
-          "https://www.telerik.com/kendo-react-ui/components/pdfprocessing/"
+          "https://www.telerik.com/kendo-react-ui/components/pdfprocessing/",
+          "https://blog.usejournal.com/lets-make-a-resume-in-react-2c9c5540f51a"
         ]
       }
     ]

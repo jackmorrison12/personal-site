@@ -2,45 +2,45 @@
   "topTrack": {
     "name": "Rain on Me (with Ariana Grande)",
     "artist": "Lady Gaga",
-    "playCount": "48",
+    "playCount": "64",
     "url": "https://www.last.fm/music/Lady+Gaga/_/Rain+on+Me+(with+Ariana+Grande)",
     "artistUrl": "https://www.last.fm/music/Lady+Gaga"
   },
   "recentTrack": {
-    "name": "Rain On Me",
-    "artist": "Lady Gaga & Ariana Grande",
-    "url": "https://www.last.fm/music/Lady+Gaga+&+Ariana+Grande/_/Rain+On+Me"
+    "name": "Sour Candy (with BLACKPINK)",
+    "artist": "Lady Gaga",
+    "url": "https://www.last.fm/music/Lady+Gaga/_/Sour+Candy+(with+BLACKPINK)"
   },
   "topArtists": [
     {
+      "name": "Zara Larsson",
+      "playCount": "175",
+      "url": "https://www.last.fm/music/Zara+Larsson"
+    },
+    {
       "name": "Doja Cat",
-      "playCount": "167",
+      "playCount": "170",
       "url": "https://www.last.fm/music/Doja+Cat"
     },
     {
+      "name": "Lady Gaga",
+      "playCount": "148",
+      "url": "https://www.last.fm/music/Lady+Gaga"
+    },
+    {
       "name": "Conan Gray",
-      "playCount": "117",
+      "playCount": "123",
       "url": "https://www.last.fm/music/Conan+Gray"
     },
     {
       "name": "Ariana Grande",
-      "playCount": "86",
+      "playCount": "88",
       "url": "https://www.last.fm/music/Ariana+Grande"
     },
     {
       "name": "Dua Lipa",
-      "playCount": "71",
+      "playCount": "68",
       "url": "https://www.last.fm/music/Dua+Lipa"
-    },
-    {
-      "name": "Alex Newell",
-      "playCount": "65",
-      "url": "https://www.last.fm/music/Alex+Newell"
-    },
-    {
-      "name": "Megan Thee Stallion",
-      "playCount": "53",
-      "url": "https://www.last.fm/music/Megan+Thee+Stallion"
     }
   ],
   "topAlbums": [
@@ -48,7 +48,7 @@
       "name": "Lover",
       "playCount": "555",
       "url": "https://www.last.fm/music/Taylor+Swift/Lover",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/13c3fd969ea2d962c92d064884086e46.png",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8a89bf00eff0d1912f33164d3a15071f.png",
       "artist": "Taylor Swift",
       "artistUrl": "https://www.last.fm/music/Taylor+Swift"
     },
@@ -62,7 +62,7 @@
     },
     {
       "name": "So Good",
-      "playCount": "422",
+      "playCount": "453",
       "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
       "artist": "Zara Larsson",
@@ -70,7 +70,7 @@
     },
     {
       "name": "thank u, next",
-      "playCount": "327",
+      "playCount": "325",
       "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/404b81cd632ba51b63fb4ec5a29eb513.jpg",
       "artist": "Ariana Grande",
@@ -86,7 +86,7 @@
     },
     {
       "name": "Sweetener",
-      "playCount": "312",
+      "playCount": "311",
       "url": "https://www.last.fm/music/Ariana+Grande/Sweetener",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8c3b74f6b3e288d8f7baab0542f105df.png",
       "artist": "Ariana Grande",

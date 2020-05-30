@@ -26,7 +26,7 @@ export default function Template({
               <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Projects`}</h2>
             </Link>
           </div>
-          <div className="col-xs-12 col-sm-10 pad-5-lr">
+          <div className="col-xs-12 col-sm-7 pad-5-lr">
             <h1 className="is-title margin-1-t margin-1-b">
               {frontmatter.title}
             </h1>
@@ -40,17 +40,8 @@ export default function Template({
             </h6>
             <div className="line margin-5-tb is-red" />
           </div>
-          <div className="col-xs-12 col-sm-2">
-            {frontmatter.hero ? (
-              <div className="project-logo">
-                <Img fluid={frontmatter.hero.childImageSharp.fluid} />
-              </div>
-            ) : (
-              ""
-            )}
-          </div>
-          <div className="col-xs-12 pad-5-lr">
-            <div className="float-right margin-3 pad-5-lr col-xs-12 col-sm-4 is-white-bg">
+          <div className="col-xs-12 col-sm-3 pad-3-lr pad-5-b">
+            <div className="pad-3-lr pad-1-tb is-white-bg">
               {frontmatter.sources ? (
                 <p>
                   Source code/examples can be found on{" "}
@@ -103,6 +94,17 @@ export default function Template({
                 ""
               )}
             </div>
+          </div>
+          <div className="col-xs-12 col-sm-2">
+            {frontmatter.hero ? (
+              <div className="project-logo">
+                <Img fluid={frontmatter.hero.childImageSharp.fluid} />
+              </div>
+            ) : (
+              ""
+            )}
+          </div>
+          <div className="col-xs-12 pad-5-lr">
             <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
