@@ -4,9 +4,9 @@ header:
   version: 2.12.0
   elapsed_seconds: 0.012
   n_files: 115
-  n_lines: 6608
+  n_lines: 6633
   files_per_second: 9583.333333333334
-  lines_per_second: 550666.6666666666
+  lines_per_second: 552750
 JSON:
   name: JSON
   code: 472
@@ -15,9 +15,9 @@ JSON:
   nFiles: 9
 JavaScript:
   name: JavaScript
-  code: 3205
-  comment: 70
-  blank: 160
+  code: 3232
+  comment: 65
+  blank: 157
   nFiles: 53
 License:
   name: License
@@ -33,7 +33,7 @@ Markdown:
   nFiles: 26
 Sass:
   name: Sass
-  code: 1050
+  code: 1056
   comment: 222
   blank: 202
   nFiles: 17
@@ -62,8 +62,8 @@ gitignore:
   blank: 18
   nFiles: 1
 SUM:
-  code: 5722
-  comment: 315
-  blank: 571
+  code: 5755
+  comment: 310
+  blank: 568
   nFiles: 115
 

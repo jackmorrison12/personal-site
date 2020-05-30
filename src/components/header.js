@@ -1,51 +1,70 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from "react"
 import navlinks from "../data/navigation.json"
+import { SlideDown } from "react-slidedown"
+import { HamburgerButton } from "react-hamburger-button"
+import "react-slidedown/lib/slidedown.css"
 
-const Header = () => (
-  <header>
-    <div className="is-white-bg pad-5">
-      <div className="row flex padding-0-tb container-small">
-        {/* <div className="col-xs-3 flex">
-          <h1 className="margin-0">
-            <Link to="/" className="is-black">
-              Jack Morrison
-            </Link>
-          </h1>
-        </div> */}
-        <div
-          className="col-xs-12"
-          style={{ justifyContent: "flex-end", alignItems: "center" }}
-        >
-          <div className="row flex text-align-center">
-            {navlinks.map((item, i) => (
-              <div key={i} className="col-xs-6 col-md-2 col-lg-2">
-                <h3 className="margin-0">
-                  <Link
-                    to={item.link}
-                    activeClassName="is-red"
-                    className="is-black"
-                  >
-                    {" "}
-                    {item.name}{" "}
-                  </Link>
-                </h3>
-              </div>
-            ))}
+export default ({ data }) => {
+  const [open, setOpen] = useState(false)
+  return (
+    <header>
+      <div className="is-white-bg pad-5">
+        <div className="row flex padding-0-tb container-small mobile-hide">
+          <div className="col-xs-12">
+            <div className="row flex text-align-center">
+              {navlinks.map((item, i) => (
+                <div key={i} className="col-xs-6 col-md-2 col-lg-2">
+                  <h3 className="margin-0">
+                    <Link
+                      to={item.link}
+                      activeClassName="is-red"
+                      className="is-black"
+                    >
+                      {" "}
+                      {item.name}{" "}
+                    </Link>
+                  </h3>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+        <div className="row flex padding-0-tb container-small mobile-show-flex">
+          <div className="col-xs-11"></div>
+          <div className="col-xs-1">
+            <HamburgerButton
+              open={open}
+              onClick={() => setOpen(!open)}
+              width={18}
+              height={15}
+              strokeWidth={3}
+              color="white"
+              animationDuration={0.5}
+            />
+          </div>
+          <SlideDown closed={!open}>
+            <div className="col-xs-12">
+              <div className="row flex text-align-center">
+                {navlinks.map((item, i) => (
+                  <div key={i} className="col-xs-6 col-md-2 col-lg-2">
+                    <h3 className="margin-0">
+                      <Link
+                        to={item.link}
+                        activeClassName="is-red"
+                        className="is-black"
+                      >
+                        {" "}
+                        {item.name}{" "}
+                      </Link>
+                    </h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SlideDown>
+        </div>
       </div>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+    </header>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header

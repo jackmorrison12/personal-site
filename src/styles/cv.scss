@@ -1,9 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700;800&display=swap");
 
 .mobile-hide {
-  display: block;
+  display: inherit;
 }
 .mobile-show {
+  display: none;
+}
+.mobile-show-flex {
   display: none;
 }
 
@@ -14,7 +17,10 @@
     overflow: hidden;
   }
   .mobile-show {
-    display: block;
+    display: inherit;
+  }
+  .mobile-show-flex {
+    display: flex;
   }
 }
 
