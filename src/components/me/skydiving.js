@@ -1,11 +1,11 @@
 import React from "react"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 export default () => (
   <>
     <h1 className="col-xs-12">
-      <Emoji symbol="🪂" label="skydiver" /> Skydiving
+      <Twemoji svg text="🪂 Skydiving" />
     </h1>
     <div className="col-xs-12 col-md-6">
       <p>
@@ -20,10 +20,7 @@ export default () => (
         .
         <br />
         Unfortunately, due to Covid-19, I didn't get to go on the annual trip to
-        start my AFF course{" "}
-        <span role="img" aria-label="tear">
-          😪
-        </span>
+        start my AFF course <Twemoji svg text="😪" />
         . However I'm planning to start it this summer, so check back for
         updates!
         <br />

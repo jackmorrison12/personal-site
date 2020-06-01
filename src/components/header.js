@@ -4,6 +4,7 @@ import navlinks from "../data/navigation.json"
 import { SlideDown } from "react-slidedown"
 import { HamburgerButton } from "react-hamburger-button"
 import "react-slidedown/lib/slidedown.css"
+import { Twemoji } from "react-emoji-render"
 
 export default ({ data }) => {
   const [open, setOpen] = useState(false)
@@ -21,8 +22,7 @@ export default ({ data }) => {
                       activeClassName="is-red"
                       className="is-black"
                     >
-                      {" "}
-                      {item.name}{" "}
+                      <Twemoji svg text={item.name} />
                     </Link>
                   </h3>
                 </div>
@@ -44,7 +44,7 @@ export default ({ data }) => {
             />
           </div>
           <SlideDown closed={!open}>
-            {open ?
+            {open ? (
               <div className="col-xs-12">
                 <div className="row flex text-align-center">
                   {navlinks.map((item, i) => (
@@ -55,15 +55,16 @@ export default ({ data }) => {
                           activeClassName="is-red"
                           className="is-black"
                         >
-                          {" "}
-                          {item.name}{" "}
+                          <Twemoji svg text={item.name} />
                         </Link>
                       </h3>
                     </div>
                   ))}
                 </div>
               </div>
-              : ""}
+            ) : (
+              ""
+            )}
           </SlideDown>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import useGitStatsData from "../../hooks/use-git-stats-data"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import TimeAgo from "react-timeago"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
@@ -56,7 +56,7 @@ export default props => {
         .
       </h2>
       <p>
-        <Emoji symbol="😻" label="cat" /> Data sourced using{" "}
+        <Twemoji svg text="😻 Data sourced using " />
         <OutboundLink
           className="link"
           href="https://github.com/jackmorrison12/personal-site/blob/master/src/scripts/git-stats.sh"

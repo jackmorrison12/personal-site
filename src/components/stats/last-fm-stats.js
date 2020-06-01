@@ -1,5 +1,5 @@
 import React from "react"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import Img from "gatsby-image"
 import TimeAgo from "react-timeago"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
@@ -94,7 +94,7 @@ export default props => {
         ))}
       </div>
       <p>
-        <Emoji symbol="🎸" label="guitar" /> Provided by the{" "}
+        <Twemoji svg text="🎸 Provided by the " />
         <OutboundLink className="link" href="https://www.last.fm/api/intro">
           Last FM API
         </OutboundLink>
