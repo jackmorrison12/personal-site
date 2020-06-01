@@ -25,18 +25,51 @@ highlights:
 ---
 
 <div class="row">
-<div class="col-xs-12">
+  <div class="col-xs-12">
+    <p>
+We've noticed a trend: over the last few years, everything is becoming more collaborative.
 
-Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly.
+But one thing is lagging behind... drawing tools.
 
-We have created a resilient collaborative drawing app for iPadOS, using Conflict-free Replicated Data Types (CRDTs), that aims to prevent failures as listed previously from becoming an issue.
+That is, until now.
 
-Our app, which is optimised for iPads, is called Canvas. Canvas allows users to connect and draw at the same time. Changes are propagated in real time, so if a user becomes temporarily disconnected, on reconnection, the changes that they made during this period will sync up. Canvas offers features such as shape recognition and bluetooth network optimisation.
+</p>
 
-CRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, so does not rely on one of the nodes to always be connected. CRDTs are currently an open research area, so this project started as a proof of concept to show that they could be used in this context.
+  </div>
+  <div class="col-xs-12">
+    <p>
 
-Since this was an iPadOS app, we created it in XCode, using Swift 5.
+We have created a resilient collaborative drawing app for iPadOS, using _Conflict-free Replicated Data Types_, or <span class="is-red">CRDTs</span>.
 
-<div>
+Meet **Canvas**.
 
+  </p>
+  </div>
+  
+    <div class="col-xs-12 col-sm-6">
+
+![Canvas Features](/img/canvas-1.png "Canvas Features")
+
+  </div>
+  <div class="col-xs-12 col-sm-6 flex"  style="justify-content:center; flex-direction:column">
+    <p>
+
+It has everything you'd expect, plus advanced whiteboard features, such as shape and line recognition.
+
+  </p>
+  </div>
+  <div class="col-xs-12 col-sm-6 flex"  style="justify-content:center; flex-direction:column">
+    <p>
+
+Canvas allows users to connect and draw at the same time, but what makes it different? It's decentralised.
+
+It uses multiple connection mechanisms, including XMPP and Bluetooth, the create mesh networks.
+
+  </p>
+  </div>
+        <div class="col-xs-12 col-sm-6">
+
+![Canvas Network Architechture](/img/canvas-2.png "Canvas Network Architechture")
+
+  </div>
 </div>
