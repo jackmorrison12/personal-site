@@ -95,14 +95,15 @@ export default function Template({
               )}
             </div>
           </div>
-          <div className="col-xs-12 col-sm-2">
-            {frontmatter.hero ? (
-              <div className="project-logo">
-                <Img fluid={frontmatter.hero.childImageSharp.fluid} />
-              </div>
-            ) : (
-              ""
-            )}
+          <div className="col-xs-12 mobile-show">
+            <div className="margin-auto pad-5-lr">
+              <Img fluid={frontmatter.banner.childImageSharp.fluid} />
+            </div>
+          </div>
+          <div className="col-sm-2 mobile-hide">
+            <div className="margin-auto">
+              <Img fluid={frontmatter.hero.childImageSharp.fluid} />
+            </div>
           </div>
           <div className="col-xs-12 pad-5-lr">
             <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
@@ -130,6 +131,13 @@ export const pageQuery = graphql`
           icon
         }
         hero {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        banner {
           childImageSharp {
             fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid
