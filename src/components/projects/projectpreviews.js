@@ -20,7 +20,12 @@ class ProjectPreviews extends React.Component {
               <div className="grow project non-featured is-light-grey-bg">
                 <Link to={"/" + post.frontmatter.slug} className="" id="path">
                   <div className="row">
-                    <div className="col-xs-12 col-sm-4 pad-0">
+                    <div className="col-xs-12 pad-0 mobile-show">
+                      <Img
+                        fluid={post.frontmatter.banner.childImageSharp.fluid}
+                      />
+                    </div>
+                    <div className="col-sm-4 pad-0 mobile-hide">
                       <Img
                         fluid={post.frontmatter.hero.childImageSharp.fluid}
                       />
@@ -85,6 +90,13 @@ export default () => (
                 description
                 tech
                 hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                banner {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
                       ...GatsbyImageSharpFluid

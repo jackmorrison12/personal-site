@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useEducationData } from "../../hooks/use-education-data"
 import { useExperienceData } from "../../hooks/use-experience-data"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Twemoji } from "react-emoji-render"
 
 import {
   VerticalTimeline,
@@ -51,9 +52,7 @@ export const ExperienceTimeline = () => {
 
             {data.shorthighlights.map(i => (
               <p className="vertical-timeline-element-badge">
-                <span role="img" aria-label="star">
-                  ⭐️
-                </span>{" "}
+                <Twemoji svg text="⭐️ " />
                 {i.highlight}
               </p>
             ))}
@@ -122,9 +121,7 @@ export const EducationTimeline = () => {
             {data.highlights
               ? data.highlights.map(i => (
                   <p className="vertical-timeline-element-badge">
-                    <span role="img" aria-label="star">
-                      ⭐️
-                    </span>{" "}
+                    <Twemoji svg text="⭐️ " />
                     {i.name}: {i.score ? i.score : ""}
                   </p>
                 ))
@@ -133,9 +130,7 @@ export const EducationTimeline = () => {
             {data.commendations
               ? data.commendations.map(i => (
                   <p className="vertical-timeline-element-badge">
-                    <span role="img" aria-label="trophy">
-                      🏆
-                    </span>{" "}
+                    <Twemoji svg text="🏆 " />
                     {i.name} - <i>{i.awarder}</i>
                   </p>
                 ))

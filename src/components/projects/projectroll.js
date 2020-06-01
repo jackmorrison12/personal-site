@@ -21,7 +21,9 @@ class ProjectRoll extends React.Component {
               <div className="col-xs-12 col-sm-6 col-md-3 margin-3-b pad-5-lr">
                 <div className="grow project featured is-white-bg">
                   <Link to={"/" + post.frontmatter.slug} className="" id="path">
-                    <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
+                    <Img
+                      fluid={post.frontmatter.banner.childImageSharp.fluid}
+                    />
                     <div className="pad-2">
                       <h2 className="is-red margin-0">
                         {post.frontmatter.title}
@@ -53,7 +55,12 @@ class ProjectRoll extends React.Component {
                 <div className="grow project non-featured is-white-bg">
                   <Link to={"/" + post.frontmatter.slug} className="" id="path">
                     <div className="row">
-                      <div className="col-xs-12 col-sm-4 pad-0">
+                      <div className="col-xs-12 pad-0 mobile-show">
+                        <Img
+                          fluid={post.frontmatter.banner.childImageSharp.fluid}
+                        />
+                      </div>
+                      <div className="col-sm-4 pad-0 mobile-hide">
                         <Img
                           fluid={post.frontmatter.hero.childImageSharp.fluid}
                         />
@@ -126,6 +133,13 @@ export default () => (
                     }
                   }
                 }
+                banner {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
               }
             }
           }
@@ -148,6 +162,13 @@ export default () => (
                 description
                 tech
                 hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                banner {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
                       ...GatsbyImageSharpFluid

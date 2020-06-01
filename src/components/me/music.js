@@ -1,5 +1,5 @@
 import React from "react"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import ReactAudioPlayer from "react-audio-player"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
@@ -8,7 +8,7 @@ import musicData from "../../data/music.json"
 export default () => (
   <>
     <h1 className="col-xs-12">
-      <Emoji symbol="🎸" label="guitar" /> Making Music
+      <Twemoji svg text="🎸 Making Music" />
     </h1>
     <div className="col-xs-12 col-md-6">
       <p>

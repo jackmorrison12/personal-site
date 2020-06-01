@@ -7,6 +7,7 @@ cv: true
 featured: false
 hidden: false
 hero: /img/wacc-logo.png
+banner: /img/wacc-banner.png
 description: A compiler created for our own programming language
 tech:
   - Kotlin

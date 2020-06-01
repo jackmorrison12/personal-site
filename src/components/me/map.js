@@ -1,11 +1,11 @@
 import React from "react"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 
 export default () => {
   return (
     <>
       <h1 className="col-xs-12">
-        <Emoji symbol="📌" label="pin" /> Map
+        <Twemoji svg text="📌 Map" />
       </h1>
       <div className="col-xs-12 col-md-6">
         <p>

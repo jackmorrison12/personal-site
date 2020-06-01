@@ -1,7 +1,7 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -22,13 +22,13 @@ class CVPage extends React.Component {
               <div className="mobile-show">
                 <p>
                   Unfortunately, it looks like your screen is a little too small
-                  to display my CV <Emoji symbol="😢" label="sad" />. Maybe come
-                  back and take a look if you find a bigger screen!
+                  to display my CV <Twemoji svg text="😢" />. Maybe come back
+                  and take a look if you find a bigger screen!
                 </p>
                 <p>
                   You can download a PDF copy instead if you'd like, but please
                   save the trees and only print it if really necessary{" "}
-                  <Emoji symbol="🌳" label="trees" />
+                  <Twemoji text="🌳" />
                 </p>
               </div>
               <button

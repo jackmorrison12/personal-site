@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/pintos-logo.png
+banner: /img/pintos-banner.png
 description: An Operating System we helped complete
 tech:
   - C

@@ -1,5 +1,5 @@
 import React from "react"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import pythonData from "../../data/python.json"
@@ -8,7 +8,7 @@ export default () => (
   <>
     <div className="col-xs-12 col-md-6">
       <h1>
-        <Emoji symbol="👨‍🏫" label="teacher" /> Teaching
+        <Twemoji svg text="👨‍🏫 Teaching" />
       </h1>
       <p>
         I enjoy teaching, and have volunteered my skills teaching a Robotics

@@ -13,6 +13,7 @@ import Teaching from "../components/me/teaching"
 
 import { SlideDown } from "react-slidedown"
 import "react-slidedown/lib/slidedown.css"
+import { Twemoji } from "react-emoji-render"
 
 export default ({ data }) => {
   const [section, setSection] = useState("NONE")
@@ -64,11 +65,7 @@ export default ({ data }) => {
       <SEO title="Me" />
       <div className="me-hero">
         <h1 className="me-hero-title is-title margin-0-t">
-          Hey{" "}
-          <span role="img" aria-label="wave">
-            👋
-          </span>{" "}
-          I'm Jack
+          <Twemoji svg text="Hey 👋 I'm Jack" />
         </h1>
       </div>
       <div className="row">

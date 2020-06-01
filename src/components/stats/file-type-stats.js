@@ -1,7 +1,7 @@
 import React from "react"
 import useStatsData from "../../hooks/use-stats-data"
 import ReactTooltip from "react-tooltip"
-import Emoji from "a11y-react-emoji"
+import { Twemoji } from "react-emoji-render"
 import TimeAgo from "react-timeago"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 
@@ -128,7 +128,7 @@ export default props => {
         </div>
       </div>
       <p>
-        <Emoji symbol="💻" label="laptop" /> Data sourced using{" "}
+        <Twemoji svg text="💻 Data sourced using " />
         <OutboundLink className="link" href="https://github.com/boyter/scc/">
           scc terminal command
         </OutboundLink>

@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/epq-logo.png
+banner: /img/epq-banner.png
 description: An essay discussing the validity of computer-assisted proofs
 tech:
   - Extended Writing
