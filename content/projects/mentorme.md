@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/mentor-me-logo.png
+banner: /img/mentor-me-banner.png
 description: An app to 'Bring Communities Together'
 tech:
   - React

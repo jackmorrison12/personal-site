@@ -7,6 +7,7 @@ cv: true
 featured: true
 hidden: false
 hero: /img/topics-logo.png
+banner: /img/topics-banner.png
 description: A website discussing the uses of AI in Medical Imaging Analysis
 tech:
   - HTML

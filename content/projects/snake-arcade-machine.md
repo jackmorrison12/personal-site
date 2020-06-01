@@ -7,6 +7,7 @@ cv: false
 featured: true
 hidden: false
 hero: /img/snake-logo.png
+banner: /img/snake-banner.png
 description: A recreation of the classic game Snake on a 32x32 LED matrix
 tech:
   - C

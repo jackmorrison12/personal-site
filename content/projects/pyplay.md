@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/pyplay-logo.png
+banner: /img/pyplay-banner.png
 description: An app to teach young coders the basics of Python
 tech:
   - Python

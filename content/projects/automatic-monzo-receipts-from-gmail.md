@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/monzo-receipts-logo.png
+banner: /img/monzo-receipts-banner.png
 description: Integrating Gmail receipts into the Monzo app
 tech:
   - Python

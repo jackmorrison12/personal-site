@@ -7,6 +7,7 @@ cv: false
 featured: false
 hidden: false
 hero: /img/imaths-logo.png
+banner: /img/imaths-banner.png
 description: An app to teach students GCSE Maths
 tech:
   - Swift
