@@ -5,9 +5,12 @@ import { SlideDown } from "react-slidedown"
 import { HamburgerButton } from "react-hamburger-button"
 import "react-slidedown/lib/slidedown.css"
 import { Twemoji } from "react-emoji-render"
+import useDarkMode from "use-dark-mode"
 
 export default ({ data }) => {
   const [open, setOpen] = useState(false)
+  const darkMode = useDarkMode(true)
+
   return (
     <header>
       <div className="is-white-bg pad-5">
@@ -39,7 +42,7 @@ export default ({ data }) => {
               width={18}
               height={15}
               strokeWidth={3}
-              color="white"
+              color={darkMode.value ? "white" : "black"}
               animationDuration={0.5}
             />
           </div>
