@@ -53,6 +53,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 20px;
   }
   // .gatsby-resp-image-wrapper {
   //   max-width: 60% !important;
@@ -104,8 +105,8 @@
 
   .left {
     @extend .half;
-    @extend .start-xs;
-    @extend .end-sm;
+    // @extend .start-xs;
+    // @extend .end-sm;
   }
   .right {
     @extend .half;

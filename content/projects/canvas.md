@@ -26,7 +26,6 @@ highlights:
 ---
 
 <div class="row">
-<div class="col-xs-12">
 
 Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly.
 
@@ -37,7 +36,5 @@ Our app, which is optimised for iPads, is called Canvas. Canvas allows users to 
 CRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, so does not rely on one of the nodes to always be connected. CRDTs are currently an open research area, so this project started as a proof of concept to show that they could be used in this context.
 
 Since this was an iPadOS app, we created it in XCode, using Swift 5.
-
-<div>
 
 </div>
