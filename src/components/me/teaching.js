@@ -27,8 +27,8 @@ export default () => (
           The Coopers' Company and Coborn School
         </OutboundLink>
         .
-        <br />
-        <br />
+      </p>
+      <p>
         The course I taught at Coopers is completely open source, and the lesson
         plans and resources can be found below. Please feel free to use them and
         contribute any ideas!

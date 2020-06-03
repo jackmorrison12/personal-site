@@ -16,7 +16,7 @@ enddate: 2017-04-30T23:51:00.000Z
 sources:
   - icon: fas fa-file-pdf
     name: this file
-    url: epq.pdf
+    url: /files/epq.pdf
 ---
 
 This project was completed as my Extended Project during my A Level studies, and discussed the controversy over computer-assisted proofs.
