@@ -29,4 +29,3 @@ The game has 4 modes, one of which was an Artificial Intelligence, that was pret
 This project won the prize for the best group project extension, judged by the creators of the Raspberry Pi themselves.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLcktxoHnY120O6bfpuRcR4mMEOCJwQ5V7" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<p class="vid-caption">A playlist of video demonstrations of the game</p>

@@ -21,12 +21,12 @@ export default function Template({
       <SEO title={frontmatter.title} />
       <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t ">
-          <div className="col-xs-12 pad-5-lr">
+          <div className="col-xs-12 pad-3-lr">
             <Link to="/projects" className="">
               <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Projects`}</h2>
             </Link>
           </div>
-          <div className="col-xs-12 col-sm-7 pad-5-lr">
+          <div className="col-xs-12 col-sm-7 pad-3-lr">
             <h1 className="is-title margin-1-t margin-1-b">
               {frontmatter.title}
             </h1>
@@ -96,7 +96,7 @@ export default function Template({
             </div>
           </div>
           <div className="col-xs-12 mobile-show">
-            <div className="margin-auto pad-5-lr">
+            <div className="margin-auto pad-3-lr">
               <Img fluid={frontmatter.banner.childImageSharp.fluid} />
             </div>
           </div>
@@ -105,8 +105,11 @@ export default function Template({
               <Img fluid={frontmatter.hero.childImageSharp.fluid} />
             </div>
           </div>
-          <div className="col-xs-12 pad-5-lr">
-            <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="col-xs-12 pad-3-lr">
+            <div
+              className="project-wrapper"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </div>
       </div>

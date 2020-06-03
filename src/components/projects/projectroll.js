@@ -18,7 +18,7 @@ class ProjectRoll extends React.Component {
         <div className="row flex">
           {featured &&
             featured.map(({ node: post }) => (
-              <div className="col-xs-12 col-sm-6 col-md-3 margin-3-b pad-5-lr">
+              <div className="col-xs-12 col-sm-6 col-md-3 margin-3-b pad-2-lr">
                 <div className="grow project featured is-white-bg">
                   <Link to={"/" + post.frontmatter.slug} className="" id="path">
                     <Img
@@ -51,7 +51,7 @@ class ProjectRoll extends React.Component {
         <div className="row flex">
           {non_featured &&
             non_featured.map(({ node: post }) => (
-              <div className="col-xs-12 col-md-6 margin-3-b pad-5-lr">
+              <div className="col-xs-12 col-md-6 margin-3-b pad-2-lr">
                 <div className="grow project non-featured is-white-bg">
                   <Link to={"/" + post.frontmatter.slug} className="" id="path">
                     <div className="row">

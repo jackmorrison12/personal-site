@@ -27,6 +27,25 @@ sources:
     icon: devpost
 ---
 
-Creativity, Curiosity, Coding! Those are our three C's, our core values here at PyPlay. We wanted to create an application to teach young coders the basics of Python. We want to provide an easy-to-use interface, where kids can write code, and visually see their code come to life. Unlike other platforms, where you drag-and-drop blocks, with PyPlay, you're actually writing real Python code! We created this for IC Hack 2020.
+<div class="row">
+  <div class="left">
 
-![PyPlay Interface](/img/pyplay-1.jpg "Pyplay Interface")<p class="caption">The student interface of PyPlay</p>
+## Creativity, Curiosity, Coding!
+
+Those are our three C's, our core values here at PyPlay.
+
+We created an application to teach young coders the basics of Python.
+
+We provide an easy-to-use interface, where kids can write code, and visually see their code come to life.
+
+Unlike other platforms, where you drag-and-drop blocks, with PyPlay, you're actually writing real Python code!
+
+  </div>
+  <div class="right">
+
+![PyPlay Interface](/img/pyplay-1.jpg "Pyplay Interface")
+
+  </div>
+</div>
+
+We created this for IC Hack 2020.

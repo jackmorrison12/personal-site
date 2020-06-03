@@ -26,24 +26,78 @@ highlights:
   - highlight: Tackled the problem of confirmation bias in the current consumption of the news
 ---
 
-The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together. Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online. One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments. Our own 'confirmation bias' means we're more likely to reading something that challenges our beliefs and content delivery algorithms on the internet have a vested interest in showing us what we like. It's becoming increasingly easy to live in a bubble (see what we did there?).
+The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together
 
-The goal of 'Burst My Bubble' was to create a news feed with a difference; to encourage variety so people had a more broad consumption of the news. We use RSS feeds to aggregate articles from a wide variety of news feeds, and along with the user's reading history, we curate a diverse and confronting personalised news feed.
+Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online
 
-![Burst My Bubble Feed Screenshot](/img/bmb-1.png "Burst My Bubble Feed Screenshot")<p class="caption">An example of a personalised news feed</p>
+One cause of this downturn in decency is how easy the internet makes it to disregard opposing arguments
 
-Users can share their thoughts on articles, but instead of the traditional comments and replies format, can instead only write one opinion, which they're free to edit as their point of view matures.
+Our own confirmation bias means we're less likely to read something that challenges our beliefs, and content delivery algorithms on the internet have a vested interest in showing us what we like
 
-![Burst My Bubble Article Page Screenshot](/img/bmb-3.png "Burst My Bubble Article Page Screenshot")<p class="caption">An example of an article page, with supporting and opposing opinions</p>
+It's becoming increasingly easy to live in a bubble (see what we did there?)
+
+That's why we created <span class="highlight">Burst My Bubble</span>
+
+<div class="row">
+  <div class="left">
+
+## Personalised news feed... with a difference
+
+With articles sourced from all over the web, we use a user's reading history to curate a diverse and confronting personalised news feed, containing articles they wouldn't usually come across
+
+  </div>
+  <div class="right">
+
+![Personalised News Feed - Burst My Bubble](/img/bmb-1.png "Personalised News Feed - Burst My Bubble")
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="left">
+
+![Opinions - Burst My Bubble](/img/bmb-3.png "Opinions - Burst My Bubble")
+
+  </div>
+  <div class="right first-xs last-sm">
+
+## A twist on the usual comments section
+
+Users can share their thoughts on articles, but instead of the traditional comments and replies format, can instead only write one opinion, which they're free to edit as their point of view matures
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="left">
+
+## Keep track of what you're reading
 
 Users also have access to a personal page, which shows their latest reading stats, as well as recently read articles.
 
-![Burst My Bubble Article Page Screenshot](/img/bmb-3.png "Burst My Bubble Article Page Screenshot")<p class="caption">An example of an article page, with supporting and opposing opinions</p>
+  </div>
+  <div class="right">
+
+![Personal Page - Burst My Bubble](/img/bmb-2.png "Personal Page - Burst My Bubble")
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="left">
+
+![Trending - Burst My Bubble](/img/bmb-4.png "Trending - Burst My Bubble")
+
+  </div>
+  <div class="right first-xs last-sm">
+
+## See what's going on in the world
 
 We also showed the top trending topics on Burst My Bubble, so you're not just limited to articles which are tailored to you, since the app is all about expanding your horizons!
 
-![Burst My Bubble Trending Page Screenshot](/img/bmb-4.png "Burst My Bubble Trending Page Screenshot")<p class="caption">An example of the top trending topics on Burst My Bubble</p>
+  </div>
+</div>
 
-Burst My Bubble was awarded second best project for the year.
+Burst My Bubble was awarded second best WebApps project in our year
 
-We wrote the frontend of the application using React, and used Python and Java for the backend. We also used a MongoDB database.
+Sources can be found at the top of the page

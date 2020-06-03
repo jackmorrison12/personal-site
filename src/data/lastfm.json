@@ -1,46 +1,46 @@
 {
   "topTrack": {
-    "name": "Rain on Me (with Ariana Grande)",
+    "name": "Sour Candy (with BLACKPINK)",
     "artist": "Lady Gaga",
-    "playCount": "64",
-    "url": "https://www.last.fm/music/Lady+Gaga/_/Rain+on+Me+(with+Ariana+Grande)",
+    "playCount": "91",
+    "url": "https://www.last.fm/music/Lady+Gaga/_/Sour+Candy+(with+BLACKPINK)",
     "artistUrl": "https://www.last.fm/music/Lady+Gaga"
   },
   "recentTrack": {
-    "name": "Sour Candy (with BLACKPINK)",
-    "artist": "Lady Gaga",
-    "url": "https://www.last.fm/music/Lady+Gaga/_/Sour+Candy+(with+BLACKPINK)"
+    "name": "All for You",
+    "artist": "Years & Years",
+    "url": "https://www.last.fm/music/Years+&+Years/_/All+for+You"
   },
   "topArtists": [
     {
+      "name": "Lady Gaga",
+      "playCount": "201",
+      "url": "https://www.last.fm/music/Lady+Gaga"
+    },
+    {
       "name": "Zara Larsson",
-      "playCount": "175",
+      "playCount": "173",
       "url": "https://www.last.fm/music/Zara+Larsson"
     },
     {
       "name": "Doja Cat",
-      "playCount": "170",
+      "playCount": "140",
       "url": "https://www.last.fm/music/Doja+Cat"
     },
     {
-      "name": "Lady Gaga",
-      "playCount": "148",
-      "url": "https://www.last.fm/music/Lady+Gaga"
-    },
-    {
       "name": "Conan Gray",
-      "playCount": "123",
+      "playCount": "121",
       "url": "https://www.last.fm/music/Conan+Gray"
     },
     {
       "name": "Ariana Grande",
-      "playCount": "88",
+      "playCount": "90",
       "url": "https://www.last.fm/music/Ariana+Grande"
     },
     {
-      "name": "Dua Lipa",
-      "playCount": "68",
-      "url": "https://www.last.fm/music/Dua+Lipa"
+      "name": "Alex Newell",
+      "playCount": "67",
+      "url": "https://www.last.fm/music/Alex+Newell"
     }
   ],
   "topAlbums": [
@@ -62,7 +62,7 @@
     },
     {
       "name": "So Good",
-      "playCount": "453",
+      "playCount": "444",
       "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
       "artist": "Zara Larsson",
@@ -86,7 +86,7 @@
     },
     {
       "name": "Sweetener",
-      "playCount": "311",
+      "playCount": "310",
       "url": "https://www.last.fm/music/Ariana+Grande/Sweetener",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8c3b74f6b3e288d8f7baab0542f105df.png",
       "artist": "Ariana Grande",
