@@ -106,7 +106,10 @@ export default function Template({
             </div>
           </div>
           <div className="col-xs-12 pad-5-lr">
-            <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
+            <div
+              className="project-wrapper"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
           </div>
         </div>
       </div>
