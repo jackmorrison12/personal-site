@@ -23,7 +23,7 @@ export default function Template({
         description={frontmatter.description}
       />
       <div className="is-grey is-light-grey-bg">
-        <div className="row container pad-10-t pad-5-lr">
+        <div className="row container pad-10-t pad-3-lr">
           <div className="col-xs-12">
             <Link to="/writing" className="">
               <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Articles`}</h2>
