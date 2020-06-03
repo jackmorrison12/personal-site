@@ -34,6 +34,25 @@ The app worked by connecting to an Arduino, which sent data via Bluetooth to the
 
 Since this was only a Hackathon project, we only created a rough v1, as you can see in the images, however if continued, Correct-a-Spine would incorporate machine learning in order to learn about its user and give them the best possible advice. We'd achieve this by working alongside medical professionals.
 
-![Correct-a-Spine Accelerometer](/img/cas-1.png "Correct-a-Spine Accelerometer")<p class="caption">The accelerometer attached to the patient</p>
+<div class="row">
+  <div class="left">
 
-![Correct-a-Spine Flex Sensor](/img/cas-2.png "Correct-a-Spine Flex Sensor")<p class="caption">The flex sensor attached to the patient</p>
+  </div>
+  <div class="right">
+
+</div>
+
+</div>
+<div class="row">
+  <div class="left">
+
+![Correct-a-Spine Flex Sensor](/img/cas-2.png "Correct-a-Spine Flex Sensor")
+
+  </div>
+  <div class="right first-xs last-sm">
+
+![Correct-a-Spine Accelerometer](/img/cas-1.png "Correct-a-Spine Accelerometer")
+
+  </div>
+
+</div>
