@@ -5,7 +5,7 @@ type: School Project
 homepage: false
 cv: false
 featured: false
-hidden: false
+hidden: true
 hero: /img/imaths-logo.png
 banner: /img/imaths-banner.png
 description: An app to teach students GCSE Maths
