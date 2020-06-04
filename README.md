@@ -7,7 +7,7 @@
   My Personal Webpage
 </h1>
 
-This is the git repo behind my personal site, hosted at [jackmorrison.xyz](https://jackmorrison.netlify.app)
+This is the git repo behind my personal site, hosted at [jackmorrison.xyz](https://jackmorrison.xyz)
 
 Current status:
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3289fe4d-7b66-4f01-991c-74cc3e12074f/deploy-status)](https://app.netlify.com/sites/jackmorrison/deploys)

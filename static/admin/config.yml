@@ -7,8 +7,8 @@ publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
-site_url: https://jackmorrison.netlify.app
-display_url: https://jackmorrison.netlify.app
+site_url: https://jackmorrison.xyz
+display_url: https://jackmorrison.xyz
 
 show_preview_links: true
 

@@ -11,7 +11,7 @@ module.exports = {
     description: `Jack Morrison - Personal Website`,
     author: `@jsm_ic`,
     image: "/img/banner2.png",
-    url: "https://jackmorrison.netlify.app",
+    url: "https://jackmorrison.xyz",
   },
   plugins: [
     netlifyCmsPaths,
