@@ -25,20 +25,20 @@ highlights:
   - highlight: Used a mesh network topology to allow for decentralisation
 ---
 
-We've noticed a trend: over the last few years, everything is becoming more collaborative.
+We've noticed a trend: over the last few years, everything is becoming more collaborative
 
-But one thing is lagging behind... _drawing tools_.
+But one thing is lagging behind... _drawing tools_
 
-That is, until now.
+That is, until now
 
-Introducing <span class="highlight">Canvas</div>.
+Introducing <span class="highlight">Canvas</div>
 
 <div class="row">
   <div class="left">
 
 ## What is canvas?
 
-We have created a resilient collaborative drawing app for iPadOS, using _Conflict-free Replicated Data Types_, or <span class="highlight">CRDTs</span>.
+We have created a resilient collaborative drawing app for iPadOS, using _Conflict-free Replicated Data Types_, or <span class="highlight">CRDTs</span>
 
   </div>
   <div class="right">
@@ -57,7 +57,7 @@ We have created a resilient collaborative drawing app for iPadOS, using _Conflic
 
 ## Features
 
-Canvas has everything you'd expect from a drawing app, such as various design tools and sharing options, plus more advanced features, such as extremely accurate\* <span class="highlight">shape and line recognition</span>.
+Canvas has everything you'd expect from a drawing app, such as various design tools and sharing options, plus more advanced features, such as extremely accurate\* <span class="highlight">shape and line recognition</span>
 
   </div>
 </div>
@@ -66,9 +66,11 @@ Canvas has everything you'd expect from a drawing app, such as various design to
 
 ## Users
 
-Canvas allows up to <span class="highlight">1000 users</span>\* to connect and draw at the same time.
+Canvas allows up to <span class="highlight">1000 users</span>\* to connect and draw at the same time
 
-But what makes it different to every other online whiteboard? It's de-centralised.
+But what makes it different to every other online whiteboard?
+
+<span class="highlight">It's de-centralised</span>
 
   </div>
   <div class="right">
@@ -87,9 +89,9 @@ But what makes it different to every other online whiteboard? It's de-centralise
 
 ## Networking
 
-Our app uses a dual connection mechanism, making use of an <span class="highlight">XMPP</span> server, for long-distance drawing, and a <span class="highlight">Bluetooth</span> mesh topology, for optimised close-range drawing.
+Our app uses a dual connection mechanism, making use of an <span class="highlight">XMPP</span> server, for long-distance drawing, and a <span class="highlight">Bluetooth</span> mesh topology, for optimised close-range drawing
 
-This creates a <span class="highlight">resilient, de-centralised\*\* network</span>.
+This creates a <span class="highlight">resilient, de-centralised\*\* network</span>
 
   </div>
 </div>
