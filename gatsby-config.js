@@ -70,6 +70,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          `gatsby-remark-google-analytics-track-links`,
         ],
       },
     },
