@@ -25,16 +25,79 @@ highlights:
   - highlight: Used a mesh network topology to allow for decentralisation
 ---
 
+We've noticed a trend: over the last few years, everything is becoming more collaborative.
+
+But one thing is lagging behind... _drawing tools_.
+
+That is, until now.
+
+Introducing <span class="highlight">Canvas</div>.
+
 <div class="row">
+  <div class="left">
 
-Remote collaboration has been increasing in popularity over the last couple of years, especially within professional working environments and academia. However, tools for visual collaboration, such as through drawing, are currently lacking, with many suffering from lag, dropped connections or devices not syncing together correctly.
+## What is canvas?
 
-We have created a resilient collaborative drawing app for iPadOS, using Conflict-free Replicated Data Types (CRDTs), that aims to prevent failures as listed previously from becoming an issue.
+We have created a resilient collaborative drawing app for iPadOS, using _Conflict-free Replicated Data Types_, or <span class="highlight">CRDTs</span>.
 
-Our app, which is optimised for iPads, is called Canvas. Canvas allows users to connect and draw at the same time. Changes are propagated in real time, so if a user becomes temporarily disconnected, on reconnection, the changes that they made during this period will sync up. Canvas offers features such as shape recognition and bluetooth network optimisation.
+  </div>
+  <div class="right">
 
-CRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, so does not rely on one of the nodes to always be connected. CRDTs are currently an open research area, so this project started as a proof of concept to show that they could be used in this context.
+![CRDTs- Canvas](/img/canvas-1.png "CRDTs- Canvas")
 
-Since this was an iPadOS app, we created it in XCode, using Swift 5.
+  </div>
+</div>
+<div class="row">
+  <div class="left">
+
+![Features - Canvas](/img/canvas-2.png "Features - Canvas")
+
+  </div>
+  <div class="right first-xs last-sm">
+
+## Features
+
+Canvas has everything you'd expect from a drawing app, such as various design tools and sharing options, plus more advanced features, such as extremely accurate\* <span class="highlight">shape and line recognition</span>.
+
+  </div>
+</div>
+<div class="row">
+  <div class="left">
+
+## Users
+
+Canvas allows up to <span class="highlight">1000 users</span>\* to connect and draw at the same time.
+
+But what makes it different to every other online whiteboard? It's de-centralised.
+
+  </div>
+  <div class="right">
+
+![Users - Canvas](/img/canvas-3.png "Users - Canvas")
+
+  </div>
+</div>
+<div class="row">
+  <div class="left">
+
+![Networking - Canvas](/img/canvas-4.png "Networking - Canvas")
+
+  </div>
+  <div class="right first-xs last-sm">
+
+## Networking
+
+Our app uses a dual connection mechanism, making use of an <span class="highlight">XMPP</span> server, for long-distance drawing, and a <span class="highlight">Bluetooth</span> mesh topology, for optimised close-range drawing.
+
+This creates a <span class="highlight">resilient, de-centralised\*\* network</span>.
+
+  </div>
+</div>
+
+<div class="footnote">
+
+\*CRDTs are currently an open research area, so this project started as a proof of concept to see if they could be used in this context. We wrote a [report](/files/canvas-report.pdf) which analyses referenced statistics in much more depth.
+
+\*\*CRDTs are a class of abstract data types that allow their state to be distributed across devices, modified locally and then merged in a straight-forward manner, meaning that they guarantee eventual consistency. Therefore, Canvas is completely de-centralised, and as such does not rely on one of the nodes to always be connected to the XMPP server.
 
 </div>
