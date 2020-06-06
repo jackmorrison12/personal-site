@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const useCvData = () => {
   const data = useStaticQuery(graphql`
     {
-      basics: dataJson {
+      basics: dataJson(name: { ne: null }) {
         name
       }
       socials: allSocialsJson(filter: { cv: { eq: true } }) {

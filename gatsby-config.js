@@ -12,6 +12,7 @@ module.exports = {
     author: `@jsm_ic`,
     image: "/img/banner2.png",
     url: "https://jackmorrison.xyz",
+    siteUrl: "https://jackmorrison.xyz",
   },
   plugins: [
     netlifyCmsPaths,
@@ -19,6 +20,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-advanced-sitemap`,
     {
       resolve: "gatsby-plugin-use-dark-mode",
       options: {
