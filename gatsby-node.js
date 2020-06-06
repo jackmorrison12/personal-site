@@ -40,6 +40,11 @@ const redirects = [
     toPath: "/cv",
     isPermanent: true,
   },
+  {
+    fromPath: "/about",
+    toPath: "/me",
+    isPermanent: true,
+  },
 ]
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
