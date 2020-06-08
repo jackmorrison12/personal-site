@@ -35,7 +35,7 @@ export default () => (
       </p>
     </div>
     <div className="col-xs-12">
-      <table class="teaching-table-desktop text-align-center">
+      <table className="teaching-table-desktop text-align-center">
         <tr>
           <th>Week</th>
           <th>Teacher Slides</th>
@@ -78,7 +78,7 @@ export default () => (
                   </OutboundLink>
                 </td>
               ) : (
-                <td class="teaching-table-empty"></td>
+                <td className="teaching-table-empty"></td>
               )}
               {item.leaderboard ? (
                 <td>
@@ -87,14 +87,14 @@ export default () => (
                   </OutboundLink>
                 </td>
               ) : (
-                <td class="teaching-table-empty"></td>
+                <td className="teaching-table-empty"></td>
               )}
               {item.kahoot ? (
                 <td>
                   <OutboundLink href={item.kahoot}>Kahoot {i + 1}</OutboundLink>
                 </td>
               ) : (
-                <td class="teaching-table-empty"></td>
+                <td className="teaching-table-empty"></td>
               )}
               <td>
                 <OutboundLink href={item.github} className="icon">
@@ -105,7 +105,7 @@ export default () => (
           )
         })}
       </table>
-      <div class="teaching-table-mobile">
+      <div className="teaching-table-mobile">
         {pythonData.map((item, i) => {
           return (
             <>

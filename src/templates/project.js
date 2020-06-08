@@ -79,7 +79,7 @@ export default function Template({
                 <p>
                   Written using{" "}
                   {frontmatter.tech
-                    .map(item => <span className="is-red">{item}</span>)
+                    .map((item, i) => <span key={i} className="is-red">{item}</span>)
                     .reduce((acc, curr, i) =>
                       i !== 0
                         ? [

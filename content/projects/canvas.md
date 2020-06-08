@@ -31,7 +31,7 @@ But one thing is lagging behind... _drawing tools_
 
 That is, until now
 
-Introducing <span class="highlight">Canvas</div>
+Introducing <span class="highlight">Canvas</span>
 
 <div class="row">
   <div class="left">

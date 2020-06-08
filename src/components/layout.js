@@ -31,14 +31,14 @@ const Layout = ({ children }) => {
       <footer className="is-white-bg is-black pad-2">
         <div className="dark-toggle">
           Light{"    "}
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               id="dark-mode-switch"
-              onClick={() => switchDarkMode()}
+              onChange={() => switchDarkMode()}
               checked={darkMode.value}
             />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
           {"    "}
           Dark
