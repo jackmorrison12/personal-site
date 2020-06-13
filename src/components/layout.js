@@ -44,13 +44,36 @@ const Layout = ({ children }) => {
           Dark
         </div>
         <div>
-          Created by me, with help from{" "}
           <Link
             to="/credits"
-            activeClassName="is-black"
+            activeClassName="bold"
             className="is-medium-blue link"
           >
-            these people
+            Credits
+          </Link>{" "}
+          ●{" "}
+          <Link
+            to="/tools"
+            activeClassName="bold"
+            className="is-medium-blue link"
+          >
+            Tools Used
+          </Link>{" "}
+          ●{" "}
+          <Link
+            to="/fair-use"
+            activeClassName="bold"
+            className="is-medium-blue link"
+          >
+            Fair Use Policy
+          </Link>{" "}
+          ●{" "}
+          <Link
+            to="/archive"
+            activeClassName="bold"
+            className="is-medium-blue link"
+          >
+            Archive
           </Link>
         </div>
       </footer>
