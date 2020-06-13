@@ -25,7 +25,9 @@ export default ({ data }) => (
         </div>
         <div className="col-xs-12 col-sm-6 pad-3">
           <OutboundLink className="link" href="https://v0.jackmorrison.xyz">
-            <Img fluid={data.v0.childImageSharp.fluid} />
+            <div className="grow">
+              <Img fluid={data.v0.childImageSharp.fluid} />
+            </div>
           </OutboundLink>
 
           <p>
@@ -41,7 +43,9 @@ export default ({ data }) => (
         </div>
         <div className="col-xs-12 col-sm-6 pad-3">
           <OutboundLink className="link" href="https://v1.jackmorrison.xyz">
-            <Img fluid={data.v1.childImageSharp.fluid} />
+            <div className="grow">
+              <Img fluid={data.v1.childImageSharp.fluid} />
+            </div>
           </OutboundLink>
           <p>
             The first site I published was static HTML and CSS, and was hosted
@@ -56,7 +60,9 @@ export default ({ data }) => (
         </div>
         <div className="col-xs-12 col-sm-6 pad-3">
           <OutboundLink className="link" href="https://v2.jackmorrison.xyz">
-            <Img fluid={data.v2.childImageSharp.fluid} />
+            <div className="grow">
+              <Img fluid={data.v2.childImageSharp.fluid} />
+            </div>
           </OutboundLink>
           <p>
             The second generation was made using Jekyll, and converted my old
@@ -71,7 +77,9 @@ export default ({ data }) => (
         </div>
         <div className="col-xs-12 col-sm-6 pad-3">
           <OutboundLink className="link" href="https://v3.jackmorrison.xyz">
-            <Img fluid={data.v3.childImageSharp.fluid} />
+            <div className="grow">
+              <Img fluid={data.v3.childImageSharp.fluid} />
+            </div>
           </OutboundLink>
           <p>
             Version 3 of my site was created using react, and compiled using a
