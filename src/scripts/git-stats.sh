@@ -22,6 +22,9 @@ then
 elif [[ $git_message == Merge* ]];
 then
   git_message=$(git log -1 --pretty=%b)
+  if [[ -n $git_message]];
+  then 
+    git_message="Merges a branch"
 fi
 
 cd src/data 

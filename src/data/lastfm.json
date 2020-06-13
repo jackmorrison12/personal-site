@@ -1,52 +1,52 @@
 {
   "topTrack": {
-    "name": "Sour Candy (with BLACKPINK)",
-    "artist": "Lady Gaga",
-    "playCount": "91",
-    "url": "https://www.last.fm/music/Lady+Gaga/_/Sour+Candy+(with+BLACKPINK)",
-    "artistUrl": "https://www.last.fm/music/Lady+Gaga"
+    "name": "All I Need (with Mahalia & Ty Dolla $ign)",
+    "artist": "Jacob Collier",
+    "playCount": "17",
+    "url": "https://www.last.fm/music/Jacob+Collier/_/All+I+Need+(with+Mahalia+&+Ty+Dolla+$ign)",
+    "artistUrl": "https://www.last.fm/music/Jacob+Collier"
   },
   "recentTrack": {
-    "name": "All for You",
-    "artist": "Years & Years",
-    "url": "https://www.last.fm/music/Years+&+Years/_/All+for+You"
+    "name": "Under My Shades",
+    "artist": "Zara Larsson",
+    "url": "https://www.last.fm/music/Zara+Larsson/_/Under+My+Shades"
   },
   "topArtists": [
     {
       "name": "Lady Gaga",
-      "playCount": "201",
+      "playCount": "269",
       "url": "https://www.last.fm/music/Lady+Gaga"
     },
     {
       "name": "Zara Larsson",
-      "playCount": "173",
+      "playCount": "179",
       "url": "https://www.last.fm/music/Zara+Larsson"
     },
     {
-      "name": "Doja Cat",
-      "playCount": "140",
-      "url": "https://www.last.fm/music/Doja+Cat"
-    },
-    {
-      "name": "Conan Gray",
-      "playCount": "121",
-      "url": "https://www.last.fm/music/Conan+Gray"
-    },
-    {
       "name": "Ariana Grande",
-      "playCount": "90",
+      "playCount": "115",
       "url": "https://www.last.fm/music/Ariana+Grande"
     },
     {
-      "name": "Alex Newell",
-      "playCount": "67",
-      "url": "https://www.last.fm/music/Alex+Newell"
+      "name": "Jacob Collier",
+      "playCount": "79",
+      "url": "https://www.last.fm/music/Jacob+Collier"
+    },
+    {
+      "name": "Peach",
+      "playCount": "77",
+      "url": "https://www.last.fm/music/Peach"
+    },
+    {
+      "name": "Kim Petras",
+      "playCount": "61",
+      "url": "https://www.last.fm/music/Kim+Petras"
     }
   ],
   "topAlbums": [
     {
       "name": "Lover",
-      "playCount": "555",
+      "playCount": "556",
       "url": "https://www.last.fm/music/Taylor+Swift/Lover",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8a89bf00eff0d1912f33164d3a15071f.png",
       "artist": "Taylor Swift",
@@ -62,35 +62,35 @@
     },
     {
       "name": "So Good",
-      "playCount": "444",
+      "playCount": "395",
       "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
       "artist": "Zara Larsson",
       "artistUrl": "https://www.last.fm/music/Zara+Larsson"
     },
     {
-      "name": "thank u, next",
-      "playCount": "325",
-      "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/404b81cd632ba51b63fb4ec5a29eb513.jpg",
-      "artist": "Ariana Grande",
-      "artistUrl": "https://www.last.fm/music/Ariana+Grande"
-    },
-    {
       "name": "Future Nostalgia",
-      "playCount": "322",
+      "playCount": "329",
       "url": "https://www.last.fm/music/Dua+Lipa/Future+Nostalgia",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/e4901b067675378333d26240239fda6a.png",
       "artist": "Dua Lipa",
       "artistUrl": "https://www.last.fm/music/Dua+Lipa"
     },
     {
-      "name": "Sweetener",
-      "playCount": "310",
-      "url": "https://www.last.fm/music/Ariana+Grande/Sweetener",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8c3b74f6b3e288d8f7baab0542f105df.png",
+      "name": "thank u, next",
+      "playCount": "315",
+      "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/7a99951c89a6792eaeb5da8ba1e9be0d.jpg",
       "artist": "Ariana Grande",
       "artistUrl": "https://www.last.fm/music/Ariana+Grande"
+    },
+    {
+      "name": "Birthday",
+      "playCount": "310",
+      "url": "https://www.last.fm/music/Anne-Marie/Birthday",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/b70ab4ea00deb256873846adbd24c2b7.jpg",
+      "artist": "Anne-Marie",
+      "artistUrl": "https://www.last.fm/music/Anne-Marie"
     }
   ]
 }
