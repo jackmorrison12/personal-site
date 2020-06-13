@@ -48,10 +48,12 @@ const FairUsePage = () => (
             </p>
           </div>
           <div className="col-xs-12 col-sm-6">
-            <object
-              type="image/svg+xml"
-              data="https://gh-card.dev/repos/jackmorrison12/personal-site.svg?fullname=&link_target=_blank"
-            ></object>
+            <OutboundLink href="https://github.com/jackmorrison12/personal-site">
+              <img
+                style={{ maxWidth: "100%" }}
+                src="https://gh-card.dev/repos/jackmorrison12/personal-site.svg"
+              />
+            </OutboundLink>
           </div>
         </div>
       </div>
