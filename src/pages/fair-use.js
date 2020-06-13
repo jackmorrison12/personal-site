@@ -100,7 +100,7 @@ const FairUsePage = () => (
                   <code>http://localhost:8000!</code>
                 </p>
                 <p>
-                  Note: You'll also see a second link:
+                  Note: You'll also see a second link:{" "}
                   <code>http://localhost:8000/___graphql</code>. This is a tool
                   you can use to experiment with querying your data. Learn more
                   about using this tool in the{" "}
