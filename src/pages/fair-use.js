@@ -52,6 +52,7 @@ const FairUsePage = () => (
               <img
                 style={{ maxWidth: "100%" }}
                 src="https://gh-card.dev/repos/jackmorrison12/personal-site.svg"
+                alt="Personal Site GitHub Repo"
               />
             </OutboundLink>
           </div>
