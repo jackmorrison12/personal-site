@@ -27,36 +27,23 @@ const LivePage = () => {
     }
     var url =
       process.env.NODE_ENV === "development"
-        ? "localhost:8080"
-        : "api.jackmorrison.xyz"
+        ? "http://localhost:8080"
+        : "https://api.jackmorrison.xyz"
 
-    fetch("https://" + url + "/getAPISummaryForDate", requestOptions)
+    fetch(url + "/getAPISummaryForDate", requestOptions)
       .then(response => response.json())
       .then(result => {
         setSummary(result)
         console.log(result)
       })
       .catch(error => console.log("error", error))
-
-    //     fetch("https://" + url + "/getSummaryForDate", {
-    //       method: "POST",
-    //       mode: "cors",
-    //       headers: {
-    //         "Content-Type": "application/x-www-form-urlencoded",
-    //       },
-    //       body: "date=" + date.toString(),
-    //     })
-    //       //   .then(response => response.json()) // parse JSON from request
-    //       .then(resultData => {
-    //         setSummary(resultData)
-    //         console.log(resultData)
-    //       })
   }, [])
   return (
     <Layout>
       <SEO title="Live" />
       <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
         <div className="row container ">
+          <div className="col-xs-12">Today I have...</div>
           {summary.lastfm ? (
             <div className="col-xs-12 col-sm-6 ">
               I've listened to {summary.lastfm} songs
@@ -66,7 +53,7 @@ const LivePage = () => {
           )}
           {summary.github ? (
             <div className="col-xs-12 col-sm-6 ">
-              I've done {summary.github} events
+              I've done {summary.github} events on GitHub
             </div>
           ) : (
             ""
