@@ -30,7 +30,7 @@ const LivePage = () => {
         ? "localhost:8080"
         : "jackmorrison.xyz"
 
-    fetch("http://" + url + "/getAPISummaryForDate", requestOptions)
+    fetch("https://" + url + "/getAPISummaryForDate", requestOptions)
       .then(response => response.json())
       .then(result => {
         setSummary(result)
