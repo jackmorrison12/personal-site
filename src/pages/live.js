@@ -28,7 +28,7 @@ const LivePage = () => {
     var url =
       process.env.NODE_ENV === "development"
         ? "localhost:8080"
-        : "jackmorrison.xyz"
+        : "api.jackmorrison.xyz"
 
     fetch("https://" + url + "/getAPISummaryForDate", requestOptions)
       .then(response => response.json())
