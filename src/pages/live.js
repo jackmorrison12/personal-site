@@ -73,7 +73,10 @@ const LivePage = () => {
                   </>
                 )
               ) : (
-                "0 songs"
+                <>
+                  <span className="is-red">0</span>
+                  <span> songs</span>
+                </>
               )}
             </h3>
           </div>
