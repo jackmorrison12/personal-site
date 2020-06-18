@@ -7,3 +7,228 @@
   vertical-align: middle;
   padding: 25px;
 }
+
+.live-dot {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px;
+}
+
+.live-date {
+  font-size: 0.7rem;
+}
+
+/**
+ *  This file is based on code from https://github.com/hugeinc/flexboxgrid-sass/blob/master/flexboxgrid.scss
+ */
+
+@import "./flex";
+
+$flexboxgrid-grid-columns: 14;
+$flexboxgrid-gutter-width: 1rem !default;
+$flexboxgrid-outer-margin: 2rem !default;
+$flexboxgrid-breakpoints: sm 48em 46rem, md 62em 61rem, lg 75em 71rem !default;
+$flexboxgrid-max-width: 1200px !default;
+
+$gutter-compensation: $flexboxgrid-gutter-width * 0.5 * -1;
+$half-gutter-width: $flexboxgrid-gutter-width * 0.5;
+
+.margin14-0 {
+  margin: 0;
+}
+
+.wrapper14 {
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: $flexboxgrid-max-width;
+}
+
+.container-fluid14 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $flexboxgrid-outer-margin;
+  padding-right: $flexboxgrid-outer-margin;
+}
+
+.row14 {
+  @include flexbox();
+  @include flex(0, 1, auto);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  box-sizing: border-box;
+}
+
+.row14.reverse14 {
+  @include flex-direction(row-reverse);
+}
+
+.col14.reverse {
+  @include flex-direction(column-reverse);
+}
+
+@mixin flexboxgrid-sass-col-common {
+  @include flex-grow(0);
+  @include flex-shrink(0);
+  box-sizing: border-box;
+  padding-left: $half-gutter-width;
+  padding-right: $half-gutter-width;
+}
+
+$name: xs;
+.col14-#{$name} {
+  @include flexboxgrid-sass-col-common;
+  @include flex-basis(auto);
+}
+@for $i from 1 through $flexboxgrid-grid-columns {
+  .col14-#{$name}-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+    max-width: 100% / $flexboxgrid-grid-columns * $i;
+  }
+}
+@for $i from 0 through $flexboxgrid-grid-columns {
+  .col14-#{$name}-offset-#{$i} {
+    @include flexboxgrid-sass-col-common;
+    @if $i == 0 {
+      margin-left: 0;
+    } @else {
+      margin-left: 100% / $flexboxgrid-grid-columns * $i;
+    }
+  }
+}
+.col14-#{$name} {
+  @include flex-grow(1);
+  @include flex-basis(0);
+  max-width: 100%;
+}
+.start14-#{$name} {
+  @include justify-content(flex-start);
+  text-align: left;
+}
+
+.center14-#{$name} {
+  @include justify-content(center);
+  text-align: center;
+}
+
+.end14-#{$name} {
+  @include justify-content(flex-end);
+  text-align: right;
+}
+
+.top14-#{$name} {
+  @include align-items(flex-start);
+}
+
+.middle14-#{$name} {
+  @include align-items(center);
+}
+
+.bottom14-#{$name} {
+  @include align-items(flex-end);
+}
+
+.around14-#{$name} {
+  @include justify-content(space-around);
+}
+
+.between14-#{$name} {
+  @include justify-content(space-between);
+}
+
+.first14-#{$name} {
+  order: -1;
+}
+
+.last14-#{$name} {
+  order: 1;
+}
+
+@each $breakpoint in $flexboxgrid-breakpoints {
+  $name: nth($breakpoint, 1);
+  $size: nth($breakpoint, 2);
+  $container: nth($breakpoint, 3);
+  @media only screen and (min-width: $size) {
+    .container14 {
+      margin: auto;
+      max-width: $container;
+    }
+
+    .container-small14 {
+      margin: auto;
+      max-width: $container * 1.2;
+    }
+
+    .col14-#{$name} {
+      @include flexboxgrid-sass-col-common;
+      @include flex-basis(auto);
+    }
+    .col14-#{$name} {
+      @include flex-grow(1);
+      @include flex-basis(0);
+      max-width: 100%;
+    }
+    .start14-#{$name} {
+      @include justify-content(flex-start);
+      text-align: left;
+    }
+
+    .center14-#{$name} {
+      @include justify-content(center);
+      text-align: center;
+    }
+
+    .end14-#{$name} {
+      @include justify-content(flex-end);
+      text-align: right;
+    }
+
+    .top14-#{$name} {
+      @include align-items(flex-start);
+    }
+
+    .middle14-#{$name} {
+      @include align-items(center);
+    }
+
+    .bottom14-#{$name} {
+      @include align-items(flex-end);
+    }
+
+    .around14-#{$name} {
+      @include justify-content(space-around);
+    }
+
+    .between14-#{$name} {
+      @include justify-content(space-between);
+    }
+
+    .first14-#{$name} {
+      order: -1;
+    }
+
+    .last14-#{$name} {
+      order: 1;
+    }
+    @for $i from 1 through $flexboxgrid-grid-columns {
+      .col14-#{$name}-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        @include flex-basis(100% / $flexboxgrid-grid-columns * $i);
+        max-width: 100% / $flexboxgrid-grid-columns * $i;
+      }
+    }
+    @for $i from 0 through $flexboxgrid-grid-columns {
+      .col14-#{$name}-offset-#{$i} {
+        @include flexboxgrid-sass-col-common;
+        @if $i == 0 {
+          margin-left: 0;
+        } @else {
+          margin-left: 100% / $flexboxgrid-grid-columns * $i;
+        }
+      }
+    }
+  }
+}

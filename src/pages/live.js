@@ -10,8 +10,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 library.add(fab)
 
+Date.prototype.formatDDMMYYYY = function () {
+  return this.getDate() + "/" + (this.getMonth() + 1)
+}
+
 const LivePage = () => {
-  const [summary, setSummary] = useState(0)
+  const [todaySummary, setTodaySummary] = useState(0)
+  const [summary, setSummary] = useState([])
+
   useEffect(() => {
     const d = new Date()
     const ye = new Intl.DateTimeFormat("en", { year: "numeric" }).format(d)
@@ -40,11 +46,26 @@ const LivePage = () => {
     fetch(url + "/getSummaryForDate", requestOptions)
       .then(response => response.json())
       .then(result => {
+        setTodaySummary(result)
+        console.log(result)
+      })
+      .catch(error => console.log("error", error))
+    fetch(url + "/getSummariesByDate")
+      .then(response => response.json())
+      .then(result => {
         setSummary(result)
         console.log(result)
       })
       .catch(error => console.log("error", error))
   }, [])
+
+  let colours = [
+    ["pink", "white"],
+    ["green", "white"],
+    ["medium-blue", "white"],
+    ["yellow", "black"],
+    ["cyan", "black"],
+  ]
   return (
     <Layout>
       <SEO title="Live" />
@@ -60,10 +81,10 @@ const LivePage = () => {
             />
             <h3>
               Listened to{" "}
-              {summary.music ? (
-                summary.music > 1 ? (
+              {todaySummary.music ? (
+                todaySummary.music > 1 ? (
                   <>
-                    <span className="is-red">{summary.music}</span>
+                    <span className="is-red">{todaySummary.music}</span>
                     <span> songs</span>
                   </>
                 ) : (
@@ -87,11 +108,11 @@ const LivePage = () => {
               className="grow-3 live-icon is-black-bg is-white"
             />
             <h3>
-              {summary.git_push ? (
-                summary.git_push > 1 ? (
+              {todaySummary.git_push ? (
+                todaySummary.git_push > 1 ? (
                   <>
                     <span>Pushed code </span>
-                    <span className="is-yellow">{summary.git_push}</span>
+                    <span className="is-yellow">{todaySummary.git_push}</span>
                     <span> times</span>
                   </>
                 ) : (
@@ -116,11 +137,13 @@ const LivePage = () => {
               className="grow-3 live-icon is-twitter-blue-bg is-white-always"
             />
             <h3>
-              {summary.tweet ? (
-                summary.tweet > 1 ? (
+              {todaySummary.tweet ? (
+                todaySummary.tweet > 1 ? (
                   <>
                     <span>Tweeted</span>
-                    <span className="is-twitter-blue">{summary.tweet}</span>
+                    <span className="is-twitter-blue">
+                      {todaySummary.tweet}
+                    </span>
                     <span> times</span>
                   </>
                 ) : (
@@ -146,10 +169,10 @@ const LivePage = () => {
             />
             <h3>
               Taken{" "}
-              {summary.steps ? (
-                summary.steps > 1 ? (
+              {todaySummary.steps ? (
+                todaySummary.steps > 1 ? (
                   <>
-                    <span className="is-pink">{summary.steps}</span>
+                    <span className="is-pink">{todaySummary.steps}</span>
                     <span>step</span>
                   </>
                 ) : (
@@ -165,6 +188,68 @@ const LivePage = () => {
                 </>
               )}
             </h3>
+          </div>
+        </div>
+      </div>
+      <div className="is-grey is-light-grey-bg  pad-3-lr">
+        <div className="row container ">
+          <h1 className="col-xs-12 pad-5-b">
+            Lets take a look at the last fortnight...
+          </h1>
+          <div className="row14 container">
+            {summary
+              ? summary
+                  .slice(0)
+                  .reverse()
+                  .map((item, i) => (
+                    <div className="col14-xs-2 col14-sm-1">
+                      <div className="text-align-center live-date bold">
+                        {new Date(
+                          Date.now() - 13 * 86400000 + i * 86400000
+                        ).formatDDMMYYYY()}
+                      </div>
+                      {item.lastfm ? (
+                        <div
+                          className={
+                            "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold"
+                          }
+                        >
+                          {item.lastfm}
+                        </div>
+                      ) : (
+                        <div
+                          className={"live-dot is-light-grey-bg margin-3-tb"}
+                        ></div>
+                      )}
+                      {item.github ? (
+                        <div
+                          className={
+                            "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
+                          }
+                        >
+                          {item.github}
+                        </div>
+                      ) : (
+                        <div
+                          className={"live-dot is-light-grey-bg margin-3-tb"}
+                        ></div>
+                      )}
+                      {/* {item.twitter ? (
+                        <div
+                          className={
+                            "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
+                          }
+                        >
+                          {item.twitter}
+                        </div>
+                      ) : (
+                        <div
+                          className={"live-dot is-light-grey-bg margin-3-tb"}
+                        ></div>
+                      )} */}
+                    </div>
+                  ))
+              : ""}
           </div>
         </div>
       </div>
