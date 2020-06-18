@@ -56,7 +56,7 @@ const LivePage = () => {
             <FontAwesomeIcon
               icon={["fab", "lastfm"]}
               size="4x"
-              className="grow-5 live-icon is-lastfm-red-bg is-white-always"
+              className="grow-3 live-icon is-lastfm-red-bg is-white-always"
             />
             <h3>
               Listened to{" "}
@@ -81,7 +81,7 @@ const LivePage = () => {
             <FontAwesomeIcon
               icon={["fab", "github"]}
               size="4x"
-              className="grow-5 live-icon is-black-bg is-white"
+              className="grow-3 live-icon is-black-bg is-white"
             />
             <h3>
               {summary.git_push ? (
@@ -110,7 +110,7 @@ const LivePage = () => {
             <FontAwesomeIcon
               icon={["fab", "twitter"]}
               size="4x"
-              className="grow-5 live-icon is-twitter-blue-bg is-white-always"
+              className="grow-3 live-icon is-twitter-blue-bg is-white-always"
             />
             <h3>
               {summary.tweet ? (
@@ -139,7 +139,7 @@ const LivePage = () => {
             <FontAwesomeIcon
               icon={faShoePrints}
               size="4x"
-              className="grow-5 live-icon is-pink-bg is-white-always"
+              className="grow-3 live-icon is-pink-bg is-white-always"
             />
             <h3>
               Taken{" "}
