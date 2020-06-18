@@ -16,6 +16,7 @@
 @import "./cv";
 @import "./data";
 @import "./dark_mode_toggle";
+@import "./live";
 
 @for $i from 1 through 6 {
   h#{7 - $i} {
