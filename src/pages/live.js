@@ -58,7 +58,24 @@ const LivePage = () => {
               size="4x"
               className="grow-5 live-icon is-lastfm-red-bg is-white-always"
             />
-            <h3>Listened to {summary.music ? summary.music : 0} songs</h3>
+            <h3>
+              Listened to{" "}
+              {summary.music ? (
+                summary.music > 1 ? (
+                  <>
+                    <span className="is-red">{summary.music}</span>
+                    <span> songs</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="is-red">1</span>
+                    <span>song</span>
+                  </>
+                )
+              ) : (
+                "0 songs"
+              )}
+            </h3>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
@@ -67,7 +84,26 @@ const LivePage = () => {
               className="grow-5 live-icon is-black-bg is-white"
             />
             <h3>
-              Pushed code {summary["git-push"] ? summary["git-push"] : 0} times
+              {summary.git_push ? (
+                summary.git_push > 1 ? (
+                  <>
+                    <span>Pushed code </span>
+                    <span className="is-yellow">{summary.git_push}</span>
+                    <span> times</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Pushed code </span>
+                    <span className="is-yellow">once</span>
+                  </>
+                )
+              ) : (
+                <>
+                  <span>Not pushed </span>
+                  <span className="is-yellow">any code</span>
+                  <span>... yet</span>
+                </>
+              )}
             </h3>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
@@ -76,7 +112,28 @@ const LivePage = () => {
               size="4x"
               className="grow-5 live-icon is-twitter-blue-bg is-white-always"
             />
-            <h3>Tweeted {summary.tweet ? summary.tweet : 0} times</h3>
+            <h3>
+              {summary.tweet ? (
+                summary.tweet > 1 ? (
+                  <>
+                    <span>Tweeted</span>
+                    <span className="is-twitter-blue">{summary.tweet}</span>
+                    <span> times</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Tweeted </span>
+                    <span className="is-twitter-blue">once</span>
+                  </>
+                )
+              ) : (
+                <>
+                  <span>Not tweeted </span>
+                  <span className="is-twitter-blue">anything</span>
+                  <span>... yet</span>
+                </>
+              )}
+            </h3>
           </div>
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
@@ -84,7 +141,27 @@ const LivePage = () => {
               size="4x"
               className="grow-5 live-icon is-pink-bg is-white-always"
             />
-            <h3>Taken {summary.steps ? summary.steps : 0} steps</h3>
+            <h3>
+              Taken{" "}
+              {summary.steps ? (
+                summary.steps > 1 ? (
+                  <>
+                    <span className="is-pink">{summary.steps}</span>
+                    <span>step</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="is-pink">1</span>
+                    <span>step</span>
+                  </>
+                )
+              ) : (
+                <>
+                  <span className="is-pink">no</span>
+                  <span> steps... yet</span>
+                </>
+              )}
+            </h3>
           </div>
         </div>
       </div>
