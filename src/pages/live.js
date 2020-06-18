@@ -196,13 +196,13 @@ const LivePage = () => {
           <h1 className="col-xs-12 pad-5-b">
             Lets take a look at the last fortnight...
           </h1>
-          <div className="row14 container">
+          <div className="row14 container center14-xs">
             {summary
               ? summary
                   .slice(0)
                   .reverse()
                   .map((item, i) => (
-                    <div className="col14-xs-2 col14-sm-1">
+                    <div className="col14-xs-3 col14-sm-1">
                       <div className="text-align-center live-date bold">
                         {new Date(
                           Date.now() - 13 * 86400000 + i * 86400000
