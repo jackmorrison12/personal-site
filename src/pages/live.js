@@ -105,7 +105,10 @@ const LivePage = () => {
         <div className="row container ">
           <h1 className="col-xs-12 pad-5-b">Today I have...</h1>
 
-          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
+          <div
+            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
+            onClick={() => click("lastfm", 13)}
+          >
             <FontAwesomeIcon
               icon={["fab", "lastfm"]}
               size="4x"
@@ -133,7 +136,10 @@ const LivePage = () => {
               )}
             </h3>
           </div>
-          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
+          <div
+            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
+            onClick={() => click("github", 13)}
+          >
             <FontAwesomeIcon
               icon={["fab", "github"]}
               size="4x"
@@ -162,7 +168,10 @@ const LivePage = () => {
               )}
             </h3>
           </div>
-          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
+          <div
+            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
+            onClick={() => click("twitter", 13)}
+          >
             <FontAwesomeIcon
               icon={["fab", "twitter"]}
               size="4x"
@@ -193,7 +202,10 @@ const LivePage = () => {
               )}
             </h3>
           </div>
-          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
+          <div
+            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
+            onClick={() => click("googlefit", 13)}
+          >
             <FontAwesomeIcon
               icon={faShoePrints}
               size="4x"
