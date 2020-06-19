@@ -5,6 +5,10 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { faShoePrints } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import TimeAgo from "react-timeago"
+
+import { SlideDown } from "react-slidedown"
+import "react-slidedown/lib/slidedown.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,6 +21,10 @@ Date.prototype.formatDDMMYYYY = function () {
 const LivePage = () => {
   const [todaySummary, setTodaySummary] = useState(0)
   const [summary, setSummary] = useState([])
+  const [selectedAPI, setSelectedAPI] = useState("")
+  const [selectedDate, setSelectedDate] = useState("")
+  const [displayDetail, setDisplayDetail] = useState(false)
+  const [displayFragments, setDisplayFragments] = useState([])
 
   useEffect(() => {
     const d = new Date()
@@ -59,13 +67,37 @@ const LivePage = () => {
       .catch(error => console.log("error", error))
   }, [])
 
-  let colours = [
-    ["pink", "white"],
-    ["green", "white"],
-    ["medium-blue", "white"],
-    ["yellow", "black"],
-    ["cyan", "black"],
-  ]
+  function click(api, date) {
+    var myHeaders = new Headers()
+    myHeaders.append("Content-Type", "application/x-www-form-urlencoded")
+
+    var urlencoded = new URLSearchParams()
+    urlencoded.append("date", date)
+    urlencoded.append("api", api)
+
+    var requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: urlencoded,
+      redirect: "follow",
+    }
+    var url =
+      process.env.NODE_ENV === "development"
+        ? "http://localhost:8080"
+        : "https://api.jackmorrison.xyz"
+
+    fetch(url + "/getAPIFragmentsFromDate", requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        setDisplayFragments(result)
+        console.log(result)
+      })
+      .catch(error => console.log("error", error))
+    setDisplayDetail(true)
+    setSelectedAPI(api)
+    setSelectedDate(date)
+  }
+
   return (
     <Layout>
       <SEO title="Live" />
@@ -213,6 +245,7 @@ const LivePage = () => {
                           className={
                             "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold"
                           }
+                          onClick={() => click("lastfm", i)}
                         >
                           {item.lastfm}
                         </div>
@@ -226,6 +259,7 @@ const LivePage = () => {
                           className={
                             "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
                           }
+                          onClick={() => click("github", i)}
                         >
                           {item.github}
                         </div>
@@ -239,6 +273,7 @@ const LivePage = () => {
                           className={
                             "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
                           }
+                          onClick={() => click("twitter", i)}
                         >
                           {item.twitter}
                         </div>
@@ -253,6 +288,45 @@ const LivePage = () => {
           </div>
         </div>
       </div>
+      <SlideDown closed={!displayDetail}>
+        <div className="row pad-10-t pad-3-lr container">
+          <div className="col-xs-12 col-md-12">
+            <div
+              role="button"
+              tabIndex="0"
+              onClick={e => setDisplayDetail(false)}
+              onKeyDown={e => {
+                if (e.keyCode === 13) {
+                  setDisplayDetail(false)
+                }
+              }}
+              className="link is-medium-blue float-right"
+            >
+              Close
+            </div>
+          </div>
+        </div>
+        <div className="is-grey is-light-grey-bg pad-10-b pad-3-lr">
+          <div className="row container ">
+            <div className="col-xs-12 ">
+              <h1>
+                More detail here on {selectedAPI} on{" "}
+                {new Date(
+                  Date.now() - 13 * 86400000 + selectedDate * 86400000
+                ).formatDDMMYYYY()}
+              </h1>
+              {displayFragments[0]
+                ? displayFragments.map(item => (
+                    <p>
+                      {item.body} - <TimeAgo date={item.occur_date} />
+                    </p>
+                  ))
+                : ""}
+            </div>
+          </div>
+        </div>
+      </SlideDown>
+
       <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
         <div className="row container ">
           <div className="col-xs-12 ">
