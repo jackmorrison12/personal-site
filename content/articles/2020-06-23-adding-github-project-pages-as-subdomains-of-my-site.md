@@ -3,7 +3,7 @@ title: Adding GitHub Project Pages as Subdomains of my Site
 slug: /articles/github-project-subdomains
 date: 2020-06-23T22:26:37.457Z
 hidden: false
-hero: /img/gatsby-notifications.png
+hero: /img/github-project-subdomains.png
 description: Hosting old versions of my site under subdomains of my current domain
 topics:
   - Netlify DNS
