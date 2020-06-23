@@ -17,8 +17,14 @@ I assumed this would be a simple task, however I actually spent quite a while tr
 
 The first thing I had to do was to update the DNS records on Netlify DNS, which is how I host my site. It's actually pretty simple - all I had to do was add a new CNAME record with the appropriate subdomain, and then set the value to my main GitHub pages URL (which is just {username}.github.io). I made one CNAME record for each project page I wanted to host, but they all pointed to the same URL.
 
+
+
+![](/img/github-project-subdomains-1.jpg)
+
 This meant the Netlify side of stuff was done. Easy!
 
 The second thing to do is head on over to GitHub, and set the custom domain of each project you want to host. All this involves is... typing in a URL. This then sets the CNAME file in the repo.
+
+![](/img/github-project-subdomains-2.jpg)
 
 And that's it! It may take while for DNS servers to update and caches to clear, but eventually all your sites are hosted properly!
