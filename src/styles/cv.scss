@@ -35,8 +35,7 @@
   position: relative;
 
   .inner {
-    position: absolute;
-    min-height: 297mm;
+    min-height: 100%;
   }
   .line {
     border-bottom: 2px solid;

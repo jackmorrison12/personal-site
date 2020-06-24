@@ -14,8 +14,8 @@ export default () => {
   return (
     <>
       <div className="cv">
-        <div className="row inner">
-          <div className="col-xs-4 is-black-bg-always pad-3">
+        <div className="row inner position-absolute">
+          <div className="col-xs-4 is-black-bg-always pad-3 inner">
             <Title basics={data.basics} socials={data.socials} />
             <div className="margin-3-b margin-3-t" />
             <Education education={data.education} />
@@ -24,7 +24,7 @@ export default () => {
             <div className="margin-3-b" />
             <Skills skills={data.skills} />
           </div>
-          <div className="col-xs-8 pad-3-l pad-3">
+          <div className="col-xs-8 pad-3-l pad-3 inner">
             <Experience experience={data.experience} />
             <div className="margin-3-b margin-3-t" />
             <Projects projects={data.projects} />
