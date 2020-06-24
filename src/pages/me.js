@@ -130,18 +130,6 @@ export default ({ data }) => {
           </div>
         </div>
       </SlideDown>
-      <div className="is-red-bg-always">
-        <div className="row container pad-10-tb pad-3-lr ">
-          <div className="col-xs-12 col-md-12">
-            <h1 className="is-title margin-0-t text-align-center is-white-always">
-              Want a familiar format?
-            </h1>
-            <Link to="/cv" className="btn-center is-white-bg is-black">
-              Read my CV
-            </Link>
-          </div>
-        </div>
-      </div>
     </Layout>
   )
 }

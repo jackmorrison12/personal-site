@@ -1,11 +1,11 @@
 import React from "react"
 
-import Title from "./title"
-import Education from "./education"
-import Skills from "./skills"
-import Languages from "./languages"
-import Experience from "./experience"
-import Projects from "./projects"
+import Title from "./titlemobile"
+import Education from "./educationmobile"
+import Skills from "./skillsmobile"
+import Languages from "./languagesmobile"
+import Experience from "./experiencemobile"
+import Projects from "./projectsmobile"
 import useCvData from "../../hooks/use-cv-data"
 
 export default () => {
@@ -13,9 +13,9 @@ export default () => {
   console.log(data)
   return (
     <>
-      <div className="cv">
-        <div className="row inner position-absolute">
-          <div className="col-xs-4 is-black-bg-always pad-3 inner">
+      <div className="mobile-cv">
+        <div className="row">
+          <div className="col-xs-12 pad-3">
             <Title basics={data.basics} socials={data.socials} />
             <div className="margin-3-b margin-3-t" />
             <Education education={data.education} />
@@ -23,8 +23,8 @@ export default () => {
             <Languages languages={data.languages} />
             <div className="margin-3-b" />
             <Skills skills={data.skills} />
-          </div>
-          <div className="col-xs-8 is-white-bg-always pad-3-l pad-3 inner">
+            <div className="margin-3-b" />
+
             <Experience experience={data.experience} />
             <div className="margin-3-b margin-3-t" />
             <Projects projects={data.projects} />

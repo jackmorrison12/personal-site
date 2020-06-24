@@ -1,11 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
 
-import { Twemoji } from "react-emoji-render"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import CV from "../components/cv/cv"
+import MobileCV from "../components/cv/mobilecv"
+
 import { savePDF } from "@progress/kendo-react-pdf"
 
 class CVPage extends React.Component {
@@ -19,25 +19,18 @@ class CVPage extends React.Component {
               <div className="mobile-hide" ref={cv => (this.cv = cv)}>
                 <CV />
               </div>
-              <div className="mobile-show">
-                <p>
-                  Unfortunately, it looks like your screen is a little too small
-                  to display my CV <Twemoji svg text="😢" />. Maybe come back
-                  and take a look if you find a bigger screen!
-                </p>
-                <p>
-                  You can download a PDF copy instead if you'd like, but please
-                  save the trees and only print it if really necessary{" "}
-                  <Twemoji text="🌳" />
-                </p>
+              <div className="mobile-hide">
+                <button
+                  className="btn-center is-red-bg is-black is-red-border margin-10-t"
+                  onClick={this.exportPDFWithMethod}
+                >
+                  Download CV
+                </button>
               </div>
-              <button
-                className="btn-center is-red-bg is-black is-red-border margin-10-t"
-                onClick={this.exportPDFWithMethod}
-              >
-                Download CV
-              </button>
-            </div>
+              <div className="mobile-show">
+                <MobileCV />
+              </div>
+            </div>{" "}
           </div>
         </div>
       </Layout>
