@@ -3,9 +3,9 @@ import React from "react"
 export default props => {
   return (
     <>
-      <h3 className="is-dark-blue-always">Skills</h3>
+      <h3 className="is-green-always subtitle">Skills</h3>
       {props.skills.nodes.map(item => (
-        <div className="margin-3-t">
+        <div className="margin-3-t is-white-always">
           <h4 className="margin-0-b">{item.name}</h4>
           <p className="margin-0">{item.summary}</p>
         </div>

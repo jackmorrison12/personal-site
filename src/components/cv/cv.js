@@ -14,30 +14,24 @@ export default () => {
   return (
     <>
       <div className="cv">
-        <div className="pad-3">
-          <div className="row">
-            <div className="col-xs-12">
-              <Title basics={data.basics} socials={data.socials} />
-            </div>
+        <div className="row inner">
+          <div className="col-xs-4 is-black-bg-always pad-3">
+            <Title basics={data.basics} socials={data.socials} />
+            <div className="margin-3-b margin-3-t" />
+            <Education education={data.education} />
+            <div className=" margin-3-b margin-3-t" />
+            <Languages languages={data.languages} />
+            <div className="margin-3-b" />
+            <Skills skills={data.skills} />
           </div>
-          <div className="line is-light-grey-always margin-3-b" />
-          <div className="row">
-            <div className="col-xs-3">
-              <Education education={data.education} />
-              <div className="line is-light-grey-always margin-3-b margin-3-t" />
-              <Languages languages={data.languages} />
-              <div className="line is-light-grey-always margin-3-b" />
-              <Skills skills={data.skills} />
-            </div>
-            <div className="col-xs-9 pad-6-l">
-              <Experience experience={data.experience} />
-              <div className="line is-light-grey-always margin-3-b margin-3-t" />
-              <Projects projects={data.projects} />
-              <div className="line is-light-grey-always margin-3-b margin-3-t" />
-              <h4 className="is-dark-blue-always">
-                References can be supplied upon request
-              </h4>
-            </div>
+          <div className="col-xs-8 pad-3-l pad-3">
+            <Experience experience={data.experience} />
+            <div className="margin-3-b margin-3-t" />
+            <Projects projects={data.projects} />
+            <div className="margin-3-b margin-3-t" />
+            <h4 className="is-green-always subtitle">
+              References can be supplied upon request
+            </h4>
           </div>
         </div>
       </div>

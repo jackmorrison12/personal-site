@@ -19,7 +19,7 @@
     "url": "https://github.com/jackmorrison12",
     "icon": "github",
     "home": true,
-    "cv": false,
+    "cv": true,
     "name": "GitHub",
     "username": "github.com/jackmorrison12"
   },
@@ -43,7 +43,7 @@
     "url": "https://www.linkedin.com/in/jackmorrison12/",
     "icon": "linkedin-in",
     "home": true,
-    "cv": false,
+    "cv": true,
     "name": "LinkedIn",
     "username": "linkedin.com/in/jackmorrison12"
   },

@@ -32,7 +32,12 @@
   min-height: 297mm;
   margin: auto;
   font-family: "Muli", sans-serif;
+  position: relative;
 
+  .inner {
+    position: absolute;
+    height: 100%;
+  }
   .line {
     border-bottom: 2px solid;
     max-width: 100%;
@@ -80,5 +85,15 @@
   a {
     font-size: 12.8px;
     font-weight: bold;
+  }
+
+  .subtitle {
+    border-bottom: 2px solid;
+    border-top: 2px solid;
+    max-width: 100%;
+    @extend .is-light-grey-border-always;
+    @extend .text-align-center;
+    padding-top: 3px;
+    padding-bottom: 3px;
   }
 }

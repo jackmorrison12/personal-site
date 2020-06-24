@@ -3,7 +3,7 @@ import React from "react"
 export default props => {
   return (
     <>
-      <h3 className="is-dark-blue-always">Projects</h3>
+      <h3 className="is-green-always subtitle">Projects</h3>
       {props.projects.nodes.map(item => (
         <div className="margin-3-t">
           <a href={"https://jackmorrison.xyz" + item.frontmatter.slug}>
@@ -15,7 +15,7 @@ export default props => {
             {item.frontmatter.startdate} - {item.frontmatter.enddate}
           </p>
           {item.frontmatter.highlights.map(highlight => (
-            <p className="bullet pad-5-l">{highlight.highlight}</p>
+            <p className="bullet pad-5-l pad-2-b">{highlight.highlight}</p>
           ))}
         </div>
       ))}

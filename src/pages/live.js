@@ -330,6 +330,7 @@ const LivePage = () => {
               {displayFragments[0]
                 ? displayFragments.map(item => (
                     <p>
+                      {/* //Change this to show time if more than 1 day ago */}
                       {item.body} - <TimeAgo date={item.occur_date} />
                     </p>
                   ))
