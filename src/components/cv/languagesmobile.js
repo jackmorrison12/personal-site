@@ -5,7 +5,7 @@ export default props => {
     <>
       <h3 className="is-green-always subtitle">Technical Experience</h3>
       {props.languages.nodes.map(item => (
-        <div className="margin-3-t is-white-always">
+        <div className="margin-3-t">
           <h4 className="margin-0-b">{item.name}</h4>
           <div className="row pad-2-t">
             <p>

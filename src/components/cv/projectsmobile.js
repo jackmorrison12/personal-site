@@ -7,9 +7,7 @@ export default props => {
       {props.projects.nodes.map(item => (
         <div className="margin-3-t">
           <a href={"https://jackmorrison.xyz" + item.frontmatter.slug}>
-            <h3 className="margin-0-b is-white-always">
-              {item.frontmatter.title}
-            </h3>
+            <h3 className="margin-0-b is-black">{item.frontmatter.title}</h3>
           </a>
           <p className="margin-0-t italic">
             {item.frontmatter.startdate} - {item.frontmatter.enddate}

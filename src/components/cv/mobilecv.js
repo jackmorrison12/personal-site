@@ -29,7 +29,7 @@ export default () => {
             <div className="margin-3-b margin-3-t" />
             <Projects projects={data.projects} />
             <div className="margin-3-b margin-3-t" />
-            <h4 className="is-green-always subtitle">
+            <h4 className="is-green subtitle">
               References can be supplied upon request
             </h4>
           </div>

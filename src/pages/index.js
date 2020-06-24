@@ -80,10 +80,23 @@ const IndexPage = () => (
     <div className="is-light-grey-bg is-black ">
       <div className="row container-small pad-20-t pad-3-lr pad-10-b ">
         <div className="col-xs-12">
-          <h2 className="text-align-center">Want to know more?</h2>
-          <Link to="/cv" className="btn-center is-red-bg is-black">
-            Read my CV
-          </Link>
+          <h2 className="text-align-center">Where else can you reach me?</h2>
+          <div className="text-align-center">
+            {socials
+              .filter(item => item.home)
+              .map(item => (
+                <OutboundLink
+                  href={item.url}
+                  className="is-black pad-2 col-xs-3"
+                >
+                  <FontAwesomeIcon
+                    icon={["fab", item.icon]}
+                    size="2x"
+                    className="grow-5"
+                  />
+                </OutboundLink>
+              ))}
+          </div>
         </div>
       </div>
     </div>
