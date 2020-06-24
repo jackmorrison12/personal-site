@@ -26,3 +26,11 @@ The second thing to do is head on over to GitHub, and set the custom domain of e
 ![Custom Domain on GitHub Project Page](/img/github-project-subdomains-2.jpg "Custom Domain on GitHub Project Page")
 
 And that's it! It may take while for DNS servers to update and caches to clear, but eventually all your sites are hosted properly!
+
+You can find my personal examples at the subdomains 
+- [v0.jackmorrison.xyz](https://v0.jackmorrison.xyz)
+- [v1.jackmorrison.xyz](https://v1.jackmorrison.xyz)
+- [v2.jackmorrison.xyz](https://v2.jackmorrison.xyz) 
+- [v3.jackmorrison.xyz](https://v3.jackmorrison.xyz)
+
+and more detail on these previous site iterations on my [archive page](https://jackmorrison.xyz/archive).
