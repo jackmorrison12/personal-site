@@ -3,7 +3,7 @@
   *  This file is based on code from https://dev.to/lynnewritescode/colour-coding-with-scss-each-loops-31k
  */
 
-$brand-colors: ("white", white, #1c1c1c), ("black", #1c1c1c, white),
+$colors: ("white", white, #1c1c1c), ("black", #1c1c1c, white),
   ("light-grey", rgb(240, 240, 240), #121212),
   ("medium-grey", rgb(146, 146, 146), #121212), ("dark-blue", #274690, white),
   ("medium-blue", #3772ff, #3772ff), ("red", #f4442e, #f4442e),
@@ -11,7 +11,7 @@ $brand-colors: ("white", white, #1c1c1c), ("black", #1c1c1c, white),
   ("cyan", #2ab7ca, #2ab7ca), ("pink", #d741a7, #d741a7),
   ("twitter-blue", #1da1f2, #1da1f2), ("lastfm-red", #d51007, #d51007);
 
-@each $color in $brand-colors {
+@each $color in $colors {
   .is-#{nth($color,1)}-bg {
     background-color: nth($color, 2);
   }
