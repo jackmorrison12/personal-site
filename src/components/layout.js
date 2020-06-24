@@ -11,6 +11,8 @@ import PropTypes from "prop-types"
 import useDarkMode from "use-dark-mode"
 import { Link } from "gatsby"
 
+import { Twemoji } from "react-emoji-render"
+
 import Header from "./header"
 
 const Layout = ({ children }) => {
@@ -30,7 +32,8 @@ const Layout = ({ children }) => {
       <main className="is-light-grey-bg is-black">{children}</main>
       <footer className="is-white-bg is-black pad-2">
         <div className="dark-toggle">
-          Light{"    "}
+          <Twemoji svg text="☀️" />
+          {"    "}
           <label className="switch">
             <input
               type="checkbox"
@@ -41,7 +44,7 @@ const Layout = ({ children }) => {
             <span className="slider round"></span>
           </label>
           {"    "}
-          Dark
+          <Twemoji svg text="🌙" />
         </div>
         <div>
           <Link
