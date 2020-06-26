@@ -11,23 +11,23 @@ class BlogPreviews extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     return (
-      posts &&
-      posts.map(({ node: post }) => (
-        <Link to={"/" + post.frontmatter.slug} className="" id="path">
-          <div className="grow row margin-5-b">
-            <div className="col-xs-12 margin-5-t">
-              <h1 className="margin-0 is-light-grey">
-                {post.frontmatter.title}
-              </h1>
-              <p className="margin-0 margin-2-b is-black">
-                {post.frontmatter.date}
-              </p>
-              <div className="line-sm is-black margin-3-b" />
-              <p className="margin-0 is-black">{post.excerpt}</p>
+      <div className="row">
+        {posts &&
+          posts.map(({ node: post }) => (
+            <div className="col-xs-12 col-md-6 margin-5-t grow margin-5-b">
+              <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                <h1 className="margin-0 is-light-grey">
+                  {post.frontmatter.title}
+                </h1>
+                <p className="margin-0 margin-2-b is-black">
+                  {post.frontmatter.date}
+                </p>
+                <div className="line-sm is-black margin-3-b" />
+                <p className="margin-0 is-black">{post.excerpt}</p>
+              </Link>
             </div>
-          </div>
-        </Link>
-      ))
+          ))}
+      </div>
     )
   }
 }
