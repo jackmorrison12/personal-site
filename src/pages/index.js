@@ -25,7 +25,7 @@ export default () => {
         <div className="row container-small pad-10-t">
           <div className="col-xs-12 pad-5-lr">
             <div className="">
-              <h1 className="me-hero-title is-title margin-0-t">
+              <h1 className="me-hero-title title margin-0-t">
                 <Twemoji svg text="Hey 👋 I'm Jack" />
                 <br />
                 I'm a computing student at{" "}

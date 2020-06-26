@@ -2,18 +2,26 @@
  *  This file is based on code from https://github.com/slarsendisney/personal-site/tree/master/src/styles
  */
 
-.is-subtitle {
+.subtitle {
   font-size: 1.25em;
   line-height: 1em;
   @extend .margin-0;
 }
 
-.is-title {
+.title {
   font-size: 3em;
 }
 
+.title-borders {
+  border-bottom: 7px solid;
+  border-top: 7px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: fit-content;
+}
+
 @media screen and (max-width: 481px) {
-  .is-title {
+  .title {
     font-size: 2em;
   }
 }

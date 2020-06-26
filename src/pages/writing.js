@@ -12,8 +12,7 @@ const WritingPage = () => (
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
       <div className="row container-small">
         <div className="col-xs-12 col-md-12">
-          <h1 className="is-title margin-0-t">I like to write</h1>
-          <div className="line margin-3-t" />
+          <h1 className="title title-borders margin-0-t">I like to write</h1>
           <h1 className="pad-5-t">Some articles...</h1>
           <ArticleRoll />
           <h3 className="pad-5-t margin-0">

@@ -31,13 +31,11 @@ export default function Template({
             </Link>
           </div>
           <div className="col-xs-12 col-sm-7 pad-3-lr">
-            <h1 className="is-title margin-1-t margin-1-b">
-              {frontmatter.title}
-            </h1>
-            <h6 className="is-subtitle margin-3-b italic">
+            <h1 className="title margin-1-t margin-1-b">{frontmatter.title}</h1>
+            <h6 className="subtitle margin-3-b italic">
               {frontmatter.description}
             </h6>
-            <h6 className="is-subtitle margin-3-b">
+            <h6 className="subtitle margin-3-b">
               {frontmatter.startdate !== frontmatter.enddate
                 ? frontmatter.startdate + " - " + frontmatter.enddate
                 : frontmatter.startdate}
@@ -79,7 +77,11 @@ export default function Template({
                 <p>
                   Written using{" "}
                   {frontmatter.tech
-                    .map((item, i) => <span key={i} className="is-red">{item}</span>)
+                    .map((item, i) => (
+                      <span key={i} className="is-red">
+                        {item}
+                      </span>
+                    ))
                     .reduce((acc, curr, i) =>
                       i !== 0
                         ? [

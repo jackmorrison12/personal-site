@@ -64,7 +64,7 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Me" />
       <div className="me-hero">
-        <h1 className="me-hero-title is-title margin-0-t">
+        <h1 className="me-hero-title title margin-0-t">
           <Twemoji svg text="Hey 👋 I'm Jack" />
         </h1>
       </div>
@@ -81,7 +81,7 @@ export default ({ data }) => {
       <div className="is-light-grey-bg">
         <div className="row container pad-10-tb pad-3-lr">
           <div className="col-xs-12 col-md-12">
-            <h1 className="is-title margin-0-t">About me (in 40 words)</h1>
+            <h1 className="title margin-0-t">About me (in 40 words)</h1>
             <h2>
               {" "}
               I'm a Software Engineer from London. I'm currently studying

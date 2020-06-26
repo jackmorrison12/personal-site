@@ -30,10 +30,8 @@ export default function Template({
             </Link>
           </div>
           <div className="col-xs-12 col-md-6">
-            <h1 className="is-title margin-1-t margin-5-b">
-              {frontmatter.title}
-            </h1>
-            <h6 className="is-subtitle margin-3-b">{frontmatter.date}</h6>
+            <h1 className="title margin-1-t margin-5-b">{frontmatter.title}</h1>
+            <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="line margin-5-tb is-red" />
           </div>
           <div className="col-xs-12 col-md-6">
