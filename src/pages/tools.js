@@ -10,7 +10,7 @@ const ToolsPage = () => (
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
       <div className="row container ">
         <div className="col-xs-12 ">
-          <h1 className="margin-0-t title">Tools Used</h1>
+          <h1 className="margin-0-t title title-borders">Tools Used</h1>
           <p>
             The site is created using:
             <ul>

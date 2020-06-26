@@ -1,26 +1,32 @@
 [
   {
     "name": "🏠 Home",
-    "link": "/"
+    "link": "/",
+    "hidden": false
   },
   {
     "name": "👨‍💻 Me",
-    "link": "/me"
+    "link": "/me",
+    "hidden": false
   },
   {
     "name": "📄 CV",
-    "link": "/cv"
+    "link": "/cv",
+    "hidden": false
   },
   {
     "name": "🔧 Projects",
-    "link": "/projects"
+    "link": "/projects",
+    "hidden": false
   },
   {
     "name": "📚 Articles",
-    "link": "/writing"
+    "link": "/writing",
+    "hidden": false
   },
   {
     "name": "🎉 Fun Stuff",
-    "link": "/data"
+    "link": "/data",
+    "hidden": true
   }
 ]

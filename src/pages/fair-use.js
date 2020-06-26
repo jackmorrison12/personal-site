@@ -13,6 +13,7 @@ const FairUsePage = () => (
       <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
         <div className="row container ">
           <div className="col-xs-12 ">
+            <h1 className="margin-0-t title title-borders">Fair Use Policy</h1>
             <h1 className="margin-0-t">
               <Twemoji svg text="🧐 " />
               Can I use this template?

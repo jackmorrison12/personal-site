@@ -11,7 +11,7 @@ const CreditsPage = () => (
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
       <div className="row container ">
         <div className="col-xs-12 ">
-          <h1 className="title margin-0-t">Credits</h1>
+          <h1 className="title margin-0-t title-borders">Credits</h1>
           <p>
             This site would not be possible without the following code &
             tutorials
