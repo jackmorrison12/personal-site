@@ -107,6 +107,7 @@
 
   .left {
     @extend .half;
+    @extend .text-align-center;
     // @extend .start-xs;
     // @extend .end-sm;
   }
@@ -121,5 +122,13 @@
 
   .footnote {
     font-size: 0.8rem;
+  }
+
+  .intro {
+    @extend .text-align-center;
+  }
+
+  .footer {
+    @extend .text-align-center;
   }
 }

@@ -25,13 +25,17 @@ highlights:
   - highlight: Used a mesh network topology to allow for decentralisation
 ---
 
+<div class="intro">
+
 We've noticed a trend: over the last few years, everything is becoming more collaborative
 
 But one thing is lagging behind... _drawing tools_
 
 That is, until now
 
-Introducing <span class="highlight">Canvas</span>
+Introducing... <span class="highlight">Canvas</span>
+
+</div>
 
 <div class="row">
   <div class="left">
@@ -50,14 +54,14 @@ We have created a resilient collaborative drawing app for iPadOS, using _Conflic
 <div class="row">
   <div class="left">
 
-![Features - Canvas](/img/canvas-2.png "Features - Canvas")
-
-  </div>
-  <div class="right first-xs last-sm">
-
 ## Features
 
 Canvas has everything you'd expect from a drawing app, such as various design tools and sharing options, plus more advanced features, such as extremely accurate\* <span class="highlight">shape and line recognition</span>
+
+  </div>
+  <div class="right">
+
+![Features - Canvas](/img/canvas-2.png "Features - Canvas")
 
   </div>
 </div>
@@ -70,7 +74,7 @@ Canvas allows up to <span class="highlight">1000 users</span>\* to connect and d
 
 But what makes it different to every other online whiteboard?
 
-<span class="highlight">It's de-centralised</span>
+It's <span class="highlight">de-centralised</span>
 
   </div>
   <div class="right">
@@ -82,16 +86,16 @@ But what makes it different to every other online whiteboard?
 <div class="row">
   <div class="left">
 
-![Networking - Canvas](/img/canvas-4.png "Networking - Canvas")
-
-  </div>
-  <div class="right first-xs last-sm">
-
 ## Networking
 
 Our app uses a dual connection mechanism, making use of an <span class="highlight">XMPP</span> server, for long-distance drawing, and a <span class="highlight">Bluetooth</span> mesh topology, for optimised close-range drawing
 
 This creates a <span class="highlight">resilient, de-centralised\*\* network</span>
+
+  </div>
+  <div class="right">
+
+![Networking - Canvas](/img/canvas-4.png "Networking - Canvas")
 
   </div>
 </div>

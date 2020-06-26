@@ -48,4 +48,8 @@ Unlike other platforms, where you drag-and-drop blocks, with PyPlay, you're actu
   </div>
 </div>
 
+<div class="footer">
+
 We created this for IC Hack 2020.
+
+</div>

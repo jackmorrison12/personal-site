@@ -26,6 +26,8 @@ highlights:
   - highlight: Tackled the problem of confirmation bias in the current consumption of the news
 ---
 
+<div class="intro">
+
 The internet is a powerful tool for connecting people but it hasn't necessarily brought us closer together
 
 Sites are removing their comments sections in droves, with news feeds full of think pieces about the state of debate online
@@ -37,6 +39,8 @@ Our own confirmation bias means we're less likely to read something that challen
 It's becoming increasingly easy to live in a bubble (see what we did there?)
 
 That's why we created <span class="highlight">Burst My Bubble</span>
+
+</div>
 
 <div class="row">
   <div class="left">
@@ -56,14 +60,14 @@ With articles sourced from all over the web, we use a user's reading history to 
 <div class="row">
   <div class="left">
 
-![Opinions - Burst My Bubble](/img/bmb-3.png "Opinions - Burst My Bubble")
-
-  </div>
-  <div class="right first-xs last-sm">
-
 ## A twist on the usual comments section
 
 Users can share their thoughts on articles, but instead of the traditional comments and replies format, can instead only write one opinion, which they're free to edit as their point of view matures
+
+  </div>
+  <div class="right">
+
+![Opinions - Burst My Bubble](/img/bmb-3.png "Opinions - Burst My Bubble")
 
   </div>
 </div>
@@ -86,18 +90,22 @@ Users also have access to a personal page, which shows their latest reading stat
 <div class="row">
   <div class="left">
 
-![Trending - Burst My Bubble](/img/bmb-4.png "Trending - Burst My Bubble")
-
-  </div>
-  <div class="right first-xs last-sm">
-
 ## See what's going on in the world
 
 We also showed the top trending topics on Burst My Bubble, so you're not just limited to articles which are tailored to you, since the app is all about expanding your horizons!
 
   </div>
+  <div class="right">
+
+![Trending - Burst My Bubble](/img/bmb-4.png "Trending - Burst My Bubble")
+
+  </div>
 </div>
+
+<div class="footer">
 
 Burst My Bubble was awarded second best WebApps project in our year
 
 Sources can be found at the top of the page
+
+</div>
