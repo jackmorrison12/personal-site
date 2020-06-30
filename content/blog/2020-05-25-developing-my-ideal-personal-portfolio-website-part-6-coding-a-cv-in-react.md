@@ -11,7 +11,7 @@ Everyone has a CV, and I've had many iterations over the years. Most recently, I
 
 ## Where to start
 
-I was simultaneously excited and nervous to start this part of my site. I knew it was something which would look really good, but I also wasn't sure how well I could execute it. I started off by looking around and seeing if there were any examples online. I couldn't find any tutorials which covered what I wanted to create, but found [a great example](https://sld.codes/cv) of what I wanted it to look like. 
+I was simultaneously excited and nervous to start this part of my site. I knew it was something which would look really good, but I also wasn't sure how well I could execute it. I started off by looking around and seeing if there were any examples online. I couldn't find any tutorials which covered what I wanted to create, but found [a great example](https://sld.codes/cv) of another CV created using React, so I knew it was possible. 
 
 ## Structure
 
