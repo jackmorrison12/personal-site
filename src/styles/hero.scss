@@ -12,6 +12,13 @@
   font-size: 3em;
 }
 
+.hero-title {
+  display: table-cell;
+  vertical-align: middle;
+  @extend .title;
+  @extend .margin-0-t;
+}
+
 .title-borders {
   border-bottom: 7px solid;
   border-top: 7px solid;

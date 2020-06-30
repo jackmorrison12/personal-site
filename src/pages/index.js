@@ -25,10 +25,9 @@ export default () => {
         <div className="row container-small pad-10-t">
           <div className="col-xs-12 pad-5-lr">
             <div className="">
-              <h1 className="me-hero-title title margin-0-t">
+              <h1 className="hero-title">
                 <Twemoji svg text="Hey 👋 I'm Jack" />
-                <br />
-                I'm a computing student at{" "}
+                <br />A computing student at{" "}
                 <OutboundLink
                   className="is-red link"
                   href="https://www.imperial.ac.uk/computing"
