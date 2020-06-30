@@ -54,19 +54,23 @@ export default ({ data }) => {
             {open ? (
               <div className="col-xs-12">
                 <div className="row flex text-align-center">
-                  {navlinks.map((item, i) => (
-                    <div key={i} className="col-xs-6 col-md-2 col-lg-2">
-                      <h3 className="margin-0">
-                        <Link
-                          to={item.link}
-                          activeClassName="is-red"
-                          className="is-black"
-                        >
-                          <Twemoji svg text={item.name} />
-                        </Link>
-                      </h3>
-                    </div>
-                  ))}
+                  {navlinks.map((item, i) =>
+                    !item.hidden ? (
+                      <div key={i} className="col-xs-6 col-md-2 col-lg-2">
+                        <h3 className="margin-0">
+                          <Link
+                            to={item.link}
+                            activeClassName="is-red"
+                            className="is-black"
+                          >
+                            <Twemoji svg text={item.name} />
+                          </Link>
+                        </h3>
+                      </div>
+                    ) : (
+                      ""
+                    )
+                  )}
                 </div>
               </div>
             ) : (
