@@ -43,3 +43,27 @@ $colors: ("white", white, #1c1c1c), ("black", #1c1c1c, white),
     }
   }
 }
+
+$brands: ("github", #daaa00, #eac435), ("twitter", #1da1f2, #1da1f2),
+  ("lastfm", #d51007, #d51007), ("gitlab", #fc6d26, #fc6d26),
+  ("linkedin", #0077b5, #0077b5), ("instagram", #8a3ab9, #8a3ab9),
+  ("spotify", #1db954, #1db954), ("playstation", #00ac9f, #00ac9f),
+  ("facebookmessenger", #0084ff, #0084ff);
+
+@each $brand in $brands {
+  .#{nth($brand,1)}-colour {
+    color: nth($brand, 2);
+  }
+  .#{nth($brand,1)}-colour-hover:hover {
+    color: nth($brand, 2);
+  }
+
+  body.dark-mode {
+    .#{nth($brand,1)}-colour {
+      color: nth($brand, 3);
+    }
+    .#{nth($brand,1)}-colour-hover:hover {
+      color: nth($brand, 3);
+    }
+  }
+}

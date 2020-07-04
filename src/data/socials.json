@@ -5,7 +5,8 @@
     "home": false,
     "cv": true,
     "name": "Email",
-    "username": "jack.morrison17@imperial.ac.uk"
+    "username": "jack.morrison17@imperial.ac.uk",
+    "identifier": "email"
   },
   {
     "url": "sms:+447775101516",
@@ -13,7 +14,8 @@
     "home": false,
     "cv": true,
     "name": "SMS",
-    "username": "+447775 101 516"
+    "username": "+447775 101 516",
+    "identifier": "sms"
   },
   {
     "url": "https://github.com/jackmorrison12",
@@ -21,7 +23,9 @@
     "home": true,
     "cv": true,
     "name": "GitHub",
-    "username": "github.com/jackmorrison12"
+    "username": "github.com/jackmorrison12",
+    "identifier": "github",
+    "colour": "#eac435"
   },
   {
     "url": "https://gitlab.doc.ic.ac.uk/jsm1317",
@@ -29,7 +33,9 @@
     "home": true,
     "cv": false,
     "name": "GitLab",
-    "username": "jsm1317"
+    "username": "jsm1317",
+    "identifier": "gitlab",
+    "colour": "#fc6d26"
   },
   {
     "url": "https://twitter.com/jsm_ic",
@@ -37,7 +43,9 @@
     "home": true,
     "cv": false,
     "name": "Twitter",
-    "username": "@jsm_ic"
+    "username": "@jsm_ic",
+    "identifier": "twitter",
+    "colour": "#38A1F3"
   },
   {
     "url": "https://www.linkedin.com/in/jackmorrison12/",
@@ -45,7 +53,9 @@
     "home": true,
     "cv": true,
     "name": "LinkedIn",
-    "username": "linkedin.com/in/jackmorrison12"
+    "username": "linkedin.com/in/jackmorrison12",
+    "identifier": "linkedin",
+    "colour": "#0077B5"
   },
   {
     "url": "https://jackmorrison.xyz",
@@ -53,7 +63,8 @@
     "home": false,
     "cv": true,
     "name": "Wesbite",
-    "username": "jackmorrison.xyz"
+    "username": "jackmorrison.xyz",
+    "identifier": "wesbite"
   },
   {
     "url": "https://www.instagram.com/jackmorrison12/",
@@ -61,7 +72,9 @@
     "home": true,
     "cv": false,
     "name": "Instagram",
-    "username": "@jackmorrison12"
+    "username": "@jackmorrison12",
+    "identifier": "instagram",
+    "colour": "#8a3ab9"
   },
   {
     "url": "https://www.last.fm/user/Jackmorrison12",
@@ -69,7 +82,9 @@
     "home": true,
     "cv": false,
     "name": "LastFM",
-    "username": "jackmorrison12"
+    "username": "jackmorrison12",
+    "identifier": "lastfm",
+    "colour": "#D51007"
   },
   {
     "url": "https://open.spotify.com/user/112282925",
@@ -77,7 +92,9 @@
     "home": true,
     "cv": false,
     "name": "Spotify",
-    "username": "112282925"
+    "username": "112282925",
+    "identifier": "spotify",
+    "colour": "#1DB954"
   },
   {
     "url": "https://psnprofiles.com/rapidivergence",
@@ -85,7 +102,9 @@
     "home": true,
     "cv": false,
     "name": "PlayStation Network",
-    "username": "rapidivergence"
+    "username": "rapidivergence",
+    "identifier": "playstation",
+    "colour": "#00AC9F"
   },
   {
     "url": "https://m.me/jackmorrison99",
@@ -93,6 +112,8 @@
     "home": true,
     "cv": false,
     "name": "Facebook Messenger",
-    "username": "jackmorrison99"
+    "username": "jackmorrison99",
+    "identifier": "facebookmessenger",
+    "colour": "#0084FF"
   }
 ]
