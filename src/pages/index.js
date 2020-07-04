@@ -73,13 +73,13 @@ export default () => {
         <div className="row container-small pad-20-t pad-3-lr pad-10-b ">
           <div className="col-xs-12">
             <h2 className="text-align-center">Where else can you reach me?</h2>
-            <div className="text-align-center">
+            <div className="text-align-center row content-center">
               {socials
                 .filter(item => item.home)
                 .map(item => (
                   <OutboundLink
                     href={item.url}
-                    className="is-black pad-2 col-xs-3"
+                    className="is-black pad-2 col-xs-4 col-sm-1"
                   >
                     <FontAwesomeIcon
                       icon={["fab", item.icon]}
