@@ -54,5 +54,45 @@
     "cv": true,
     "name": "Wesbite",
     "username": "jackmorrison.xyz"
+  },
+  {
+    "url": "https://www.instagram.com/jackmorrison12/",
+    "icon": "instagram",
+    "home": true,
+    "cv": false,
+    "name": "Instagram",
+    "username": "@jackmorrison12"
+  },
+  {
+    "url": "https://www.last.fm/user/Jackmorrison12",
+    "icon": "lastfm",
+    "home": true,
+    "cv": false,
+    "name": "LastFM",
+    "username": "jackmorrison12"
+  },
+  {
+    "url": "https://open.spotify.com/user/112282925",
+    "icon": "spotify",
+    "home": true,
+    "cv": false,
+    "name": "Spotify",
+    "username": "112282925"
+  },
+  {
+    "url": "https://psnprofiles.com/rapidivergence",
+    "icon": "playstation",
+    "home": true,
+    "cv": false,
+    "name": "PlayStation Network",
+    "username": "rapidivergence"
+  },
+  {
+    "url": "https://m.me/jackmorrison99",
+    "icon": "facebook-messenger",
+    "home": true,
+    "cv": false,
+    "name": "Facebook Messenger",
+    "username": "jackmorrison99"
   }
 ]
