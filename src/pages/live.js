@@ -108,6 +108,13 @@ const LivePage = () => {
           <div
             className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
             onClick={() => click("lastfm", 13)}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                click("lastfm", 13)
+              }
+            }}
+            role="button"
+            tabindex="0"
           >
             <FontAwesomeIcon
               icon={["fab", "lastfm"]}
@@ -139,6 +146,13 @@ const LivePage = () => {
           <div
             className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
             onClick={() => click("github", 13)}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                click("github", 13)
+              }
+            }}
+            role="button"
+            tabindex="0"
           >
             <FontAwesomeIcon
               icon={["fab", "github"]}
@@ -171,6 +185,13 @@ const LivePage = () => {
           <div
             className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
             onClick={() => click("twitter", 13)}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                click("twitter", 13)
+              }
+            }}
+            role="button"
+            tabindex="0"
           >
             <FontAwesomeIcon
               icon={["fab", "twitter"]}
@@ -205,6 +226,13 @@ const LivePage = () => {
           <div
             className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
             onClick={() => click("googlefit", 13)}
+            onKeyDown={e => {
+              if (e.keyCode === 13) {
+                click("googlefit", 13)
+              }
+            }}
+            role="button"
+            tabindex="0"
           >
             <FontAwesomeIcon
               icon={faShoePrints}
@@ -258,6 +286,13 @@ const LivePage = () => {
                             "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold"
                           }
                           onClick={() => click("lastfm", i)}
+                          onKeyDown={e => {
+                            if (e.keyCode === 13) {
+                              click("lastfm", i)
+                            }
+                          }}
+                          role="button"
+                          tabindex="0"
                         >
                           {item.lastfm}
                         </div>
@@ -272,6 +307,13 @@ const LivePage = () => {
                             "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
                           }
                           onClick={() => click("github", i)}
+                          onKeyDown={e => {
+                            if (e.keyCode === 13) {
+                              click("github", i)
+                            }
+                          }}
+                          role="button"
+                          tabindex="0"
                         >
                           {item.github}
                         </div>

@@ -1,11 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
-import Img from "gatsby-image"
 import { Twemoji } from "react-emoji-render"
 
 import Layout from "../components/layout"
@@ -38,8 +36,8 @@ export default () => {
                 </OutboundLink>
               </h1>
               <h3>
-                Feel free to take a look around and discover some things I've
-                been working on!
+                Take a look around and discover some things I've been working
+                on!
               </h3>
             </div>
           </div>
