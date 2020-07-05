@@ -20,6 +20,7 @@ Date.prototype.formatDDMMYYYY = function () {
 
 const LivePage = () => {
   const [todaySummary, setTodaySummary] = useState(0)
+  const [todaysTweets, setTodaysTweets] = useState(0)
   const [summary, setSummary] = useState([])
   const [selectedAPI, setSelectedAPI] = useState("")
   const [selectedDate, setSelectedDate] = useState("")
@@ -56,6 +57,14 @@ const LivePage = () => {
       .then(result => {
         setTodaySummary(result)
         console.log(result)
+        var tweetSum = 0
+        if (todaySummary.tweet) {
+          tweetSum += todaySummary.tweet
+        }
+        if (todaySummary.retweet) {
+          tweetSum += todaySummary.retweet
+        }
+        setTodaysTweets(tweetSum)
       })
       .catch(error => console.log("error", error))
     fetch(url + "/getSummariesByDate")
@@ -199,13 +208,11 @@ const LivePage = () => {
               className="grow-3 live-icon is-twitter-blue-bg is-white-always"
             />
             <h3>
-              {todaySummary.tweet ? (
-                todaySummary.tweet > 1 ? (
+              {todaysTweets > 0 ? (
+                todaysTweets > 1 ? (
                   <>
-                    <span>Tweeted</span>
-                    <span className="is-twitter-blue">
-                      {todaySummary.tweet}
-                    </span>
+                    <span>Tweeted </span>
+                    <span className="is-twitter-blue">{todaysTweets}</span>
                     <span> times</span>
                   </>
                 ) : (
@@ -322,10 +329,10 @@ const LivePage = () => {
                           className={"live-dot is-light-grey-bg margin-3-tb"}
                         ></div>
                       )}
-                      {/* {item.twitter ? (
+                      {item.twitter ? (
                         <div
                           className={
-                            "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
+                            "live-dot is-twitter-blue-bg-always margin-3-tb grow-3 bold"
                           }
                           onClick={() => click("twitter", i)}
                         >
@@ -335,7 +342,7 @@ const LivePage = () => {
                         <div
                           className={"live-dot is-light-grey-bg margin-3-tb"}
                         ></div>
-                      )} */}
+                      )}
                     </div>
                   ))
               : ""}
