@@ -378,10 +378,33 @@ const LivePage = () => {
               </h1>
               {displayFragments[0]
                 ? displayFragments.map(item => (
-                    <p>
+                    <div className="row pad-3-b">
                       {/* //Change this to show time if more than 1 day ago */}
-                      {item.body} - <TimeAgo date={item.occur_date} />
-                    </p>
+                      {item.image ? (
+                        <>
+                          <div className="col-xs-2 col-sm-1 align-self-center">
+                            <img src={item.image} style={{ width: "100%" }} />
+                          </div>
+                          <div className=" col-xs-8 col-sm-9 align-self-center">
+                            {item.body}
+                          </div>{" "}
+                          <div className="col-xs-2 col-sm-2 align-self-center is-red">
+                            {" "}
+                            <TimeAgo date={item.occur_date} />
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <div className="col-xs-12 col-sm-10 align-self-center">
+                            {item.body}
+                          </div>
+                          <div className="col-xs-12 col-sm-2 align-self-center is-red">
+                            {" "}
+                            <TimeAgo date={item.occur_date} />
+                          </div>
+                        </>
+                      )}
+                    </div>
                   ))
                 : ""}
             </div>
