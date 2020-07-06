@@ -14,19 +14,17 @@ export default props => {
         <div className="row container ">
           <h1 className="col-xs-12 pad-5-b">Today I have...</h1>
 
-          <div
-            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
-            onClick={() => props.click("lastfm", 13)}
-            onKeyDown={e => {
-              props.enter(e, "lastfm", 13)
-            }}
-            role="button"
-            tabindex="0"
-          >
+          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
               icon={["fab", "lastfm"]}
               size="4x"
-              className="grow-3 live-icon is-lastfm-red-bg is-white-always"
+              className="grow-3 live-icon is-lastfm-red-bg is-white-always pointer"
+              onClick={() => props.click("lastfm", 13)}
+              onKeyDown={e => {
+                props.enter(e, "lastfm", 13)
+              }}
+              role="button"
+              tabindex="0"
             />
             <h3>
               Listened to{" "}
@@ -50,19 +48,17 @@ export default props => {
               )}
             </h3>
           </div>
-          <div
-            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
-            onClick={() => props.click("github", 13)}
-            onKeyDown={e => {
-              props.enter(e, "github", 13)
-            }}
-            role="button"
-            tabindex="0"
-          >
+          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
               icon={["fab", "github"]}
               size="4x"
-              className="grow-3 live-icon is-black-bg is-white"
+              className="grow-3 live-icon is-black-bg is-white pointer"
+              onClick={() => props.click("github", 13)}
+              onKeyDown={e => {
+                props.enter(e, "github", 13)
+              }}
+              role="button"
+              tabindex="0"
             />
             <h3>
               {props.todaySummary.git_push ? (
@@ -89,19 +85,17 @@ export default props => {
               )}
             </h3>
           </div>
-          <div
-            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
-            onClick={() => props.click("twitter", 13)}
-            onKeyDown={e => {
-              props.enter(e, "twitter", 13)
-            }}
-            role="button"
-            tabindex="0"
-          >
+          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
               icon={["fab", "twitter"]}
               size="4x"
-              className="grow-3 live-icon is-twitter-blue-bg is-white-always"
+              className="grow-3 live-icon is-twitter-blue-bg is-white-always pointer"
+              onClick={() => props.click("twitter", 13)}
+              onKeyDown={e => {
+                props.enter(e, "twitter", 13)
+              }}
+              role="button"
+              tabindex="0"
             />
             <h3>
               {props.todaysTweets > 0 ? (
@@ -128,19 +122,17 @@ export default props => {
               )}
             </h3>
           </div>
-          <div
-            className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center"
-            onClick={() => props.click("googlefit", 13)}
-            onKeyDown={e => {
-              props.enter(e, "googlefit", 13)
-            }}
-            role="button"
-            tabindex="0"
-          >
+          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
               icon={faShoePrints}
               size="4x"
-              className="grow-3 live-icon is-pink-bg is-white-always"
+              className="grow-3 live-icon is-pink-bg is-white-always pointer"
+              onClick={() => props.click("googlefit", 13)}
+              onKeyDown={e => {
+                props.enter(e, "googlefit", 13)
+              }}
+              role="button"
+              tabindex="0"
             />
             <h3>
               Taken{" "}

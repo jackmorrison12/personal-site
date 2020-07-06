@@ -23,7 +23,7 @@ export default props => {
                       {item.lastfm ? (
                         <div
                           className={
-                            "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold"
+                            "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold pointer"
                           }
                           onClick={() => props.click("lastfm", i)}
                           onKeyDown={e => {
@@ -42,7 +42,7 @@ export default props => {
                       {item.github ? (
                         <div
                           className={
-                            "live-dot is-yellow-bg-always margin-3-tb grow-3 bold"
+                            "live-dot is-yellow-bg-always margin-3-tb grow-3 bold pointer"
                           }
                           onClick={() => props.click("github", i)}
                           onKeyDown={e => {
@@ -61,7 +61,7 @@ export default props => {
                       {item.twitter ? (
                         <div
                           className={
-                            "live-dot is-twitter-blue-bg-always margin-3-tb grow-3 bold"
+                            "live-dot is-twitter-blue-bg-always margin-3-tb grow-3 bold pointer"
                           }
                           onClick={() => props.click("twitter", i)}
                           onKeyDown={e => {
