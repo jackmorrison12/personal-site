@@ -20,6 +20,7 @@ const LivePage = () => {
   const [selectedDate, setSelectedDate] = useState("")
   const [displayDetail, setDisplayDetail] = useState(false)
   const [displayFragments, setDisplayFragments] = useState([])
+  const [currentPage, setCurrentPage] = useState(1)
 
   useEffect(() => {
     const d = new Date()
@@ -96,9 +97,10 @@ const LivePage = () => {
         console.log(result)
       })
       .catch(error => console.log("error", error))
-    setDisplayDetail(true)
+    setCurrentPage(1)
     setSelectedAPI(api)
     setSelectedDate(date)
+    setDisplayDetail(true)
   }
 
   let enter = (e, api, date) => {
@@ -126,6 +128,8 @@ const LivePage = () => {
         selectedAPI={selectedAPI}
         selectedDate={selectedDate}
         displayFragments={displayFragments}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
       />
 
       <WhatIs />
