@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 import TimeAgo from "react-timeago"
 
@@ -25,7 +25,11 @@ export default props => {
           {item.image ? (
             <>
               <div className="col-xs-2 col-sm-1 align-self-center">
-                <img src={item.image} style={{ width: "100%" }} />
+                <img
+                  src={item.image}
+                  alt={item.body}
+                  style={{ width: "100%" }}
+                />
               </div>
               <div className=" col-xs-8 col-sm-9 align-self-center">
                 {item.body}
@@ -70,7 +74,7 @@ export default props => {
               id={number}
               onClick={handleClick}
               onKeyDown={e => {
-                if (e.keyCode == 13) {
+                if (e.keyCode === 13) {
                   handleClick(e)
                 }
               }}
