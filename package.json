@@ -61,7 +61,7 @@
   "scripts": {
     "prebuild": "npm run git-stats && npm run lastfm-stats && npm run last-build",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,json,md,scss}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

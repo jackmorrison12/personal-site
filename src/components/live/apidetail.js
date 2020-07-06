@@ -83,6 +83,16 @@ export default props => {
         })
       : ""
 
+  let capitalise = name => {
+    let capitalisations = {
+      lastfm: "LastFM Scrobbles",
+      github: "GitHub Actions",
+      twitter: "Tweets & Retweets",
+      googlefit: "Fitness Activity",
+    }
+    return capitalisations[name]
+  }
+
   return (
     <>
       <SlideDown closed={!props.displayDetail}>
@@ -107,7 +117,7 @@ export default props => {
           <div className="row container ">
             <div className="col-xs-12 ">
               <h1>
-                More detail here on {props.selectedAPI} on{" "}
+                {capitalise(props.selectedAPI)} from{" "}
                 {new Date(
                   Date.now() - 13 * 86400000 + props.selectedDate * 86400000
                 ).formatDDMMYYYY()}

@@ -82,7 +82,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `jack-morrison-personal-site`,
-        short_name: `Jack's Site`,
+        short_name: `Jack Morrison | Personal Website`,
         start_url: `/`,
         background_color: `black`,
         theme_color: `#f4442e`,

@@ -39,7 +39,7 @@ export default props => {
                 ) : (
                   <>
                     <span className="is-red">1</span>
-                    <span>song</span>
+                    <span> song</span>
                   </>
                 )
               ) : (
@@ -148,12 +148,12 @@ export default props => {
                 props.todaySummary.steps > 1 ? (
                   <>
                     <span className="is-pink">{props.todaySummary.steps}</span>
-                    <span>step</span>
+                    <span> steps</span>
                   </>
                 ) : (
                   <>
                     <span className="is-pink">1</span>
-                    <span>step</span>
+                    <span> step</span>
                   </>
                 )
               ) : (

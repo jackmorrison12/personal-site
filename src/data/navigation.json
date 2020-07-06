@@ -28,5 +28,10 @@
     "name": "🎉 Fun Stuff",
     "link": "/data",
     "hidden": true
+  },
+  {
+    "name": "🔴 Live",
+    "link": "/live",
+    "hidden": false
   }
 ]
