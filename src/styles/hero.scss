@@ -41,3 +41,8 @@
   margin: 0 auto;
   transform: skewY(6deg);
 }
+
+.nav {
+  position: relative;
+  z-index: 1000;
+}
