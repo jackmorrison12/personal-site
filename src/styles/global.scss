@@ -14,6 +14,7 @@
 @import "./data";
 @import "./dark_mode_toggle";
 @import "./live";
+@import "./logo";
 
 html {
   max-width: 100vw;
@@ -61,4 +62,10 @@ footer {
 
 a {
   text-decoration: none;
+}
+
+.credit {
+  font-size: 0.8em;
+  @extend .pad-0;
+  @extend .margin-0;
 }

@@ -3,7 +3,7 @@ import React from "react"
 export default props => {
   return (
     <>
-      <div className="is-grey is-light-grey-bg  pad-3-lr">
+      <div className="is-grey is-light-grey-bg pad-3-lr pad-5-b">
         <div className="row container ">
           <h1 className="col-xs-12 pad-5-b">
             Lets take a look at the last fortnight...

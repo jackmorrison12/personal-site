@@ -100,24 +100,26 @@ export default props => {
   return (
     <>
       <SlideDown closed={!props.displayDetail}>
-        <div className="row pad-10-t pad-3-lr container">
-          <div className="col-xs-12 col-md-12">
-            <div
-              role="button"
-              tabIndex="0"
-              onClick={e => props.setDisplayDetail(false)}
-              onKeyDown={e => {
-                if (e.keyCode === 13) {
-                  props.setDisplayDetail(false)
-                }
-              }}
-              className="link is-medium-blue float-right"
-            >
-              Close
+        <div className=" pad-10-t pad-3-lr is-white-bg ">
+          <div className="row container">
+            <div className="col-xs-12 col-md-12">
+              <div
+                role="button"
+                tabIndex="0"
+                onClick={e => props.setDisplayDetail(false)}
+                onKeyDown={e => {
+                  if (e.keyCode === 13) {
+                    props.setDisplayDetail(false)
+                  }
+                }}
+                className="link is-medium-blue float-right"
+              >
+                Close
+              </div>
             </div>
           </div>
         </div>
-        <div className="is-grey is-light-grey-bg pad-10-b pad-3-lr">
+        <div className="is-grey is-white-bg pad-10-b pad-3-lr">
           <div className="row container ">
             <div className="col-xs-12 ">
               <h1>

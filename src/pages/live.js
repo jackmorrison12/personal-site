@@ -7,6 +7,7 @@ import Banner from "../components/live/banner"
 import FortnightView from "../components/live/fortnightview"
 import APIDetail from "../components/live/apidetail"
 import WhatIs from "../components/live/whatis"
+import StaticStats from "../components/live/staticstats"
 
 Date.prototype.formatDDMMYYYY = function () {
   return this.getDate() + "/" + (this.getMonth() + 1)
@@ -132,6 +133,7 @@ const LivePage = () => {
         setCurrentPage={setCurrentPage}
       />
 
+      <StaticStats />
       <WhatIs />
     </Layout>
   )
