@@ -36,13 +36,18 @@ export default () => (
       </p>
       <p>
         {" "}
-        I also wrote a report about my time teaching. An anonymised version can
-        be found{" "}
+        I also wrote a{" "}
         <Link to="/files/ccsis-report.pdf" class="link">
           {" "}
-          here
-        </Link>
-        .
+          report
+        </Link>{" "}
+        and gave a{" "}
+        <Link to="/files/ccsis-presentation.pdf" class="link">
+          {" "}
+          presentation
+        </Link>{" "}
+        about my time teaching. They've both been anonymised for GDPR
+        compliance.
       </p>
     </div>
     <div className="col-xs-12">
