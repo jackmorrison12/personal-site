@@ -152,6 +152,7 @@ export default props => {
                 <>
                   <span className="is-pink">no</span>
                   <span> steps... yet</span>
+                  <sup style={{ fontSize: "0.5em" }}> BETA</sup>
                 </>
               )}
             </h3>
