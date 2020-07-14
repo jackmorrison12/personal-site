@@ -1,6 +1,7 @@
 import React from "react"
 import { Twemoji } from "react-emoji-render"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import { Link } from "gatsby"
 
 import pythonData from "../../data/python.json"
 
@@ -32,6 +33,16 @@ export default () => (
         The course I taught at Coopers is completely open source, and the lesson
         plans and resources can be found below. Please feel free to use them and
         contribute any ideas!
+      </p>
+      <p>
+        {" "}
+        I also wrote a report about my time teaching. An anonymised version can
+        be found{" "}
+        <Link to="/files/ccsis-report.pdf" class="link">
+          {" "}
+          here
+        </Link>
+        .
       </p>
     </div>
     <div className="col-xs-12">
