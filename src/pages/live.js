@@ -54,11 +54,11 @@ const LivePage = () => {
         setTodaySummary(result)
         console.log(result)
         var tweetSum = 0
-        if (todaySummary.tweet) {
-          tweetSum += todaySummary.tweet
+        if (result.tweet) {
+          tweetSum += result.tweet
         }
-        if (todaySummary.retweet) {
-          tweetSum += todaySummary.retweet
+        if (result.retweet) {
+          tweetSum += result.retweet
         }
         setTodaysTweets(tweetSum)
       })
