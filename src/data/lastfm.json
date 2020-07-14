@@ -1,52 +1,52 @@
 {
   "topTrack": {
-    "name": "All I Need (with Mahalia & Ty Dolla $ign)",
-    "artist": "Jacob Collier",
-    "playCount": "17",
-    "url": "https://www.last.fm/music/Jacob+Collier/_/All+I+Need+(with+Mahalia+&+Ty+Dolla+$ign)",
-    "artistUrl": "https://www.last.fm/music/Jacob+Collier"
+    "name": "Love Me Land",
+    "artist": "Zara Larsson",
+    "playCount": "180",
+    "url": "https://www.last.fm/music/Zara+Larsson/_/Love+Me+Land",
+    "artistUrl": "https://www.last.fm/music/Zara+Larsson"
   },
   "recentTrack": {
-    "name": "Under My Shades",
+    "name": "Love Me Land",
     "artist": "Zara Larsson",
-    "url": "https://www.last.fm/music/Zara+Larsson/_/Under+My+Shades"
+    "url": "https://www.last.fm/music/Zara+Larsson/_/Love+Me+Land"
   },
   "topArtists": [
     {
-      "name": "Lady Gaga",
-      "playCount": "269",
-      "url": "https://www.last.fm/music/Lady+Gaga"
-    },
-    {
       "name": "Zara Larsson",
-      "playCount": "179",
+      "playCount": "198",
       "url": "https://www.last.fm/music/Zara+Larsson"
     },
     {
-      "name": "Ariana Grande",
-      "playCount": "115",
-      "url": "https://www.last.fm/music/Ariana+Grande"
+      "name": "Taylor Swift",
+      "playCount": "112",
+      "url": "https://www.last.fm/music/Taylor+Swift"
     },
     {
-      "name": "Jacob Collier",
-      "playCount": "79",
-      "url": "https://www.last.fm/music/Jacob+Collier"
+      "name": "Joel Corry",
+      "playCount": "102",
+      "url": "https://www.last.fm/music/Joel+Corry"
     },
     {
-      "name": "Peach",
+      "name": "Dua Lipa",
+      "playCount": "85",
+      "url": "https://www.last.fm/music/Dua+Lipa"
+    },
+    {
+      "name": "6ix9ine",
       "playCount": "77",
-      "url": "https://www.last.fm/music/Peach"
+      "url": "https://www.last.fm/music/6ix9ine"
     },
     {
-      "name": "Kim Petras",
-      "playCount": "61",
-      "url": "https://www.last.fm/music/Kim+Petras"
+      "name": "Pentatonix",
+      "playCount": "65",
+      "url": "https://www.last.fm/music/Pentatonix"
     }
   ],
   "topAlbums": [
     {
       "name": "Lover",
-      "playCount": "556",
+      "playCount": "579",
       "url": "https://www.last.fm/music/Taylor+Swift/Lover",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/8a89bf00eff0d1912f33164d3a15071f.png",
       "artist": "Taylor Swift",
@@ -54,43 +54,43 @@
     },
     {
       "name": "Treat Myself",
-      "playCount": "467",
+      "playCount": "468",
       "url": "https://www.last.fm/music/Meghan+Trainor/Treat+Myself",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/14372eeb2724498cdb16f6fdb8c6742f.jpg",
       "artist": "Meghan Trainor",
       "artistUrl": "https://www.last.fm/music/Meghan+Trainor"
     },
     {
-      "name": "So Good",
-      "playCount": "395",
-      "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
-      "artist": "Zara Larsson",
-      "artistUrl": "https://www.last.fm/music/Zara+Larsson"
-    },
-    {
       "name": "Future Nostalgia",
-      "playCount": "329",
+      "playCount": "409",
       "url": "https://www.last.fm/music/Dua+Lipa/Future+Nostalgia",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/e4901b067675378333d26240239fda6a.png",
       "artist": "Dua Lipa",
       "artistUrl": "https://www.last.fm/music/Dua+Lipa"
     },
     {
-      "name": "thank u, next",
-      "playCount": "315",
-      "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
-      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/7a99951c89a6792eaeb5da8ba1e9be0d.jpg",
-      "artist": "Ariana Grande",
-      "artistUrl": "https://www.last.fm/music/Ariana+Grande"
+      "name": "So Good",
+      "playCount": "381",
+      "url": "https://www.last.fm/music/Zara+Larsson/So+Good",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/07bf8a0688369f74fbb033eb4a43c166.png",
+      "artist": "Zara Larsson",
+      "artistUrl": "https://www.last.fm/music/Zara+Larsson"
     },
     {
       "name": "Birthday",
-      "playCount": "310",
+      "playCount": "319",
       "url": "https://www.last.fm/music/Anne-Marie/Birthday",
       "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/b70ab4ea00deb256873846adbd24c2b7.jpg",
       "artist": "Anne-Marie",
       "artistUrl": "https://www.last.fm/music/Anne-Marie"
+    },
+    {
+      "name": "thank u, next",
+      "playCount": "290",
+      "url": "https://www.last.fm/music/Ariana+Grande/thank+u,+next",
+      "imageUrl": "https://lastfm.freetls.fastly.net/i/u/300x300/5b83828019eef9308f99f7bd6ad86b87.jpg",
+      "artist": "Ariana Grande",
+      "artistUrl": "https://www.last.fm/music/Ariana+Grande"
     }
   ]
 }
