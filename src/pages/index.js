@@ -5,6 +5,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
 import { Twemoji } from "react-emoji-render"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -63,7 +64,12 @@ export default () => {
       <div className="is-red-bg is-black diagonal-box">
         <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
           <div className="col-xs-12">
-            <h2>Projects I've been working on</h2>
+            <h2>
+              <Link to="/projects" className="link is-black">
+                Projects
+              </Link>{" "}
+              I've been working on
+            </h2>
             <ProjectPreviews />
           </div>
         </div>
@@ -71,7 +77,12 @@ export default () => {
       <div className="is-light-grey-bg is-black diagonal-box">
         <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
           <div className="col-xs-12">
-            <h2>My Latest Articles</h2>
+            <h2>
+              My Latest{" "}
+              <Link to="/articles" className="link is-black">
+                Articles
+              </Link>
+            </h2>
             <ArticlePreviews />
           </div>
         </div>
@@ -79,7 +90,12 @@ export default () => {
       <div className="is-red-bg is-black diagonal-box">
         <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
           <div className="col-xs-12">
-            <h2>My Latest Blog Posts</h2>
+            <h2>
+              My Latest{" "}
+              <Link to="/blog" className="link is-black">
+                Blog Posts
+              </Link>
+            </h2>
             <BlogPreviews />
           </div>
         </div>
