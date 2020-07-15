@@ -1,5 +1,7 @@
 ---
-title: "Developing my Ideal Personal Portfolio Website - Part 3: Where to start?"
+series: Developing My Ideal Personal Portfolio Website
+entry: 3
+title: Where to start?
 slug: /blog/portfolio-starting-out
 date: 2020-05-06T01:56:53.791Z
 hidden: false

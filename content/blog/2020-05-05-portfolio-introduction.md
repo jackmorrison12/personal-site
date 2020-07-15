@@ -1,5 +1,7 @@
 ---
-title: "Developing My Ideal Personal Portfolio Website - Part 1: Introduction"
+series: Developing My Ideal Personal Portfolio Website
+entry: 1
+title: Introduction
 slug: /blog/portfolio-introduction
 date: 2020-05-03T20:30:00.000Z
 hidden: false

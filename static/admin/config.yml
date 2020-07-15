@@ -22,6 +22,8 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Series", name: "series", widget: "string" }
+      - { label: "Entry", name: "entry", widget: "number" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }

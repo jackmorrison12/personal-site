@@ -16,6 +16,9 @@ class BlogArchive extends React.Component {
         <Link to={"/" + post.frontmatter.slug} className="" id="path">
           <div className="grow row margin-5-b">
             <div className="col-xs-12 margin-5-t">
+              <h3 className="margin-0 is-medium-blue">
+                {post.frontmatter.series}: Part {post.frontmatter.entry}
+              </h3>
               <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
               <p className="margin-0 margin-2-b is-black">
                 {post.frontmatter.date}
@@ -53,6 +56,8 @@ export default () => (
               frontmatter {
                 slug
                 title
+                series
+                entry
                 date(formatString: "MMMM DD, YYYY")
               }
             }

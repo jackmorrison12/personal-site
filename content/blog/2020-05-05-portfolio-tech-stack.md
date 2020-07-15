@@ -1,6 +1,7 @@
 ---
-title: "Developing my Ideal Personal Portfolio Website - Part 2: Choosing my
-  Tech Stack"
+series: Developing My Ideal Personal Portfolio Website
+entry: 2
+title: Choosing my Tech Stack
 slug: /blog/portfolio-tech-stack
 date: 2020-05-05T20:00:00.000Z
 hidden: false

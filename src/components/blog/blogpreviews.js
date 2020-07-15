@@ -16,6 +16,9 @@ class BlogPreviews extends React.Component {
           posts.map(({ node: post }) => (
             <div className="col-xs-12 col-md-6 margin-5-t grow margin-5-b">
               <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                <h3 className="margin-0 is-black">
+                  {post.frontmatter.series}: Part {post.frontmatter.entry}
+                </h3>
                 <h1 className="margin-0 is-light-grey">
                   {post.frontmatter.title}
                 </h1>
@@ -59,6 +62,8 @@ export default () => (
               frontmatter {
                 slug
                 title
+                series
+                entry
                 date(formatString: "MMMM DD, YYYY")
               }
             }

@@ -1,5 +1,7 @@
 ---
-title: "Developing my Ideal Personal Portfolio Website - Part 4: Adding Content"
+series: Developing My Ideal Personal Portfolio Website
+entry: 4
+title: Adding Content
 slug: /blog/portfolio-adding-content
 date: 2020-05-08T00:01:02.535Z
 hidden: false
