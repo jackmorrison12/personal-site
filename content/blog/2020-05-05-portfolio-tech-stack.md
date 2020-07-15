@@ -5,8 +5,7 @@ title: Choosing my Tech Stack
 slug: /blog/portfolio-tech-stack
 date: 2020-05-05T20:00:00.000Z
 hidden: false
-description: The second blog post in my series documenting the creation of my
-  new personal website, diving into the tech stack
+description: How I researched and decided on what technologies to create this site with
 topics:
   - Personal Portfolio
   - Gatsby

@@ -5,7 +5,7 @@ title: Where to start?
 slug: /blog/portfolio-starting-out
 date: 2020-05-06T01:56:53.791Z
 hidden: false
-description: The third iteration of my personal portfolio series
+description: A guide on how to start setting up a Gatsby Site with Custom CSS and Netlify CMS
 topics:
   - Personal Portfolio
   - Gatsby

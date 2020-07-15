@@ -22,11 +22,14 @@ class BlogPreviews extends React.Component {
                 <h1 className="margin-0 is-light-grey">
                   {post.frontmatter.title}
                 </h1>
-                <p className="margin-0 margin-2-b is-black">
+                <p className="margin-0 margin-1-b is-black">
                   {post.frontmatter.date}
                 </p>
+                <p className="margin-0 margin-1-b bold is-light-grey pad-2-b">
+                  {post.frontmatter.description}
+                </p>
                 <div className="line-sm is-black margin-3-b" />
-                <p className="margin-0 is-black">{post.excerpt}</p>
+                <p className="margin-0 is-black ">{post.excerpt}</p>
               </Link>
             </div>
           ))}
@@ -57,13 +60,14 @@ export default () => (
         ) {
           edges {
             node {
-              excerpt(pruneLength: 300)
+              excerpt(pruneLength: 200)
               id
               frontmatter {
                 slug
                 title
                 series
                 entry
+                description
                 date(formatString: "MMMM DD, YYYY")
               }
             }

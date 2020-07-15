@@ -5,7 +5,7 @@ title: Adding Content
 slug: /blog/portfolio-adding-content
 date: 2020-05-08T00:01:02.535Z
 hidden: false
-description: The fourth iteration of my personal portfolio series
+description: How I chose what I wanted to share about myself with the world
 topics:
   - Adding Content
 ---

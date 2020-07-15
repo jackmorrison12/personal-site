@@ -19,12 +19,17 @@ class BlogRoll extends React.Component {
               className="grow margin-5-b col-xs-12 col-sm-6 margin-5-t"
               id="path"
             >
-              <h3 className="margin-0 is-medium-blue">
+              <h3 className="margin-0 is-red">
                 {post.frontmatter.series}: Part {post.frontmatter.entry}
               </h3>
-              <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
-              <p className="margin-0 margin-2-b is-black">
+              <h1 className="margin-0 is-medium-blue">
+                {post.frontmatter.title}
+              </h1>
+              <p className="margin-0 margin-1-b is-black">
                 {post.frontmatter.date}
+              </p>
+              <p className="margin-0 margin-1-b is-black bold is-red pad-2-b">
+                {post.frontmatter.description}
               </p>
               <div className="line-sm is-black margin-3-b" />
               <p className="margin-0 is-black">{post.excerpt}</p>
@@ -64,6 +69,7 @@ export default () => (
                 title
                 entry
                 series
+                description
                 date(formatString: "MMMM DD, YYYY")
               }
             }
