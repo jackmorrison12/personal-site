@@ -23,6 +23,16 @@ collections:
       preview: true
     fields:
       - { label: "Series", name: "series", widget: "string" }
+      - {
+          label: "Blog Series",
+          name: "blogseries",
+          widget: "relation",
+          collection: "series",
+          searchFields: ["title"],
+          valueField: "title",
+          displayFields: ["title", "hero", "hidden", "slug"],
+          required: false,
+        }
       - { label: "Entry", name: "entry", widget: "number" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
