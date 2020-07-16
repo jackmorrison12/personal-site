@@ -1,5 +1,6 @@
 ---
 series: Developing My Ideal Personal Portfolio Website
+blogseries: /blog/portfolio
 entry: 6
 title: Coding a CV in React
 slug: /blog/portfolio-cv

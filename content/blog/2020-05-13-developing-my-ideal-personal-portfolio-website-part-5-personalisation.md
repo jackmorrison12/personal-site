@@ -1,5 +1,6 @@
 ---
 series: Developing My Ideal Personal Portfolio Website
+blogseries: /blog/portfolio
 entry: 5
 title: Personalisation!
 slug: /blog/portfolio-personalisation

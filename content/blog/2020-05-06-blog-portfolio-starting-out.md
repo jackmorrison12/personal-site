@@ -1,5 +1,6 @@
 ---
 series: Developing My Ideal Personal Portfolio Website
+blogseries: /blog/portfolio
 entry: 3
 title: Where to start?
 slug: /blog/portfolio-starting-out

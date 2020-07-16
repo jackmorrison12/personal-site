@@ -1,5 +1,6 @@
 ---
 series: Developing My Ideal Personal Portfolio Website
+blogseries: /blog/portfolio
 entry: 2
 title: Choosing my Tech Stack
 slug: /blog/portfolio-tech-stack

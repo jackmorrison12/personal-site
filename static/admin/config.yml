@@ -29,7 +29,7 @@ collections:
           widget: "relation",
           collection: "series",
           searchFields: ["title"],
-          valueField: "title",
+          valueField: "slug",
           displayFields: ["title"],
           required: false,
         }

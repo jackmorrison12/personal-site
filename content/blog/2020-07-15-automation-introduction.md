@@ -1,5 +1,6 @@
 ---
 series: Automating My Life
+blogseries: /blog/automation
 entry: 1
 title: Why automation?
 slug: /blog/automation-introduction

@@ -1,6 +1,6 @@
 ---
 series: Developing My Ideal Personal Portfolio Website
-blogseries: Developing My Ideal Personal Portfolio Website
+blogseries: /blog/portfolio
 entry: 1
 title: Introduction
 slug: /blog/portfolio-introduction
