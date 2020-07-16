@@ -2,7 +2,7 @@
 type: project
 title: Snake Arcade Machine
 slug: /projects/snake
-type: Uni Project
+projecttype: Uni Project
 homepage: false
 cv: false
 featured: true

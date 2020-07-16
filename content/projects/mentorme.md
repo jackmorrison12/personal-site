@@ -2,7 +2,7 @@
 type: project
 title: MentorMe
 slug: /projects/mentor-me
-type: Personal Project
+projecttype: Personal Project
 homepage: false
 cv: false
 featured: false

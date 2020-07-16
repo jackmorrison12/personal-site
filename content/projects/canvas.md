@@ -2,7 +2,7 @@
 type: project
 title: Canvas
 slug: /projects/canvas
-type: Uni Project
+projecttype: Uni Project
 homepage: true
 cv: true
 featured: true

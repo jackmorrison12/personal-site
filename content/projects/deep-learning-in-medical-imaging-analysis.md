@@ -2,7 +2,7 @@
 type: project
 title: Deep Learning in Medical Imaging Analysis
 slug: /projects/topics
-type: Uni Project
+projecttype: Uni Project
 homepage: false
 cv: true
 featured: true

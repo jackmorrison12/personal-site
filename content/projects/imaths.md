@@ -2,7 +2,7 @@
 type: project
 title: iMaths
 slug: /projects/imaths
-type: School Project
+projecttype: School Project
 homepage: false
 cv: false
 featured: false

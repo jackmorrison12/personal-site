@@ -2,7 +2,7 @@
 type: project
 title: Computer-Assisted Proofs
 slug: /projects/epq
-type: School Project
+projecttype: School Project
 homepage: false
 cv: false
 featured: false

@@ -2,7 +2,7 @@
 type: project
 title: WACC
 slug: /projects/wacc
-type: Uni Project
+projecttype: Uni Project
 homepage: false
 cv: true
 featured: false

@@ -2,7 +2,7 @@
 type: project
 title: PyPlay
 slug: /projects/pyplay
-type: Hackathon
+projecttype: Hackathon
 homepage: false
 cv: false
 featured: false

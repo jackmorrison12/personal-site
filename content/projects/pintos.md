@@ -2,7 +2,7 @@
 type: project
 title: Pintos
 slug: /projects/pintos
-type: Uni Project
+projecttype: Uni Project
 homepage: false
 cv: false
 featured: false

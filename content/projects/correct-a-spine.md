@@ -2,7 +2,7 @@
 type: project
 title: Correct-a-Spine
 slug: /projects/correct-a-spine
-type: Hackathon
+projecttype: Hackathon
 homepage: false
 cv: false
 featured: false

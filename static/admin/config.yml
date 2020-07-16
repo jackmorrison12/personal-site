@@ -91,8 +91,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - {
-          label: "Type",
-          name: "type",
+          label: "Project Type",
+          name: "projecttype",
           widget: "select",
           options:
             ["Hackathon", "School Project", "Uni Project", "Personal Project"],
