@@ -28,9 +28,9 @@ collections:
           name: "blogseries",
           widget: "relation",
           collection: "series",
-          searchFields: "title",
+          searchFields: ["title"],
           valueField: "title",
-          displayFields: ["title", "hero", "hidden", "slug"],
+          displayFields: ["title"],
           required: false,
         }
       - { label: "Entry", name: "entry", widget: "number" }
