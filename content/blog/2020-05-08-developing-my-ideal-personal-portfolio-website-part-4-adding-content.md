@@ -3,7 +3,7 @@ series: Developing My Ideal Personal Portfolio Website
 blogseries: /blog/portfolio
 entry: 4
 title: Adding Content
-slug: /blog/portfolio-adding-content
+slug: /blog/portfolio/adding-content
 date: 2020-05-08T00:01:02.535Z
 hidden: false
 description: How I chose what I wanted to share about myself with the world

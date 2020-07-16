@@ -3,7 +3,7 @@ series: Automating My Life
 blogseries: /blog/automation
 entry: 1
 title: Why automation?
-slug: /blog/automation-introduction
+slug: /blog/automation/introduction
 date: 2020-07-15T20:30:00.000Z
 hidden: false
 description: "Why do I want to make my day-to-day life as automated as possible?"

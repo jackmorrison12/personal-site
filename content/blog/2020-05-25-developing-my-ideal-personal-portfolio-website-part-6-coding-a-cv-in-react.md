@@ -3,7 +3,7 @@ series: Developing My Ideal Personal Portfolio Website
 blogseries: /blog/portfolio
 entry: 6
 title: Coding a CV in React
-slug: /blog/portfolio-cv
+slug: /blog/portfolio/cv
 date: 2020-05-18T01:41:44.394Z
 hidden: false
 description: "A guide on how I created my current CV, which integrates directly into my site!"

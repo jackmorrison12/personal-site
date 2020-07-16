@@ -3,7 +3,7 @@ series: Developing My Ideal Personal Portfolio Website
 blogseries: /blog/portfolio
 entry: 5
 title: Personalisation!
-slug: /blog/portfolio-personalisation
+slug: /blog/portfolio/personalisation
 date: 2020-05-13T23:44:04.965Z
 hidden: false
 description: How I made my site scream ME

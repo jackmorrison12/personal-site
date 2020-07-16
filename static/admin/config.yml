@@ -22,6 +22,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "blog" }
       - { label: "Series", name: "series", widget: "string" }
       - {
           label: "Blog Series",
@@ -51,6 +52,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "series" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -67,6 +69,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "article" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -84,6 +87,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "project" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - {
@@ -145,6 +149,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "education" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "CV", name: "cv", widget: "boolean", default: true }
@@ -196,6 +201,7 @@ collections:
     editor:
       preview: true
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "experience" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "CV", name: "cv", widget: "boolean", default: true }
