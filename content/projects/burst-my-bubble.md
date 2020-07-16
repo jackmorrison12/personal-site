@@ -1,4 +1,5 @@
 ---
+type: project
 title: Burst My Bubble
 slug: /projects/burst-my-bubble
 type: Uni Project

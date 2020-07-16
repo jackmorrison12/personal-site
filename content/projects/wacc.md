@@ -1,4 +1,5 @@
 ---
+type: project
 title: WACC
 slug: /projects/wacc
 type: Uni Project

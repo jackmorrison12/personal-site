@@ -1,4 +1,5 @@
 ---
+type: experience
 title: Facebook
 slug: /experience/facebook
 cv: true

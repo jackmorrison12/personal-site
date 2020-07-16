@@ -1,4 +1,5 @@
 ---
+type: project
 title: MentorMe
 slug: /projects/mentor-me
 type: Personal Project

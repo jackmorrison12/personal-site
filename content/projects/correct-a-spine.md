@@ -1,4 +1,5 @@
 ---
+type: project
 title: Correct-a-Spine
 slug: /projects/correct-a-spine
 type: Hackathon

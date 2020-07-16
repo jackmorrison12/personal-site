@@ -1,4 +1,5 @@
 ---
+type: article
 title: Adding GitHub Project Pages as Subdomains of my Site
 slug: /articles/github-project-subdomains
 date: 2020-06-23T22:26:37.457Z

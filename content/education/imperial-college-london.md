@@ -1,4 +1,5 @@
 ---
+type: education
 title: Imperial College London
 slug: /education/imperial
 cv: true

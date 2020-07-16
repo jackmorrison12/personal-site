@@ -1,4 +1,5 @@
 ---
+type: project
 title: ARM11 Emulator and Assembler
 slug: /projects/arm11
 type: Uni Project

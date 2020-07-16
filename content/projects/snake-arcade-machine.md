@@ -1,4 +1,5 @@
 ---
+type: project
 title: Snake Arcade Machine
 slug: /projects/snake
 type: Uni Project

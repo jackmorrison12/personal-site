@@ -1,4 +1,5 @@
 ---
+type: project
 title: Pintos
 slug: /projects/pintos
 type: Uni Project

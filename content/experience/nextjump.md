@@ -1,4 +1,5 @@
 ---
+type: experience
 title: Nextjump
 slug: /experience/nextjump
 cv: true

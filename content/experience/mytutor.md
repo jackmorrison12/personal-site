@@ -1,4 +1,5 @@
 ---
+type: experience
 title: MyTutor
 slug: /experience/mytutor
 cv: true

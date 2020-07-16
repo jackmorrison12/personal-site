@@ -1,4 +1,5 @@
 ---
+type: article
 title: Getting Live Gatsby Deployment Notifications to my Phone
 slug: /articles/gatsby-notifications
 date: 2020-05-13T23:49:09.865Z

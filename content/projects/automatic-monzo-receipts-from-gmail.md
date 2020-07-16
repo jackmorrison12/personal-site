@@ -1,4 +1,5 @@
 ---
+type: project
 title: Automatic Monzo Receipts from Gmail
 slug: /projects/monzo-receipts
 type: Hackathon

@@ -1,4 +1,5 @@
 ---
+type: project
 title: Computer-Assisted Proofs
 slug: /projects/epq
 type: School Project

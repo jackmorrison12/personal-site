@@ -1,4 +1,5 @@
 ---
+type: education
 title: The Billericay School
 slug: /education/imperial
 cv: false

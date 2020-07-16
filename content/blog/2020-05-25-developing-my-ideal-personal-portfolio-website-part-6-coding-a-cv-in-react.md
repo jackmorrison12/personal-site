@@ -1,4 +1,5 @@
 ---
+type: blog
 series: Developing My Ideal Personal Portfolio Website
 blogseries: /blog/portfolio
 entry: 6

@@ -1,4 +1,5 @@
 ---
+type: project
 title: Canvas
 slug: /projects/canvas
 type: Uni Project

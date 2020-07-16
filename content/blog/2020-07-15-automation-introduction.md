@@ -1,4 +1,5 @@
 ---
+type: blog
 series: Automating My Life
 blogseries: /blog/automation
 entry: 1

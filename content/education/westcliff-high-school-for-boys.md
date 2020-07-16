@@ -1,4 +1,5 @@
 ---
+type: education
 title: Westcliff High School for Boys
 slug: /education/whsb
 cv: true

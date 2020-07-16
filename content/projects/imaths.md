@@ -1,4 +1,5 @@
 ---
+type: project
 title: iMaths
 slug: /projects/imaths
 type: School Project

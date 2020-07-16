@@ -1,4 +1,5 @@
 ---
+type: project
 title: PyPlay
 slug: /projects/pyplay
 type: Hackathon
