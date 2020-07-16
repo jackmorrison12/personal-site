@@ -58,12 +58,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { fileAbsolutePath: { regex: "/blog/|/projects/|/articles/" } }
+        filter: { frontmatter: { type: { regex: "/blog|project|article/" } } }
       ) {
         edges {
           node {
             frontmatter {
               slug
+              type
             }
           }
         }
@@ -81,12 +82,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: node.frontmatter.slug,
-      component: node.frontmatter.slug.includes("/blog/")
-        ? blogPostTemplate
-        : node.frontmatter.slug.includes("/articles/")
-        ? articleTemplate
-        : projectTemplate,
+      path:
+        node.frontmatter.type === "blog"
+          ? node.frontmatter.slug
+          : node.frontmatter.type === "article"
+          ? node.frontmatter.slug
+          : node.frontmatter.slug,
+      component:
+        node.frontmatter.type === "blog"
+          ? blogPostTemplate
+          : node.frontmatter.type === "article"
+          ? articleTemplate
+          : projectTemplate,
       context: {}, // additional data can be passed via context
     })
   })
