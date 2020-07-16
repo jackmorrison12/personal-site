@@ -32,6 +32,22 @@ collections:
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Topics", name: "topics", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "series"
+    label: "Blog Series"
+    description: "A collection og blog posts about the same topic"
+    folder: "content/series"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   - name: "article"
     label: "Article"
     description: "More formal writing"
