@@ -123,8 +123,8 @@ export default function Template({
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+  query($slug: String!, $baseurl: String!) {
+    markdownRemark(frontmatter: { slug: { eq: $slug }, baseurl: { eq: $baseurl }  }) {
       html
       frontmatter {
         slug

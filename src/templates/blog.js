@@ -40,9 +40,9 @@ export default function Template({
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!, $blogseries: String!) {
+  query($slug: String!, $blogseries: String!, $baseurl: String!) {
     markdownRemark(
-      frontmatter: { slug: { eq: $slug }, blogseries: { eq: $blogseries } }
+      frontmatter: { slug: { eq: $slug }, blogseries: { eq: $blogseries } , baseurl: { eq: $baseurl } }
     ) {
       html
       frontmatter {

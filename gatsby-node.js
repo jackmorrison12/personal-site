@@ -76,12 +76,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const blogPostTemplate = path.resolve(`src/templates/blog.js`)
   const articleTemplate = path.resolve(`src/templates/article.js`)
   const projectTemplate = path.resolve(`src/templates/project.js`)
+  const seriesTemplate = path.resolve(`src/templates/series.js`)
 
   const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { frontmatter: { type: { regex: "/blog|project|article/" } } }
+        filter: {
+          frontmatter: { type: { regex: "/blog|project|article|series/" } }
+        }
       ) {
         edges {
           node {
@@ -120,7 +123,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           ? blogPostTemplate
           : node.frontmatter.type === "article"
           ? articleTemplate
-          : projectTemplate,
+          : node.frontmatter.type === "project"
+          ? projectTemplate
+          : seriesTemplate,
       context: {
         blogseries: node.frontmatter.blogseries,
         baseurl: node.frontmatter.baseurl,
