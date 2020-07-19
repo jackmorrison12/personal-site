@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: MentorMe
-slug: /projects/mentor-me
+slug: mentor-me
 projecttype: Personal Project
 homepage: false
 cv: false

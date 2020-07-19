@@ -46,6 +46,29 @@ const redirects = [
     isPermanent: true,
   },
 ]
+exports.onCreateNode = ({ node, actions }) => {
+  if (node.frontmatter && node.frontmatter.type) {
+    if (node.frontmatter.type === "blog") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.blogseries,
+        "/",
+        node.frontmatter.slug
+      )
+    } else if (node.frontmatter.type === "series") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.slug
+      )
+    } else if (node.frontmatter.type === "article") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.slug
+      )
+    } else if (node.frontmatter.type === "project") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.slug
+      )
+    }
+  }
+}
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage, createRedirect } = actions
@@ -65,6 +88,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               slug
               type
+              baseurl
+              blogseries
             }
           }
         }
@@ -84,17 +109,23 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     createPage({
       path:
         node.frontmatter.type === "blog"
-          ? node.frontmatter.slug
-          : node.frontmatter.type === "article"
-          ? node.frontmatter.slug
-          : node.frontmatter.slug,
+          ? node.frontmatter.baseurl.concat(
+              node.frontmatter.blogseries,
+              "/",
+              node.frontmatter.slug
+            )
+          : node.frontmatter.baseurl.concat(node.frontmatter.slug),
       component:
         node.frontmatter.type === "blog"
           ? blogPostTemplate
           : node.frontmatter.type === "article"
           ? articleTemplate
           : projectTemplate,
-      context: {}, // additional data can be passed via context
+      context: {
+        blogseries: node.frontmatter.blogseries,
+        baseurl: node.frontmatter.baseurl,
+        slug: node.frontmatter.slug,
+      }, // additional data can be passed via context
     })
   })
 }

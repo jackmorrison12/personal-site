@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Automatic Monzo Receipts from Gmail
-slug: /projects/monzo-receipts
+slug: monzo-receipts
 projecttype: Hackathon
 homepage: false
 cv: false

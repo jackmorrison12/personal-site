@@ -1,7 +1,8 @@
 ---
 type: article
+baseurl: "/articles/"
 title: Getting Live Gatsby Deployment Notifications to my Phone
-slug: /articles/gatsby-notifications
+slug: gatsby-notifications
 date: 2020-05-13T23:49:09.865Z
 hidden: false
 hero: /img/gatsby-notifications.png

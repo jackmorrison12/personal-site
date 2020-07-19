@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Burst My Bubble
-slug: /projects/burst-my-bubble
+slug: burst-my-bubble
 projecttype: Uni Project
 homepage: true
 cv: true

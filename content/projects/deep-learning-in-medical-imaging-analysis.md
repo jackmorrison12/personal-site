@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Deep Learning in Medical Imaging Analysis
-slug: /projects/topics
+slug: topics
 projecttype: Uni Project
 homepage: false
 cv: true

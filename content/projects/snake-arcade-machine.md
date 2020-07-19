@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Snake Arcade Machine
-slug: /projects/snake
+slug: snake
 projecttype: Uni Project
 homepage: false
 cv: false

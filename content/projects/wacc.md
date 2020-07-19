@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: WACC
-slug: /projects/wacc
+slug: wacc
 projecttype: Uni Project
 homepage: false
 cv: true

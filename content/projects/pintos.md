@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Pintos
-slug: /projects/pintos
+slug: pintos
 projecttype: Uni Project
 homepage: false
 cv: false

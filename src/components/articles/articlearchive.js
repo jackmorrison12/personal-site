@@ -15,7 +15,7 @@ class ArticleArchive extends React.Component {
     return (
       posts &&
       posts.map(({ node: post }) => (
-        <Link to={"/" + post.frontmatter.slug} className="" id="path">
+        <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
           <div className="grow row margin-5-b">
             <div className="col-xs-12 col-md-5 margin-5-t">
               <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
@@ -56,7 +56,7 @@ export default () => (
               excerpt(pruneLength: 200)
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 date(formatString: "MMMM DD, YYYY")
                 hero {

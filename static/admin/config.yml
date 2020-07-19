@@ -23,6 +23,12 @@ collections:
       preview: true
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "blog" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/blog/",
+        }
       - { label: "Series", name: "series", widget: "string" }
       - {
           label: "Blog Series",
@@ -53,6 +59,12 @@ collections:
       preview: true
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "series" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/blog/",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -70,6 +82,12 @@ collections:
       preview: true
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "article" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/articles/",
+        }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -88,6 +106,13 @@ collections:
       preview: true
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "project" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/projects/",
+        }
+
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - {

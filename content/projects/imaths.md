@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: iMaths
-slug: /projects/imaths
+slug: imaths
 projecttype: School Project
 homepage: false
 cv: false

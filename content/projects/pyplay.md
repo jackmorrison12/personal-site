@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: PyPlay
-slug: /projects/pyplay
+slug: pyplay
 projecttype: Hackathon
 homepage: false
 cv: false

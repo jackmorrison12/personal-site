@@ -13,7 +13,7 @@ class BlogArchive extends React.Component {
     return (
       posts &&
       posts.map(({ node: post }) => (
-        <Link to={"/" + post.frontmatter.slug} className="" id="path">
+        <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
           <div className="grow row margin-5-b">
             <div className="col-xs-12 margin-5-t">
               <h3 className="margin-0 is-red">
@@ -59,12 +59,12 @@ export default () => (
               excerpt(pruneLength: 300)
               id
               frontmatter {
-                slug
                 title
                 series
                 entry
                 description
                 date(formatString: "MMMM DD, YYYY")
+                fullurl
               }
             }
           }

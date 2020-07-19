@@ -17,7 +17,7 @@ class ArticleRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <Link
-              to={"/" + post.frontmatter.slug}
+              to={"/" + post.frontmatter.fullurl}
               className="grow margin-5-b col-xs-12"
               id="path"
             >
@@ -64,7 +64,7 @@ export default () => (
               excerpt(pruneLength: 200)
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 date(formatString: "MMMM DD, YYYY")
                 hero {

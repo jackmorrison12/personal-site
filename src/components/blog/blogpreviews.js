@@ -15,7 +15,7 @@ class BlogPreviews extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <div className="col-xs-12 col-md-6 margin-5-t grow margin-5-b">
-              <Link to={"/" + post.frontmatter.slug} className="" id="path">
+              <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
                 <h3 className="margin-0 is-black">
                   {post.frontmatter.series}: Part {post.frontmatter.entry}
                 </h3>
@@ -63,7 +63,7 @@ export default () => (
               excerpt(pruneLength: 200)
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 series
                 entry

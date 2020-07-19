@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Correct-a-Spine
-slug: /projects/correct-a-spine
+slug: correct-a-spine
 projecttype: Hackathon
 homepage: false
 cv: false

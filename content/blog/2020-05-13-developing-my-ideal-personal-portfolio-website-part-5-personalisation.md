@@ -1,10 +1,11 @@
 ---
 type: blog
+baseurl: "/blog/"
 series: Developing My Ideal Personal Portfolio Website
-blogseries: /blog/portfolio
+blogseries: portfolio
 entry: 5
 title: Personalisation!
-slug: /blog/portfolio/personalisation
+slug: personalisation
 date: 2020-05-13T23:44:04.965Z
 hidden: false
 description: How I made my site scream ME

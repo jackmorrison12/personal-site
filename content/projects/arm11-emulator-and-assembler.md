@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: ARM11 Emulator and Assembler
-slug: /projects/arm11
+slug: arm11
 projecttype: Uni Project
 homepage: false
 cv: false

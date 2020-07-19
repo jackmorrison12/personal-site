@@ -1,10 +1,11 @@
 ---
 type: blog
+baseurl: "/blog/"
 series: Developing My Ideal Personal Portfolio Website
-blogseries: /blog/portfolio
+blogseries: portfolio
 entry: 2
 title: Choosing my Tech Stack
-slug: /blog/portfolio/tech-stack
+slug: tech-stack
 date: 2020-05-05T20:00:00.000Z
 hidden: false
 description: How I researched and decided on what technologies to create this site with

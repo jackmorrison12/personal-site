@@ -20,7 +20,11 @@ class ProjectRoll extends React.Component {
             featured.map(({ node: post }) => (
               <div className="col-xs-12 col-sm-6 col-md-3 margin-3-b pad-2-lr">
                 <div className="grow project featured is-white-bg">
-                  <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                  <Link
+                    to={"/" + post.frontmatter.fullurl}
+                    className=""
+                    id="path"
+                  >
                     <Img
                       fluid={post.frontmatter.banner.childImageSharp.fluid}
                     />
@@ -53,7 +57,11 @@ class ProjectRoll extends React.Component {
             non_featured.map(({ node: post }) => (
               <div className="col-xs-12 col-md-6 margin-3-b pad-2-lr">
                 <div className="grow project non-featured is-white-bg">
-                  <Link to={"/" + post.frontmatter.slug} className="" id="path">
+                  <Link
+                    to={"/" + post.frontmatter.fullurl}
+                    className=""
+                    id="path"
+                  >
                     <div className="row">
                       <div className="col-xs-12 pad-0 mobile-show">
                         <Img
@@ -120,7 +128,7 @@ export default () => (
             node {
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 startdate(formatString: "MMMM YYYY")
                 enddate(formatString: "MMMM YYYY")
@@ -155,7 +163,7 @@ export default () => (
             node {
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 startdate(formatString: "MMMM YYYY")
                 enddate(formatString: "MMMM YYYY")

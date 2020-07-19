@@ -1,7 +1,8 @@
 ---
 type: article
+baseurl: "/articles/"
 title: Adding GitHub Project Pages as Subdomains of my Site
-slug: /articles/github-project-subdomains
+slug: github-project-subdomains
 date: 2020-06-23T22:26:37.457Z
 hidden: false
 hero: /img/github-project-subdomains.png

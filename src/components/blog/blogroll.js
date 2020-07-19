@@ -15,7 +15,7 @@ class BlogRoll extends React.Component {
         {posts &&
           posts.map(({ node: post }) => (
             <Link
-              to={"/" + post.frontmatter.slug}
+              to={"/" + post.frontmatter.fullurl}
               className="grow margin-5-b col-xs-12 col-sm-6 margin-5-t"
               id="path"
             >
@@ -65,7 +65,7 @@ export default () => (
               excerpt(pruneLength: 300)
               id
               frontmatter {
-                slug
+                fullurl
                 title
                 entry
                 series

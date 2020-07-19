@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Canvas
-slug: /projects/canvas
+slug: canvas
 projecttype: Uni Project
 homepage: true
 cv: true

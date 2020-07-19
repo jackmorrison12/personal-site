@@ -1,7 +1,8 @@
 ---
 type: project
+baseurl: "/projects/"
 title: Computer-Assisted Proofs
-slug: /projects/epq
+slug: epq
 projecttype: School Project
 homepage: false
 cv: false
