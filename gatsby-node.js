@@ -46,7 +46,7 @@ const redirects = [
     isPermanent: true,
   },
 ]
-exports.onCreateNode = ({ node, actions }) => {
+exports.onCreateNode = ({ node, getNodesByType }) => {
   if (node.frontmatter && node.frontmatter.type) {
     if (node.frontmatter.type === "blog") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
@@ -58,6 +58,37 @@ exports.onCreateNode = ({ node, actions }) => {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug
       )
+      var allNodes = getNodesByType(`MarkdownRemark`)
+      allNodes = allNodes.filter(innernode => {
+        return (
+          innernode.frontmatter &&
+          innernode.frontmatter.type &&
+          innernode.frontmatter.type === "blog" &&
+          innernode.frontmatter.blogseries === node.frontmatter.slug
+        )
+      })
+      function compare(a, b) {
+        if (a.frontmatter.date < b.frontmatter.date) {
+          return -1
+        }
+        if (a.frontmatter.date > b.frontmatter.date) {
+          return 1
+        }
+        return 0
+      }
+      allNodes.sort(compare)
+      if (allNodes.length > 1) {
+        node.frontmatter.startdate = allNodes[0].frontmatter.date
+        node.frontmatter.enddate =
+          allNodes[allNodes.length - 1].frontmatter.date
+      } else if (allNodes.length === 1) {
+        node.frontmatter.startdate = allNodes[0].frontmatter.date
+        node.frontmatter.enddate = allNodes[0].frontmatter.date
+      } else {
+        node.frontmatter.startdate = node.frontmatter.date
+        node.frontmatter.enddate = node.frontmatter.date
+      }
+      node.frontmatter.totalposts = allNodes.length
     } else if (node.frontmatter.type === "article") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug

@@ -26,33 +26,45 @@ export default function Template({
             </Link>
           </div>
 
-          <div className="col-xs-12 pad-3-lr">
+          <div className="col-xs-12">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>{" "}
             <h6 className="subtitle margin-3-b is-red">
               {frontmatter.description}
             </h6>
-            <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
+            <h6 className="subtitle margin-3-b">
+              {frontmatter.startdate !== frontmatter.enddate
+                ? frontmatter.startdate + " - " + frontmatter.enddate
+                : frontmatter.startdate}
+            </h6>
+            <h6 className="subtitle margin-3-b">
+              {frontmatter.totalposts > 1
+                ? frontmatter.totalposts + " posts"
+                : frontmatter.totalposts === 1
+                ? "1 post"
+                : "No posts"}
+            </h6>
             <div className="line margin-5-tb is-red" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
         </div>
-        <div className="row container">
+        <div className="row container pad-3-lr">
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
                 <div className="grow row margin-5-b">
                   <div className="col-xs-12 margin-5-t">
                     <h3 className="margin-0 is-red">
-                      {post.frontmatter.series}: Part {post.frontmatter.entry}
+                      Part {post.frontmatter.entry}
                     </h3>
-                    <h1 className="margin-0 is-medium-blue">
+                    <h1 className="margin-0 is-black">
                       {post.frontmatter.title}
                     </h1>
-                    <p className="margin-0 margin-2-b is-black">
-                      {post.frontmatter.date}
-                    </p>
                     <p className="margin-0 margin-1-b is-black bold is-red pad-2-b">
                       {post.frontmatter.description}
+                    </p>
+
+                    <p className="margin-0 margin-2-b is-black">
+                      {post.frontmatter.date}
                     </p>
                     <div className="line-sm is-black margin-3-b" />
                     <p className="margin-0 is-black">{post.excerpt}</p>
@@ -76,6 +88,9 @@ export const pageQuery = graphql`
         slug
         title
         description
+        startdate(formatString: "MMMM DD, YYYY")
+        enddate(formatString: "MMMM DD, YYYY")
+        totalposts
       }
     }
     blogposts: allMarkdownRemark(
@@ -86,7 +101,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 300)
+          excerpt(pruneLength: 200)
           id
           frontmatter {
             title
