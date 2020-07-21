@@ -28,7 +28,8 @@ export default function Template({
           <div className="col-xs-12 pad-3-lr">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>
             <h3 className="margin-0-t margin-5-b is-red">
-              {frontmatter.series}: Part {frontmatter.entry}
+              {frontmatter.series}: Part {frontmatter.entry} of{" "}
+              {frontmatter.totalentries}
             </h3>
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="line margin-5-tb is-red" />
@@ -42,7 +43,11 @@ export default function Template({
 export const pageQuery = graphql`
   query($slug: String!, $blogseries: String!, $baseurl: String!) {
     markdownRemark(
-      frontmatter: { slug: { eq: $slug }, blogseries: { eq: $blogseries } , baseurl: { eq: $baseurl } }
+      frontmatter: {
+        slug: { eq: $slug }
+        blogseries: { eq: $blogseries }
+        baseurl: { eq: $baseurl }
+      }
     ) {
       html
       frontmatter {
@@ -51,6 +56,7 @@ export const pageQuery = graphql`
         title
         series
         entry
+        totalentries
       }
     }
   }

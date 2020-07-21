@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 2
 title: Choosing my Tech Stack
 slug: tech-stack
 date: 2020-05-05T20:00:00.000Z

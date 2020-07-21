@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 1
 title: Introduction
 slug: introduction
 date: 2020-05-03T20:30:00.000Z

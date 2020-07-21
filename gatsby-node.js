@@ -54,12 +54,52 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
         "/",
         node.frontmatter.slug
       )
+      var seriesNodes = getNodesByType(`MarkdownRemark`)
+      seriesNodes = seriesNodes.filter(innernode => {
+        return (
+          innernode.frontmatter &&
+          innernode.frontmatter.type &&
+          innernode.frontmatter.type === "series" &&
+          innernode.frontmatter.slug === node.frontmatter.blogseries
+        )
+      })
+      node.frontmatter.hero = !node.frontmatter.hero
+        ? seriesNodes[0].frontmatter.hero
+        : node.frontmatter.hero
+      node.frontmatter.series = seriesNodes[0].frontmatter.title
+      node.frontmatter.hidden =
+        node.frontmatter.hidden || seriesNodes[0].frontmatter.hidden
+      var blogNodes = getNodesByType(`MarkdownRemark`)
+      blogNodes = blogNodes.filter(innernode => {
+        return (
+          innernode.frontmatter &&
+          innernode.frontmatter.type &&
+          innernode.frontmatter.type === "blog" &&
+          innernode.frontmatter.blogseries === node.frontmatter.blogseries
+        )
+      })
+      function compare(a, b) {
+        if (a.frontmatter.date < b.frontmatter.date) {
+          return -1
+        }
+        if (a.frontmatter.date > b.frontmatter.date) {
+          return 1
+        }
+        return 0
+      }
+      blogNodes.sort(compare)
+      node.frontmatter.totalentries = blogNodes.length
+      node.frontmatter.entry =
+        blogNodes.findIndex(x => x.frontmatter.slug === node.frontmatter.slug) +
+        1
+
+      console.log(node.frontmatter)
     } else if (node.frontmatter.type === "series") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug
       )
-      var allNodes = getNodesByType(`MarkdownRemark`)
-      allNodes = allNodes.filter(innernode => {
+      var blogNodes = getNodesByType(`MarkdownRemark`)
+      blogNodes = blogNodes.filter(innernode => {
         return (
           innernode.frontmatter &&
           innernode.frontmatter.type &&
@@ -76,19 +116,19 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
         }
         return 0
       }
-      allNodes.sort(compare)
-      if (allNodes.length > 1) {
-        node.frontmatter.startdate = allNodes[0].frontmatter.date
+      blogNodes.sort(compare)
+      if (blogNodes.length > 1) {
+        node.frontmatter.startdate = blogNodes[0].frontmatter.date
         node.frontmatter.enddate =
-          allNodes[allNodes.length - 1].frontmatter.date
-      } else if (allNodes.length === 1) {
-        node.frontmatter.startdate = allNodes[0].frontmatter.date
-        node.frontmatter.enddate = allNodes[0].frontmatter.date
+          blogNodes[blogNodes.length - 1].frontmatter.date
+      } else if (blogNodes.length === 1) {
+        node.frontmatter.startdate = blogNodes[0].frontmatter.date
+        node.frontmatter.enddate = blogNodes[0].frontmatter.date
       } else {
         node.frontmatter.startdate = node.frontmatter.date
         node.frontmatter.enddate = node.frontmatter.date
       }
-      node.frontmatter.totalposts = allNodes.length
+      node.frontmatter.totalposts = blogNodes.length
     } else if (node.frontmatter.type === "article") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug

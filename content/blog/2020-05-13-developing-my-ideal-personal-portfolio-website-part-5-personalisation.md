@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 5
 title: Personalisation!
 slug: personalisation
 date: 2020-05-13T23:44:04.965Z

@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Automating My Life
 blogseries: automation
-entry: 1
 title: Why automation?
 slug: introduction
 date: 2020-07-15T20:30:00.000Z

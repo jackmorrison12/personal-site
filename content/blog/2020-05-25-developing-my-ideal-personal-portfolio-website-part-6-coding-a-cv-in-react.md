@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 6
 title: Coding a CV in React
 slug: cv
 date: 2020-05-18T01:41:44.394Z

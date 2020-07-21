@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 3
 title: Where to start?
 slug: starting-out
 date: 2020-05-06T01:56:53.791Z

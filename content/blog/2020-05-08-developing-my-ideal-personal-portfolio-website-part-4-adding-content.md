@@ -1,9 +1,7 @@
 ---
 type: blog
 baseurl: "/blog/"
-series: Developing My Ideal Personal Portfolio Website
 blogseries: portfolio
-entry: 4
 title: Adding Content
 slug: adding-content
 date: 2020-05-08T00:01:02.535Z
