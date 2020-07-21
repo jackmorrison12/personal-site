@@ -19,7 +19,7 @@ export default function Template({
     <Layout>
       <SEO title={frontmatter.title} />
       <div className="is-grey is-light-grey-bg">
-        <div className="row container pad-10-t ">
+        <div className="row container pad-10-t pad-3-lr ">
           <div className="col-xs-12 pad-3-lr">
             <Link to="/writing" className="">
               <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Blog`}</h2>
@@ -47,27 +47,24 @@ export default function Template({
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
         </div>
-        <div className="row container pad-3-lr">
+        <div className="container pad-3-lr">
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
                 <div className="grow row margin-5-b">
                   <div className="col-xs-12 margin-5-t">
-                    <h3 className="margin-0 is-red">
-                      Part {post.frontmatter.entry}
-                    </h3>
-                    <h1 className="margin-0 is-black">
-                      {post.frontmatter.title}
+                    <h2 className="margin-0 margin-2-b is-black">
+                      {post.frontmatter.date}
+                    </h2>
+                    <h1 className="margin-0 is-red pad-3-l">
+                      Part {post.frontmatter.entry}: {post.frontmatter.title}
                     </h1>
-                    <p className="margin-0 margin-1-b is-black bold is-red pad-2-b">
+                    <p className="margin-0 margin-1-b is-black bold is-black pad-2-b pad-3-l">
                       {post.frontmatter.description}
                     </p>
 
-                    <p className="margin-0 margin-2-b is-black">
-                      {post.frontmatter.date}
-                    </p>
-                    <div className="line-sm is-black margin-3-b" />
-                    <p className="margin-0 is-black">{post.excerpt}</p>
+                    <div className="line-sm is-red margin-3-b margin-3-l" />
+                    <p className="margin-0 is-black pad-3-l">{post.excerpt}</p>
                   </div>
                 </div>
               </Link>
