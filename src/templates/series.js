@@ -31,7 +31,7 @@ export default function Template({
             </Link>
           </div>
 
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-7">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>{" "}
             <h6 className="subtitle margin-3-b is-red">
               {frontmatter.description}
@@ -51,7 +51,7 @@ export default function Template({
             <div className="line margin-5-tb is-red" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
-          <div className="col-xs-12 col-md-6">
+          <div className="col-xs-12 col-md-5">
             <div>
               <Img fluid={frontmatter.hero.childImageSharp.fluid} />
             </div>

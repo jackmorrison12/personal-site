@@ -93,7 +93,6 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
         blogNodes.findIndex(x => x.frontmatter.slug === node.frontmatter.slug) +
         1
 
-      console.log(node.frontmatter)
     } else if (node.frontmatter.type === "series") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug
