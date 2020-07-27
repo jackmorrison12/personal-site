@@ -5,6 +5,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,7 +18,11 @@ export default function Template({
   const posts = blogposts.edges
   return (
     <Layout>
-      <SEO title={frontmatter.title} />
+      <SEO
+        title={frontmatter.title}
+        image={"/img/" + frontmatter.hero.childImageSharp.fluid.originalName}
+        description={frontmatter.description}
+      />
       <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t pad-3-lr ">
           <div className="col-xs-12 pad-3-lr">
@@ -26,7 +31,7 @@ export default function Template({
             </Link>
           </div>
 
-          <div className="col-xs-12">
+          <div className="col-xs-12 col-md-6">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>{" "}
             <h6 className="subtitle margin-3-b is-red">
               {frontmatter.description}
@@ -45,6 +50,11 @@ export default function Template({
             </h6>
             <div className="line margin-5-tb is-red" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
+          </div>
+          <div className="col-xs-12 col-md-6">
+            <div>
+              <Img fluid={frontmatter.hero.childImageSharp.fluid} />
+            </div>
           </div>
         </div>
         <div className="container pad-3-lr">
@@ -88,6 +98,14 @@ export const pageQuery = graphql`
         startdate(formatString: "MMMM DD, YYYY")
         enddate(formatString: "MMMM DD, YYYY")
         totalposts
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
+          }
+        }
       }
     }
     blogposts: allMarkdownRemark(
