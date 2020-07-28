@@ -24,17 +24,25 @@ export default function Template({
       <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t pad-3-lr">
           <div className="col-xs-12">
-            <Link to="/writing" className="">
-              <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Blog`}</h2>
+            <Link
+              to={frontmatter.baseurl + frontmatter.blogseries}
+              className=""
+            >
+              <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Series`}</h2>
             </Link>
           </div>
 
           <div className="col-xs-12 col-md-7">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>
-            <h3 className="margin-0-t margin-5-b is-red">
-              {frontmatter.series}: Part {frontmatter.entry} of{" "}
-              {frontmatter.totalentries}
-            </h3>
+            <Link
+              to={frontmatter.baseurl + frontmatter.blogseries}
+              className="link is-red"
+            >
+              <h3 className="margin-0-t margin-5-b is-red">
+                {frontmatter.series}: Part {frontmatter.entry} of{" "}
+                {frontmatter.totalentries}
+              </h3>
+            </Link>
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="line margin-5-tb is-red" />
           </div>
@@ -66,6 +74,8 @@ export const pageQuery = graphql`
         series
         entry
         totalentries
+        blogseries
+        baseurl
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {

@@ -82,7 +82,7 @@ export default function Template({
                     {/* <p className="margin-0 is-black">{post.excerpt}</p> */}
                   </div>
                 </div>
-                {post.frontmatter.entry != 1 ? (
+                {post.frontmatter.entry !== 1 ? (
                   <div className="line-full is-red margin-3-b mobile-show" />
                 ) : (
                   ""
