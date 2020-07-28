@@ -39,35 +39,37 @@ const ToolsPage = () => (
           <p>
             When I initially created the site, I wrote a 6-part series of blog
             posts, entitled{" "}
-            <i>Developing My Ideal Personal Portfolio Website</i>
+            <Link className="link" to={"blog/portfolio"}>
+              <i>Developing My Ideal Personal Portfolio Website</i>
+            </Link>
             <ul>
               <li>
-                <Link className="link" to={"blog/portfolio-introduction"}>
+                <Link className="link" to={"blog/portfolio/introduction"}>
                   <b>Part 1 - Introduction</b>
                 </Link>
               </li>
               <li>
-                <Link className="link" to={"blog/portfolio-tech-stack"}>
+                <Link className="link" to={"blog/portfolio/tech-stack"}>
                   <b>Part 2 - Choosing my Tech Stack</b>
                 </Link>
               </li>
               <li>
-                <Link className="link" to={"blog/portfolio-starting-out"}>
+                <Link className="link" to={"blog/portfolio/starting-out"}>
                   <b>Part 3 - Where to start?</b>
                 </Link>
               </li>
               <li>
-                <Link className="link" to={"blog/portfolio-adding-content"}>
+                <Link className="link" to={"blog/portfolio/adding-content"}>
                   <b>Part 4 - Adding Content</b>
                 </Link>
               </li>
               <li>
-                <Link className="link" to={"blog/portfolio-personalisation"}>
+                <Link className="link" to={"blog/portfolio/personalisation"}>
                   <b>Part 5 - Personalisation!</b>
                 </Link>
               </li>
               <li>
-                <Link className="link" to={"blog/portfolio-cv"}>
+                <Link className="link" to={"blog/portfolio/cv"}>
                   <b>Part 6 - Coding a CV in React</b>
                 </Link>
               </li>
