@@ -57,7 +57,7 @@ export default function Template({
             </div>
           </div>
         </div>
-        <div className="container pad-3-lr">
+        <div className="container pad-3-lr pad-10-b">
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
