@@ -6,6 +6,10 @@
   display: flex;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .inherit {
   display: inherit;
 }
@@ -66,6 +70,10 @@
 .line-sm {
   border-bottom: 3px solid;
   max-width: 20%;
+}
+
+.line-full {
+  border-bottom: 3px solid;
 }
 
 .underline {

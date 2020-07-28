@@ -124,6 +124,14 @@ $name: xs;
   order: 1;
 }
 
+.left-#{$name} {
+  text-align: left;
+}
+
+.right-#{$name} {
+  text-align: right;
+}
+
 @each $breakpoint in $flexboxgrid-breakpoints {
   $name: nth($breakpoint, 1);
   $size: nth($breakpoint, 2);
@@ -189,6 +197,14 @@ $name: xs;
 
     .last-#{$name} {
       order: 1;
+    }
+
+    .left-#{$name} {
+      text-align: left;
+    }
+
+    .right-#{$name} {
+      text-align: right;
     }
     @for $i from 1 through $flexboxgrid-grid-columns {
       .col-#{$name}-#{$i} {
