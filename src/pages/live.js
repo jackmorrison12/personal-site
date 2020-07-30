@@ -113,7 +113,13 @@ const LivePage = () => {
   return (
     <Layout>
       <SEO title="Live" />
-
+      <div className="is-grey is-light-grey-bg pad-10-t pad-3-lr">
+        <div className="row container-small">
+          <div className="col-xs-12 col-md-12">
+            <h1 className="title title-borders margin-0-t">Today I have...</h1>
+          </div>
+        </div>
+      </div>
       <Banner
         click={click}
         enter={enter}

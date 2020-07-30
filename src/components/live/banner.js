@@ -12,8 +12,6 @@ export default props => {
     <>
       <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
         <div className="row container ">
-          <h1 className="col-xs-12 pad-5-b">Today I have...</h1>
-
           <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 text-align-center">
             <FontAwesomeIcon
               icon={["fab", "lastfm"]}
