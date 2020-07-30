@@ -34,7 +34,7 @@ class WritingRoll extends React.Component {
                   <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
                   <p className="margin-0 margin-2-b is-black">
                     {post.frontmatter.startdate &&
-                    post.frontmatter.startdate != post.frontmatter.date
+                    post.frontmatter.startdate !== post.frontmatter.date
                       ? post.frontmatter.startdate + " - "
                       : ""}
                     {post.frontmatter.date}

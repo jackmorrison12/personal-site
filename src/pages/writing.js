@@ -3,8 +3,6 @@ import React from "react"
 import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import ArticleRoll from "../components/articles/articleroll"
-import BlogRoll from "../components/blog/blogroll"
 import WritingRoll from "../components/writing/writingroll"
 
 const WritingPage = () => (

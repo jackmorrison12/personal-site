@@ -14,7 +14,7 @@ export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
   const { series, blogposts } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = series
+  const { frontmatter } = series
   const posts = blogposts.edges
   return (
     <Layout>
@@ -27,7 +27,7 @@ export default function Template({
         <div className="row container pad-10-t pad-3-lr ">
           <div className="col-xs-12 pad-3-lr">
             <Link to="/writing" className="">
-              <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Blog`}</h2>
+              <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Articles`}</h2>
             </Link>
           </div>
 
