@@ -9,6 +9,9 @@
 .mobile-show-flex {
   display: none;
 }
+.mobile-show-inline-block {
+  display: none;
+}
 
 @media screen and (max-width: 210mm) {
   .mobile-hide {
@@ -21,6 +24,9 @@
   }
   .mobile-show-flex {
     display: flex;
+  }
+  .mobile-show-inline-block {
+    display: inline-block;
   }
 }
 
