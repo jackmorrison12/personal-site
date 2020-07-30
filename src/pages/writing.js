@@ -19,7 +19,7 @@ const WritingPage = () => (
     <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
       <div className="row container-small ">
         <div className="col-xs-12 col-md-12">
-          <h3 className="pad-5-t margin-0">
+          <h3 className="margin-0">
             Looking for something older? Go to the{" "}
             <Link to="articles" className="link">
               article archive
