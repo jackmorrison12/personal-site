@@ -9,4 +9,4 @@ hero: /img/automation.png
 description: A blog series about any cool automations I create
 ---
 
-Write about articles for automation
+A blog series about any cool automations I create

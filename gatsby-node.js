@@ -92,7 +92,6 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
       node.frontmatter.entry =
         blogNodes.findIndex(x => x.frontmatter.slug === node.frontmatter.slug) +
         1
-
     } else if (node.frontmatter.type === "series") {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug
@@ -120,9 +119,11 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
         node.frontmatter.startdate = blogNodes[0].frontmatter.date
         node.frontmatter.enddate =
           blogNodes[blogNodes.length - 1].frontmatter.date
+        node.frontmatter.date = blogNodes[blogNodes.length - 1].frontmatter.date
       } else if (blogNodes.length === 1) {
         node.frontmatter.startdate = blogNodes[0].frontmatter.date
         node.frontmatter.enddate = blogNodes[0].frontmatter.date
+        node.frontmatter.date = blogNodes[blogNodes.length - 1].frontmatter.date
       } else {
         node.frontmatter.startdate = node.frontmatter.date
         node.frontmatter.enddate = node.frontmatter.date

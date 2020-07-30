@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ArticleRoll from "../components/articles/articleroll"
 import BlogRoll from "../components/blog/blogroll"
+import WritingRoll from "../components/writing/writingroll"
 
 const WritingPage = () => (
   <Layout>
@@ -13,25 +14,19 @@ const WritingPage = () => (
       <div className="row container-small">
         <div className="col-xs-12 col-md-12">
           <h1 className="title title-borders margin-0-t">I like to write</h1>
-          <h1 className="pad-5-t">Some articles...</h1>
-          <ArticleRoll />
-          <h3 className="pad-5-t margin-0">
-            Looking for something older? Go to the{" "}
-            <Link to="articles" className="link">
-              article archive
-            </Link>
-            .
-          </h3>
+          <WritingRoll />
         </div>
       </div>
     </div>
     <div className="is-grey is-white-bg pad-10-tb pad-3-lr">
       <div className="row container-small ">
         <div className="col-xs-12 col-md-12">
-          <h1>... and some recent blog posts</h1>
-          <BlogRoll />
           <h3 className="pad-5-t margin-0">
             Looking for something older? Go to the{" "}
+            <Link to="articles" className="link">
+              article archive
+            </Link>{" "}
+            or the{" "}
             <Link to="blog" className="link">
               blog archive
             </Link>

@@ -9,4 +9,4 @@ hero: /img/portfolio.png
 description: A blog series describing how I created this website
 ---
 
-Write about articles
+A blog series describing how I created this website
