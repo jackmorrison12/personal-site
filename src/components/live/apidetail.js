@@ -68,7 +68,7 @@ export default props => {
     pageNumbers.length > 1
       ? pageNumbers.map(number => {
           return (
-            <div
+            <h2
               className="link col-xs-1 is-medium-blue text-align-center margin-0-b"
               key={number}
               id={number}
@@ -81,8 +81,8 @@ export default props => {
               role="button"
               tabindex="0"
             >
-              <h2 className="margin-0-b">{number}</h2>
-            </div>
+              {number}
+            </h2>
           )
         })
       : ""
