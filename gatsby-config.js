@@ -73,6 +73,14 @@ module.exports = {
             },
           },
           `gatsby-remark-google-analytics-track-links`,
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "seti",
+              lineNumbers: true,
+            },
+          },
         ],
       },
     },

@@ -1,19 +1,14 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
-// import { useStaticQuery, graphql, Link } from "gatsby"
 import useDarkMode from "use-dark-mode"
 import { Link } from "gatsby"
 
 import { Twemoji } from "react-emoji-render"
 
 import Header from "./header"
+
+import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
+deckDeckGoHighlightElement()
 
 const Layout = ({ children }) => {
   const darkMode = useDarkMode(true)
