@@ -24,12 +24,15 @@ export default function Template({
         description={frontmatter.description}
       />
       <div className="is-grey is-light-grey-bg">
-        <div className="row container pad-10-t ">
-          <div className="col-xs-12 pad-3-lr">
-            <Link to="/projects" className="">
-              <h2 className="is-medium-blue margin-0 margin-2-b link is-red pad-1-b inherit">{`< Projects`}</h2>
+        <div className="row container pad-10-t">
+          <div className="col-xs-12">
+            {"< "}
+            <Link to={"/projects"} className="">
+              <h3 className="margin-0 margin-2-b link is-red pad-1-b inherit">{`All Projects`}</h3>
             </Link>
           </div>
+        </div>
+        <div className="row container">
           <div className="col-xs-12 col-sm-7 pad-3-lr">
             <h1 className="title margin-1-t margin-1-b">{frontmatter.title}</h1>
             <h6 className="subtitle margin-3-b italic">
@@ -124,7 +127,9 @@ export default function Template({
 }
 export const pageQuery = graphql`
   query($slug: String!, $baseurl: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug }, baseurl: { eq: $baseurl }  }) {
+    markdownRemark(
+      frontmatter: { slug: { eq: $slug }, baseurl: { eq: $baseurl } }
+    ) {
       html
       frontmatter {
         slug
