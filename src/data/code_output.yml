@@ -4,9 +4,9 @@ header:
   version: 2.12.0
   elapsed_seconds: 0.008
   n_files: 140
-  n_lines: 9496
+  n_lines: 9508
   files_per_second: 17500
-  lines_per_second: 1.187e+06
+  lines_per_second: 1.1885e+06
 JSON:
   name: JSON
   code: 545
@@ -15,7 +15,7 @@ JSON:
   nFiles: 9
 JavaScript:
   name: JavaScript
-  code: 5102
+  code: 5114
   comment: 66
   blank: 228
   nFiles: 71
@@ -62,7 +62,7 @@ gitignore:
   blank: 18
   nFiles: 1
 SUM:
-  code: 8341
+  code: 8353
   comment: 335
   blank: 820
   nFiles: 140
