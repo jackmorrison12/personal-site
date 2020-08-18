@@ -5,6 +5,8 @@ import { Link } from "gatsby"
 
 import { Twemoji } from "react-emoji-render"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 import Header from "./header"
 
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
@@ -13,6 +15,11 @@ deckDeckGoHighlightElement()
 const Layout = ({ children }) => {
   const darkMode = useDarkMode(true)
   function switchDarkMode() {
+    trackCustomEvent({
+      category: "Button",
+      action: "click",
+      label: "Dark Mode Toggle",
+    })
     var toggle = document.getElementById("dark-mode-switch")
     if (toggle.checked) {
       darkMode.enable()
