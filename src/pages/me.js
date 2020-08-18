@@ -50,7 +50,7 @@ export default ({ data }) => {
           trackCustomEvent({
             category: "Me Page Link",
             action: "click",
-            label: { text },
+            label: text,
           })
         }}
         onKeyDown={e => {
@@ -60,7 +60,7 @@ export default ({ data }) => {
             trackCustomEvent({
               category: "Me Page Link",
               action: "click",
-              label: { text },
+              label: text,
             })
           }
         }}
