@@ -72,7 +72,16 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          `gatsby-remark-google-analytics-track-links`,
+          {
+            resolve: `gatsby-remark-google-analytics-track-links`,
+            options: {
+              gaOptions: {
+                internalLinkTitle: "Internal Link",
+                externalLinkTitle: "Outbound Link",
+              },
+            },
+          },
+
           {
             resolve: `gatsby-remark-highlight-code`,
             options: {
