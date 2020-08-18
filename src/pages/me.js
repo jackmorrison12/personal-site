@@ -14,6 +14,7 @@ import Teaching from "../components/me/teaching"
 import { SlideDown } from "react-slidedown"
 import "react-slidedown/lib/slidedown.css"
 import { Twemoji } from "react-emoji-render"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 export default ({ data }) => {
   const [section, setSection] = useState("NONE")
@@ -46,11 +47,21 @@ export default ({ data }) => {
         onClick={e => {
           setSection(link)
           setOpen(true)
+          trackCustomEvent({
+            category: "Me Page Link",
+            action: "click",
+            label: { Text },
+          })
         }}
         onKeyDown={e => {
           if (e.keyCode === 13) {
             setSection(link)
             setOpen(true)
+            trackCustomEvent({
+              category: "Me Page Link",
+              action: "click",
+              label: { Text },
+            })
           }
         }}
         className={"link is-" + colour}
@@ -106,10 +117,22 @@ export default ({ data }) => {
               <div
                 role="button"
                 tabIndex="0"
-                onClick={e => setOpen(false)}
+                onClick={e => {
+                  setOpen(false)
+                  trackCustomEvent({
+                    category: "Me Page Link",
+                    action: "click",
+                    label: "Close",
+                  })
+                }}
                 onKeyDown={e => {
                   if (e.keyCode === 13) {
                     setOpen(false)
+                    trackCustomEvent({
+                      category: "Me Page Link",
+                      action: "click",
+                      label: "Close",
+                    })
                   }
                 }}
                 className="link is-medium-blue float-right"
