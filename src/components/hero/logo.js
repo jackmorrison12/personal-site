@@ -7,7 +7,6 @@ export default () => (
     height="200"
     viewBox="50 0 348 347"
     fill="none"
-    class="hero"
   >
     <rect
       x="117.634"
