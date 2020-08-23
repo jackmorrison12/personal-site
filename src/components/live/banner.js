@@ -115,12 +115,12 @@ export default props => {
               size="4x"
               className="grow-3 live-icon is-twitter-blue-bg is-white-always pointer"
               onClick={() => {
-                props.click("twitter", 13),
-                  trackCustomEvent({
-                    category: "Live Page Hero Link",
-                    action: "click",
-                    label: "Twitter",
-                  })
+                props.click("twitter", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "Twitter",
+                })
               }}
               onKeyDown={e => {
                 props.enter(e, "twitter", 13)
