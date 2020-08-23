@@ -1,5 +1,7 @@
 import React from "react"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
@@ -17,9 +19,21 @@ export default props => {
               icon={["fab", "lastfm"]}
               size="4x"
               className="grow-3 live-icon is-lastfm-red-bg is-white-always pointer"
-              onClick={() => props.click("lastfm", 13)}
+              onClick={() => {
+                props.click("lastfm", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "LastFM",
+                })
+              }}
               onKeyDown={e => {
                 props.enter(e, "lastfm", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "LastFM",
+                })
               }}
               role="button"
               tabindex="0"
@@ -51,9 +65,21 @@ export default props => {
               icon={["fab", "github"]}
               size="4x"
               className="grow-3 live-icon is-black-bg is-white pointer"
-              onClick={() => props.click("github", 13)}
+              onClick={() => {
+                props.click("github", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "GitHub",
+                })
+              }}
               onKeyDown={e => {
                 props.enter(e, "github", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "GitHub",
+                })
               }}
               role="button"
               tabindex="0"
@@ -88,9 +114,21 @@ export default props => {
               icon={["fab", "twitter"]}
               size="4x"
               className="grow-3 live-icon is-twitter-blue-bg is-white-always pointer"
-              onClick={() => props.click("twitter", 13)}
+              onClick={() => {
+                props.click("twitter", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "Twitter",
+                })
+              }}
               onKeyDown={e => {
                 props.enter(e, "twitter", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "Twitter",
+                })
               }}
               role="button"
               tabindex="0"
@@ -125,9 +163,21 @@ export default props => {
               icon={faShoePrints}
               size="4x"
               className="grow-3 live-icon is-pink-bg is-white-always pointer"
-              onClick={() => props.click("googlefit", 13)}
+              onClick={() => {
+                props.click("googlefit", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "Google Fit",
+                })
+              }}
               onKeyDown={e => {
                 props.enter(e, "googlefit", 13)
+                trackCustomEvent({
+                  category: "Live Page Hero Link",
+                  action: "click",
+                  label: "Google Fit",
+                })
               }}
               role="button"
               tabindex="0"

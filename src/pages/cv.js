@@ -7,6 +7,7 @@ import CV from "../components/cv/cv"
 import MobileCV from "../components/cv/mobilecv"
 
 import { savePDF } from "@progress/kendo-react-pdf"
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 class CVPage extends React.Component {
   render() {
@@ -37,6 +38,11 @@ class CVPage extends React.Component {
     )
   }
   exportPDFWithMethod = () => {
+    trackCustomEvent({
+      category: "Button",
+      action: "click",
+      label: "CV Download",
+    })
     savePDF(ReactDOM.findDOMNode(this.cv), {
       paperSize: "auto",
       margin: 0,

@@ -1,5 +1,7 @@
 import React from "react"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 export default props => {
   return (
     <>
@@ -25,9 +27,29 @@ export default props => {
                           className={
                             "live-dot is-lastfm-red-bg-always margin-3-tb grow-3 bold pointer"
                           }
-                          onClick={() => props.click("lastfm", i)}
+                          onClick={() => {
+                            props.click("lastfm", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "LastFM " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
+                          }}
                           onKeyDown={e => {
                             props.enter(e, "lastfm", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "LastFM " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
                           }}
                           role="button"
                           tabindex="0"
@@ -44,9 +66,29 @@ export default props => {
                           className={
                             "live-dot is-yellow-bg-always margin-3-tb grow-3 bold pointer"
                           }
-                          onClick={() => props.click("github", i)}
+                          onClick={() => {
+                            props.click("github", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "GitHub " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
+                          }}
                           onKeyDown={e => {
                             props.enter(e, "github", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "GitHub " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
                           }}
                           role="button"
                           tabindex="0"
@@ -63,9 +105,29 @@ export default props => {
                           className={
                             "live-dot is-twitter-blue-bg-always margin-3-tb grow-3 bold pointer"
                           }
-                          onClick={() => props.click("twitter", i)}
+                          onClick={() => {
+                            props.click("twitter", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "Twitter " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
+                          }}
                           onKeyDown={e => {
                             props.enter(e, "twitter", i)
+                            trackCustomEvent({
+                              category: "Live Page Fortnight Link",
+                              action: "click",
+                              label:
+                                "Twitter " +
+                                new Date(
+                                  Date.now() - 13 * 86400000 + i * 86400000
+                                ).formatDDMMYYYY(),
+                            })
                           }}
                           role="button"
                           tabindex="0"

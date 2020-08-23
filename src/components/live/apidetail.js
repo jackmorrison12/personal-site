@@ -5,6 +5,8 @@ import TimeAgo from "react-timeago"
 import { SlideDown } from "react-slidedown"
 import "react-slidedown/lib/slidedown.css"
 
+import { trackCustomEvent } from "gatsby-plugin-google-analytics"
+
 export default props => {
   const itemsPerPage = 5
 
@@ -106,10 +108,22 @@ export default props => {
               <div
                 role="button"
                 tabIndex="0"
-                onClick={e => props.setDisplayDetail(false)}
+                onClick={e => {
+                  props.setDisplayDetail(false)
+                  trackCustomEvent({
+                    category: "Live Page Link",
+                    action: "click",
+                    label: "Close",
+                  })
+                }}
                 onKeyDown={e => {
                   if (e.keyCode === 13) {
                     props.setDisplayDetail(false)
+                    trackCustomEvent({
+                      category: "Live Page Link",
+                      action: "click",
+                      label: "Close",
+                    })
                   }
                 }}
                 className="link is-medium-blue float-right"
