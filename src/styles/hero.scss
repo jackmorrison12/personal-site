@@ -56,3 +56,10 @@
     font-size: 1.5em;
   }
 }
+
+.wave-container {
+  position: relative;
+}
+.wave-container > svg {
+  display: block;
+}

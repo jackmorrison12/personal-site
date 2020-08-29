@@ -26,6 +26,7 @@ export default () => {
     <Layout>
       <SEO title="Home" />
       <Hero recents={recents} />
+      <p>Test</p>
     </Layout>
   )
 }
