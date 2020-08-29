@@ -2,18 +2,18 @@ import React from "react"
 
 import { Twemoji } from "react-emoji-render"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Socials from "./socials"
 
-import Logo from "./logo"
-
-export default () => (
+export default props => (
   <>
-    <div className="row half-height">
-      <div className="col-xs-12 col-md-6 text-align-center">
-        <h1 className="hero-title">
+    <div className="container-small row hero">
+      <div className="col-xs-12 text-align-center">
+        <h1 className="title margin-0 pad-15-t">
           <Twemoji svg text="Hey 👋 I'm Jack" />{" "}
         </h1>
-        <h2>
-          <br />A computing student at{" "}
+        <h2 className="subtitle margin-0">
+          <br />
+          I'm a computing student at{" "}
           <OutboundLink
             className="is-red link"
             href="https://www.imperial.ac.uk/computing"
@@ -23,13 +23,10 @@ export default () => (
             Imperial
           </OutboundLink>
         </h2>
-        <Logo />
+        <div className="pad-5-t">
+          <Socials recents={props.recents} />
+        </div>
       </div>
-      <div className="col-xs-12 col-md-6 is-red-bg is-white">Articles</div>
-    </div>
-    <div className="row half-height">
-      <div className="col-xs-12 col-md-6 is-red-bg is-white">Socials</div>
-      <div className="col-xs-12 col-md-6">Projects</div>
     </div>
   </>
 )
