@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import Hero from "../components/hero/hero"
 import Socials from "../components/hero/socials"
 import ProjectPreviews from "../components/projects/projectpreviewsv2"
+import WritingPreviews from "../components/writing/writingpreviews"
 
 export default () => {
   const [recents, setRecents] = useState([])
@@ -39,6 +40,7 @@ export default () => {
         </div>
         <div className="col-xs-12 col-md-6">
           <h2 className="text-align-center">Articles</h2>
+          <WritingPreviews />
         </div>
       </div>
     </Layout>
