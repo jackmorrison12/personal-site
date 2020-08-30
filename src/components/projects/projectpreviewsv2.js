@@ -16,8 +16,8 @@ class ProjectPreviews extends React.Component {
       <div className="row margin-5-b">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="col-xs-12 col-md-6 margin-3-b">
-              <div className="grow project non-featured is-light-grey-bg">
+            <div className="col-xs-12 margin-3-b">
+              <div className="grow project non-featured is-white-bg">
                 <Link
                   to={"/" + post.frontmatter.fullurl}
                   className=""
@@ -76,7 +76,7 @@ ProjectPreviews.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProjectPreviewsQuery {
+      query ProjectPreviewsv2Query {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___startdate] }
           filter: {

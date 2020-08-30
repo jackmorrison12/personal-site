@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero/hero"
 import Socials from "../components/hero/socials"
+import ProjectPreviews from "../components/projects/projectpreviewsv2"
 
 export default () => {
   const [recents, setRecents] = useState([])
@@ -27,19 +28,17 @@ export default () => {
     <Layout>
       <SEO title="Home" />
       <Hero recents={recents} />
-      <div className="row container-small text-align-center">
-        <div className="col-xs-12">
+      <div className="row container-small">
+        <div className="col-xs-12 text-align-center">
           <h2>Here's some stuff I've been getting up to...</h2>
         </div>
 
         <div className="col-xs-12 col-md-6">
-          <h2>Projects</h2>
+          <h2 className="text-align-center">Projects</h2>
+          <ProjectPreviews />
         </div>
         <div className="col-xs-12 col-md-6">
-          <h2>Articles</h2>
-        </div>
-        <div className="pad-5-t col-xs-12">
-          <Socials recents={recents} showRecents={true} />
+          <h2 className="text-align-center">Articles</h2>
         </div>
       </div>
     </Layout>

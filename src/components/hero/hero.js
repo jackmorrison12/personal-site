@@ -8,7 +8,7 @@ export default props => (
   <>
     <div className="hero">
       <div className="container-small row">
-        <div className="col-xs-12 text-align-center">
+        <div className="col-xs-12 text-align-center is-white-always">
           <h1 className="h-title margin-0 pad-15-t">
             <Twemoji svg text="Hey 👋 I'm Jack" />{" "}
           </h1>
@@ -16,7 +16,7 @@ export default props => (
             <br />
             I'm a computing student at{" "}
             <OutboundLink
-              className="is-white link"
+              className="is-white-always link"
               href="https://www.imperial.ac.uk/computing"
               target="_blank"
               rel="noopener noreferrer"

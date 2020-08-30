@@ -12,7 +12,7 @@ export default props => (
       .map(item => (
         <OutboundLink
           href={item.url}
-          className="is-black pad-2 col-xs-4 col-sm-1"
+          className="is-white-always pad-2 col-xs-4 col-sm-1"
         >
           {props.recents[item.identifier] && props.showRecents ? (
             //Make flaming
