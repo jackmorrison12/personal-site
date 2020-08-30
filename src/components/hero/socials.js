@@ -14,7 +14,7 @@ export default props => (
           href={item.url}
           className="is-black pad-2 col-xs-4 col-sm-1"
         >
-          {props.recents[item.identifier] ? (
+          {props.recents[item.identifier] && props.showRecents ? (
             //Make flaming
             <FontAwesomeIcon
               icon={["fab", item.icon]}
