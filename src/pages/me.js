@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 import Layout from "../components/layout"
@@ -11,7 +11,6 @@ import Music from "../components/me/music"
 import Skydiving from "../components/me/skydiving"
 import Teaching from "../components/me/teaching"
 
-import { SlideDown } from "react-slidedown"
 import "react-slidedown/lib/slidedown.css"
 import { Twemoji } from "react-emoji-render"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
@@ -164,6 +163,20 @@ export default ({ data }) => {
             }
           >
             {sectionSwitch(section)}
+          </div>
+        </div>
+        <div className="is-light-grey-bg">
+          <div className="row pad-3-lr pad-10-tb container">
+            <div className="col-xs-12 col-md-12">
+              <h2 className="text-align-center margin-0-t">
+                Want to learn more?
+              </h2>
+              <Link to="cv">
+                <button className="btn-center is-red-bg is-black is-red-border">
+                  View My CV
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
