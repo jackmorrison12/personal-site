@@ -3,7 +3,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/hero/hero"
-import Socials from "../components/hero/socials"
 import ProjectPreviews from "../components/projects/projectpreviewsv2"
 import WritingPreviews from "../components/writing/writingpreviews"
 
@@ -29,7 +28,7 @@ export default () => (
       method="post"
       netlify-honeypot="bot-field"
       data-netlify="true"
-      name="contact"
+      name="New Homepage"
       className="row text-align-center is-red-bg pad-5"
     >
       <h2 className="col-xs-12">

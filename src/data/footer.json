@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Credits",
+    "link": "/credits",
+    "hidden": false
+  },
+  {
+    "name": "Tools Used",
+    "link": "/tools",
+    "hidden": false
+  },
+  {
+    "name": "Fair Use Policy",
+    "link": "/fair-use",
+    "hidden": false
+  },
+  {
+    "name": "Archive",
+    "link": "/archive",
+    "hidden": false
+  },
+  {
+    "name": "Contact Me",
+    "link": "/contact",
+    "hidden": false
+  }
+]
