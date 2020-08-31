@@ -19,6 +19,8 @@ export const useExperienceData = () => {
                 title
                 subtitle
                 url
+                startdate(formatString: "MMMM YYYY")
+                enddate(formatString: "MMMM YYYY")
                 shorthighlights {
                   highlight
                 }

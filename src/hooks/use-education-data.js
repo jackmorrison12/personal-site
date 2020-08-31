@@ -28,6 +28,8 @@ export const useEducationData = () => {
                   awarder
                   date(formatString: "MMMM YYYY")
                 }
+                startdate(formatString: "MMMM YYYY")
+                enddate(formatString: "MMMM YYYY")
               }
             }
           }

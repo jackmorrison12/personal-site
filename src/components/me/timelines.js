@@ -39,7 +39,7 @@ export const ExperienceTimeline = () => {
             <h4 className="vertical-timeline-element-subtitle">
               {data.subtitle}
             </h4>
-            <h2 className="vertical-timeline-element-title pad-2-b">
+            <h2 className="vertical-timeline-element-title">
               <OutboundLink
                 href={data.url}
                 className="link is-black"
@@ -49,6 +49,9 @@ export const ExperienceTimeline = () => {
                 {data.title}
               </OutboundLink>
             </h2>
+            <h4 className="vertical-timeline-element-subtitle pad-2-b">
+              {data.startdate} - {data.enddate}
+            </h4>
 
             {data.shorthighlights.map(i => (
               <p className="vertical-timeline-element-badge">
@@ -107,7 +110,7 @@ export const EducationTimeline = () => {
             <h4 className="vertical-timeline-element-subtitle">
               {data.subtitle}
             </h4>
-            <h2 className="vertical-timeline-element-title pad-2-b">
+            <h2 className="vertical-timeline-element-title">
               <OutboundLink
                 href={data.url}
                 className="link is-black"
@@ -117,6 +120,9 @@ export const EducationTimeline = () => {
                 {data.title}
               </OutboundLink>
             </h2>
+            <h4 className="vertical-timeline-element-subtitle pad-2-b">
+              {data.startdate} - {data.enddate}
+            </h4>
 
             {data.highlights
               ? data.highlights.map(i => (
