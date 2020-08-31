@@ -4,8 +4,8 @@ export default () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 150">
     <defs>
       <linearGradient id="g1">
-        <stop stop-color="#833ab4" />
-        <stop offset="1" stop-color="#fd1d1d" />
+        <stop stop-color="#ff5e00" />
+        <stop offset="1" stop-color="#f83600" />
       </linearGradient>
     </defs>
     <path

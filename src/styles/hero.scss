@@ -48,14 +48,10 @@
 }
 
 .hero {
-  background: linear-gradient(
-    90deg,
-    rgba(131, 58, 180, 1) 0%,
-    rgba(253, 29, 29, 1) 100%
-  );
+  background: linear-gradient(90deg, #ff5e00 0%, #f83600 100%);
 
   .h-title {
-    font-size: 3em;
+    font-size: 5em;
   }
 
   .h-subtitle {

@@ -13,7 +13,7 @@ export default () => (
     <Hero />
     <div className="row container-small">
       <div className="col-xs-12 text-align-center">
-        <h2>Here's some stuff I've been getting up to...</h2>
+        <h2>Here's some stuff I've been working on...</h2>
       </div>
 
       <div className="col-xs-12 col-md-6">

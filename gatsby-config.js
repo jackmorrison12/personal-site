@@ -102,7 +102,7 @@ module.exports = {
         short_name: `Jack Morrison | Personal Website`,
         start_url: `/`,
         background_color: `black`,
-        theme_color: `#f4442e`,
+        theme_color: `#f83600`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },

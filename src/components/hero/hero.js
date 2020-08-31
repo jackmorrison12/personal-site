@@ -14,8 +14,7 @@ export default () => (
             <Twemoji svg text="Hey 👋 I'm Jack" />{" "}
           </h1>
           <h2 className="h-subtitle margin-0">
-            <br />
-            I'm a computing student at{" "}
+            I'm a Computing Student at{" "}
             <OutboundLink
               className="is-white-always link"
               href="https://www.imperial.ac.uk/computing"
