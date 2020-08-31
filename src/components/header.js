@@ -13,7 +13,7 @@ export default ({ data }) => {
 
   return (
     <header>
-      <div className="is-white-bg pad-5 nav">
+      <div className="is-white-bg pad-5 nav" id="nav">
         <div className="row flex padding-0-tb container-small mobile-hide">
           <div className="col-xs-12">
             <div className="row flex text-align-center content-center">

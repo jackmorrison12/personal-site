@@ -101,8 +101,8 @@ export default props => {
 
   return (
     <>
-      <SlideDown closed={!props.displayDetail}>
-        <div className=" pad-10-t pad-3-lr is-white-bg ">
+      <div id="results" className={props.displayDetail ? "" : "hidden"}>
+        <div className=" pad-10-t pad-3-lr is-white-bg">
           <div className="row container">
             <div className="col-xs-12 col-md-12">
               <div
@@ -115,6 +115,9 @@ export default props => {
                     action: "click",
                     label: "Close",
                   })
+                  document.getElementById("nav").scrollIntoView({
+                    behavior: "smooth",
+                  })
                 }}
                 onKeyDown={e => {
                   if (e.keyCode === 13) {
@@ -123,6 +126,9 @@ export default props => {
                       category: "Live Page Link",
                       action: "click",
                       label: "Close",
+                    })
+                    document.getElementById("nav").scrollIntoView({
+                      behavior: "smooth",
                     })
                   }
                 }}
@@ -150,7 +156,7 @@ export default props => {
             </div>
           </div>
         </div>
-      </SlideDown>
+      </div>
     </>
   )
 }

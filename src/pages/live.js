@@ -72,7 +72,7 @@ const LivePage = () => {
       .catch(error => console.log("error", error))
   }, [])
 
-  let click = (api, date) => {
+  let click = async (api, date) => {
     var myHeaders = new Headers()
     myHeaders.append("Content-Type", "application/x-www-form-urlencoded")
 
@@ -102,6 +102,11 @@ const LivePage = () => {
     setSelectedAPI(api)
     setSelectedDate(date)
     setDisplayDetail(true)
+    await new Promise(r => setTimeout(r, 20))
+
+    document.getElementById("results").scrollIntoView({
+      behavior: "smooth",
+    })
   }
 
   let enter = (e, api, date) => {
@@ -128,7 +133,6 @@ const LivePage = () => {
       />
 
       <FortnightView click={click} enter={enter} summary={summary} />
-
       <APIDetail
         displayDetail={displayDetail}
         setDisplayDetail={setDisplayDetail}
@@ -138,7 +142,6 @@ const LivePage = () => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-
       <StaticStats />
       <WhatIs />
     </Layout>

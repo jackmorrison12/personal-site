@@ -44,13 +44,18 @@ export default ({ data }) => {
       <span
         role="button"
         tabIndex="0"
-        onClick={e => {
+        onClick={async e => {
           setSection(link)
           setOpen(true)
           trackCustomEvent({
             category: "Me Page Link",
             action: "click",
             label: text,
+          })
+          await new Promise(r => setTimeout(r, 20))
+
+          document.getElementById("results").scrollIntoView({
+            behavior: "smooth",
           })
         }}
         onKeyDown={e => {
@@ -61,6 +66,9 @@ export default ({ data }) => {
               category: "Me Page Link",
               action: "click",
               label: text,
+            })
+            document.getElementById("results").scrollIntoView({
+              behavior: "smooth",
             })
           }
         }}
@@ -110,7 +118,7 @@ export default ({ data }) => {
           </div>
         </div>
       </div>
-      <SlideDown closed={!open}>
+      <div id="results" className={open ? "" : "hidden"}>
         <div className="is-white-bg">
           <div className="row pad-10-t pad-3-lr container">
             <div className="col-xs-12 col-md-12">
@@ -124,6 +132,9 @@ export default ({ data }) => {
                     action: "click",
                     label: "Close",
                   })
+                  document.getElementById("nav").scrollIntoView({
+                    behavior: "smooth",
+                  })
                 }}
                 onKeyDown={e => {
                   if (e.keyCode === 13) {
@@ -132,6 +143,9 @@ export default ({ data }) => {
                       category: "Me Page Link",
                       action: "click",
                       label: "Close",
+                    })
+                    document.getElementById("nav").scrollIntoView({
+                      behavior: "smooth",
                     })
                   }
                 }}
@@ -152,7 +166,7 @@ export default ({ data }) => {
             {sectionSwitch(section)}
           </div>
         </div>
-      </SlideDown>
+      </div>
     </Layout>
   )
 }
