@@ -1,7 +1,7 @@
 ---
 type: education
 title: The Billericay School
-slug: /education/imperial
+slug: imperial
 cv: false
 hidden: false
 subtitle: Secondary School

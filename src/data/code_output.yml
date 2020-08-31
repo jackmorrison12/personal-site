@@ -2,11 +2,11 @@
 header:
   url: https://github.com/boyter/scc/
   version: 2.12.0
-  elapsed_seconds: 0.054
+  elapsed_seconds: 0.043000000000000003
   n_files: 148
   n_lines: 10114
-  files_per_second: 2740.740740740741
-  lines_per_second: 187296.2962962963
+  files_per_second: 3441.8604651162786
+  lines_per_second: 235209.30232558138
 JSON:
   name: JSON
   code: 545

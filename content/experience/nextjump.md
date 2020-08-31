@@ -1,7 +1,7 @@
 ---
 type: experience
 title: Nextjump
-slug: /experience/nextjump
+slug: nextjump
 cv: true
 hidden: false
 subtitle: Software Engineering Intern

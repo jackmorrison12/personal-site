@@ -1,7 +1,7 @@
 ---
 type: education
 title: Westcliff High School for Boys
-slug: /education/whsb
+slug: whsb
 cv: true
 hidden: false
 subtitle: Sixth Form

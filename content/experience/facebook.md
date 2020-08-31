@@ -1,7 +1,7 @@
 ---
 type: experience
 title: Facebook
-slug: /experience/facebook
+slug: facebook
 cv: true
 hidden: false
 subtitle: Hack-a-Project Participant

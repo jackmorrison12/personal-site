@@ -1,7 +1,7 @@
 ---
 type: experience
 title: MyTutor
-slug: /experience/mytutor
+slug: mytutor
 cv: true
 hidden: false
 subtitle: Mathematics and Computing Tutor

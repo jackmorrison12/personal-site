@@ -1,7 +1,7 @@
 ---
 type: education
 title: Imperial College London
-slug: /education/imperial
+slug: imperial
 cv: true
 hidden: false
 subtitle: MEng Computing
