@@ -5,7 +5,7 @@ import { OutboundLink } from "gatsby-plugin-google-analytics"
 import Socials from "./socials"
 import Wave from "./wave"
 
-export default props => (
+export default () => (
   <>
     <div className="hero">
       <div className="container-small row">
@@ -26,7 +26,7 @@ export default props => (
             </OutboundLink>
           </h2>
           <div className="pad-5-t">
-            <Socials recents={props.recents} showRecents={false} />
+            <Socials showRecents={false} />
           </div>
         </div>
       </div>
