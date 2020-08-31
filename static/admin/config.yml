@@ -248,3 +248,15 @@ collections:
           fields: [{ label: "Highlight", name: "highlight", widget: "string" }],
         }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "miscellaneous"
+    label: "Miscellaneous"
+    description: "Miscellaneous pieces of markdown"
+    folder: "content/misc"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "misc" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
