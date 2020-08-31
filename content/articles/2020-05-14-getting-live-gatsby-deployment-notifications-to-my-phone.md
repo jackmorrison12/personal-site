@@ -6,6 +6,7 @@ slug: gatsby-notifications
 date: 2020-05-13T23:49:09.865Z
 hidden: false
 hero: /img/gatsby-notifications.png
+logo: /img/gatsby-notifications-logo.png
 description: Getting Live Gatsby Deployment Notifications to my Phone
 topics:
   - Gatsby

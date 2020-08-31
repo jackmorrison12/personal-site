@@ -6,6 +6,7 @@ slug: github-project-subdomains
 date: 2020-06-23T22:26:37.457Z
 hidden: false
 hero: /img/github-project-subdomains.png
+logo: /img/github-project-subdomains-logo.png
 description: A guide on how I hosted old versions of my site under subdomains of jackmorrison.xyz
 topics:
   - Netlify DNS

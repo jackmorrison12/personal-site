@@ -24,9 +24,14 @@ class ProjectPreviews extends React.Component {
                   id="path"
                 >
                   <div className="row">
-                    <div className="col-sm-4 pad-0">
+                    <div className="col-xs-12 pad-0 mobile-show">
                       <Img
                         fluid={post.frontmatter.hero.childImageSharp.fluid}
+                      />
+                    </div>
+                    <div className="col-sm-4 pad-0 mobile-hide">
+                      <Img
+                        fluid={post.frontmatter.logo.childImageSharp.fluid}
                       />
                     </div>
                     <div className="col-xs-12 col-sm-8">
@@ -42,7 +47,9 @@ class ProjectPreviews extends React.Component {
                           {post.frontmatter.date}
                         </p>
                         <div className="line-sm is-black margin-3-b" />
-                        <p className="margin-0 is-black">{post.excerpt}</p>
+                        <p className="margin-0 is-black">
+                          {post.frontmatter.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -83,12 +90,20 @@ export default () => (
               frontmatter {
                 fullurl
                 title
+                description
                 totalposts
                 type
                 date(formatString: "MMMM DD, YYYY")
                 startdate(formatString: "MMMM DD, YYYY")
                 enddate(formatString: "MMMM DD, YYYY")
                 hero {
+                  childImageSharp {
+                    fluid(maxWidth: 1000) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                logo {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
                       ...GatsbyImageSharpFluid
