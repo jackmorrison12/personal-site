@@ -32,7 +32,7 @@ export default props => {
             href={item.url}
             className="is-white-always pad-2 col-xs-4 col-sm-1"
           >
-            {props.showRecents && recents[item.identifier] ? (
+            {recents[item.identifier] ? (
               //Make flaming
               <FontAwesomeIcon
                 icon={["fab", item.icon]}
