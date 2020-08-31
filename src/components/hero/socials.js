@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react"
 
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import socials from "../../data/socials.json"
+library.add(fab)
 
 export default props => {
   const [recents, setRecents] = useState([])
