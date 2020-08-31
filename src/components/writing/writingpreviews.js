@@ -16,8 +16,8 @@ class ProjectPreviews extends React.Component {
       <div className="row margin-5-b">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="col-xs-12 col-md-6 margin-3-b">
-              <div className="grow project non-featured is-light-grey-bg">
+            <div className="col-xs-12 margin-3-b">
+              <div className="grow project non-featured is-white-bg">
                 <Link
                   to={"/" + post.frontmatter.fullurl}
                   className=""
@@ -26,12 +26,12 @@ class ProjectPreviews extends React.Component {
                   <div className="row">
                     <div className="col-xs-12 pad-0 mobile-show">
                       <Img
-                        fluid={post.frontmatter.banner.childImageSharp.fluid}
+                        fluid={post.frontmatter.hero.childImageSharp.fluid}
                       />
                     </div>
                     <div className="col-sm-4 pad-0 mobile-hide">
                       <Img
-                        fluid={post.frontmatter.hero.childImageSharp.fluid}
+                        fluid={post.frontmatter.logo.childImageSharp.fluid}
                       />
                     </div>
                     <div className="col-xs-12 col-sm-8">
@@ -40,19 +40,15 @@ class ProjectPreviews extends React.Component {
                           {post.frontmatter.title}
                         </h2>
                         <p className=" margin-0-t margin-2-b is-black bold">
-                          {post.frontmatter.startdate !==
-                          post.frontmatter.enddate
-                            ? post.frontmatter.startdate +
-                              " - " +
-                              post.frontmatter.enddate
-                            : post.frontmatter.startdate}
+                          {post.frontmatter.startdate &&
+                          post.frontmatter.startdate !== post.frontmatter.date
+                            ? post.frontmatter.startdate + " - "
+                            : ""}
+                          {post.frontmatter.date}
                         </p>
                         <div className="line-sm is-black margin-3-b" />
                         <p className="margin-0 is-black">
                           {post.frontmatter.description}
-                        </p>
-                        <p className="margin-0 is-red">
-                          {post.frontmatter.tech.map(item => item).join(", ")}
                         </p>
                       </div>
                     </div>
@@ -76,23 +72,30 @@ ProjectPreviews.propTypes = {
 export default () => (
   <StaticQuery
     query={graphql`
-      query ProjectPreviewsQuery {
+      query WritingPreviewsQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___startdate] }
+          sort: { order: DESC, fields: [frontmatter___date] }
           filter: {
-            fileAbsolutePath: { regex: "/projects/" }
-            frontmatter: { homepage: { eq: true } }
+            frontmatter: {
+              type: { regex: "/article|series/" }
+              hidden: { eq: false }
+            }
           }
           limit: 2
         ) {
           edges {
             node {
+              excerpt(pruneLength: 200)
               id
               frontmatter {
                 fullurl
                 title
                 description
-                tech
+                totalposts
+                type
+                date(formatString: "MMMM DD, YYYY")
+                startdate(formatString: "MMMM DD, YYYY")
+                enddate(formatString: "MMMM DD, YYYY")
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
@@ -100,7 +103,7 @@ export default () => (
                     }
                   }
                 }
-                banner {
+                logo {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
                       ...GatsbyImageSharpFluid
