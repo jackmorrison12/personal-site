@@ -154,14 +154,7 @@ export default ({ data }) => {
               </div>
             </div>
           </div>
-          <div
-            className={
-              "row pad-10-b pad-3-lr " +
-              (section === "EXPERIENCE" || section === "EDUCATION"
-                ? ""
-                : "container")
-            }
-          >
+          <div className="row pad-10-b pad-3-lr container">
             {sectionSwitch(section)}
           </div>
         </div>

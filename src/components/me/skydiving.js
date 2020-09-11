@@ -1,6 +1,7 @@
 import React from "react"
 import { Twemoji } from "react-emoji-render"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import SkydivingPic from "./skydiving-pic"
 
 export default () => (
   <>
@@ -19,16 +20,14 @@ export default () => (
         </OutboundLink>
         .
         <br />
-        Unfortunately, due to Covid-19, I didn't get to go on the annual trip to
-        start my AFF course <Twemoji svg text="😪" />
-        . However I'm planning to start it this summer, so check back for
-        updates!
+        I've been completing my AFF course this summer & hope to get my
+        A-License soon!
         <br />
         I'm also the Skydiving Society Secretary for the 2020-21 year.
       </p>
     </div>
     <div className="col-xs-12 col-md-6 text-align-center">
-      <p>*Insert photo here of me (eventually) skydiving*</p>
+      <SkydivingPic />
     </div>
   </>
 )
