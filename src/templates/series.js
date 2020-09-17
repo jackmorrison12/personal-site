@@ -122,7 +122,11 @@ export const pageQuery = graphql`
     blogposts: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
-        frontmatter: { blogseries: { eq: $slug }, baseurl: { eq: $baseurl } }
+        frontmatter: {
+          blogseries: { eq: $slug }
+          baseurl: { eq: $baseurl }
+          hidden: { eq: false }
+        }
       }
     ) {
       edges {
@@ -134,7 +138,7 @@ export const pageQuery = graphql`
             series
             entry
             description
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMM DD, YYYY")
             fullurl
           }
         }

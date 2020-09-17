@@ -102,7 +102,8 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
           innernode.frontmatter &&
           innernode.frontmatter.type &&
           innernode.frontmatter.type === "blog" &&
-          innernode.frontmatter.blogseries === node.frontmatter.slug
+          innernode.frontmatter.blogseries === node.frontmatter.slug &&
+          !innernode.frontmatter.hidden
         )
       })
       function compare(a, b) {
