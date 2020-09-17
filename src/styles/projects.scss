@@ -82,6 +82,10 @@
     font-style: italic;
   }
 
+  .gatsby-resp-image-image {
+    border-radius: 15px;
+  }
+
   @media only screen and (max-width: 46em) {
     // .caption {
     //   padding-left: 0;

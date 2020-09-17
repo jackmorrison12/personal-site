@@ -54,7 +54,7 @@ export default function Template({
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="line margin-5-tb is-red" />
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-5 rounded">
             <div>
               <Img fluid={frontmatter.hero.childImageSharp.fluid} />
             </div>

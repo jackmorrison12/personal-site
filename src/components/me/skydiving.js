@@ -26,7 +26,7 @@ export default () => (
         I'm also the Skydiving Society Secretary for the 2020-21 year.
       </p>
     </div>
-    <div className="col-xs-12 col-md-6 text-align-center">
+    <div className="col-xs-12 col-md-6 text-align-center rounded">
       <SkydivingPic />
     </div>
   </>

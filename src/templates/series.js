@@ -53,7 +53,7 @@ export default function Template({
             <div className="line margin-5-tb is-red" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
-          <div className="col-xs-12 col-md-5">
+          <div className="col-xs-12 col-md-5 rounded">
             <div>
               <Img fluid={frontmatter.hero.childImageSharp.fluid} />
             </div>

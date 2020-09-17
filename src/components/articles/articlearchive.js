@@ -17,7 +17,7 @@ class ArticleArchive extends React.Component {
       posts.map(({ node: post }) => (
         <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
           <div className="grow row margin-5-b">
-            <div className="col-xs-12 col-md-5 margin-5-t">
+            <div className="col-xs-12 col-md-5 margin-5-t rounded">
               <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
             </div>
             <div className="col-xs-12 col-md-6 margin-5-t">

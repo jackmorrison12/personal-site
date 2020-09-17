@@ -22,7 +22,7 @@ class ArticleRoll extends React.Component {
               id="path"
             >
               <div className="row">
-                <div className="col-xs-12 col-sm-6 col-md-4 margin-5-t">
+                <div className="col-xs-12 col-sm-6 col-md-4 margin-5-t rounded">
                   <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">

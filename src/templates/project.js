@@ -46,7 +46,7 @@ export default function Template({
             <div className="line margin-5-tb is-red" />
           </div>
           <div className="col-xs-12 col-sm-3 pad-3-lr pad-5-b">
-            <div className="pad-3-lr pad-1-tb is-white-bg">
+            <div className="pad-3-lr pad-1-tb is-white-bg rounded">
               {frontmatter.sources ? (
                 <p>
                   Source code/examples can be found on{" "}
@@ -105,12 +105,12 @@ export default function Template({
             </div>
           </div>
           <div className="col-xs-12 mobile-show">
-            <div className="margin-auto pad-3-lr">
+            <div className="margin-auto pad-3-lr rounded">
               <Img fluid={frontmatter.banner.childImageSharp.fluid} />
             </div>
           </div>
           <div className="col-sm-2 mobile-hide">
-            <div className="margin-auto">
+            <div className="margin-auto rounded">
               <Img fluid={frontmatter.hero.childImageSharp.fluid} />
             </div>
           </div>

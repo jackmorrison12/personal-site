@@ -75,7 +75,7 @@ export default props => {
         {topAlbums.map((item, i) => (
           <div className="col-xs-6 col-sm-2">
             <OutboundLink href={item.url}>
-              <div className="grow">
+              <div className="grow rounded">
                 <Img fluid={albumImages[i].childImageSharp.fluid} />
               </div>
               <p className="link bold is-yellow text-align-center margin-0-b">

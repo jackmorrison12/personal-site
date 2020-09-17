@@ -22,15 +22,10 @@ class WritingRoll extends React.Component {
               id="path"
             >
               <div className="row">
-                <div className="col-xs-12 col-sm-6 col-md-4 margin-5-t">
+                <div className="col-xs-12 col-sm-6 col-md-4 margin-5-t rounded">
                   <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">
-                  <span class="is-red-bg pad-1 is-white float-right mobile-hide">
-                    {post.frontmatter.type === "series"
-                      ? "Blog Series"
-                      : "Article"}
-                  </span>
                   <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
                   <p className="margin-0 margin-2-b is-black">
                     {post.frontmatter.startdate &&
@@ -39,11 +34,11 @@ class WritingRoll extends React.Component {
                       : ""}
                     {post.frontmatter.date}
                   </p>
-                  <span class="is-red-bg pad-1 is-white mobile-show-inline-block margin-2-b">
+                  <div class="is-red-bg pad-1 is-white margin-2-b width-fit rounded">
                     {post.frontmatter.type === "series"
                       ? "Blog Series"
                       : "Article"}
-                  </span>
+                  </div>
                   <div className="line-sm is-black margin-3-b" />
                   <p className="margin-0 is-black">{post.excerpt}</p>
                   {post.frontmatter.totalposts ? (
