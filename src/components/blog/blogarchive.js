@@ -52,7 +52,9 @@ export default () => (
       query BlogArchiveQuery {
         allMarkdownRemark(
           sort: { order: DESC, fields: [frontmatter___date] }
-          filter: { fileAbsolutePath: { regex: "/blog/" } }
+          filter: {
+            frontmatter: { type: { regex: "/blog/" }, hidden: { eq: false } }
+          }
         ) {
           edges {
             node {
