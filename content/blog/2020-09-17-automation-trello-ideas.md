@@ -2,7 +2,7 @@
 type: blog
 baseurl: "/blog/"
 blogseries: automation
-title: Recording ideas
+title: Recording Ideas
 slug: trello-ideas
 date: 2020-09-17T20:30:00.000Z
 hidden: true
@@ -16,4 +16,4 @@ topics:
 
 Don't you hate it when you're lying in bed, and you come up with a brilliant idea. The next big thing. You contemplate writing it down somewhere, but it's so amazing, you think "Why bother? I'll definitely remember it in the morning!". Then morning comes, and you can't remember it at all.
 
-Worse. Feeling. Ever.
+<span class="is-red">**Worst. Feeling. Ever.**</span>
