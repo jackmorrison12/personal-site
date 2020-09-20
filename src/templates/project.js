@@ -50,7 +50,7 @@ export default function Template({
               <div className="margin-0 margin-2-t pad-1-l flex flex-wrap">
                 {frontmatter.sources.map(item => (
                   <OutboundLink href={item.url}>
-                    <div class="is-medium-blue-bg is-white margin-1-r tag margin-2-b">
+                    <div class="is-medium-blue-bg is-white margin-1-r tag margin-2-b grow-2">
                       {item.name}
                     </div>
                   </OutboundLink>
