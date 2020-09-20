@@ -48,13 +48,15 @@ export default function Template({
           <div className="col-xs-12 col-sm-3 pad-3-lr pad-5-b">
             <div className="pad-3-lr pad-1-tb is-white-bg rounded">
               <div className="margin-0 margin-2-t pad-1-l flex flex-wrap">
-                {frontmatter.sources.map(item => (
-                  <OutboundLink href={item.url}>
-                    <div class="is-medium-blue-bg is-white margin-1-r tag margin-2-b grow-2">
-                      {item.name}
-                    </div>
-                  </OutboundLink>
-                ))}
+                {frontmatter.sources
+                  ? frontmatter.sources.map(item => (
+                      <OutboundLink href={item.url}>
+                        <div class="is-medium-blue-bg is-white margin-1-r tag margin-2-b grow-2">
+                          {item.name}
+                        </div>
+                      </OutboundLink>
+                    ))
+                  : ""}
               </div>
               <div className="margin-0 pad-1-l flex flex-wrap">
                 {frontmatter.tags.map(item => (
