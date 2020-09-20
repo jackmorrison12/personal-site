@@ -25,6 +25,13 @@ class ArticleArchive extends React.Component {
               <p className="margin-0 margin-2-b is-black">
                 {post.frontmatter.date}
               </p>
+              <div className="margin-0 margin-1-t flex flex-wrap">
+                {post.frontmatter.tags.map(item => (
+                  <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                    {item}
+                  </div>
+                ))}
+              </div>
               <div className="line-sm is-black margin-3-b" />
               <p className="margin-0 is-black">{post.excerpt}</p>
             </div>
@@ -59,6 +66,7 @@ export default () => (
                 fullurl
                 title
                 date(formatString: "MMMM DD, YYYY")
+                tags
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {

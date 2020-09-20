@@ -34,10 +34,17 @@ class WritingRoll extends React.Component {
                       : ""}
                     {post.frontmatter.date}
                   </p>
-                  <div class="is-red-bg is-white margin-2-b width-fit tag">
-                    {post.frontmatter.type === "series"
-                      ? "Blog Series"
-                      : "Article"}
+                  <div className="margin-0 margin-1-t flex flex-wrap">
+                    <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                      {post.frontmatter.type === "series"
+                        ? "Blog Series"
+                        : "Article"}
+                    </div>
+                    {post.frontmatter.tags.map(item => (
+                      <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                        {item}
+                      </div>
+                    ))}
                   </div>
                   <div className="line-sm is-black margin-3-b" />
                   <p className="margin-0 is-black">{post.excerpt}</p>
@@ -93,6 +100,7 @@ export default () => (
                 title
                 totalposts
                 type
+                tags
                 date(formatString: "MMMM DD, YYYY")
                 startdate(formatString: "MMMM DD, YYYY")
                 enddate(formatString: "MMMM DD, YYYY")

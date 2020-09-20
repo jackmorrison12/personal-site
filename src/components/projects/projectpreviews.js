@@ -51,9 +51,13 @@ class ProjectPreviews extends React.Component {
                         <p className="margin-0 is-black">
                           {post.frontmatter.description}
                         </p>
-                        <p className="margin-0 is-red">
-                          {post.frontmatter.tags.map(item => item).join(", ")}
-                        </p>
+                        <div className="margin-0 margin-1-t flex flex-wrap">
+                          {post.frontmatter.tags.map(item => (
+                            <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                              {item}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>

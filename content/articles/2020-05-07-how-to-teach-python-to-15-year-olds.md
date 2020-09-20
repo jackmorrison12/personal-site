@@ -1,7 +1,7 @@
 ---
 type: article
 baseurl: "/articles/"
-title: How to teach Python to 15 year olds
+title: Teaching Python to 15 year olds
 slug: teach-python
 date: 2020-07-14T21:10:34.448Z
 hidden: false

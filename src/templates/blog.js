@@ -52,6 +52,11 @@ export default function Template({
               </h3>
             </Link>
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
+            <div className="margin-0 margin-1-t flex flex-wrap">
+              {frontmatter.tags.map(item => (
+                <div class="is-red-bg is-white margin-2-b margin-1-r tag">{item}</div>
+              ))}
+            </div>
             <div className="line margin-5-tb is-red" />
           </div>
           <div className="col-xs-12 col-md-5 rounded">
@@ -84,6 +89,7 @@ export const pageQuery = graphql`
         totalentries
         blogseries
         baseurl
+        tags
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {

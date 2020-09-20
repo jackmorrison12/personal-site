@@ -39,9 +39,9 @@ class ProjectRoll extends React.Component {
                             post.frontmatter.enddate
                           : post.frontmatter.startdate}
                       </p>
-                      <p className="margin-0 margin-2-b margin-1-t flex">
+                      <p className="margin-0 margin-1-t flex flex-wrap">
                         {post.frontmatter.tags.map(item => (
-                          <div class="is-red-bg is-white margin-1-r tag">
+                          <div class="is-red-bg is-white margin-2-b margin-1-r tag">
                             {item}
                           </div>
                         ))}
@@ -90,13 +90,13 @@ class ProjectRoll extends React.Component {
                                 post.frontmatter.enddate
                               : post.frontmatter.startdate}
                           </p>
-                          <p className="margin-0 margin-2-b margin-1-t flex">
+                          <div className="margin-0 margin-1-t flex flex-wrap">
                             {post.frontmatter.tags.map(item => (
-                              <div class="is-red-bg is-white margin-1-r tag">
+                              <div class="is-red-bg is-white margin-2-b margin-1-r tag">
                                 {item}
                               </div>
                             ))}
-                          </p>
+                          </div>
                           <div className="line-sm is-black margin-3-b" />
                           <p className="margin-0 is-black">
                             {post.frontmatter.description}

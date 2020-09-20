@@ -50,6 +50,13 @@ export default function Template({
                 ? "1 post"
                 : "No posts"}
             </h6>
+            <div className="margin-0 margin-1-t flex flex-wrap">
+              {frontmatter.tags.map(item => (
+                <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                  {item}
+                </div>
+              ))}
+            </div>
             <div className="line margin-5-tb is-red" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
@@ -109,6 +116,7 @@ export const pageQuery = graphql`
         startdate(formatString: "MMMM DD, YYYY")
         enddate(formatString: "MMMM DD, YYYY")
         totalposts
+        tags
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {

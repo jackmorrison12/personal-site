@@ -47,61 +47,22 @@ export default function Template({
           </div>
           <div className="col-xs-12 col-sm-3 pad-3-lr pad-5-b">
             <div className="pad-3-lr pad-1-tb is-white-bg rounded">
-              {frontmatter.sources ? (
-                <p>
-                  Source code/examples can be found on{" "}
-                  {frontmatter.sources
-                    .map(item => (
-                      <span className="link">
-                        <OutboundLink href={item.url}>{item.name}</OutboundLink>
-                      </span>
-                    ))
-                    .reduce((acc, curr, i) =>
-                      i !== 0
-                        ? [
-                            acc,
-                            `${
-                              Object.entries(frontmatter.sources).length - 1 ===
-                              i
-                                ? ` and`
-                                : ", "
-                            }
-                  `,
-                            curr,
-                          ]
-                        : curr
-                    )}
-                </p>
-              ) : (
-                ""
-              )}
-
-              {frontmatter.tags ? (
-                <p>
-                  Written using{" "}
-                  {frontmatter.tags
-                    .map((item, i) => (
-                      <span key={i} className="is-red">
-                        {item}
-                      </span>
-                    ))
-                    .reduce((acc, curr, i) =>
-                      i !== 0
-                        ? [
-                            acc,
-                            `${
-                              Object.entries(frontmatter.tags).length - 1 === i
-                                ? ` and  `
-                                : ", "
-                            }`,
-                            curr,
-                          ]
-                        : curr
-                    )}{" "}
-                </p>
-              ) : (
-                ""
-              )}
+              <div className="margin-0 margin-2-t pad-1-l flex flex-wrap">
+                {frontmatter.sources.map(item => (
+                  <OutboundLink href={item.url}>
+                    <div class="is-medium-blue-bg is-white margin-1-r tag margin-2-b">
+                      {item.name}
+                    </div>
+                  </OutboundLink>
+                ))}
+              </div>
+              <div className="margin-0 pad-1-l flex flex-wrap">
+                {frontmatter.tags.map(item => (
+                  <div class="is-red-bg is-white margin-1-r tag margin-2-b">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="col-xs-12 mobile-show">
