@@ -11,8 +11,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ArticlePreviews from "../components/articles/articlepreviews"
 import BlogPreviews from "../components/blog/blogpreviews"
-import ProjectPreviews from "../components/projects/projectpreviewsv2"
-import WritingPreviews from "../components/writing/writingpreviews"
+import ProjectPreviews from "../components/projects/projectpreviews"
 
 import socials from "../data/socials.json"
 library.add(fab)
@@ -64,13 +63,40 @@ export default () => {
       </div>
       <div className="is-red-bg is-black diagonal-box">
         <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
-          <div className="col-xs-12 col-md-6">
-            <h2 className="text-align-center">Projects</h2>
+          <div className="col-xs-12">
+            <h2>
+              <Link to="/projects" className="link is-black">
+                Projects
+              </Link>{" "}
+              I've been working on
+            </h2>
             <ProjectPreviews />
           </div>
-          <div className="col-xs-12 col-md-6">
-            <h2 className="text-align-center">Articles</h2>
-            <WritingPreviews />
+        </div>
+      </div>
+      <div className="is-light-grey-bg is-black diagonal-box">
+        <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
+          <div className="col-xs-12">
+            <h2>
+              My Latest{" "}
+              <Link to="/articles" className="link is-black">
+                Articles
+              </Link>
+            </h2>
+            <ArticlePreviews />
+          </div>
+        </div>
+      </div>
+      <div className="is-red-bg is-black diagonal-box">
+        <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
+          <div className="col-xs-12">
+            <h2>
+              My Latest{" "}
+              <Link to="/blog" className="link is-black">
+                Blog Posts
+              </Link>
+            </h2>
+            <BlogPreviews />
           </div>
         </div>
       </div>
