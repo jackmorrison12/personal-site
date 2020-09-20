@@ -32,19 +32,23 @@ class ProjectRoll extends React.Component {
                       <h2 className="is-red margin-0">
                         {post.frontmatter.title}
                       </h2>
-                      <p className=" margin-0-t margin-2-b is-black bold">
+                      <p className=" margin-0-tb is-black bold">
                         {post.frontmatter.startdate !== post.frontmatter.enddate
                           ? post.frontmatter.startdate +
                             " - " +
                             post.frontmatter.enddate
                           : post.frontmatter.startdate}
                       </p>
+                      <p className="margin-0 margin-2-b margin-1-t flex">
+                        {post.frontmatter.tags.map(item => (
+                          <div class="is-red-bg is-white margin-1-r tag">
+                            {item}
+                          </div>
+                        ))}
+                      </p>
                       <div className="line-sm is-black margin-3-b" />
                       <p className="margin-0 is-black">
                         {post.frontmatter.description}
-                      </p>
-                      <p className="margin-0 is-red">
-                        {post.frontmatter.tags.map(item => item).join(", ")}
                       </p>
                     </div>
                   </Link>
@@ -78,7 +82,7 @@ class ProjectRoll extends React.Component {
                           <h2 className="is-red margin-0">
                             {post.frontmatter.title}
                           </h2>
-                          <p className=" margin-0-t margin-2-b is-black bold">
+                          <p className=" margin-0-tb is-black bold">
                             {post.frontmatter.startdate !==
                             post.frontmatter.enddate
                               ? post.frontmatter.startdate +
@@ -86,12 +90,16 @@ class ProjectRoll extends React.Component {
                                 post.frontmatter.enddate
                               : post.frontmatter.startdate}
                           </p>
+                          <p className="margin-0 margin-2-b margin-1-t flex">
+                            {post.frontmatter.tags.map(item => (
+                              <div class="is-red-bg is-white margin-1-r tag">
+                                {item}
+                              </div>
+                            ))}
+                          </p>
                           <div className="line-sm is-black margin-3-b" />
                           <p className="margin-0 is-black">
                             {post.frontmatter.description}
-                          </p>
-                          <p className="margin-0 is-red">
-                            {post.frontmatter.tags.map(item => item).join(", ")}
                           </p>
                         </div>
                       </div>
