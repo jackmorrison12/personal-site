@@ -22,7 +22,7 @@ sources:
     url: https://github.com/et-tamen-compilat/medical-image-computing
     icon: fab fa-github
   - url: https://www.doc.ic.ac.uk/~jce317/
-    name: at this link
+    name: Website Link
     icon: fas fa-link
 highlights:
   - highlight: Researched the uses of AI in Medical Imaging Analysis, e.g. Image Segmentation
