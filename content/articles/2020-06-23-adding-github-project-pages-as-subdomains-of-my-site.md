@@ -8,7 +8,7 @@ hidden: false
 hero: /img/github-project-subdomains.png
 logo: /img/github-project-subdomains-logo.png
 description: A guide on how I hosted old versions of my site under subdomains of jackmorrison.xyz
-topics:
+tags:
   - Netlify DNS
   - Gatsby
   - GitHub Pages

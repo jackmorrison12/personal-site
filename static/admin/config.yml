@@ -46,7 +46,7 @@ collections:
       - { label: "Hero Image", name: "hero", widget: "image", required: false }
       - { label: "Logo Image", name: "logo", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Topics", name: "topics", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "series"
     label: "Blog Series"
@@ -70,6 +70,7 @@ collections:
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
       - { label: "Hero Image", name: "hero", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "article"
     label: "Article"
@@ -94,7 +95,7 @@ collections:
       - { label: "Hero Image", name: "hero", widget: "image", required: true }
       - { label: "Logo Image", name: "logo", widget: "image", required: false }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Topics", name: "topics", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "project"
     label: "Project"
@@ -144,7 +145,7 @@ collections:
           required: true,
         }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Tech", name: "tech", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Start Date", name: "startdate", widget: "datetime" }
       - { label: "End Date", name: "enddate", widget: "datetime" }
       - {

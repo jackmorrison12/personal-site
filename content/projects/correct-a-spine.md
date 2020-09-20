@@ -11,7 +11,7 @@ hidden: false
 hero: /img/cas-logo.png
 banner: /img/cas-banner.png
 description: A device to prevent back pain
-tech:
+tags:
   - C
   - Swift
   - Arduino

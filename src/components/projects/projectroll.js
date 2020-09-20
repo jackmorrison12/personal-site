@@ -44,7 +44,7 @@ class ProjectRoll extends React.Component {
                         {post.frontmatter.description}
                       </p>
                       <p className="margin-0 is-red">
-                        {post.frontmatter.tech.map(item => item).join(", ")}
+                        {post.frontmatter.tags.map(item => item).join(", ")}
                       </p>
                     </div>
                   </Link>
@@ -91,7 +91,7 @@ class ProjectRoll extends React.Component {
                             {post.frontmatter.description}
                           </p>
                           <p className="margin-0 is-red">
-                            {post.frontmatter.tech.map(item => item).join(", ")}
+                            {post.frontmatter.tags.map(item => item).join(", ")}
                           </p>
                         </div>
                       </div>
@@ -133,7 +133,7 @@ export default () => (
                 startdate(formatString: "MMMM YYYY")
                 enddate(formatString: "MMMM YYYY")
                 description
-                tech
+                tags
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
@@ -168,7 +168,7 @@ export default () => (
                 startdate(formatString: "MMMM YYYY")
                 enddate(formatString: "MMMM YYYY")
                 description
-                tech
+                tags
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {

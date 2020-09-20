@@ -76,10 +76,10 @@ export default function Template({
                 ""
               )}
 
-              {frontmatter.tech ? (
+              {frontmatter.tags ? (
                 <p>
                   Written using{" "}
-                  {frontmatter.tech
+                  {frontmatter.tags
                     .map((item, i) => (
                       <span key={i} className="is-red">
                         {item}
@@ -90,7 +90,7 @@ export default function Template({
                         ? [
                             acc,
                             `${
-                              Object.entries(frontmatter.tech).length - 1 === i
+                              Object.entries(frontmatter.tags).length - 1 === i
                                 ? ` and  `
                                 : ", "
                             }`,
@@ -136,7 +136,7 @@ export const pageQuery = graphql`
         title
         type
         description
-        tech
+        tags
         startdate(formatString: "MMMM YYYY")
         enddate(formatString: "MMMM YYYY")
         sources {

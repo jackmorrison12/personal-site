@@ -7,7 +7,7 @@ slug: adding-content
 date: 2020-05-08T00:01:02.535Z
 hidden: false
 description: How I chose what I wanted to share about myself with the world
-topics:
+tags:
   - Adding Content
 ---
 

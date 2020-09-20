@@ -7,7 +7,7 @@ slug: trello-ideas
 date: 2020-09-17T20:30:00.000Z
 hidden: true
 description: "A shortcut to record any ideas I have for this site on my Trello board"
-topics:
+tags:
   - iOS
   - Shortcuts
   - Trello

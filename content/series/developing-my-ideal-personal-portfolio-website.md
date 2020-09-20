@@ -8,6 +8,10 @@ hidden: false
 hero: /img/portfolio.png
 logo: /img/portfolio-logo.png
 description: A blog series describing how I created this website
+tags:
+  - Personal Portfolio
+  - Gatsby
+  - CSS
 ---
 
 A blog series describing how I created this website

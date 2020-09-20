@@ -8,7 +8,7 @@ hidden: false
 hero: /img/teach-python.png
 logo: /img/teach-python-logo.png
 description: This is how I taught a 6-week Python course to a group of 15 year olds
-topics:
+tags:
   - Python
   - Teaching
 ---

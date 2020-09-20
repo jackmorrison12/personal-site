@@ -11,7 +11,7 @@ hidden: false
 hero: /img/wacc-logo.png
 banner: /img/wacc-banner.png
 description: A compiler created for our own programming language
-tech:
+tags:
   - Kotlin
   - ANTLR
 startdate: 2019-01-01T00:38:00.000Z

@@ -11,7 +11,7 @@ hidden: false
 hero: /img/snake-logo.png
 banner: /img/snake-banner.png
 description: A recreation of the classic game Snake on a 32x32 LED matrix
-tech:
+tags:
   - C
   - Raspberry Pi
 startdate: 2018-05-01T15:41:53.014Z

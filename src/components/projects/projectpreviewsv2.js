@@ -52,7 +52,7 @@ class ProjectPreviews extends React.Component {
                           {post.frontmatter.description}
                         </p>
                         <p className="margin-0 is-red">
-                          {post.frontmatter.tech.map(item => item).join(", ")}
+                          {post.frontmatter.tags.map(item => item).join(", ")}
                         </p>
                       </div>
                     </div>
@@ -92,7 +92,7 @@ export default () => (
                 fullurl
                 title
                 description
-                tech
+                tags
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {

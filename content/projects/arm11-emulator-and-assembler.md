@@ -11,7 +11,7 @@ hidden: false
 hero: /img/arm11-logo.png
 banner: /img/arm11-banner.png
 description: An Emulator and Assembler for the ARM11 Programming Language
-tech:
+tags:
   - C
 startdate: 2018-04-30T23:41:00.000Z
 enddate: 2018-05-31T23:41:00.000Z

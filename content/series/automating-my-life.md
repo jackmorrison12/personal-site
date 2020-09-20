@@ -8,6 +8,9 @@ hidden: false
 hero: /img/automation.png
 logo: /img/automation-logo.png
 description: A blog series about any cool automations I create
+tags:
+  - Shortcuts
+  - Automation
 ---
 
 A blog series about any cool automations I create

@@ -11,7 +11,7 @@ hidden: false
 hero: /img/mentor-me-logo.png
 banner: /img/mentor-me-banner.png
 description: An app to 'Bring Communities Together'
-tech:
+tags:
   - React
   - Express
   - Node

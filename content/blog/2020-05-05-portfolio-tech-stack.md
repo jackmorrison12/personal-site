@@ -7,7 +7,7 @@ slug: tech-stack
 date: 2020-05-05T20:00:00.000Z
 hidden: false
 description: How I researched and decided on what technologies to create this site with
-topics:
+tags:
   - Personal Portfolio
   - Gatsby
   - Hugo

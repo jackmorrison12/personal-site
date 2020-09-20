@@ -11,7 +11,7 @@ hidden: true
 hero: /img/imaths-logo.png
 banner: /img/imaths-banner.png
 description: An app to teach students GCSE Maths
-tech:
+tags:
   - Swift
   - XCode
 startdate: 2016-05-31T23:53:00.000Z

@@ -11,7 +11,7 @@ hidden: false
 hero: /img/pyplay-logo.png
 banner: /img/pyplay-banner.png
 description: An app to teach young coders the basics of Python
-tech:
+tags:
   - Python
   - Heroku
   - HTML5

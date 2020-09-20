@@ -11,7 +11,7 @@ hidden: false
 hero: /img/canvas-logo.png
 banner: /img/canvas-banner.png
 description: A CRDT-powered collaborative drawing app
-tech:
+tags:
   - Swift
   - XCode
   - CRDTs

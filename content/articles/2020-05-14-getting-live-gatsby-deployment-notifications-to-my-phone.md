@@ -8,7 +8,7 @@ hidden: false
 hero: /img/gatsby-notifications.png
 logo: /img/gatsby-notifications-logo.png
 description: Getting Live Gatsby Deployment Notifications to my Phone
-topics:
+tags:
   - Gatsby
   - Netlify
   - IFTTT

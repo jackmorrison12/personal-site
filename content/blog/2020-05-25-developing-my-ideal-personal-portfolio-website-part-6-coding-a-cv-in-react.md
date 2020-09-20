@@ -7,7 +7,7 @@ slug: cv
 date: 2020-05-18T01:41:44.394Z
 hidden: false
 description: "A guide on how I created my current CV, which integrates directly into my site!"
-topics:
+tags:
   - CV
 ---
 
