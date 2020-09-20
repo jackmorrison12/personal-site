@@ -135,7 +135,7 @@ export default props => {
         , accurate as of last build (<TimeAgo date={props.last_build} />)
       </p>
       <p className="credit">
-      <Twemoji svg text="💡 Idea inspired by " />
+        <Twemoji svg text="💡 Idea inspired by " />
         <OutboundLink className="link" href="https://sld.codes/stats">
           sld.codes
         </OutboundLink>

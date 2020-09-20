@@ -16,4 +16,4 @@ tags:
 
 Don't you hate it when you're lying in bed, and you come up with a brilliant idea. The next big thing. You contemplate writing it down somewhere, but it's so amazing, you think "Why bother? I'll definitely remember it in the morning!". Then morning comes, and you can't remember it at all.
 
-<span class="is-red">**Worst. Feeling. Ever.**</span>
+<span class="is-primary">**Worst. Feeling. Ever.**</span>

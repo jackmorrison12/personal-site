@@ -36,7 +36,7 @@ class ProjectPreviews extends React.Component {
                     </div>
                     <div className="col-xs-12 col-sm-8">
                       <div className="pad-2 pad-5-t">
-                        <h2 className="is-red margin-0">
+                        <h2 className="is-primary margin-0">
                           {post.frontmatter.title}
                         </h2>
                         <p className=" margin-0-t margin-2-b is-black bold">
@@ -49,7 +49,7 @@ class ProjectPreviews extends React.Component {
                         </p>
                         <div className="margin-0 margin-1-t flex flex-wrap">
                           {post.frontmatter.tags.map(item => (
-                            <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                            <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
                               {item}
                             </div>
                           ))}

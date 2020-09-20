@@ -22,7 +22,7 @@ class CVPage extends React.Component {
               </div>
               <div className="mobile-hide">
                 <button
-                  className="btn-center is-red-bg is-black is-red-border margin-10-t"
+                  className="btn-center is-primary-bg is-black is-primary-border margin-10-t"
                   onClick={this.exportPDFWithMethod}
                 >
                   Download CV

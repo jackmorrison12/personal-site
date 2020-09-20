@@ -36,7 +36,7 @@ export default props => {
               <div className=" col-xs-8 col-sm-9 align-self-center">
                 {item.body}
               </div>{" "}
-              <div className="col-xs-2 col-sm-2 align-self-center text-align-right is-red">
+              <div className="col-xs-2 col-sm-2 align-self-center text-align-right is-primary">
                 {" "}
                 <TimeAgo date={item.occur_date} />
               </div>
@@ -46,7 +46,7 @@ export default props => {
               <div className="col-xs-12 col-sm-10 align-self-center">
                 {item.body}
               </div>
-              <div className="col-xs-12 col-sm-2 align-self-center text-align-right is-red">
+              <div className="col-xs-12 col-sm-2 align-self-center text-align-right is-primary">
                 {" "}
                 <TimeAgo date={item.occur_date} />
               </div>

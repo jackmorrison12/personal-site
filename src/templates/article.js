@@ -27,7 +27,7 @@ export default function Template({
           <div className="col-xs-12">
             {"< "}
             <Link to={"/writing"} className="">
-              <h3 className="margin-0 margin-2-b link is-red pad-1-b inherit">{`All Articles`}</h3>
+              <h3 className="margin-0 margin-2-b link is-primary pad-1-b inherit">{`All Articles`}</h3>
             </Link>
           </div>
         </div>
@@ -37,10 +37,12 @@ export default function Template({
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="margin-0 margin-1-t flex flex-wrap">
               {frontmatter.tags.map(item => (
-                <div class="is-red-bg is-white margin-2-b margin-1-r tag">{item}</div>
+                <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
+                  {item}
+                </div>
               ))}
             </div>
-            <div className="line margin-5-tb is-red" />
+            <div className="line margin-5-tb is-primary" />
           </div>
           <div className="col-xs-12 col-md-5 rounded">
             <div>

@@ -44,7 +44,7 @@ export default () => {
                 <Twemoji svg text="Hey 👋 I'm Jack" />
                 <br />A computing student at{" "}
                 <OutboundLink
-                  className="is-red link"
+                  className="is-primary link"
                   href="https://www.imperial.ac.uk/computing"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export default () => {
           </div>
         </div>
       </div>
-      <div className="is-red-bg is-black diagonal-box">
+      <div className="is-primary-bg is-black diagonal-box">
         <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
           <div className="col-xs-12 col-md-6">
             <Link to="/projects" className="link is-black text-align-center">

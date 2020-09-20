@@ -23,7 +23,7 @@ export default ({ data }) => {
                     <h3 className="margin-0">
                       <Link
                         to={item.link}
-                        activeClassName="is-red"
+                        activeClassName="is-primary"
                         className="is-black"
                       >
                         <Twemoji svg text={item.name} />
@@ -60,7 +60,7 @@ export default ({ data }) => {
                         <h3 className="margin-0">
                           <Link
                             to={item.link}
-                            activeClassName="is-red"
+                            activeClassName="is-primary"
                             className="is-black"
                           >
                             <Twemoji svg text={item.name} />

@@ -26,7 +26,7 @@ class WritingRoll extends React.Component {
                   <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">
-                  <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
+                  <h1 className="margin-0 is-primary">{post.frontmatter.title}</h1>
                   <p className="margin-0 margin-2-b is-black">
                     {post.frontmatter.startdate &&
                     post.frontmatter.startdate !== post.frontmatter.date
@@ -35,13 +35,13 @@ class WritingRoll extends React.Component {
                     {post.frontmatter.date}
                   </p>
                   <div className="margin-0 margin-1-t flex flex-wrap">
-                    <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                    <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
                       {post.frontmatter.type === "series"
                         ? "Blog Series"
                         : "Article"}
                     </div>
                     {post.frontmatter.tags.map(item => (
-                      <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                      <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
                         {item}
                       </div>
                     ))}
@@ -51,7 +51,7 @@ class WritingRoll extends React.Component {
                   {post.frontmatter.totalposts ? (
                     <p className="margin-0 is-black">
                       This series consists of{" "}
-                      <b className="is-red">
+                      <b className="is-primary">
                         {post.frontmatter.totalposts > 1
                           ? post.frontmatter.totalposts + " blog posts "
                           : post.frontmatter.totalposts === 1

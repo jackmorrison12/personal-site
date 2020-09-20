@@ -26,14 +26,14 @@ export default function Template({
           <div className="col-xs-12">
             {"< "}
             <Link to={"/writing"} className="">
-              <h3 className="margin-0 margin-2-b link is-red pad-1-b inherit">{`All Series`}</h3>
+              <h3 className="margin-0 margin-2-b link is-primary pad-1-b inherit">{`All Series`}</h3>
             </Link>{" "}
             {"< "}
             <Link
               to={frontmatter.baseurl + frontmatter.blogseries}
               className=""
             >
-              <h3 className="margin-0 margin-2-b link is-red pad-1-b inherit">
+              <h3 className="margin-0 margin-2-b link is-primary pad-1-b inherit">
                 {frontmatter.series}
               </h3>
             </Link>
@@ -44,9 +44,9 @@ export default function Template({
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>
             <Link
               to={frontmatter.baseurl + frontmatter.blogseries}
-              className="link is-red"
+              className="link is-primary"
             >
-              <h3 className="margin-0-t margin-5-b is-red">
+              <h3 className="margin-0-t margin-5-b is-primary">
                 {frontmatter.series}: Part {frontmatter.entry} of{" "}
                 {frontmatter.totalentries}
               </h3>
@@ -54,10 +54,12 @@ export default function Template({
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
             <div className="margin-0 margin-1-t flex flex-wrap">
               {frontmatter.tags.map(item => (
-                <div class="is-red-bg is-white margin-2-b margin-1-r tag">{item}</div>
+                <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
+                  {item}
+                </div>
               ))}
             </div>
-            <div className="line margin-5-tb is-red" />
+            <div className="line margin-5-tb is-primary" />
           </div>
           <div className="col-xs-12 col-md-5 rounded">
             <div>

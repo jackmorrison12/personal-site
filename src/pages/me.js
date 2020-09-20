@@ -104,14 +104,14 @@ export default ({ data }) => {
               {" "}
               I'm a Software Engineer from London. I'm currently studying
               Computing at{" "}
-              {makeLink("EDUCATION", "Imperial College London", "red")}. I've
-              worked as a Software Engineer at{" "}
-              {makeLink("EXPERIENCE", "NextJump", "red")} and{" "}
-              {makeLink("EXPERIENCE", "Facebook", "red")}. I've dabbled in{" "}
-              {makeLink("TEACHING", "teaching", "red")}. I enjoy{" "}
-              {makeLink("MUSIC", "making music", "red")},{" "}
-              {makeLink("MAP", "travelling", "red")}, and am currently learning
-              how to {makeLink("SKYDIVING", "skydive", "red")}.
+              {makeLink("EDUCATION", "Imperial College London", "primary")}.
+              I've worked as a Software Engineer at{" "}
+              {makeLink("EXPERIENCE", "NextJump", "primary")} and{" "}
+              {makeLink("EXPERIENCE", "Facebook", "primary")}. I've dabbled in{" "}
+              {makeLink("TEACHING", "teaching", "primary")}. I enjoy{" "}
+              {makeLink("MUSIC", "making music", "primary")},{" "}
+              {makeLink("MAP", "travelling", "primary")}, and am currently
+              learning how to {makeLink("SKYDIVING", "skydive", "primary")}.
             </h2>
             <p>Click any of the links above to find out more!</p>
           </div>
@@ -165,7 +165,7 @@ export default ({ data }) => {
                 Want to learn more?
               </h2>
               <Link to="cv">
-                <button className="btn-center is-red-bg is-black is-red-border">
+                <button className="btn-center is-primary-bg is-black is-primary-border">
                   View My CV
                 </button>
               </Link>

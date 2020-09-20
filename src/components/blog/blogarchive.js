@@ -16,19 +16,21 @@ class BlogArchive extends React.Component {
         <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
           <div className="grow row margin-5-b">
             <div className="col-xs-12 margin-5-t">
-              <h3 className="margin-0 is-red">
+              <h3 className="margin-0 is-primary">
                 {post.frontmatter.series}: Part {post.frontmatter.entry}
               </h3>
               <h1 className="margin-0 is-black">{post.frontmatter.title}</h1>
               <div className="margin-0 margin-1-t flex flex-wrap">
                 {post.frontmatter.tags.map(item => (
-                  <div class="is-red-bg is-white margin-2-b margin-1-r tag">{item}</div>
+                  <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
+                    {item}
+                  </div>
                 ))}
               </div>
               <p className="margin-0 margin-2-b is-black">
                 {post.frontmatter.date}
               </p>
-              <p className="margin-0 margin-1-b is-black bold is-red pad-2-b">
+              <p className="margin-0 margin-1-b bold is-primary pad-2-b">
                 {post.frontmatter.description}
               </p>
               <div className="line-sm is-black margin-3-b" />

@@ -26,7 +26,7 @@ class ArticleRoll extends React.Component {
                   <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">
-                  <h1 className="margin-0 is-red">{post.frontmatter.title}</h1>
+                  <h1 className="margin-0 is-primary">{post.frontmatter.title}</h1>
                   <p className="margin-0 margin-2-b is-black">
                     {post.frontmatter.date}
                   </p>

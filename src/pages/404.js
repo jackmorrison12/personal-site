@@ -9,7 +9,7 @@ const NotFoundPage = () => (
     <SEO title="404: Not found" />
     <div className="is-grey is-light-grey-bg pad-10-tb pad-3-lr">
       <div className="container pad-20-t ">
-        <h1 className="is-red">This page doesn't exist... yet!</h1>
+        <h1 className="is-primary">This page doesn't exist... yet!</h1>
         <h3>
           Why not{" "}
           <Link to="/writing" className="link ">

@@ -37,7 +37,7 @@
 .project-wrapper {
   @for $i from 1 through 6 {
     h#{$i} {
-      @extend .is-red;
+      @extend .is-primary;
     }
   }
 
@@ -120,7 +120,7 @@
   }
 
   .highlight {
-    @extend .is-red;
+    @extend .is-primary;
     @extend .bold;
   }
 

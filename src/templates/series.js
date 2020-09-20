@@ -28,14 +28,14 @@ export default function Template({
           <div className="col-xs-12">
             {"< "}
             <Link to={"/writing"} className="">
-              <h3 className="margin-0 margin-2-b link is-red pad-1-b inherit">{`All Series`}</h3>
+              <h3 className="margin-0 margin-2-b link is-primary pad-1-b inherit">{`All Series`}</h3>
             </Link>
           </div>
         </div>
         <div className="row container pad-3-lr">
           <div className="col-xs-12 col-md-7">
             <h1 className="title margin-3-t margin-0-b">{frontmatter.title}</h1>{" "}
-            <h6 className="subtitle margin-3-b is-red">
+            <h6 className="subtitle margin-3-b is-primary">
               {frontmatter.description}
             </h6>
             <h6 className="subtitle margin-3-b">
@@ -52,12 +52,12 @@ export default function Template({
             </h6>
             <div className="margin-0 margin-1-t flex flex-wrap">
               {frontmatter.tags.map(item => (
-                <div class="is-red-bg is-white margin-2-b margin-1-r tag">
+                <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
                   {item}
                 </div>
               ))}
             </div>
-            <div className="line margin-5-tb is-red" />
+            <div className="line margin-5-tb is-primary" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
           <div className="col-xs-12 col-md-5 rounded">
@@ -75,12 +75,12 @@ export default function Template({
                     <h1 className="margin-0 is-black left-xs right-md width-full last-xs first-md">
                       {post.frontmatter.date}
                     </h1>
-                    <p className="margin-0 is-red bold is-black left-xs right-md width-full">
+                    <p className="margin-0 is-primary bold is-black left-xs right-md width-full">
                       Part {post.frontmatter.entry}
                     </p>
                   </div>
                   <div className="col-xs-12 col-md-9">
-                    <h1 className="margin-0 is-red">
+                    <h1 className="margin-0 is-primary">
                       {post.frontmatter.title}
                     </h1>
 
@@ -92,7 +92,7 @@ export default function Template({
                   </div>
                 </div>
                 {post.frontmatter.entry !== 1 ? (
-                  <div className="line-full is-red margin-3-b mobile-show" />
+                  <div className="line-full is-primary margin-3-b mobile-show" />
                 ) : (
                   ""
                 )}

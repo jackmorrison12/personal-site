@@ -15,22 +15,22 @@ const ToolsPage = () => (
             The site is created using:
             <ul>
               <li>
-                <b className="is-red">GatsbyJS</b>, a static site generator
+                <b className="is-primary">GatsbyJS</b>, a static site generator
                 based on react
               </li>
               <li>
-                <b className="is-red">Custom-built CSS</b>, written by me and
+                <b className="is-primary">Custom-built CSS</b>, written by me and
                 from{" "}
                 <Link className="link" to="/credits">
                   other sources
                 </Link>
               </li>
               <li>
-                <b className="is-red">Netlify</b>, which is a hosting platform,
+                <b className="is-primary">Netlify</b>, which is a hosting platform,
                 and manages the DNS of the site
               </li>
               <li>
-                <b className="is-red">Netlify CMS</b>, which is a content
+                <b className="is-primary">Netlify CMS</b>, which is a content
                 management system
               </li>
             </ul>

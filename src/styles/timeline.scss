@@ -3,13 +3,13 @@
 */
 
 .vertical-timeline-element-content {
-  @extend .is-red-bg-always;
+  @extend .is-primary-bg-always;
   box-shadow: none !important;
   font-weight: normal !important;
 }
 
 .vertical-timeline-element-icon {
-  @extend .is-red-bg-always;
+  @extend .is-primary-bg-always;
 }
 
 .vertical-timeline-element-badge {
