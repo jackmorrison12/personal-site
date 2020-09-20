@@ -47,10 +47,6 @@ class ProjectPreviews extends React.Component {
                               post.frontmatter.enddate
                             : post.frontmatter.startdate}
                         </p>
-                        <div className="line-sm is-black margin-3-b" />
-                        <p className="margin-0 is-black">
-                          {post.frontmatter.description}
-                        </p>
                         <div className="margin-0 margin-1-t flex flex-wrap">
                           {post.frontmatter.tags.map(item => (
                             <div class="is-red-bg is-white margin-2-b margin-1-r tag">
@@ -58,6 +54,9 @@ class ProjectPreviews extends React.Component {
                             </div>
                           ))}
                         </div>
+                        <p className="margin-0 is-black">
+                          {post.frontmatter.description}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -97,6 +96,8 @@ export default () => (
                 title
                 description
                 tags
+                startdate(formatString: "MMMM YYYY")
+                enddate(formatString: "MMMM YYYY")
                 hero {
                   childImageSharp {
                     fluid(maxWidth: 1000) {
