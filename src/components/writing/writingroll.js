@@ -34,7 +34,7 @@ class WritingRoll extends React.Component {
                       : ""}
                     {post.frontmatter.date}
                   </p>
-                  <div class="is-red-bg pad-1 is-white margin-2-b width-fit rounded">
+                  <div class="is-red-bg is-white margin-2-b width-fit tag">
                     {post.frontmatter.type === "series"
                       ? "Blog Series"
                       : "Article"}
