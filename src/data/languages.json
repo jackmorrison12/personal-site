@@ -42,7 +42,7 @@
     "description": "Languages I am familar with",
     "languages": [
       {
-        "name": "Haskell",
+        "name": "Go",
         "cv": true
       },
       {
@@ -54,7 +54,7 @@
         "cv": true
       },
       {
-        "name": "Go",
+        "name": "Haskell",
         "cv": true
       }
     ]
@@ -68,11 +68,35 @@
         "cv": true
       },
       {
-        "name": "Vim",
+        "name": "React",
         "cv": true
       },
       {
         "name": "SQL",
+        "cv": true
+      },
+      {
+        "name": "Gatsby.js",
+        "cv": true
+      },
+      {
+        "name": "Node.js",
+        "cv": true
+      },
+      {
+        "name": "GraphQL",
+        "cv": true
+      },
+      {
+        "name": "Vue.js",
+        "cv": true
+      },
+      {
+        "name": "Docker",
+        "cv": true
+      },
+      {
+        "name": "Vim",
         "cv": true
       },
       {
@@ -81,26 +105,6 @@
       },
       {
         "name": "LaTeX",
-        "cv": true
-      },
-      {
-        "name": "ReactJS",
-        "cv": true
-      },
-      {
-        "name": "GatsbyJS",
-        "cv": true
-      },
-      {
-        "name": "NodeJS",
-        "cv": true
-      },
-      {
-        "name": "GraphQL",
-        "cv": true
-      },
-      {
-        "name": "Docker",
         "cv": true
       }
     ]

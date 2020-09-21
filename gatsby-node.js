@@ -3,6 +3,7 @@
  */
 
 const path = require(`path`)
+const _ = require("lodash")
 
 const redirects = [
   {
@@ -150,10 +151,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const articleTemplate = path.resolve(`src/templates/article.js`)
   const projectTemplate = path.resolve(`src/templates/project.js`)
   const seriesTemplate = path.resolve(`src/templates/series.js`)
+  const tagTemplate = path.resolve("src/templates/tag.js")
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
           frontmatter: { type: { regex: "/blog|project|article|series/" } }
@@ -166,8 +168,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               type
               baseurl
               blogseries
+              tags
             }
           }
+        }
+      }
+      tagsGroup: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
         }
       }
     }
@@ -181,7 +189,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   redirects.forEach(redirect => createRedirect(redirect))
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.postsRemark.edges
+
+  posts.forEach(({ node }) => {
     createPage({
       path:
         node.frontmatter.type === "blog"
@@ -204,6 +214,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         baseurl: node.frontmatter.baseurl,
         slug: node.frontmatter.slug,
       }, // additional data can be passed via context
+    })
+  })
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
     })
   })
 }
