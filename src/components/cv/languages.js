@@ -9,7 +9,7 @@ export default props => {
           <h4 className="margin-0-b">{item.name}</h4>
           <div className="margin-0 margin-2-t flex flex-wrap">
             {item.languages.map(lang => (
-              <div className="is-green-bg is-white margin-1-r tag margin-2-b">
+              <div className="is-green-bg is-black-always margin-1-r tag margin-2-b">
                 {lang.name}
               </div>
             ))}
