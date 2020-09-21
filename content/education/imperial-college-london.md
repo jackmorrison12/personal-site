@@ -14,7 +14,7 @@ grades:
   - grade: 1st - Third Year
 grade-summaries:
   - grade: Third Year Student
-  - grade: "Current Grade: First (77% Average)"
+  - grade: "Current Grade: First (78% Average)"
 highlights:
   - name: Models of Computation Exam
     score: First (97.2%)
