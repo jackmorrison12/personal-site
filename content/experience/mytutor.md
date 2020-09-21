@@ -2,7 +2,7 @@
 type: experience
 title: MyTutor
 slug: mytutor
-cv: true
+cv: false
 hidden: false
 subtitle: Mathematics and Computing Tutor
 url: https://www.mytutor.co.uk/tutors/105683/

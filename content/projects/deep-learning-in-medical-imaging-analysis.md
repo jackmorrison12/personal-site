@@ -25,8 +25,8 @@ sources:
     name: Website Link
     icon: fas fa-link
 highlights:
-  - highlight: Researched the uses of AI in Medical Imaging Analysis, e.g. Image Segmentation
   - highlight: Created a website to discuss the findings and practice web development skills
+  - highlight: Researched the uses of AI in Medical Imaging Analysis, e.g. Image Segmentation
 ---
 
 This project was undertaken as my first year group project, and involved creating a website discussing the uses of AI in Medical Imaging Analysis, aimed at a specialist.
