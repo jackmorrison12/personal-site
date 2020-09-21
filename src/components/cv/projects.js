@@ -6,10 +6,12 @@ export default props => {
       <h3 className="is-green-always subtitle">Projects</h3>
       {props.projects.nodes.map(item => (
         <div className="margin-3-t">
-          <a href={"https://jackmorrison.xyz" + item.frontmatter.slug}>
-            <h4 className="margin-0-b is-black-always">
+          <a
+            href={"https://jackmorrison.xyz/projects/" + item.frontmatter.slug}
+          >
+            <h3 className="margin-0-b is-black-always">
               {item.frontmatter.title}
-            </h4>
+            </h3>
           </a>
           <p className="margin-0-t italic">
             {item.frontmatter.startdate} - {item.frontmatter.enddate}
