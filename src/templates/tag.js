@@ -149,7 +149,7 @@ export const pageQuery = graphql`
         fields: [frontmatter___type, frontmatter___date]
         order: [ASC, DESC]
       }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { tags: { in: [$tag] }, hidden: { eq: false } } }
     ) {
       totalCount
       edges {
