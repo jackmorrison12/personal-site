@@ -4,7 +4,7 @@ baseurl: "/blog/"
 blogseries: automation
 title: Why automation?
 slug: introduction
-date: 2020-07-15T20:30:00.000Z
+date: 2020-08-15T20:30:00.000Z
 hidden: false
 description: "Why do I want to make my day-to-day life as automated as possible?"
 tags:

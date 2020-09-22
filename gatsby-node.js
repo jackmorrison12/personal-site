@@ -67,6 +67,9 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
       node.frontmatter.hero = !node.frontmatter.hero
         ? seriesNodes[0].frontmatter.hero
         : node.frontmatter.hero
+      node.frontmatter.logo = !node.frontmatter.logo
+        ? seriesNodes[0].frontmatter.logo
+        : node.frontmatter.logo
       node.frontmatter.series = seriesNodes[0].frontmatter.title
       node.frontmatter.hidden =
         node.frontmatter.hidden || seriesNodes[0].frontmatter.hidden

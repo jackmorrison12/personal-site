@@ -7,6 +7,8 @@ import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
+import Project from "./project"
+
 class ProjectRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -59,54 +61,7 @@ class ProjectRoll extends React.Component {
         <div className="row flex">
           {non_featured &&
             non_featured.map(({ node: post }) => (
-              <div className="col-xs-12 col-md-6 margin-3-b pad-2-lr">
-                <div className="grow project non-featured is-white-bg">
-                  <Link
-                    to={"/" + post.frontmatter.fullurl}
-                    className=""
-                    id="path"
-                  >
-                    <div className="row">
-                      <div className="col-xs-12 pad-0 mobile-show">
-                        <Img
-                          fluid={post.frontmatter.banner.childImageSharp.fluid}
-                        />
-                      </div>
-                      <div className="col-sm-4 pad-0 mobile-hide">
-                        <Img
-                          fluid={post.frontmatter.hero.childImageSharp.fluid}
-                        />
-                      </div>
-                      <div className="col-xs-12 col-sm-8">
-                        <div className="pad-2 pad-5-t">
-                          <h2 className="is-primary margin-0">
-                            {post.frontmatter.title}
-                          </h2>
-                          <p className=" margin-0-tb is-black bold">
-                            {post.frontmatter.startdate !==
-                            post.frontmatter.enddate
-                              ? post.frontmatter.startdate +
-                                " - " +
-                                post.frontmatter.enddate
-                              : post.frontmatter.startdate}
-                          </p>
-                          <div className="margin-0 margin-1-t flex flex-wrap">
-                            {post.frontmatter.tags.map(item => (
-                              <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                                {item}
-                              </div>
-                            ))}
-                          </div>
-                          <div className="line-sm is-black margin-3-b" />
-                          <p className="margin-0 is-black">
-                            {post.frontmatter.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
+              <Project project={post.frontmatter} halfwidth="true" />
             ))}
         </div>
       </>

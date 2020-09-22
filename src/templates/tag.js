@@ -7,6 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Project from "../components/projects/project"
+import Writing from "../components/writing/writing"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -51,16 +52,9 @@ const Tags = ({ pageContext, data }) => {
                 <div className="row">
                   {edges
                     .filter(item => item.node.frontmatter.type === "project")
-                    .map(({ node }) => {
-                      const { title, fullurl } = node.frontmatter
-                      return (
-                        <div className="col-xs-12 col-sm-6">
-                          <div className="row">
-                            <Project project={node.frontmatter} />{" "}
-                          </div>
-                        </div>
-                      )
-                    })}
+                    .map(({ node }) => (
+                      <Project project={node.frontmatter} halfwidth={true} />
+                    ))}
                 </div>
               </div>
             </div>
@@ -75,14 +69,9 @@ const Tags = ({ pageContext, data }) => {
                 </h1>
                 {edges
                   .filter(item => item.node.frontmatter.type === "article")
-                  .map(({ node }) => {
-                    const { title, fullurl } = node.frontmatter
-                    return (
-                      <p>
-                        <Link to={fullurl}>{title}</Link>
-                      </p>
-                    )
-                  })}
+                  .map(({ node }) => (
+                    <Writing writing={node.frontmatter} halfwidth={true} />
+                  ))}
               </div>
             </div>
           ) : (
@@ -96,14 +85,9 @@ const Tags = ({ pageContext, data }) => {
                 </h1>
                 {edges
                   .filter(item => item.node.frontmatter.type === "blog")
-                  .map(({ node }) => {
-                    const { title, fullurl } = node.frontmatter
-                    return (
-                      <p>
-                        <Link to={fullurl}>{title}</Link>
-                      </p>
-                    )
-                  })}
+                  .map(({ node }) => (
+                    <Writing writing={node.frontmatter} halfwidth={true} />
+                  ))}
               </div>
             </div>
           ) : (
@@ -115,14 +99,9 @@ const Tags = ({ pageContext, data }) => {
                 <h1>{seriesCount} Blog Series</h1>
                 {edges
                   .filter(item => item.node.frontmatter.type === "series")
-                  .map(({ node }) => {
-                    const { title, fullurl } = node.frontmatter
-                    return (
-                      <p>
-                        <Link to={fullurl}>{title}</Link>
-                      </p>
-                    )
-                  })}
+                  .map(({ node }) => (
+                    <Writing writing={node.frontmatter} halfwidth={true} />
+                  ))}
               </div>
             </div>
           ) : (
@@ -175,8 +154,13 @@ export const pageQuery = graphql`
             title
             description
             tags
+            series
+            entry
+            totalentries
+            daystartdate: startdate(formatString: "MMMM DD, YYYY")
             startdate(formatString: "MMMM YYYY")
             enddate(formatString: "MMMM YYYY")
+            date(formatString: "MMMM DD, YYYY")
             hero {
               childImageSharp {
                 fluid(maxWidth: 1000) {
@@ -185,6 +169,13 @@ export const pageQuery = graphql`
               }
             }
             banner {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            logo {
               childImageSharp {
                 fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid

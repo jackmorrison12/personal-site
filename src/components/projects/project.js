@@ -3,7 +3,11 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 export default props => (
-  <div className="col-xs-12 margin-3-b">
+  <div
+    className={
+      "col-xs-12 margin-3-b" + (props.halfwidth ? " col-md-6 pad-2-lr" : "")
+    }
+  >
     <div className="grow project non-featured is-white-bg">
       <Link to={"/" + props.project.fullurl} className="" id="path">
         <div className="row">
