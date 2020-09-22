@@ -7,6 +7,8 @@ import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
+import Project from "./project"
+
 class ProjectPreviews extends React.Component {
   render() {
     const { data } = this.props
@@ -15,55 +17,7 @@ class ProjectPreviews extends React.Component {
     return (
       <div className="row margin-5-b">
         {posts &&
-          posts.map(({ node: post }) => (
-            <div className="col-xs-12 margin-3-b">
-              <div className="grow project non-featured is-white-bg">
-                <Link
-                  to={"/" + post.frontmatter.fullurl}
-                  className=""
-                  id="path"
-                >
-                  <div className="row">
-                    <div className="col-xs-12 pad-0 mobile-show">
-                      <Img
-                        fluid={post.frontmatter.banner.childImageSharp.fluid}
-                      />
-                    </div>
-                    <div className="col-sm-4 pad-0 mobile-hide">
-                      <Img
-                        fluid={post.frontmatter.hero.childImageSharp.fluid}
-                      />
-                    </div>
-                    <div className="col-xs-12 col-sm-8">
-                      <div className="pad-2 pad-5-t">
-                        <h2 className="is-primary margin-0">
-                          {post.frontmatter.title}
-                        </h2>
-                        <p className=" margin-0-t margin-2-b is-black bold">
-                          {post.frontmatter.startdate !==
-                          post.frontmatter.enddate
-                            ? post.frontmatter.startdate +
-                              " - " +
-                              post.frontmatter.enddate
-                            : post.frontmatter.startdate}
-                        </p>
-                        <div className="margin-0 margin-1-t flex flex-wrap">
-                          {post.frontmatter.tags.map(item => (
-                            <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                              {item}
-                            </div>
-                          ))}
-                        </div>
-                        <p className="margin-0 is-black">
-                          {post.frontmatter.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          ))}
+          posts.map(({ node: post }) => <Project project={post.frontmatter} />)}
       </div>
     )
   }

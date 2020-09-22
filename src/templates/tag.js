@@ -6,6 +6,8 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import Project from "../components/projects/project"
+
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
@@ -46,16 +48,20 @@ const Tags = ({ pageContext, data }) => {
                 <h1>
                   {projCount} Project{projCount === 1 ? "" : "s"}
                 </h1>
-                {edges
-                  .filter(item => item.node.frontmatter.type === "project")
-                  .map(({ node }) => {
-                    const { title, fullurl } = node.frontmatter
-                    return (
-                      <p>
-                        <Link to={fullurl}>{title}</Link>
-                      </p>
-                    )
-                  })}
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "project")
+                    .map(({ node }) => {
+                      const { title, fullurl } = node.frontmatter
+                      return (
+                        <div className="col-xs-12 col-sm-6">
+                          <div className="row">
+                            <Project project={node.frontmatter} />{" "}
+                          </div>
+                        </div>
+                      )
+                    })}
+                </div>
               </div>
             </div>
           ) : (
@@ -164,9 +170,27 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            title
-            fullurl
             type
+            fullurl
+            title
+            description
+            tags
+            startdate(formatString: "MMMM YYYY")
+            enddate(formatString: "MMMM YYYY")
+            hero {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            banner {
+              childImageSharp {
+                fluid(maxWidth: 1000) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
