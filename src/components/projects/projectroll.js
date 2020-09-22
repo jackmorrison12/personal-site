@@ -8,6 +8,7 @@ import { Link, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
 import Project from "./project"
+import Tags from "../misc/tags"
 
 class ProjectRoll extends React.Component {
   render() {
@@ -41,13 +42,7 @@ class ProjectRoll extends React.Component {
                             post.frontmatter.enddate
                           : post.frontmatter.startdate}
                       </p>
-                      <p className="margin-0 margin-1-t flex flex-wrap">
-                        {post.frontmatter.tags.map(item => (
-                          <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                            {item}
-                          </div>
-                        ))}
-                      </p>
+                      <Tags tags={post.frontmatter.tags} />
                       <div className="line-sm is-black margin-3-b" />
                       <p className="margin-0 is-black">
                         {post.frontmatter.description}

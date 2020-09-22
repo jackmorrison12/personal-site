@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -67,11 +67,13 @@ const Tags = ({ pageContext, data }) => {
                 <h1>
                   {articleCount} Article{articleCount === 1 ? "" : "s"}
                 </h1>
-                {edges
-                  .filter(item => item.node.frontmatter.type === "article")
-                  .map(({ node }) => (
-                    <Writing writing={node.frontmatter} halfwidth={true} />
-                  ))}
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "article")
+                    .map(({ node }) => (
+                      <Writing writing={node.frontmatter} halfwidth={true} />
+                    ))}
+                </div>
               </div>
             </div>
           ) : (
@@ -83,11 +85,13 @@ const Tags = ({ pageContext, data }) => {
                 <h1>
                   {blogCount} Blog Post{blogCount === 1 ? "" : "s"}
                 </h1>
-                {edges
-                  .filter(item => item.node.frontmatter.type === "blog")
-                  .map(({ node }) => (
-                    <Writing writing={node.frontmatter} halfwidth={true} />
-                  ))}
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "blog")
+                    .map(({ node }) => (
+                      <Writing writing={node.frontmatter} halfwidth={true} />
+                    ))}
+                </div>
               </div>
             </div>
           ) : (
@@ -97,11 +101,13 @@ const Tags = ({ pageContext, data }) => {
             <div className="row">
               <div className="col-xs-12">
                 <h1>{seriesCount} Blog Series</h1>
-                {edges
-                  .filter(item => item.node.frontmatter.type === "series")
-                  .map(({ node }) => (
-                    <Writing writing={node.frontmatter} halfwidth={true} />
-                  ))}
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "series")
+                    .map(({ node }) => (
+                      <Writing writing={node.frontmatter} halfwidth={true} />
+                    ))}
+                </div>
               </div>
             </div>
           ) : (

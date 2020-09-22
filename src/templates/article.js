@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/misc/tags"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -35,13 +36,7 @@ export default function Template({
           <div className="col-xs-12 col-md-7">
             <h1 className="title margin-1-t margin-3-b">{frontmatter.title}</h1>
             <h6 className="subtitle margin-3-b">{frontmatter.date}</h6>
-            <div className="margin-0 margin-1-t flex flex-wrap">
-              {frontmatter.tags.map(item => (
-                <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                  {item}
-                </div>
-              ))}
-            </div>
+            <Tags tags={frontmatter.tags} />
             <div className="line margin-5-tb is-primary" />
           </div>
           <div className="col-xs-12 col-md-5 rounded">

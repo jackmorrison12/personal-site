@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
+import Tags from "../misc/tags"
+
 export default props => (
   <div
     className={
@@ -25,13 +27,7 @@ export default props => (
                   ? props.project.startdate + " - " + props.project.enddate
                   : props.project.startdate}
               </p>
-              <div className="margin-0 margin-1-t flex flex-wrap">
-                {props.project.tags.map(item => (
-                  <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                    {item}
-                  </div>
-                ))}
-              </div>
+              <Tags tags={props.project.tags} />
               <p className="margin-0 is-black">{props.project.description}</p>
             </div>
           </div>

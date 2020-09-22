@@ -7,6 +7,8 @@ import PropTypes from "prop-types"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
+import Tags from "../misc/tags"
+
 class WritingRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -26,7 +28,9 @@ class WritingRoll extends React.Component {
                   <Img fluid={post.frontmatter.hero.childImageSharp.fluid} />
                 </div>
                 <div className="col-xs-12 col-sm-6 col-md-8 margin-5-t">
-                  <h1 className="margin-0 is-primary">{post.frontmatter.title}</h1>
+                  <h1 className="margin-0 is-primary">
+                    {post.frontmatter.title}
+                  </h1>
                   <p className="margin-0 margin-2-b is-black">
                     {post.frontmatter.startdate &&
                     post.frontmatter.startdate !== post.frontmatter.date
@@ -34,18 +38,12 @@ class WritingRoll extends React.Component {
                       : ""}
                     {post.frontmatter.date}
                   </p>
-                  <div className="margin-0 margin-1-t flex flex-wrap">
-                    <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                      {post.frontmatter.type === "series"
-                        ? "Blog Series"
-                        : "Article"}
-                    </div>
-                    {post.frontmatter.tags.map(item => (
-                      <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                        {item}
-                      </div>
-                    ))}
-                  </div>
+                  <Tags
+                    tags={post.frontmatter.tags}
+                    series={post.frontmatter.type === "series"}
+                    article={post.frontmatter.type === "article"}
+                  />
+
                   <div className="line-sm is-black margin-3-b" />
                   <p className="margin-0 is-black">{post.excerpt}</p>
                   {post.frontmatter.totalposts ? (

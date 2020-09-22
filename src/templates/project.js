@@ -10,6 +10,7 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { OutboundLink } from "gatsby-plugin-google-analytics"
+import Tags from "../components/misc/tags"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -58,12 +59,8 @@ export default function Template({
                     ))
                   : ""}
               </div>
-              <div className="margin-0 pad-1-l flex flex-wrap">
-                {frontmatter.tags.map(item => (
-                  <div class="is-primary-bg is-white margin-1-r tag margin-2-b">
-                    {item}
-                  </div>
-                ))}
+              <div className="pad-1-l">
+                <Tags tags={frontmatter.tags} />
               </div>
             </div>
           </div>

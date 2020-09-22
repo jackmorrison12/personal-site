@@ -9,6 +9,7 @@ import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/misc/tags"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -50,13 +51,7 @@ export default function Template({
                 ? "1 post"
                 : "No posts"}
             </h6>
-            <div className="margin-0 margin-1-t flex flex-wrap">
-              {frontmatter.tags.map(item => (
-                <div class="is-primary-bg is-white margin-2-b margin-1-r tag">
-                  {item}
-                </div>
-              ))}
-            </div>
+            <Tags tags={frontmatter.tags} />
             <div className="line margin-5-tb is-primary" />
             {/* <div className="blog" dangerouslySetInnerHTML={{ __html: html }} /> */}
           </div>
