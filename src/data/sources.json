@@ -70,5 +70,19 @@
         ]
       }
     ]
+  },
+  {
+    "type": "Images",
+    "description": "I source some of my article images from Flaticon - a big thanks to these a",
+    "sources": [
+      {
+        "name": "Becris",
+        "links": ["https://www.flaticon.com/authors/becris"]
+      },
+      {
+        "name": "Smashicons",
+        "links": ["https://smashicons.com/"]
+      }
+    ]
   }
 ]
