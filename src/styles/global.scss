@@ -28,6 +28,7 @@ main {
 body {
   margin: 0;
   max-width: 100vw;
+  overflow: hidden;
   @extend .is-light-grey-bg;
 }
 
