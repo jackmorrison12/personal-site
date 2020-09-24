@@ -17,6 +17,9 @@ $colors: ("primary", #f83600, #f83600),
   .is-#{nth($color,1)}-bg {
     background-color: nth($color, 2);
   }
+  .is-#{nth($color,1)}-bg-important {
+    background-color: nth($color, 2) !important;
+  }
   .is-#{nth($color,1)}-border {
     border-color: nth($color, 2);
   }
@@ -39,6 +42,9 @@ $colors: ("primary", #f83600, #f83600),
     }
     .is-#{nth($color,1)}-bg {
       background-color: nth($color, 3);
+    }
+    .is-#{nth($color,1)}-bg-important {
+      background-color: nth($color, 3) !important;
     }
     .is-#{nth($color,1)}-border {
       border-color: nth($color, 3);

@@ -9,7 +9,7 @@ import useDarkMode from "use-dark-mode"
 
 export default ({ data }) => {
   const [open, setOpen] = useState(false)
-  const darkMode = useDarkMode()
+  const darkMode = useDarkMode(true)
 
   return (
     <header>
@@ -39,7 +39,7 @@ export default ({ data }) => {
         </div>
         <div className="row flex padding-0-tb container-small mobile-show-flex">
           <div className="col-xs-11"></div>
-          <div className="col-xs-1">
+          <div className="col-xs-1" id="burger">
             <HamburgerButton
               open={open}
               onClick={() => setOpen(!open)}

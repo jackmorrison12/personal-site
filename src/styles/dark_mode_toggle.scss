@@ -65,3 +65,7 @@ input:checked + .slider:before {
     padding-bottom: 10px;
   }
 }
+
+#burger span {
+  @extend .is-black-bg-important;
+}

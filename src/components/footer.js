@@ -7,7 +7,7 @@ import footerlinks from "../data/footer.json"
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"
 
 export default ({ data }) => {
-  const darkMode = useDarkMode()
+  const darkMode = useDarkMode(true)
   function switchDarkMode() {
     trackCustomEvent({
       category: "Button",
