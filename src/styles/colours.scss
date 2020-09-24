@@ -82,16 +82,19 @@ $brand-colors: (
   linkedin: #0077b5,
   reddit: #ff4500,
   whatsapp: #128c7e,
+  email: rgb(161, 4, 154),
 );
 
 .post-social {
   .button {
     margin: 0.5rem 0.25rem;
-    // transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
     @each $class, $color in $brand-colors {
       &.#{$class} {
         color: $color !important;
         border-color: $color !important;
+        background-color: transparent !important;
+
         &:hover {
           background-color: $color !important;
           border-color: $color !important;

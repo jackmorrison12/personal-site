@@ -9,61 +9,80 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
   RedditShareButton,
+  EmailShareButton,
 } from "react-share"
 
 const ShareSheet = ({ socialConfig, tags }) => (
   <div className="post-social">
     <FacebookShareButton
       url={socialConfig.config.url}
-      className="button is-outlined is-rounded facebook"
+      quote={socialConfig.config.title + " by Jack Morrison"}
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb facebook"
+      resetButtonStyle={false}
     >
-      <span className="icon">
+      <span className="icon pad-2-r">
         <FontAwesomeIcon icon={["fab", "facebook-f"]} />
       </span>
-      <span className="text">Facebook</span>
+      <span className="bold">Facebook</span>
     </FacebookShareButton>
     <TwitterShareButton
       url={socialConfig.config.url}
-      className="button is-outlined is-rounded twitter"
-      title={socialConfig.config.title}
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb twitter"
+      title={socialConfig.config.title + " by Jack Morrison"}
       via={socialConfig.author.split("@").join("")}
       hashtags={tags}
+      resetButtonStyle={false}
     >
-      <span className="icon">
+      <span className="icon pad-2-r">
         <FontAwesomeIcon icon={["fab", "twitter"]} />
       </span>
-      <span className="text">Twitter</span>
+      <span className="bold">Twitter</span>
     </TwitterShareButton>
     <LinkedinShareButton
       url={socialConfig.config.url}
-      className="button is-outlined is-rounded linkedin"
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb linkedin"
       title={socialConfig.config.title}
+      resetButtonStyle={false}
     >
-      <span className="icon">
+      <span className="icon pad-2-r">
         <FontAwesomeIcon icon={["fab", "linkedin-in"]} />
       </span>
-      <span className="text">LinkedIn</span>
+      <span className="bold">LinkedIn</span>
     </LinkedinShareButton>
     <RedditShareButton
       url={socialConfig.config.url}
-      className="button is-outlined is-rounded reddit"
-      title={socialConfig.config.title}
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb reddit"
+      title={socialConfig.config.title + " by Jack Morrison"}
+      resetButtonStyle={false}
     >
-      <span className="icon">
+      <span className="icon pad-2-r">
         <FontAwesomeIcon icon={["fab", "reddit-alien"]} />
       </span>
-      <span className="text">Reddit</span>
+      <span className="bold">Reddit</span>
     </RedditShareButton>
     <WhatsappShareButton
       url={socialConfig.config.url}
-      className="button is-outlined is-rounded whatsapp"
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb whatsapp"
       title={socialConfig.config.title}
+      resetButtonStyle={false}
     >
-      <span className="icon">
+      <span className="icon pad-2-r">
         <FontAwesomeIcon icon={["fab", "whatsapp"]} />
       </span>
-      <span className="text">WhatsApp</span>
+      <span className="bold">WhatsApp</span>
     </WhatsappShareButton>
+    <EmailShareButton
+      url={socialConfig.config.url}
+      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb email"
+      subject={socialConfig.config.title}
+      resetButtonStyle={false}
+      body={socialConfig.config.title + " by Jack Morrison \n\n"}
+    >
+      <span className="icon pad-2-r">
+        <FontAwesomeIcon icon={["fab", "whatsapp"]} />
+      </span>
+      <span className="bold">Email</span>
+    </EmailShareButton>
   </div>
 )
 
