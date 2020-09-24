@@ -50,10 +50,10 @@ export default function Template({
             </div>
           </div>
           <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
-          <div className="col-xs-12">
+          <div className="col-xs-12 margin-8-b">
             <div className="line-sm margin-5-tb is-primary" />
             <h4 className="subtitle margin-3-b">
-              Enjoy this article? Why not share it...
+              Enjoyed this article? Why not share it...
             </h4>
             <ShareSheet
               socialConfig={{
