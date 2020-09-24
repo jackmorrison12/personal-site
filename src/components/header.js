@@ -9,7 +9,7 @@ import useDarkMode from "use-dark-mode"
 
 export default ({ data }) => {
   const [open, setOpen] = useState(false)
-  const darkMode = useDarkMode(true)
+  const darkMode = useDarkMode()
 
   return (
     <header>
