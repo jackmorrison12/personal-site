@@ -1,12 +1,12 @@
 ---
 type: blog
-baseurl: "/blog/"
+baseurl: /blog/
 blogseries: automation
 title: Why automation?
 slug: introduction
 date: 2020-08-15T20:30:00.000Z
 hidden: false
-description: "Why do I want to make my day-to-day life as automated as possible?"
+description: Why do I want to make my day-to-day life as automated as possible?
 tags:
   - iOS
   - Shortcuts
@@ -14,7 +14,7 @@ tags:
   - Automation
 ---
 
-Last week, Apple opened up the iOS 14 Beta to the public, and as I do every year, I downloaded it. However, this year, I decided to put it on my daily driver. Usually I play around with the latest updates on an old phone I have lying around. However this year, since I'm working from home, my main concern of battery drain isn't really a problem, since I can constantly have my phone plugged in, so I took the plunge!
+A few weeks ago, Apple opened up the iOS 14 Beta to the public, and as I do every year, I downloaded it. However, this year, I decided to put it on my daily driver. Usually I play around with the latest updates on an old phone I have lying around. However this year, since I'm working from home, my main concern of battery drain isn't really a problem, since I can constantly have my phone plugged in, so I took the plunge!
 
 One of the cool new features which comes with iOS 14 is <span class="is-primary">**Widgets**</span>, and one of these Widgets is the <span class="is-primary">**Shortcuts**</span> widget. I played around with the iOS Shortcuts app when it initially came out, but it didn't seem convenient having to click into the app every time I wanted to run a shortcut, and I don't regularly use Siri enough to call them. This meant I never really used any of the features, and pretty much ignored its existence.
 
