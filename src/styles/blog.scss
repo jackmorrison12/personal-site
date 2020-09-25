@@ -1,4 +1,5 @@
 .blog {
+  font-size: 1.125rem;
   @for $i from 1 through 6 {
     h#{$i} {
       @extend .is-primary;

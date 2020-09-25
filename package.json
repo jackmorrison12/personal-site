@@ -47,6 +47,7 @@
     "react-emoji-render": "^1.2.4",
     "react-hamburger-button": "0.0.1",
     "react-helmet": "^6.0.0",
+    "react-share": "^4.3.0",
     "react-slidedown": "^2.4.5",
     "react-timeago": "^4.4.0",
     "react-tooltip": "^4.2.6",

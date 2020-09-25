@@ -10,12 +10,17 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Tags from "../components/misc/tags"
+import ShareSheet from "../components/misc/sharesheet"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const {
+    article: { frontmatter, html },
+    site: {
+      siteMetadata: { url, author },
+    },
+  } = data
   return (
     <Layout>
       <SEO
@@ -45,6 +50,22 @@ export default function Template({
             </div>
           </div>
           <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="col-xs-12 margin-10-b">
+            <div className="line-sm margin-5-tb is-primary" />
+            <h4 className="subtitle margin-5-t margin-3-b">
+              Enjoyed this article? Why not share it...
+            </h4>
+            <ShareSheet
+              socialConfig={{
+                author,
+                config: {
+                  url: `${url}${frontmatter.fullurl}`,
+                  title: frontmatter.title,
+                },
+              }}
+              tags={frontmatter.tags}
+            />
+          </div>
         </div>
       </div>
     </Layout>
@@ -52,7 +73,13 @@ export default function Template({
 }
 export const pageQuery = graphql`
   query($slug: String!, $baseurl: String!) {
-    markdownRemark(
+    site {
+      siteMetadata {
+        url
+        author
+      }
+    }
+    article: markdownRemark(
       frontmatter: { slug: { eq: $slug }, baseurl: { eq: $baseurl } }
     ) {
       html
@@ -62,6 +89,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        fullurl
         hero {
           childImageSharp {
             fluid(maxWidth: 1000) {
