@@ -25,7 +25,7 @@ sources:
     icon: fab fa-gitlab
 highlights:
   - highlight: Created a webapp using React, Python, Java, MongoDB andMicrosoft Azure
-  - highlight: Tackled the problem of confirmation bias in the current consumption of the news
+  - highlight: Tackled the problem of confirmation bias in the current consumption of news
 ---
 
 <div class="intro">
