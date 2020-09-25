@@ -20,7 +20,7 @@ export default function Template({
     site: {
       siteMetadata: { url, author },
     },
-  } = data // data.markdownRemark holds your post data
+  } = data
   return (
     <Layout>
       <SEO
@@ -50,9 +50,9 @@ export default function Template({
             </div>
           </div>
           <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
-          <div className="col-xs-12 margin-8-b">
+          <div className="col-xs-12 margin-10-b">
             <div className="line-sm margin-5-tb is-primary" />
-            <h4 className="subtitle margin-3-b">
+            <h4 className="subtitle margin-5-t margin-3-b">
               Enjoyed this article? Why not share it...
             </h4>
             <ShareSheet
