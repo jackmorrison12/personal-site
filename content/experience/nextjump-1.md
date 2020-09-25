@@ -13,7 +13,7 @@ shorthighlights:
   - highlight: Worked with Vue.js
   - highlight: Learned a lot about UX
 longhighlights:
-  - highlight: Worked on mission-critical features, improving existing systems to prepare for increased site traffic and revenue in Q4 2020
+  - highlight: Worked on mission-critical features, improving existing and creating new systems to prepare for increased site traffic and revenue in Q4 2020
   - highlight: Owned multiple full-stack projects created using Vue.js and Go
   - highlight: Collaborated remotely with a team of engineers, UX designers and business associates to research and implement solutions on how to improve UX
 ---
