@@ -19,7 +19,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     <FacebookShareButton
       url={socialConfig.config.url}
       quote={socialConfig.config.title + " by Jack Morrison"}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb facebook"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb facebook"
       resetButtonStyle={false}
     >
       <span className="icon pad-2-r">
@@ -32,7 +32,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     </FacebookShareButton>
     <TwitterShareButton
       url={socialConfig.config.url}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb twitter"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb twitter"
       title={socialConfig.config.title + " by Jack Morrison"}
       via={socialConfig.author.split("@").join("")}
       hashtags={tags}
@@ -45,7 +45,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     </TwitterShareButton>
     <LinkedinShareButton
       url={socialConfig.config.url}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb linkedin"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb linkedin"
       title={socialConfig.config.title}
       resetButtonStyle={false}
     >
@@ -56,7 +56,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     </LinkedinShareButton>
     <RedditShareButton
       url={socialConfig.config.url}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb reddit"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb reddit"
       title={socialConfig.config.title + " by Jack Morrison"}
       resetButtonStyle={false}
     >
@@ -70,7 +70,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     </RedditShareButton>
     <WhatsappShareButton
       url={socialConfig.config.url}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb whatsapp"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb whatsapp"
       title={socialConfig.config.title}
       resetButtonStyle={false}
     >
@@ -81,7 +81,7 @@ const ShareSheet = ({ socialConfig, tags }) => (
     </WhatsappShareButton>
     <EmailShareButton
       url={socialConfig.config.url}
-      className="button super-rounded border-thin-solid pad-3-lr pad-1-tb email"
+      className="button rounded border-thin-solid pad-3-lr pad-1-tb email"
       subject={socialConfig.config.title}
       resetButtonStyle={false}
       body={socialConfig.config.title + " by Jack Morrison \n\n"}
