@@ -10,6 +10,8 @@ import {
   WhatsappShareButton,
   RedditShareButton,
   EmailShareButton,
+  FacebookShareCount,
+  RedditShareCount,
 } from "react-share"
 
 const ShareSheet = ({ socialConfig, tags }) => (
@@ -24,6 +26,9 @@ const ShareSheet = ({ socialConfig, tags }) => (
         <FontAwesomeIcon icon={["fab", "facebook-f"]} />
       </span>
       <span className="bold">Facebook</span>
+      <FacebookShareCount url={socialConfig.config.url}>
+        {shareCount => <span className="pad-2-l">{shareCount}</span>}
+      </FacebookShareCount>
     </FacebookShareButton>
     <TwitterShareButton
       url={socialConfig.config.url}
@@ -59,6 +64,9 @@ const ShareSheet = ({ socialConfig, tags }) => (
         <FontAwesomeIcon icon={["fab", "reddit-alien"]} />
       </span>
       <span className="bold">Reddit</span>
+      <RedditShareCount url={socialConfig.config.url}>
+        {shareCount => <span className="pad-2-l">{shareCount}</span>}
+      </RedditShareCount>
     </RedditShareButton>
     <WhatsappShareButton
       url={socialConfig.config.url}
