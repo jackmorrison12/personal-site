@@ -61,7 +61,7 @@ export default () => {
         </div>
       </div>
       <div className="is-primary-bg is-black diagonal-box">
-        <div className="row container-small pad-20-t pad-3-lr pad-20-b content">
+        <div className="row container-small pad-15-tb pad-3-lr content">
           <div className="col-xs-12 col-md-6">
             <Link to="/projects" className="link is-black text-align-center">
               <h2>Projects</h2>

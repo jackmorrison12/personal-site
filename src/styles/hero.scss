@@ -42,6 +42,13 @@
   transform: skewY(6deg);
 }
 
+@media only screen and (max-width: 46em) {
+  .content {
+    padding-top: 25px !important;
+    padding-bottom: 25px !important;
+  }
+}
+
 .nav {
   position: relative;
   z-index: 1000;
