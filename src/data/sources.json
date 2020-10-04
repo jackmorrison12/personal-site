@@ -44,6 +44,12 @@
           "https://www.telerik.com/kendo-react-ui/components/pdfprocessing/",
           "https://blog.usejournal.com/lets-make-a-resume-in-react-2c9c5540f51a"
         ]
+      },
+      {
+        "name": "Social Share Buttons",
+        "links": [
+          "https://swas.io/blog/social-share-button-for-gatsby-blog-pages/"
+        ]
       }
     ]
   },
