@@ -15,6 +15,7 @@ grades:
 grade-summaries:
   - grade: Fourth Year Student
   - grade: "Current Grade: First (78% Average)"
+  - grade: IC Skydiving Secretary '20/21
 highlights:
   - name: Models of Computation Exam
     score: First (97.2%)

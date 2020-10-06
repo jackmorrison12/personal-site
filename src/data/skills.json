@@ -2,13 +2,19 @@
   {
     "name": "German Language Proficiency",
     "level": "B1+ Standard of Common European Framework of Reference",
-    "summary": "I have achieved B1+ standard of the Common European Framework of Reference.",
+    "summary": "I have achieved B1+ standard of the Common European Framework of Reference alongside by degree studies",
     "cv": true
   },
   {
     "name": "Web Design",
     "level": "Proficient",
-    "summary": "I have created websites for companies, increasing my familiarity with HTML, CSS, JavaScript and PHP.",
+    "summary": "I have created websites for companies, increasing my familiarity with many technologies such as React and Vue.js",
+    "cv": true
+  },
+  {
+    "name": "Teaching",
+    "level": "Proficient",
+    "summary": "I taught an 'Introduction to Python' course to a class of 15 year old students, as well as a Robotics course to a group of Primary School children",
     "cv": true
   }
 ]

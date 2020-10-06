@@ -71,7 +71,10 @@ const useCvData = () => {
         }
       }
       projects: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___enddate] }
+        sort: {
+          order: [ASC, DESC]
+          fields: [frontmatter___hidden, frontmatter___enddate]
+        }
         filter: {
           fileAbsolutePath: { regex: "/projects/" }
           frontmatter: { cv: { eq: true } }

@@ -24,8 +24,10 @@ sources:
     url: https://gitlab.doc.ic.ac.uk/BurstMyBubble
     icon: fab fa-gitlab
 highlights:
-  - highlight: Created a webapp using React, Python, Java, MongoDB andMicrosoft Azure
   - highlight: Tackled the problem of confirmation bias in the current consumption of news
+  - highlight: Built a webapp using React, Python, Java, MongoDB and Microsoft Azure
+  - highlight: Awarded second best WebApps project in our Undergraduate class 
+
 ---
 
 <div class="intro">
@@ -79,7 +81,7 @@ Users can share their thoughts on articles, but instead of the traditional comme
 
 ## Keep track of what you're reading
 
-Users also have access to a personal page, which shows their latest reading stats, as well as recently read articles.
+Users also have access to a personal page, which shows their latest reading stats, as well as recently read articles
 
   </div>
   <div class="right">

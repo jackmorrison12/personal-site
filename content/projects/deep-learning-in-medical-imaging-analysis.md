@@ -5,7 +5,7 @@ title: Deep Learning in Medical Imaging Analysis
 slug: topics
 projecttype: Uni Project
 homepage: false
-cv: true
+cv: false
 featured: true
 hidden: false
 hero: /img/topics-logo.png

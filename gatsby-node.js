@@ -46,6 +46,11 @@ const redirects = [
     toPath: "/me",
     isPermanent: true,
   },
+  {
+    fromPath: "/projects/personal-site",
+    toPath: "/",
+    isPermanent: true,
+  },
 ]
 exports.onCreateNode = ({ node, getNodesByType }) => {
   if (node.frontmatter && node.frontmatter.type) {

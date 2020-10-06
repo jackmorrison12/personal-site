@@ -12,7 +12,7 @@ export default props => {
             {item.frontmatter.startdate} - {item.frontmatter.enddate}
           </p>
           {item.frontmatter.longhighlights.map(highlight => (
-            <p className="bullet pad-5-l pad-1-b">{highlight.highlight}</p>
+            <p className="bullet pad-5-l">{highlight.highlight}</p>
           ))}
         </div>
       ))}

@@ -24,7 +24,8 @@ sources:
 highlights:
   - highlight: Created a collaborative drawing whiteboard application for iOS
   - highlight: Researched Conflict-free Replicated Data Types (CRDTs)
-  - highlight: Used a mesh network topology to allow for decentralisation
+  - highlight: Used a mesh network topology consisting of local Bluetooth connections and a global XMPP server to allow for decentralisation
+  - highlight: Created a public protocol to interoperate with other whiteboard applications, including one created by other students
 ---
 
 <div class="intro">

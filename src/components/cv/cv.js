@@ -24,11 +24,11 @@ export default () => {
             <div className="margin-3-b" />
             <Skills skills={data.skills} />
           </div>
-          <div className="col-xs-8 is-white-bg-always pad-3-l pad-3 inner">
+          <div className="col-xs-8 is-white-bg-always pad-3 inner">
             <Experience experience={data.experience} />
             <div className="margin-3-b margin-3-t" />
             <Projects projects={data.projects} />
-            <div className="margin-3-b margin-3-t" />
+            <div className="margin-5-b margin-3-t" />
             <h4 className="is-green-always subtitle">
               References can be supplied upon request
             </h4>
