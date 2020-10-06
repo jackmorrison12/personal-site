@@ -48,7 +48,7 @@ const redirects = [
   },
   {
     fromPath: "/projects/personal-site",
-    toPath: "/",
+    toPath: "/index",
     isPermanent: true,
   },
 ]
