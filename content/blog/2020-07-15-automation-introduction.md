@@ -1,6 +1,6 @@
 ---
 type: blog
-baseurl: /blog/
+baseurl: "/blog/"
 blogseries: automation
 title: Why automation?
 slug: introduction
