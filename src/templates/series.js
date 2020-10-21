@@ -65,7 +65,7 @@ export default function Template({
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
-                <div className="grow-1 row margin-5-tb is-white-bg rounded pad-3-tb">
+                <div className="grow-1 row margin-5-tb is-white-bg rounded pad-3 margin-1-lr">
                   <div className="col-xs-12 col-md-3 flex flex-wrap">
                     <h1 className="margin-0 is-black left-xs right-md width-full last-xs first-md">
                       {post.frontmatter.date}
@@ -82,15 +82,8 @@ export default function Template({
                     <p className="margin-0 is-black bold is-black">
                       {post.frontmatter.description}
                     </p>
-
-                    {/* <p className="margin-0 is-black">{post.excerpt}</p> */}
                   </div>
                 </div>
-                {post.frontmatter.entry !== 1 ? (
-                  <div className="line-full is-primary margin-3-b mobile-show" />
-                ) : (
-                  ""
-                )}
               </Link>
             ))}
         </div>

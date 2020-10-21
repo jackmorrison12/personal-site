@@ -2,7 +2,7 @@
 type: blog
 baseurl: "/blog/"
 blogseries: automation
-title: Recording Ideas in Trello
+title: Recording ideas in Trello
 slug: trello-ideas
 date: 2020-09-17T20:30:00.000Z
 hidden: false
