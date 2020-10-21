@@ -65,7 +65,7 @@ export default function Template({
           {posts &&
             posts.map(({ node: post }) => (
               <Link to={"/" + post.frontmatter.fullurl} className="" id="path">
-                <div className="grow-2 row margin-5-tb">
+                <div className="grow-1 row margin-5-tb is-white-bg rounded pad-3-tb">
                   <div className="col-xs-12 col-md-3 flex flex-wrap">
                     <h1 className="margin-0 is-black left-xs right-md width-full last-xs first-md">
                       {post.frontmatter.date}
