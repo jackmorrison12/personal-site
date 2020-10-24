@@ -284,7 +284,6 @@ collections:
       - { label: "End Date", name: "date", widget: "datetime" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
       - { label: "Hero Image", name: "hero", widget: "image", required: false }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "note"
@@ -316,6 +315,5 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
