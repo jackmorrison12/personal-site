@@ -23,8 +23,9 @@ export default ({ data }) => {
                     <h3 className="margin-0">
                       <Link
                         to={item.link}
-                        activeClassName="is-primary"
+                        activeClassName="is-primary-important"
                         className="is-black"
+                        partiallyActive={item.link != "/"}
                       >
                         <Twemoji svg text={item.name} />
                       </Link>
