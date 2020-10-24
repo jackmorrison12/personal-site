@@ -261,3 +261,61 @@ collections:
       - { label: "Type", name: "type", widget: "hidden", default: "misc" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: "course"
+    label: "Course"
+    description: "A course to write notes about"
+    folder: "content/courses"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "course" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/notes/",
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Code", name: "code", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Start Date", name: "date", widget: "datetime" }
+      - { label: "End Date", name: "date", widget: "datetime" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "note"
+    label: "Note"
+    description: "Some notes on a particular topic"
+    folder: "content/notes"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "note" }
+      - {
+          label: "Base URL",
+          name: "baseurl",
+          widget: "hidden",
+          default: "/notes/",
+        }
+      - {
+          label: "Course",
+          name: "course",
+          widget: "relation",
+          collection: "course",
+          searchFields: ["code"],
+          valueField: "slug",
+          displayFields: ["title"],
+          required: false,
+        }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
