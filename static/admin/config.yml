@@ -280,8 +280,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Code", name: "code", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
-      - { label: "Start Date", name: "date", widget: "datetime" }
-      - { label: "End Date", name: "date", widget: "datetime" }
+      - { label: "Start Date", name: "startdate", widget: "datetime" }
+      - { label: "End Date", name: "enddate", widget: "datetime" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
       - { label: "Hero Image", name: "hero", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list" }

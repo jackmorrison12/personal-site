@@ -4,9 +4,9 @@ baseurl: /notes/
 title: Privacy Engineering
 code: "70018"
 slug: privacy-engineering
-date: 2020-12-18T15:25:06.440Z
+startdate: 2020-10-04T15:25:06.440Z
+enddate: 2020-12-18T15:25:06.440Z
 hidden: false
-description: make optional
 tags:
   - Privacy
   - Anonymisation
