@@ -148,6 +148,30 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
       node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
         node.frontmatter.slug
       )
+    } else if (node.frontmatter.type === "course") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.slug
+      )
+    } else if (node.frontmatter.type === "note") {
+      node.frontmatter.fullurl = node.frontmatter.baseurl.concat(
+        node.frontmatter.course,
+        "/",
+        node.frontmatter.slug
+      )
+      var courseNode = getNodesByType(`MarkdownRemark`)
+      courseNode = courseNode.filter(innernode => {
+        return (
+          innernode.frontmatter &&
+          innernode.frontmatter.type &&
+          innernode.frontmatter.type === "course" &&
+          innernode.frontmatter.slug === node.frontmatter.course
+        )
+      })[0]
+      node.frontmatter.course_title = courseNode.frontmatter.title
+      node.frontmatter.course_code = courseNode.frontmatter.code
+      node.frontmatter.hidden =
+        node.frontmatter.hidden || courseNode.frontmatter.hidden
+      node.frontmatter.hero = courseNode.frontmatter.hero
     }
   }
 }
@@ -160,13 +184,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const projectTemplate = path.resolve(`src/templates/project.js`)
   const seriesTemplate = path.resolve(`src/templates/series.js`)
   const tagTemplate = path.resolve("src/templates/tag.js")
+  const courseTemplate = path.resolve(`src/templates/course.js`)
+  const noteTemplate = path.resolve("src/templates/note.js")
 
   const result = await graphql(`
     {
       postsRemark: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         filter: {
-          frontmatter: { type: { regex: "/blog|project|article|series/" } }
+          frontmatter: {
+            type: { regex: "/blog|project|article|series|course|note/" }
+          }
         }
       ) {
         edges {
@@ -177,6 +205,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               baseurl
               blogseries
               tags
+              course
             }
           }
         }
@@ -208,6 +237,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               "/",
               node.frontmatter.slug
             )
+          : node.frontmatter.type === "note"
+          ? node.frontmatter.baseurl.concat(
+              node.frontmatter.course,
+              "/",
+              node.frontmatter.slug
+            )
           : node.frontmatter.baseurl.concat(node.frontmatter.slug),
       component:
         node.frontmatter.type === "blog"
@@ -216,11 +251,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           ? articleTemplate
           : node.frontmatter.type === "project"
           ? projectTemplate
+          : node.frontmatter.type === "course"
+          ? courseTemplate
+          : node.frontmatter.type === "note"
+          ? noteTemplate
           : seriesTemplate,
       context: {
         blogseries: node.frontmatter.blogseries,
         baseurl: node.frontmatter.baseurl,
         slug: node.frontmatter.slug,
+        course: node.frontmatter.course,
       }, // additional data can be passed via context
     })
   })

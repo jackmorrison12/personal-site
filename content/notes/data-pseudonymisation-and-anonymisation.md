@@ -8,6 +8,7 @@ topic: 1
 hidden: false
 tags:
   - Pseudonymisation
-  - Anonymisaton
+  - Anonymisation
 ---
+
 Notes on data anon and pseudo
