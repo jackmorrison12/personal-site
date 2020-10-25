@@ -2,6 +2,9 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import { library } from "@fortawesome/fontawesome-svg-core"
+import { fab } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   FacebookShareButton,
@@ -13,6 +16,8 @@ import {
   FacebookShareCount,
   RedditShareCount,
 } from "react-share"
+
+library.add(fab)
 
 const ShareSheet = ({ socialConfig, tags }) => (
   <div className="post-social">
