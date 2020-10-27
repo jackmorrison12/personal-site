@@ -303,6 +303,12 @@ collections:
           default: "/notes/",
         }
       - {
+          label: "Full URL",
+          name: "fullurl",
+          widget: "hidden",
+          default: " ",
+        }
+      - {
           label: "Course",
           name: "course",
           widget: "relation",

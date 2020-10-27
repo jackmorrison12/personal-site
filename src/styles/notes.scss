@@ -1,0 +1,47 @@
+.note {
+  font-size: 1.125rem;
+
+  .def,
+  .katex-display {
+    @extend .rounded;
+    @extend .is-white-bg;
+    @extend .pad-5-lr;
+    @extend .pad-4-tb;
+    width: fit-content;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
+  }
+
+  a {
+    @extend .is-medium-blue;
+  }
+
+  a:hover {
+    @extend .underline;
+  }
+
+  .gatsby-resp-image-wrapper {
+    max-width: 60% !important;
+  }
+
+  .gatsby-resp-image-image {
+    border-radius: 15px;
+  }
+
+  .caption {
+    padding-left: 20%;
+    padding-right: 20%;
+    font-style: italic;
+  }
+
+  @media only screen and (max-width: 46em) {
+    .caption {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .gatsby-resp-image-wrapper {
+      max-width: 100% !important;
+    }
+  }
+}

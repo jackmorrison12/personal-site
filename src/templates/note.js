@@ -20,12 +20,15 @@ export default function Template({
     site: {
       siteMetadata: { url, author },
     },
+    course: { frontmatter: course_frontmatter },
   } = data
   return (
     <Layout>
       <SEO
-        title={frontmatter.course_title + ": " + frontmatter.title}
-        image={"/img/" + frontmatter.hero.childImageSharp.fluid.originalName}
+        title={course_frontmatter.title + ": " + frontmatter.title}
+        image={
+          "/img/" + course_frontmatter.hero.childImageSharp.fluid.originalName
+        }
       />
       <div className="is-grey is-light-grey-bg">
         <div className="row container pad-10-t">
@@ -37,7 +40,7 @@ export default function Template({
             {"< "}
             <Link to={frontmatter.baseurl + frontmatter.course} className="">
               <h3 className="margin-0 margin-2-b link is-primary pad-1-b inherit">
-                {frontmatter.course_title}
+                {course_frontmatter.title}
               </h3>
             </Link>
           </div>
@@ -49,7 +52,7 @@ export default function Template({
             </h1>
             <Tags tags={frontmatter.tags} />
           </div>
-          <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="note" dangerouslySetInnerHTML={{ __html: html }} />
           <div className="col-xs-12 margin-10-b">
             <div className="line-sm margin-5-tb is-primary" />
             <h4 className="subtitle margin-5-t margin-3-b">
@@ -60,7 +63,7 @@ export default function Template({
                 author,
                 config: {
                   url: `${url}${frontmatter.fullurl}`,
-                  title: frontmatter.course_title + ": " + frontmatter.title,
+                  title: course_frontmatter.title + ": " + frontmatter.title,
                 },
               }}
               tags={frontmatter.tags}
@@ -79,6 +82,24 @@ export const pageQuery = graphql`
         author
       }
     }
+    course: markdownRemark(
+      frontmatter: { slug: { eq: $course }, baseurl: { eq: $baseurl } }
+    ) {
+      html
+      frontmatter {
+        slug
+        title
+        code
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid
+              originalName
+            }
+          }
+        }
+      }
+    }
     post: markdownRemark(
       frontmatter: {
         slug: { eq: $slug }
@@ -92,20 +113,10 @@ export const pageQuery = graphql`
         slug
         title
         topic
-        course_title
-        course_code
         course
         baseurl
         tags
         fullurl
-        hero {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
-              originalName
-            }
-          }
-        }
       }
     }
   }
