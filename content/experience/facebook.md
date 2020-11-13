@@ -14,7 +14,7 @@ longhighlights:
   - highlight:
       Participated in an programme at Facebook with the goal of creating an application to 'Bring Communities
       Together'
-  - highlight: Used the scrum agile methodology, working in 3-week sprints
+  - highlight: Used the scrum agile methodology, working in 2-week sprints
   - highlight: Created MentorMe, a mentoring app made using React.js and Node.js
 ---
 
