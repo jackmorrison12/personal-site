@@ -12,6 +12,13 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px;
   }
 
+  mark {
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 3px;
+    @extend .is-red-bg;
+  }
+
   a {
     @extend .is-medium-blue;
   }

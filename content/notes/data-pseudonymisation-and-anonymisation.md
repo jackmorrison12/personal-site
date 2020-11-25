@@ -50,7 +50,7 @@ This is a function which maps identifiers (e.g. a phone number) to a pseudonymis
 
 An example of a formula could be:
 
-<!-- pseudonymised_ID = phone_number \times 17 + 12345 -->
+<!--$$ pseudonymised_ID = phone_number \times 17 + 12345 $$-->
 
 This saves space, however now we also need to keep the formula secret. Also, since we have a function, we can plot the results on a graph and find the line of best fit, generating the secret formula.
 
@@ -76,7 +76,7 @@ These are designed so that a small change in input value generates a large jump 
 
 An example function is:
 
-<!-- h(k) = \lfloor m \times (ka - \lfloor k \times a \rfloor ) \rfloor -->
+<!--$$ h(k) = \lfloor m \times (ka - \lfloor k \times a \rfloor ) \rfloor $$-->
 
 Where $k$ is the input and $a$ and $m$ are constant.
 
@@ -112,7 +112,7 @@ You should never assume secrecy on the hash function. However, you can only buil
 
 An example of a salt it:
 
-<!-- md5(`07123456789") \Longrightarrow md5(`07123456789\underline{youwillneverguessthissalt!}") -->
+<!--$$ md5(`07123456789") \Longrightarrow md5(`07123456789\underline{youwillneverguessthissalt!}") $$-->
 
 If the salt is long enough, it cannot be brute forced.
 
