@@ -310,6 +310,18 @@ collections:
           default: " ",
         }
       - {
+          label: "Logo",
+          name: "logo",
+          widget: "hidden",
+          default: " ",
+        }
+      - {
+          label: "Hero",
+          name: "hero",
+          widget: "hidden",
+          default: " ",
+        }
+      - {
           label: "Course",
           name: "course",
           widget: "relation",

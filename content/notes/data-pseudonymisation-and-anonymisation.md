@@ -2,6 +2,8 @@
 type: note
 baseurl: /notes/
 fullurl: " "
+logo: " "
+hero: " "
 course: privacy-engineering
 title: Data Pseudonymisation and Anonymisation
 slug: data-pseudonymisation-and-anonymisation

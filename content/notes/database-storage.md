@@ -2,6 +2,8 @@
 type: note
 baseurl: /notes/
 fullurl: " "
+logo: " "
+hero: " "
 course: scalable-systems
 title: Database Storage
 slug: database-storage

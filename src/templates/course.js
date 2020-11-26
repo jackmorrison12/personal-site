@@ -96,7 +96,7 @@ export const pageQuery = graphql`
       }
     }
     notes: allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___topic] }
+      sort: { order: ASC, fields: [frontmatter___topic] }
       filter: {
         frontmatter: {
           course: { eq: $slug }
