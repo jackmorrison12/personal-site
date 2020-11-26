@@ -8,6 +8,7 @@ import SEO from "../components/seo"
 
 import Project from "../components/projects/project"
 import Writing from "../components/writing/writing"
+import Note from "../components/notes/note"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -25,6 +26,11 @@ const Tags = ({ pageContext, data }) => {
     .length
   const seriesCount = edges.filter(
     item => item.node.frontmatter.type === "series"
+  ).length
+  const noteCount = edges.filter(item => item.node.frontmatter.type === "note")
+    .length
+  const courseCount = edges.filter(
+    item => item.node.frontmatter.type === "course"
   ).length
 
   return (
@@ -106,6 +112,42 @@ const Tags = ({ pageContext, data }) => {
                     .filter(item => item.node.frontmatter.type === "series")
                     .map(({ node }) => (
                       <Writing writing={node.frontmatter} halfwidth={true} />
+                    ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          {courseCount > 0 ? (
+            <div className="row">
+              <div className="col-xs-12">
+                <h1>
+                  {courseCount} Course{courseCount === 1 ? "" : "s"}
+                </h1>
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "course")
+                    .map(({ node }) => (
+                      <Note note={node.frontmatter} halfwidth={true} />
+                    ))}
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          {noteCount > 0 ? (
+            <div className="row">
+              <div className="col-xs-12">
+                <h1>
+                  {noteCount} Note{noteCount === 1 ? "" : "s"}
+                </h1>
+                <div className="row">
+                  {edges
+                    .filter(item => item.node.frontmatter.type === "note")
+                    .map(({ node }) => (
+                      <Note note={node.frontmatter} halfwidth={true} />
                     ))}
                 </div>
               </div>

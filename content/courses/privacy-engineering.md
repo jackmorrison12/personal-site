@@ -8,6 +8,7 @@ startdate: 2020-10-04T15:25:06.440Z
 enddate: 2020-12-18T15:25:06.440Z
 hidden: false
 hero: /img/privacy-engineering.png
+logo: /img/privacy-engineering-logo.png
 tags:
   - Privacy
   - Anonymisation

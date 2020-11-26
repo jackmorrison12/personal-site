@@ -8,6 +8,7 @@ startdate: 2020-10-04T15:25:06.440Z
 enddate: 2020-12-18T15:25:06.440Z
 hidden: false
 hero: /img/scalable-systems.png
+logo: /img/scalable-systems-logo.png
 tags:
   - Scalable Systems
   - Databases

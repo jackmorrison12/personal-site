@@ -169,6 +169,8 @@ exports.onCreateNode = ({ node, getNodesByType }) => {
       })[0]
       node.frontmatter.hidden =
         node.frontmatter.hidden || courseNode.frontmatter.hidden
+      node.frontmatter.hero = courseNode.frontmatter.hero
+      node.frontmatter.logo = courseNode.frontmatter.logo
     }
   }
 }

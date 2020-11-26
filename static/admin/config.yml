@@ -284,6 +284,7 @@ collections:
       - { label: "End Date", name: "enddate", widget: "datetime" }
       - { label: "Hidden", name: "hidden", widget: "boolean", default: false }
       - { label: "Hero Image", name: "hero", widget: "image", required: false }
+      - { label: "Logo Image", name: "logo", widget: "image", required: false }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "note"
