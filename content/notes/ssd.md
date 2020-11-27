@@ -174,7 +174,7 @@ You're just adapting the algorithm to the underlying hardware, like we have many
 # Flash-aided Business Intelligence (OLAP)
 
 <div class="def">
-  <span class="is-primary bold">OLAP: </span>Online Analytial Processing
+  <span class="is-primary bold">OLAP: </span>Online Analytical Processing
 </div>
 
 OLAP are usually read-only, complex queries
