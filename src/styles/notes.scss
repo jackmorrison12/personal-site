@@ -19,6 +19,16 @@
     @extend .is-red-bg;
   }
 
+  table,
+  th,
+  td {
+    border: 1px solid;
+    @extend .is-black-border;
+    border-collapse: collapse;
+    margin: auto;
+    padding: 8px;
+  }
+
   a {
     @extend .is-medium-blue;
   }

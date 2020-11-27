@@ -65,7 +65,7 @@ To improve the locality therefore:
 
 # Cache Conscious Indexing
 
-## B-Trees
+## B Trees
 
 Each node in the tree can hold <mark>2 entries</mark>
 
