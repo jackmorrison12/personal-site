@@ -12,6 +12,10 @@ hidden: false
 tags:
   - Pseudonymisation
   - Anonymisation
+  - Hashing
+  - K-Anonymity
+  - l-Diversity
+  - t-closeness
 ---
 
 # Anonymisation
