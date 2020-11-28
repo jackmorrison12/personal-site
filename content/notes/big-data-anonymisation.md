@@ -85,8 +85,8 @@ Using additional information about the price of the transaction further increase
 Exact unicity is a costly calculation, so we use a procedure which relies on:
 
 - A random set of 10,000 users
-- ... for which we deap $p$ points at random
-- ... and whether draw points make them unique
+- ... for which we draw $p$ points at random
+- ... and whether these points make them unique
 
 ```
 users = select(D, p, 10000)
