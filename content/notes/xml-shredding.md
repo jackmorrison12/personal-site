@@ -21,21 +21,21 @@ tags:
   <span class="is-primary bold">XML: </span> Extensible Markup Language
 </div>
 
-XML is a language used to structure, store and send data between systems
+XML is a language used to <mark>structure, store and send data</mark> between systems
 
-It's designed to describe data and focus on what data is, and to be easy to understand
+It's designed to <mark>describe data and focus on what data is</mark>, and to be easy to understand
 
 ## XML Rules
 
-The first tag is the root of the tree - a tree only had one root
+The <mark>first tag is the root</mark> of the tree - a tree only had one root
 
-Every other matching pair of tags becomes a node. If a pair of tags is contained inside another pair of tags, then they are a child of the containing pair. Children are ordered
+Every other <mark>matching pair of tags becomes a node</mark>. If a pair of tags is contained inside another pair of tags, then they are a <mark>child of the containing pair</mark>. Children are ordered
 
 Text inside tags becomes a child of the node corresponding to the enclosing tags - these are always leaf nodes
 
-XML allows single tags, which are leaves wih a box
+XML allows <mark>single tags</mark>, which are leaves wih a box
 
-Tags are case sensitive, and have to be well formed (properly nested)
+<mark>Tags are case sensitive</mark>, and have to be well formed (properly nested)
 
 An example of some XML:
 
@@ -59,9 +59,9 @@ This gives a tree-like structure of data
 
 ## DTD
 
-A valid XML document is well formed - meaning it also conforms to the rules of a Document Type Definition (DTD)
+A valid <mark>XML document is well formed</mark> - meaning it also conforms to the rules of a Document Type Definition (DTD)
 
-A DTD is liek a database schema for XML files - it's usually referenced in the header of the XML file
+A DTD is like a <mark>database schema for XML files</mark> - it's usually referenced in the header of the XML file
 
 An example for a DTD is:
 
@@ -89,41 +89,41 @@ Some XML which follows this schema is:
 
 The `<!Element note(to,from,heading,notebody)>` tag defined the note element as having four elements, `to,from,heading,notebody`, in that specific order
 
-`<!Element to(#PCDATA)>` defined the `to` element is of type `#PCDATA`, which is Parsed Character Data (a character string)
+`<!Element to(#PCDATA)>` defines the `to` element of type `#PCDATA`, which is Parsed Character Data (a character string)
 
 There are some more symbols you can add, for example:
 
-- `<!ELEMENT note (message +)>` - Declaring a minimum of one occurrence of the `message` element
-- `<!ELEMENT note (message *)>` - Declaring zero or more occurrence of the `message` element
-- `<!ELEMENT note (message ?)>` - Declaring zero or one occurrence of the `message` element
+- `<!ELEMENT note (message +)>` - Declaring a <mark>minimum of one</mark> occurrence of the `message` element
+- `<!ELEMENT note (message *)>` - Declaring <mark>zero or more occurrences</mark> of the `message` element
+- `<!ELEMENT note (message ?)>` - Declaring <mark>zero or one occurrence</mark> of the `message` element
 
 ## Advantages of XML
 
-XML is an open standard, so can be used by anyone
+XML is an <mark>open standard</mark>, so can be used by anyone
 
-It's human readable
+It's <mark>human readable</mark>
 
-It's easy to process
+It's <mark>easy to process</mark>
 
 It can be used to integrate complex web based systems, as it's useful in communications
 
-However, one downside is that it inflates the size of the data - it adds info which could be compressed away
+However, one downside is that it <mark>inflates the size of the data</mark> - it adds info which could be compressed away
 
 ## Importance of XML
 
-It's fast emerging as the dominant standard for representing data on the internet (along with JSON)
+It's fast emerging as the <mark>dominant standard for representing data</mark> on the internet (along with JSON)
 
-Most organisations use XML as a data communications standard
+Most organisations use XML as a <mark>data communications standard</mark>
 
 Commercial development frameworks are XML oriented (e.g. .NET and Java)
 
-All modern web systems architecture is designed based on XML (e.g. HTML)
+All <mark>modern web systems architecture</mark> is designed based on XML (e.g. HTML)
 
 # XML in Databases
 
 XML can be stored in:
 
-- Relational databases
+- <mark>Relational databases</mark>
 - File systems
 - Object-oriented databases
 - Special purpose systems
@@ -132,25 +132,25 @@ XML can be stored in:
 
 There are two main ways to store XML data in databases:
 
-Structure-Mapping Approach: The design of the database schema is based on the understanding of the DTD
+<mark>Structure-Mapping Approach</mark>: The design of the database schema is <mark>based on the understanding of the DTD</mark>
 
-Model-Mapping Approach: No DTD information is required for data storage - a fixed database schema is used to store XML documents
+<mark>Model-Mapping Approach</mark>: No DTD information is required for data storage - a <mark>fixed database schema</mark> is used to store XML documents
 
 Model-mapping approaches are more useful, since:
 
-1. They're capable of supporting any sophisticated XML applications that are considered as static or dynamic
-2. They're capable of supporting well-formed byt non-DTD XML applications
-3. They don't require extending the expressive power of database models in order to support SML documents. It's possible to store them in off-the-shelf DBMSs
+1. They're capable of supporting <mark>any sophisticated XML applications</mark> that are considered as static or dynamic
+2. They're capable of supporting <mark>well-formed but non-DTD</mark> XML applications
+3. They <mark>don't require extending the expressive power of database models</mark> in order to support XML documents. It's possible to store them in off-the-shelf DBMSs
 
 Some examples of model-mapping approaches are:
 
-Edge Oriented Approaches:
+<mark>Edge Oriented Approaches</mark>:
 
 - Edge (All the edges of XML document are stored in a single table)
 - Monet (It partitions the edge table according to all possible label paths)
 - XParent (Based on LabelPath, DataPath, Element and Data)
 
-Node Oriented Approach:
+<mark>Node Oriented Approach</mark>:
 
 - XRel (XML data stored based on Path, Element, Text and Attribute)
 
@@ -170,46 +170,46 @@ Node Oriented Approach:
 
 ### Edge Approach
 
-This has just one table - the edge table, which can be represented as:
+This has just one table - the <mark>edge table</mark>, which can be represented as:
 
 `Edge(Source, Ordinal, Target, Label, Flag, Value)`
 
 Where:
 
-- `Source` represents the source node int he data graph
+- `Source` represents the source node in the data graph
 - `Ordinal` is the order of elements among the siblings
 - `Target` is the target node which the current node is pointing to
 - `Label` is the name in the XML document
 - `Flag` is the type of the data being represented
 - `Value` is the data in the document
 
-Some values can be empty, for example if they have no data in them
+Some <mark>values can be empty</mark>, for example if they have no data in them
 
 ### Monet Approach
 
-This approach stores XML in multiple tables
+This approach stores <mark>XML in multiple tables</mark>
 
-It partitions the edge table on all possible label paths, where the number of tables = the number of distinct label paths
+It <mark>partitions the edge table on all possible label paths</mark>, where the number of tables = the number of distinct label paths
 
 Tables are classified as:
 
-- `Element Node (Source, Target, Ordinal)` - this combination represents a unique edge in an XML data graph
-- `Text Node (ID, Value)` - the type of the value is explicit in the table name. This is a leaf node
+- `Element Node (Source, Target, Ordinal)` - this combination represents a <mark>unique edge in an XML data graph</mark>
+- `Text Node (ID, Value)` - the <mark>type of the value is explicit in the table name</mark>. This is a leaf node
 
 ### XRel Approach
 
-This is a node-oriented approach - it maintains nodes individually
+This is a <mark>node-oriented approach</mark> - it maintains nodes individually
 
 It stores XML in four tables:
 
 - `Path (PathID, Pathexp)` - this table maintains the simple path expression identifier `PathID` and path expression `Pathexp`
 - `Element (PathId, Start, End, Ordinal)` - this table contains the start and end positions of a region for a given `PathID`, where the region of a node is the start and end positions of this node in the XML document
 - `Text (PathID, Start, End, Value)` - this table contains the start and end positions and the value of the element for a given `PathID`
-- `Attribute (PathId, Start, Eng, Value)` - this table contains the start and end positions and the value of the attribute for a given `PathID`
+- `Attribute (PathId, Start, End, Value)` - this table contains the start and end positions and the value of the attribute for a given `PathID`
 
 ### XParent Approach
 
-This is another edge-oriented approach
+This is another <mark>edge-oriented approach</mark>
 
 It has four tables:
 
@@ -220,10 +220,8 @@ It has four tables:
 
 ## Querying XML in Databases
 
-The approaches above all depend on the types of query you want to execute to decide which one performs best, however typically:
+The approaches above all <mark>depend on the types of query you want to execute</mark> to decide which one performs best, however typically:
 
-XRel and XParent outperform Edge in complex queries
-
-Edge performs better when using simple queries
-
-Label-paths help in reducing the querying time
+- <mark>XRel and XParent</mark> outperform Edge in <mark>complex queries</mark>
+- <mark>Edge</mark> performs better when using <mark>simple queries</mark>
+- <mark>Label-paths</mark> help in <mark>reducing the querying time</mark>
