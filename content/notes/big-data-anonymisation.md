@@ -58,7 +58,7 @@ E.g. for location data:
 
 However, we <mark>don't assume an attacker knows all of the points</mark>, just a few ($p$) of them
 
-Unicity aims to <mark>quantify the risk of re-identification </mark>in large scale behavioural datasets
+Unicity aims to <mark>quantify the risk of re-identification</mark> in large scale behavioural datasets
 
 Formally, the unicity $\varepsilon _p$ of a dataset is the <mark>average fraction of the users in the dataset that are uniquely identified by $p$ random points</mark> in their trajectory
 
