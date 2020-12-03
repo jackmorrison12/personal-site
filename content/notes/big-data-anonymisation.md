@@ -99,14 +99,14 @@ for u in users:
       break
   if is_unique:
     unique_users = unique_users + {u}
-return |unique)users|/|users|
+return |unique_users|/|users|
 ```
 
 ## What does unicity tell us about behaviour?
 
 It measures <mark>what distinguishes a person from everyone else</mark>
 
-e.g. in credit card data, it showed:
+E.g. in credit card data, it showed:
 
 - Women are easier to identify than men
 - The richer you are, the easier you are to identify
@@ -136,7 +136,7 @@ Where:
 
 The data could be <mark>noisy, missing, or match several people</mark>
 
-Or the person we're searching for may <mark>not even be in the dataset</mark>!
+Or the person we're searching for may <mark>not even be in the dataset!</mark>
 
 Matching attacks are implementations of unicity that rely on:
 
@@ -205,7 +205,7 @@ The method is:
 
 The attack model on location data is to assume you have access to the previous week's mobile phone metadata for a company, with names
 
-If we hae the data for this week without identifiers, we need to reidentify the users
+If we have the data for this week without identifiers, we need to reidentify the users
 
 We can <mark>represent a person in the dataset by a histogram of their locations</mark>
 
