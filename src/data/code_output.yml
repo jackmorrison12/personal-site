@@ -2,11 +2,11 @@
 header:
   url: https://github.com/boyter/scc/
   version: 2.12.0
-  elapsed_seconds: 0.056
-  n_files: 181
-  n_lines: 13998
-  files_per_second: 3232.142857142857
-  lines_per_second: 249964.2857142857
+  elapsed_seconds: 0.057
+  n_files: 182
+  n_lines: 14043
+  files_per_second: 3192.9824561403507
+  lines_per_second: 246368.42105263157
 JSON:
   name: JSON
   code: 614
@@ -27,10 +27,10 @@ License:
   nFiles: 1
 Markdown:
   name: Markdown
-  code: 2646
+  code: 2677
   comment: 0
-  blank: 1178
-  nFiles: 48
+  blank: 1192
+  nFiles: 49
 SVG:
   name: SVG
   code: 56
@@ -68,8 +68,8 @@ gitignore:
   blank: 18
   nFiles: 1
 SUM:
-  code: 11825
+  code: 11856
   comment: 354
-  blank: 1819
-  nFiles: 181
+  blank: 1833
+  nFiles: 182
 

@@ -12,6 +12,9 @@ hidden: false
 tags:
   - Big Data
   - Anonymisation
+  - Unicity
+  - Matching Attacks
+  - Profiling Attacks
 ---
 
 # Introduction
