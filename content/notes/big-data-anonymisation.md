@@ -98,7 +98,7 @@ for u in users:
       is_unique = false
       break
   if is_unique:
-  unique_users = unique_users + {u}
+    unique_users = unique_users + {u}
 return |unique)users|/|users|
 ```
 
