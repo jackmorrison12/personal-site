@@ -174,7 +174,7 @@ They can use Bayes' rule to compute the posterior belied (assuming the true valu
 
 $Pr[true = x | output = 584] = \frac{Pr[output = 854 | true = x] \times Pr[true = x]}{Pr[output = 584]}$
 
-The result is a discretised normal distribution centred at 584 and truncated outside [0, 1000]
+The result is a discretised normal distribution centred at 584 and truncated outside $[0, 1000]$
 
 ## Problem: Averaging Attacks
 
