@@ -6,7 +6,7 @@ import Img from "gatsby-image"
 export default function SkydivingImage() {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "skydiving/skydiving-1.jpg" }) {
+      file(relativePath: { eq: "skydiving/tracking.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
             ...GatsbyImageSharpFluid
