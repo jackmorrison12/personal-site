@@ -323,7 +323,7 @@ WHERE movie.title = "Mystic River" AND kevin.name = "Kevin Bacon";
 
 ```
 MATCH (emil)-[r]->()
-WHERE emil.name = "Emil Eifrem:
+WHERE emil.name = "Emil Eifrem"
 DELETE r;
 ```
 
@@ -331,7 +331,7 @@ DELETE r;
 
 ```
 MATCH (emil)-[r]->()
-WHERE emil.name = "Emil Eifrem:
+WHERE emil.name = "Emil Eifrem"
 DELETE r, emil;
 ```
 
