@@ -2,7 +2,6 @@ import React from "react"
 
 import TimeAgo from "react-timeago"
 
-import { SlideDown } from "react-slidedown"
 import "react-slidedown/lib/slidedown.css"
 
 import { trackCustomEvent } from "gatsby-plugin-google-analytics"

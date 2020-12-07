@@ -25,7 +25,7 @@ export default ({ data }) => {
                         to={item.link}
                         activeClassName="is-primary-important"
                         className="is-black"
-                        partiallyActive={item.link != "/"}
+                        partiallyActive={item.link !== "/"}
                       >
                         <Twemoji svg text={item.name} />
                       </Link>

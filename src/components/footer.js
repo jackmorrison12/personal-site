@@ -50,7 +50,7 @@ export default ({ data }) => {
               >
                 {item.name}
               </Link>{" "}
-              {footerlinks.length != i + 1 ? " ● " : ""}
+              {footerlinks.length !== i + 1 ? " ● " : ""}
             </>
           ) : (
             ""
