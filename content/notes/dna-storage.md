@@ -158,15 +158,15 @@ It's very expensive, however in initial testing, it stores 36 records across 8 t
 
 To do selection, we need to find an oligo encoding an attribute with a particular value
 
-The key technique is to use Polymerase Chain REactions (PCR):
+The key technique is to use Polymerase Chain Reactions (PCR):
 
 - Amplify (i.e. copy) the matching oligo countless times
 - We need to know the start and end sequences of the oligo to do this
 - This will drown out any background noise of other data
 
-We then sequence
+We then sequence the oligo soup to get the attributes
 
-### Join
+### Join
 
 The goal here is to join records or attributes with equal values
 
