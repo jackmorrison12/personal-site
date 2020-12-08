@@ -128,7 +128,7 @@ So say adding noise proportional to $\varepsilon = 1$ was sufficient to protect 
 
 This is where <mark>releasing the output</mark> of <mark>any two queries</mark> on a dataset protected by a <mark>$\varepsilon$-dp mechanism</mark> is <mark>equivalent</mark> to releasing <mark>one query protected by a $2\varepsilon$-dp mechanism</mark>
 
-We can then <mark>decide on $\varepsilon$</mark>, which we will call the <mark>privacy budget</mark>, which then d<mark>efines the total number of queries anyone can run on the dataset</mark>
+We can then <mark>decide on $\varepsilon$</mark>, which we will call the <mark>privacy budget</mark>, which then <mark>defines the total number of queries anyone can run on the dataset</mark>
 
 This means that <mark>as long as we account for the cost of every query</mark>, we can <mark>spend the budget any way we want</mark>
 
