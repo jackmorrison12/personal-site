@@ -43,6 +43,8 @@ export default () => {
               <h1 className="hero-title">
                 <Twemoji svg text="Hey 👋 I'm Jack" />
                 <br />A computing student at{" "}
+                {/* 
+                // Old link to Imperial site - will be restored after exams
                 <OutboundLink
                   className="is-primary link"
                   href="https://www.imperial.ac.uk/computing"
@@ -50,7 +52,10 @@ export default () => {
                   rel="noopener noreferrer"
                 >
                   Imperial
-                </OutboundLink>
+                </OutboundLink> */}
+                <Link to="/notes" className="is-primary link">
+                  Imperial
+                </Link>
               </h1>
               <h3>
                 Take a look around and discover some things I've been working

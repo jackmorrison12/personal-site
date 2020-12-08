@@ -54,19 +54,50 @@ export default function Template({
         <div className="row container pad-5-lr">
           <div className="blog" dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-        <div className="container pad-3-lr pad-10-b">
-          {notes &&
-            notes.map(({ node: note }) => (
-              <Link to={"/" + note.frontmatter.fullurl} className="" id="path">
-                <div className="grow-1 row margin-5-tb is-white-bg rounded pad-3 margin-1-lr">
-                  <div className="col-xs-12">
-                    <h1 className="margin-0 is-black">
-                      {note.frontmatter.topic}: {note.frontmatter.title}
-                    </h1>
-                  </div>
-                </div>
-              </Link>
-            ))}
+
+        <div className="container pad-10-b">
+          <div className="row">
+            <div className="col-xs-12 col-md-6">
+              {notes &&
+                notes
+                  .slice(0, Math.ceil(notes.length / 2))
+                  .map(({ node: note }) => (
+                    <Link
+                      to={"/" + note.frontmatter.fullurl}
+                      className=""
+                      id="path"
+                    >
+                      <div className="row pad-1 ">
+                        <div className="col-xs-12">
+                          <h2 className="link margin-0 is-black">
+                            {note.frontmatter.topic}: {note.frontmatter.title}
+                          </h2>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+            </div>
+            <div className="col-xs-12 col-md-6">
+              {notes &&
+                notes
+                  .slice(Math.ceil(notes.length / 2))
+                  .map(({ node: note }) => (
+                    <Link
+                      to={"/" + note.frontmatter.fullurl}
+                      className=""
+                      id="path"
+                    >
+                      <div className="row pad-1">
+                        <div className="col-xs-12">
+                          <h2 className="link margin-0 is-black">
+                            {note.frontmatter.topic}: {note.frontmatter.title}
+                          </h2>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
