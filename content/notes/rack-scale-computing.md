@@ -7,7 +7,7 @@ hero: " "
 course: scalable-systems
 title: Rack-Scale Computing
 slug: rack-scale-computing
-topic: 7.3
+topic: 7.4
 hidden: false
 tags:
   - Rack-Scale Computing

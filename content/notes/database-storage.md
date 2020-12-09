@@ -7,7 +7,7 @@ hero: " "
 course: scalable-systems
 title: Database Storage
 slug: database-storage
-topic: 1
+topic: 1.1
 hidden: false
 tags:
   - Databases
