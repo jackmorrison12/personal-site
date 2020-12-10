@@ -71,9 +71,9 @@ To complete the evaluation, <mark>Bob uses the decryption mapping table</mark> t
 
 ## 1-from-2 Oblivious Transfer Protocol
 
-In a 1-from-2 oblivious transfer protocol, the sender (Alice) has <mark>two messages $m0$ and $m1$</mark>, and the receiver has <mark>one selection bit %b%</mark>
+In a 1-from-2 oblivious transfer protocol, the sender (Alice) has <mark>two messages $m0$ and $m1$</mark>, and the receiver has <mark>one selection bit $b$</mark>
 
-On completion, <mark>Bob received $mb$ without alice learning %b%</mark>
+On completion, <mark>Bob received $mb$ without Alice learning $b$</mark>
 
 Alice <mark>does not learn which message Bob received</mark>, and Bob doesn't learn what the other message was
 
