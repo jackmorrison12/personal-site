@@ -58,8 +58,8 @@ The stages are:
 - Alice also <mark>hashes any keywords</mark> in the text and <mark>encrypts each hash value</mark> with $Ae1$
 - Alice <mark>sends the encrypted text</mark>, <mark>encrypted key</mark> and <mark>encrypted hash keywords</mark> to the DB server
 - The DB server <mark>re-encrypts the encrypted key and encrypted hash keywords</mark> with $Ae2$ (so they are now <mark>effectively encrypted with the master RSA encryption key</mark> $e$) and stores them, along with the encrypted text
-- Bob <mark>hashes his search keywords</mark> and <mark>encrypts it with his public key</mark> $Be1$ and sends to the DB server as a query
+- Bob <mark>hashes his search keyword</mark> and <mark>encrypts it with his public key</mark> $Be1$ and sends to the DB server as a query
 - The DB server <mark>re-encrypts Bob's encrypted hashed keyword again</mark> with $Be2$ - the query is now <mark>effectively $hash(keyword)^e$</mark>
 - The DB server does a <mark>search on the query</mark> to <mark>retrieve the matching encrypted text plus its encrypted symmetric key</mark>
-- The DB server then <mark>decrypts the doubly encrypted key</mark> $k$ with $Bd2$ and sends it to Bob along with the encrypted text
+- The DB server then <mark>decrypts the doubly encrypted key</mark> $k$ with $Be2$ and sends it to Bob along with the encrypted text
 - Bob <mark>decrypts the key again</mark> with $Bd1$ to get $k$ and then uses $k$ to decrypt the encrypted text
