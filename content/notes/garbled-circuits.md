@@ -59,4 +59,67 @@ $GT [1,1] = E_{k[A,1],k[B,1]}(k[C, AND(1,1)])$
   - $k[C,0]$ corresponds to 0
   - $k[C,1]$ corresponds to 1
 
-However, for Bob to get his encrypted input key, we need to oblivious transfer protocol
+However, for Bob to get his encrypted input key, we need to do the oblivious transfer protocol
+
+Bob runs a 1-from-2 oblivious transfer protocol with Alice for each of Bob's input bits. This will get the keys which correspond to Bob's input bits from Alice without her learning which keys Bob got
+
+Alice doesn't learn $b$, and so will not know if she sent $L[B,0]$ or $K[B,1]$
+
+If Alice's input was $a=0$, then she would send $K[A,0]$ to Bob, and if Bob's input was $b=1$, then Bob would doubly decrypt the garbled gate entry for $[0,1]$ first using $K[A,0]$ then using $K[B,1]$ to get $K[C,0]$
+
+To complete the evaluation, Bob uses the decryption mapping table to learn the what the final encrypted result means, and sends this to Alice
+
+## 1-from-2 Oblivious Transfer Protocol
+
+In a 1-from-2 oblivious transfer protocol, the sender (Alice) has two messages $m0$ and $m1$, and the receiver has one selection bit %b%
+
+On completion, Bob received $mb$ without alice learning %b%
+
+Alice does not learn which message Bob received, and Bob doesn't learn what the other message was
+
+It can be extended to 1-from-n and k-from-n
+
+An example would be:
+
+- Alice generates two public-private key pairs (Pub1, Priv1), (Pub2, Priv2)
+- Alice sends Pub1 and Pub2 to Bob
+- Bob generates a symmetric key $k$ and chooses Pub1 (so he gets back $m1$)
+- Bob then sends alice $c=E_{Pub1}(k)$
+- Alice does $D_{Priv1}(c) = k$, and $D_{Priv2}(c) = u$, where $k$ is Bob's key and $u$ is not
+- Alice then sends back to Bob $c1=E_k(m1)$ and $c2=E_u(m2)$
+- Bob does $D_k(c1) = D_k(E_k(m1)) = m1$ and $D_k(c2) = D_k(E_u(m2)) = not m1$, and so now has his input
+
+## Point-and-Permute p-bit
+
+Bob needs to be ble to know which entry of a permuted garbled table should be decrypted, since the permutation is random
+
+He could do this by decrypting each entry, but this is inefficient and inelegant
+
+The trick is therefore to pair a random point-and-permute bit and its inverse (p-bot) to each of te keys of the wire
+
+If a wire $A$ had the keys $k[A,0]$ and $k[A,1]$, we would not have ($k[A,0]$, p-bit) and ($k[A,1]$, not p-bit)
+
+Bob will use the p-bit elements of the input wire pair to index the garbled table and select the correct keys
+
+For example, in order to encrypt a gate with wires $A$ and $B$ whose p-bit elements are $pA$ and $pB$, Bob will doubly decrypt the entry at position $[pA, pB]$ with they keys $key[wireA, pA]$ and $key[wireB, pB]$
+
+This allows Alice to generate a random permuted garbled table, but will allow Bob to decrypt the correct entry
+
+However, this makes the construction of the permuted garbled truth table a little more complicated
+
+For each garbled table entry $[a,b]$, the garbler now uses $[x,y]$ instead
+
+$[x,y]$ is used to:
+
+1. Select the keys to use for double-decryption, i.e. $key[A,x]$ and $key[B,y]$
+2. As inputs for the gate function, i.e. $x=GATE(x,y)$
+
+The result fot he gate, $z$, is used to determine the (key, pbit) pair to use at the fate that the output wire is connected to
+
+## Performance
+
+It runs in a constant number of rounds
+
+Computation cost is dominated by the encryption function used (typically hardware-assisted AES)
+
+It has high communication costs - the time to transfer the circuit plus the time to complete the oblivious transfers
