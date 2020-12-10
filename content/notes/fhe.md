@@ -15,23 +15,23 @@ tags:
 
 ## What is FHE?
 
-FHE allows anyone (e.g. untrusted cloud providers), not just the key holder, to output a ciphertext with the encrypted value of $f(P1,...,Pn)$ for any function $f$
+FHE allows anyone (e.g. untrusted cloud providers), not just the key holder, to <mark>output a ciphertext with the encrypted value of $f(P1,...,Pn)$ for any function $f$</mark>
 
-Inputs, outputs and intermediate values are always encrypted
+<mark>Inputs, outputs and intermediate values</mark> are <mark>always encrypted</mark>
 
-No information about $P1$, $Pn$ or $f$ is leaked
+<mark>No information</mark> about $P1$, $Pn$ or $f$ is <mark>leaked</mark>
 
-- The idea is that we give some inputs $P1$ and $Pn$m
-- These are encrypted with $E$
-- Once encrypted, we can apply function $f$ on them under FHE
-- We can then decrypt the result with $D$
-- We then get the answer $f(P1,...,Pn)$
+- The idea is that we <mark>give some inputs</mark> $P1$ and $Pn$m
+- These are <mark>encrypted</mark> with $E$
+- Once encrypted, we can <mark>apply function $f$</mark> on them under FHE
+- We can then <mark>decrypt the result</mark> with $D$
+- We then <mark>get the answer</mark> $f(P1,...,Pn)$
 
 ## Partially Homomorphic Encryption
 
-This is similar to FHE, but for a specific or known function
+This is similar to FHE, but <mark>for a specific or known function</mark>
 
-It can be ver efficient
+It can be <mark>very efficient</mark>
 
 An example is multiplication using RSA:
 
@@ -43,27 +43,27 @@ This was the first fully homomorphic encryption scheme, devised in 2009
 
 $FHE(Circuit, C1, ... , Cn)$
 
-1. $Circuit$ represents a boolean circuit for the function ew want to evaluate - these can be easily changed to use addition and multiplication gates
-2. The circuit can expand at runtime - it's not static
-3. Encryption is probabilistic - each ciphertext value has a little noise - however decryption results int he correct plaintext value
+1. $Circuit$ represents a <mark>boolean circuit</mark> for the function we want to evaluate - these can be easily changed to use addition and multiplication gates
+2. The circuit <mark>can expand at runtime</mark> - it's not static
+3. Encryption is <mark>probabilistic</mark> - each ciphertext value has a <mark>little noise</mark> - however decryption results int he correct plaintext value
 
 A very simple explanation of Gentry's FHE is:
 
-We have values C1 and C2, which both have a little noise
+We have <mark>values C1 and C2</mark>, which both have a <mark>little noise</mark>
 
-When we add the values, under Gentry's FHE it doubles the noise
+When we <mark>add the values</mark>, under Gentry's FHE it <mark>doubles the noise</mark>
 
-When we multiple values, under Gentry's FHE we square the noise
+When we <mark>multiply values</mark>, under Gentry's FHE we <mark>square the noise</mark>
 
-As we do more operations, he noise grows, leading to wrong results
+As we do <mark>more operations, the noise grows</mark>, leading to wrong results
 
-In order to control the noise, Gentry resets the ciphertext values if they get too noise (above a threshold)
+In order to control the noise, Gentry <mark>resets the ciphertext values</mark> if they get <mark>too noisy</mark> (above a threshold)
 
-This is done by decrypting and re-encrypting it so it has less noise - but this needs a secret decryption key!
+This is done by <mark>decrypting and re-encrypting</mark> it so it has less noise - but this needs a secret decryption key!
 
-So, since FHE is capable of executing any function, it executed the decrypt function
+So, since FHE is capable of executing any function, it executes the decrypt function
 
-Gentry encrypts the secret key with itself and passes it to the FHe so that the noise reset is done by decrypting with the encrypted key within FHE
+Gentry <mark>encrypts the secret key with itself</mark> and <mark>passes it to the FHE</mark> so that the noise reset is done by <mark>decrypting with the encrypted key within FHE</mark>
 
 ## Comparison with MPC
 
@@ -75,33 +75,33 @@ Gentry encrypts the secret key with itself and passes it to the FHe so that the 
 
 ## One-Time Programs
 
-Another idea is to have a 1-time program, which takes some input, execites it, and then self-destructs
+Another idea is to have a <mark>1-time program</mark>, which takes some <mark>input</mark>, <mark>executes it</mark>, and then <mark>self-destructs</mark>
 
-Only the result of the program is disclosed, nothing about the programs implementation
+<mark>Only the result</mark> of the program is disclosed, nothing about the programs implementation
 
 This could be extended to a k-time program
 
-It's not possible to do this with software, so it has to be implemented in hardware using one-time memory
+It's <mark>not possible to do this with software</mark>, so it has to be <mark>implemented in hardware</mark> using one-time memory
 
 This is tamperproof and can withstand side-channel attacks
 
-1. Locations that are never accessed are never leaked by a side channel
-2. Locations that are accessed are immediately leaked
-3. Also includes a single tamper-proof bit
+1. Locations that are <mark>never accessed</mark> are <mark>never leaked by a side channel</mark>
+2. Locations that are <mark>accessed are immediately leaked</mark>
+3. Also includes a <mark>single tamper-proof bit</mark>
 
 It's inspired by 1-from-2 oblivious transfers
 
-You initialise the OTM with two keys: $K0$ and $K1$, and a tamperproof bit $x$, which is set to 0
+You <mark>initialise</mark> the OTM with <mark>two keys: $K0$ and $K1$</mark>, and a <mark>tamperproof bit $x$</mark>, which is set to 0
 
-If $x = 0$, then set $x$ to 1, accept $b$, output $Kb$
+If <mark>$x = 0$</mark>, then <mark>set $x$ to 1</mark>, <mark>accept $b$</mark>, <mark>output $Kb$</mark>
 
-Elif $x = 1$, output error
+Elif <mark>$x = 1$</mark>, <mark>output error</mark>
 
-$K_{1-b}$ is never accessed
+<mark>$K_{1-b}$ is never accessed</mark>
 
-We can construct a program from this using garbled cirrcuits
+We can <mark>construct a program</mark> from this using <mark>garbled circuits</mark>
 
-1. Convert a program into a boolean circuit
-2. Garble
-3. Use n OTMs and put the i-th key pair in the i-th OTM
-4. Retrieve keys from OTMs during evaluation of the circuit
+1. Convert a <mark>program into a boolean circuit</mark>
+2. <mark>Garble</mark>
+3. Use <mark>n OTMs</mark> and put the i-th key pair in the i-th OTM
+4. <mark>Retrieve keys</mark> from OTMs during evaluation of the circuit
