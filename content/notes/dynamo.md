@@ -18,7 +18,7 @@ Dynamo is Amazon's Highley Available Key-Value Store
 
 ## Motivation
 
-In modern data centres, there are hunderds of services running
+In modern data centres, there are hundreds of services running
 
 These run on thousands of commodity machines, and serve millions of customers at peak times
 
@@ -315,7 +315,7 @@ The higher the request load ,the better the balance, so if more requests are bei
 
 Dynamo targets apps that only need key/value access with a primary focus on high availability
 
-Dynamo is a key0value store, whereas Dynamo is a column store
+Dynamo is a key-value store, whereas Dynamo is a column store
 
 Bigtable is a distributed database built of GFH, whereas Dynamo is a distributed hash table, where each node is responsible for storage
 
