@@ -89,8 +89,102 @@ While this systems completeness error ($Prob[YN]$) will be 0, its soundness erro
 
 ## Proofs of Knowledge
 
+The term knowledge is used to refer to the results that are computationally hard to derive using public information
+
+Proofs of Knowledge are mainly concerned with convincing a non-trivial knowledge verifier $V$ that for a given $x \in L_R$, the statement "$P$ knows \$y \in R(x)$" is true, there $R(x)\$ is the set of all witnesses for $x$
+
+$V$ being non-trivial for $R$ implies that there exists a $P$ that will always convince $V$ of its knowledge of a witness for all $x \in L_R$
+
+:$P$ knows ... " does not necessarily imply that the knowledge is directly available to $P$ in a simple form, but is instead defined in behavioural terms, i.e. $P$ behaves as if it has a $y \in R(x)$
+
+### Knowledge Extraction
+
+$P$ is considered by a non-trivial knowledge verifier $V$ to "know" a witness for $x \in L_R$ iff there exists a universal knowledge extractor $E$ that can use any $P$ as an oracle to successfully compute a witness $y \in R(x)$ in expected polynomial time with probability at least $\frac{p(x)}{q(|x|)}$, where $p(x)$ is the probability of $P$ convincing $V$ of its knowledge of a witness for $X$, and $q(x)$ is a positive polynomial
+
+Knowledge Error $k(|x|)$ is the probability of $P$ convincing $V$, despite $P$ not fully knowing a witness for $X$
+
+When $k(x) > 0$, the probability of $E$ successfully extracting a witness becomes at least $\frac{p(x) - k(|x|)}{q(x)}$
+
+### Extracting Graph Isomorphisms
+
+Another example of an interactive proof for extracting graph isomorphisms is:
+
+Knowledge: $\varphi$ such that $\varphi(G_1) = G_2$
+
+$P \rightarrow V$: $H = \Psi(G_2$) where $\Psi$ is a random relabel
+
+$V \rightarrow P$: $c \in \{1,2\}$
+
+$P \rightarrow V$: $\omega = \Psi \cdot \varphi$ if $c=1$ otherwise $\omega = \Psi$
+
+$V \rightarrow P$: Pass iff $\omega(G_c) = H$
+
+This system enjoys perfect completeness, and the above definition of $P$ qualifies $V$ as non-trivial
+
+However, the soundness error here is equal to $\frac{1}{2}$
+
+Given the $V$ above, we can define a knowledge extractor $E$ that executes $P$ twice using the same randomness
+
+In the first invocation, $E$ provides $c=2$ to $P$ (receiving $\Psi$) and in the second invocation, $E$ receives $\Psi \cdot \varphi$ through proviginf $c=1$
+
+$E$ very easily derives $\Psi^{-1}$ and outputs $\varphi = \Psi^{-1} \cdot \Psi \cdot \varphi$ if $\varphi(G_1) = G_2$
+
+Otherwise, $E$ reports failure to derive a witness
+
+Without $\varphi$, $P$ may fool $V$ with probability $\frac{1}{2}$ on any valid input by correctly predicting $V$'s challenge in advance
+
 ## Zero-Knowledge Proofs of Knowledge
 
+A Zero Knowledge Proof is intended to be equivalent to a trusted third party simply asserting the truth of a statement
+
+The main goal of a ZKPoK system is to convince a non-trivial knowledge verifier $V$ that $P$ knows a witness fot $x \in L_R$ but without letting $V$ fain any knowledge
+
+A party is said to have gained knowledge when it learns the results of a computation that was infeasible for the party to perform
+
+We do not assess the knowledge gain of $V$ only in terms pf what was leaked about the witness, but also in terms of how much knowledge was gained about anything from interacting with $P$, i.e. we quantify the robustness of $P$ against attempts to gain knowledge from interacting with it
+
+### Zero Knowledge
+
+The extent to which any $V$ can gain knowledge through interacting with $P$ can be demonstrated through showing that all computational results feasibly reachable by $V$ after interacting with $P$ on input $x \in L$ are feasibly reachable by $V$ on input $x$ without interaction with $P$
+
+More concretely, this knowledge equivalence is shown through demonstrating that for any $V$, there exists a probabilistic polynomial-time simulator $S$ which can create a set of communication transcripts $T_S = \{S_x\}, x \in L$ that is indistinguishable from the set of real communication transcripts $T_R = \{R_x\}, x \in R$ between $V$ and $P$
+
+There are three types of zero-knowledge:
+
+- Perfect zero-knowledge: $T_S$ is identical to $T_R$
+- Statistical zero=knowledge: $T_S$ is statistically equivalent to $T_R$
+- Computational zero-knowledge: No PPT algorithm can change its output when given sufficiently large members of $T_S$ as input rater than equally sized member of $T_R$ or vice versa
+
+### Simulating Graph Isomorphism
+
+Using the interactive proof decribed earlier:
+
+Knowledge: $\varphi$ such that $\varphi(G_1) = G_2$
+
+$P \rightarrow V$: $H = \Psi(G_2$) where $\Psi$ is a random relabel
+
+$V \rightarrow P$: $c \in \{1,2\}$
+
+$P \rightarrow V$: $\omega = \Psi \cdot \varphi$ if $c=1$ otherwise $\omega = \Psi$
+
+$V \rightarrow P$: Pass iff $\omega(G_c) = H$
+
+$P$ achieves perfect zero-knowledge as protocol transcripts can be easily simulated by generating an isomorphism after $V$ has made its choice
+
+The difficulty lies in specifying an adequate simulator which works for a $V$ that deviates from the specification
+
 ## Arguments (of Knowledge)
+
+By relaxing soundness to account for cases where it is computationally hard to fool $V$ into accepting false statements, we can construct systems for computationally sounds proofs of knowledge, known as arguments (ok knowledge)
+
+Essentially, in this model, we only have to consider an arbitrary probabilistic polynomial-time $P$ when analysing the system
+
+When we know that any $P$ under consideration must be efficient, we can grant the knowledge extractor $E$ access to $P$'s internal state and code without worrying that $E$ will become inefficient
+
+This is in contract to the previous definition of $E$, which permitted only black-box oracle access to $P$
+
+### Arguable Isomorphism
+
+
 
 ## zkSNARKS
