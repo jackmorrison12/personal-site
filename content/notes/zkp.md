@@ -185,6 +185,58 @@ This is in contract to the previous definition of $E$, which permitted only blac
 
 ### Arguable Isomorphism
 
+Knowledge: $\varphi$ such that $\varphi(G_1) = G_2$
 
+$P \rightarrow V$: $h = HASH(\Psi(G_2$)) where $\Psi$ is a random relabel
+
+$V \rightarrow P$: $c \in \{1,2\}$
+
+$P \rightarrow V$: $\omega = \Psi \cdot \varphi$ if $c=1$ otherwise $\omega = \Psi$
+
+$V \rightarrow P$: Pass iff $HASH(\omega(G_c)) = h$
+
+Recall that in our graph isomorphism proving system, $P$ simply provides the isomorphic copy $H$ to $V$ in a perfectly binding manner
+
+We can instead replace this plaintext message with only a hash of $H$ and require $V$ to check whether hashing the graph resulting from applying the isomorphism supplied by $P$ in response to the challenge corresponds with the hash supplied by $P$
+
+While the soundness error remains the same, the system now only provides computational soundness, as an unbounded adversary may break the hashing scheme to reveal an isomorphic ciy of the graph $V$ chose
+
+### Non-Interactive Arguments
+
+Knowledge: $\varphi$ such that $\varphi(G_1) = G_2$
+
+$P \rightarrow V$: $h = HASH(\Psi(G_2$)) where $\Psi$ is a random relabel
+
+$P \rightarrow V$: $c = R(G_1, G_2, h)$
+
+$P \rightarrow V$: $\omega = \Psi \cdot \varphi$ if $c=1$ otherwise $\omega = \Psi$
+
+$V \rightarrow P$: Pass iff $HASH(\omega(G_c)) = h$
+
+Non-interactive arguments take the form of the degenerate IP case (one unidirectional prover to verifier interaction) but with the added benefit of allowing $P$ and $V$ to access a random oracle $R$, usually realised in the form of a good cryptographic hashing function
+
+$R$ allows $P$ to independently simulate the equivalent of a random challenge in response to $P$'s commitment, and allows $V$ to validate whether the challenge responded to by $P$ is random (derived from $R$ using the statement and $P$'s commitment)
 
 ## zkSNARKS
+
+zkSNARKS (Zero Knowledge Succinct Non-interactive Argument of Knowledge Systems) reduce the protocol communication complexity and or computational load places on $V$, which enables exciting applications to be practically realised at the cost of proving time
+
+However, the saving in communication and or verification costs do not come free - they're paid for by the prover, who has to perform potentially more complex computations to yield a valid argument
+
+### Succinctness
+
+A computationally sound non-interactive knowledge proving system is succinct if it enables verifying NP statements with complexity independent from deciding membership in the target NP language (it can efficiently decide if $x \in L_R$)
+
+### Setup
+
+These systems can be built in the common reference string (CRS) model, where $P$ and $V$ both have access to a string sampled from a uniform distribution
+
+Consequently, CRD generation becomes an important step in zkSNARKS
+
+There are many trade-offs in terms of proving costs and/or verification costs between systems with different setup features and requirements
+
+Full succinctness is when the length of the CRS is reasonably short (a few hundred bytes)
+
+Their transparency can either be Trusted (the parties which perform the setup are entrusted to forget sensitive info learned when communication with CRS) or Public (no privileged information is learned when constructing the string)
+
+The application can either be Specific (a new CRS is needed for each application) or Universal (there is one universal CRS for all relations, or all R are of similar complexity)
