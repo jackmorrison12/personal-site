@@ -152,7 +152,7 @@ More concretely, this knowledge equivalence is shown through <mark>demonstrating
 There are three types of zero-knowledge:
 
 - <mark>Perfect zero-knowledge</mark>: $T_S$ is identical to $T_R$
-- <mark>Statistical zero=knowledge</mark>: $T_S$ is statistically equivalent to $T_R$
+- <mark>Statistical zero-knowledge</mark>: $T_S$ is statistically equivalent to $T_R$
 - <mark>Computational zero-knowledge</mark>: No PPT algorithm can change its output when given sufficiently large members of $T_S$ as input rater than equally sized member of $T_R$ or vice versa
 
 ### Simulating Graph Isomorphism
