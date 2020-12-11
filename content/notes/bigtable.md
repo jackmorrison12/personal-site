@@ -14,6 +14,8 @@ tags:
   - Google
 ---
 
+Bigtable is a Distributed Storage System for Structured Data, developed by Google
+
 ## Why Bigtable?
 
 Google has lots of data which needs storing and processing, for example: web, satellite and user data
