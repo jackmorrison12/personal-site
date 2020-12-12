@@ -154,7 +154,7 @@ These are called <mark>re-identification attacks</mark>, and leverage the unique
 </div>
 
 <div class="def margin-5-b">
-  <span class="is-primary bold">Quasi-identifier: </span> A piece if information that does not directly identify a person, e.g. date of birth, but put with other quasi-identifiers could potentially uniquely identify a person
+  <span class="is-primary bold">Quasi-identifier: </span> A piece of information that does not directly identify a person, e.g. date of birth, but put with other quasi-identifiers could potentially uniquely identify a person
 </div>
 
 <div class="def margin-5-b">

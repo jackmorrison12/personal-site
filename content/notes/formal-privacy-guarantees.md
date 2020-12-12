@@ -195,7 +195,7 @@ It guarantees cryptographically that no user can learn the data of anyone else, 
 
 ### Local Differential Privacy
 
-Every <mark>user adds noise to their own data locally</mark>, and then s<mark>hares this privatised data with the analyst</mark>
+Every <mark>user adds noise to their own data locally</mark>, and then <mark>shares this privatised data with the analyst</mark>
 
 The <mark>analyst can then run any computation on this privatised data</mark>
 

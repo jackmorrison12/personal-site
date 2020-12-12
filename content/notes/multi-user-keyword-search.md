@@ -36,7 +36,7 @@ Keys are not shared - they can be used to authenticate users
 
 It uses an RSA-based proxy re-encryption scheme where:
 
-- Data <mark>encrypted by Alice</mark> is <mark>e-encrypted by the server</mark>
+- Data <mark>encrypted by Alice</mark> is <mark>re-encrypted by the server</mark>
 - <mark>Re-encrypted data</mark> can be <mark>decrypted by Bob</mark>
 - Server and Bob don not know Alice's keys
 - Server is assumed to be honest-but-curious - it executes instructions faithfully but may be curious about what's stored or being searched for
