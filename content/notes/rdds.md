@@ -109,12 +109,12 @@ Some example code would be:
 ```
 lines = spark.textFile("hdfs://...)
 
-// transformations on RDD 'lines'
+// transformations on RDD 'lines' - since no result needed, they're not actually executed yet
 errors = line.filter(_.startsWith("ERROR"))
 messages = errors.map(_.split('\t')(2))
 messages.persist()
 
-// actions
+// actions - the program is now actually executed
 messages.filter(_.contains("foo")).count
 messages.filter(_.contains("bar")).count
 ```
@@ -156,7 +156,7 @@ for (i <- 1 to ITERATIONS) {
 
 ### Optimising Placement
 
-`links` and `ranks` are repeatedly joines
+`links` and `ranks` are repeatedly joined
 
 Therefore, we can co-partition them, e.g. hash both on the URL, to avoid shuffles
 
@@ -174,6 +174,6 @@ This therefore means that if a node fails, then only the partition which has tha
 
 The time per iteration of PageRank was:
 
-- 171 seconds in Hadoop
+- 171 seconds in Hadoop - needs to materialise results and write them to disk
 - 72 seconds on Basic Spark
-- 23 seconds on Spark with co-partitioning
+- 23 seconds on Spark with co-partitioning - faster as joins can be executed more efficiently
