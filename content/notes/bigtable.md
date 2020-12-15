@@ -206,7 +206,7 @@ This is done on very popular keys with lots of updates, since the key range will
 
 Column families are grouped together into SSTables
 
-- this avoids mingling data, i.e. page contents and page metadata
+- This avoids mingling data, i.e. page contents and page metadata
 - Some frequently accessed locality groups can be kept in memory
 
 Some locality groups can be compressed (sometimes 10:1 compression)

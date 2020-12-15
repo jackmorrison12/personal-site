@@ -92,7 +92,7 @@ This overlaps with a PaaS, but focusses on building app functionality without ma
 
 The cloud vendor provides set-up, capacity planning and server management
 
-The app is decouples from where it is executed
+The app is decoupled from where it is executed
 
 ### Software-as-a-Service (SaaS)
 

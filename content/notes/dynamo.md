@@ -199,7 +199,7 @@ To do a lookup, each node has a global view of the ring structure, and so can di
 
 The DHT ring makes use of virtual nodes
 
-- Each physical node has multiple virtual n odes
+- Each physical node has multiple virtual nodes
 - More powerful machines have more virtual nodes (heterogeneity)
 - Virtual nodes are distributed across the ring
 

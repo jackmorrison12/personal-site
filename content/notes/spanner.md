@@ -65,7 +65,7 @@ With multiple data centres, this is even harder, since there are high latencies 
 
 Therefore, we need external consistency - this means we have a consistent view of the database
 
-- This a synchronised snapshot read of teh database
+- This a synchronised snapshot read of the database
 - The effect of past transactions should be seen and he effect of future transactions should not be seen across all data centres
 
 It's equivalent to linearisability
@@ -85,7 +85,7 @@ To synchronise snapshot, we use global wall-clock time
 External Consistency therefore means:
 
 - Commit order respects the global wall-time order
-- Timestamp order respects the global wall0time order
+- Timestamp order respects the global wall-time order
 
 Since the timestamp order is equal to the commit order
 

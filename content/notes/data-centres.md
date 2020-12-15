@@ -142,7 +142,7 @@ There are four main methods:
 
 The aim is to get power consumption to grow linearly with the utilisation of the equipment
 
-average real-world data centres are too inefficient, as they waste 2/3 of their energy
+Average real-world data centres are too inefficient, as they waste 2/3 of their energy
 
 Energy consumption is not proportional to load - CPUs aren't so bad, but other components are
 
