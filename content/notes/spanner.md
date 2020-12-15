@@ -127,7 +127,7 @@ Each data centre has a set of time master servers, and machines have time slave 
 
 The majority of time masters are fitted with GPS clocks, and a few others called Armageddon masters are fitted with atomic clocks
 
-The daemon polls a variety of masters and reaches a consensus about the correct timestamp - it syccs the clocks and uses the uncertainty to narrow down the actual time
+The daemon polls a variety of masters and reaches a consensus about the correct timestamp - it syncs the clocks and uses the uncertainty to narrow down the actual time
 
 Both GPS and Atomic clocks are used since they have different failure rates and scenarios - this reduces uncertainty
 
@@ -212,8 +212,8 @@ This participant leader has a transaction manager and a lock table
 Paxos is a consensus algorithm
 
 - The leader will receive the client's command
-- It then assigns it a new command user i
-- It runs the ith instance of the consesus algorithm in parallel
+- It then assigns it a new command user $i$
+- It runs the $i$th instance of the consensus algorithm in parallel
 
 A Paxos group is all of the machines involved in an instance of Paxos
 
