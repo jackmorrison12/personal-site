@@ -170,7 +170,7 @@ We can <mark>omit the oid if it is dense and ascending</mark>
 
 - This is bad, since usually one relation won't fit in the cache, and then you need to keep reading things into the cache
 
-H<mark>ash-join</mark>:
+<mark>Hash-join</mark>:
 
 - This is bad if the inner relation can't fit in the cache
 
