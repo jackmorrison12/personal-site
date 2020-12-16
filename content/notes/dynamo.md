@@ -175,7 +175,7 @@ If the application doesn't resolve a conflict, it can fall back to last write wi
 
 ## Data Partitioning & Replication
 
-C<mark>onsistent hashing</mark> is used
+<mark>Consistent hashing</mark> is used
 
 - Regular hashing means that a change in the number of slots requires all keys to be remapped
 - Consistent hashing means <mark>only $\frac{K}{n}$ keys need to be remapped</mark>, where $K$ = number of keys, $n$ = number of slots
@@ -321,6 +321,6 @@ Dynamo targets apps that only need <mark>key/value access</mark> with a <mark>pr
 
 Dynamo is a <mark>key-value store</mark>, whereas Bigtable is a column store
 
-Bigtable is a d<mark>istributed database</mark> built of GFS, whereas Dynamo is a <mark>distributed hash table</mark>, where each node is responsible for storage
+Bigtable is a <mark>distributed database</mark> built of GFS, whereas Dynamo is a <mark>distributed hash table</mark>, where each node is responsible for storage
 
 In Dynamo, <mark>updates are not rejected</mark> even during network partitions or server failures
