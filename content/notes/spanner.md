@@ -14,59 +14,59 @@ tags:
   - Google
 ---
 
-Spanner is Google's globally distributed database
+Spanner is Google's <mark>globally distributed database</mark>
 
 ## What is Spanner?
 
-Spanner was the next step from [Bigtable](/notes/scalable-systems/bigtable) in RDBMS evolution with strong time semantics: a distribute multi-version database
+Spanner was the next step from [Bigtable](/notes/scalable-systems/bigtable) in RDBMS evolution with <mark>strong time semantics</mark>: a <mark>distributed multi-version database</mark>
 
 Some of the key features are:
 
-- General purpose transactions (ACID)
-  - Externally consistent global write-transactions with synchronous replication
-  - Transactions across data centres
-  - Lock-free read-only transactions
+- <mark>General purpose transactions</mark> (ACID)
+  - <mark>Externally consistent</mark> global write-transactions with synchronous replication
+  - Transactions <mark>across data centres</mark>
+  - <mark>Lock-free read-only transactions</mark>
 - Schematised, semi-relational data model
-  - SQL-like query interface
+  - <mark>SQL-like query interface</mark>
 
 It's currently running in production, providing storage for Google's advertisement data, replacing a manually sharded MySQL database
 
-Its main property is that it has external consistency of distributed transactions
+Its main property is that it has <mark>external consistency</mark> of distributed transactions
 
-- This means everyone agrees the same external order of transaction execution using global timestamps
+- This means <mark>everyone agrees the same external order of transaction execution</mark> using <mark>global timestamps</mark>
 - It was the first system of its kind at global scale
-- It enables transaction serialisation via global timestamps
+- It enables <mark>transaction serialisation</mark> via global timestamps
 
-It's implemented using an integration of concurrency control, replication and two-phase commit
+It's implemented using an integration of <mark>concurrency control, replication and two-phase commit</mark>
 
-- It focuses on correctness and performance
-- It has auto-sharding, auto-rebalancing and automatic failure response
+- It focuses on <mark>correctness and performance</mark>
+- It has <mark>auto-sharding</mark>, <mark>auto-rebalancing</mark> and <mark>automatic failure response</mark>
 
-The enabling technology for all of this is TrueTime
+The enabling technology for all of this is <mark>TrueTime</mark>
 
-- This is an interval-based global time
-- It acknowledges clock uncertainty and guarantees a bound on it, imposing a total order over timestamps
-- It uses GPS devices and Atomic clocks to get an accurate time
-- Each clock maintains an estimate of the worst time inaccuracy that could exist
+- This is an <mark>interval-based global time</mark>
+- It <mark>acknowledges clock uncertainty and guarantees a bound on it</mark>, imposing a <mark>total order over timestamps</mark>
+- It uses <mark>GPS devices and Atomic clocks</mark> to get an accurate time
+- Each <mark>clock maintains an estimate of the worst time inaccuracy</mark> that could exist
 
 ## Read Transactions
 
 Using the example of a social network, we may want to generate a page of friends' recent posts
 
-We need a consistent view of our friends list and their posts
+We need a <mark>consistent view</mark> of our friends list and their posts
 
-consistency is important, sine, if someone removes a friend and then posts something, it must be guaranteed the person they removed cannot see the post - if the order is not enforced globally, this could cause issues
+Consistency is important, since, if someone removes a friend and then posts something, it must be guaranteed the person they removed cannot see the post - if the order is not enforced globally, this could cause issues
 
 On one machine, we could just block all writes, take a consistent snapshot of the database state, and execute the read against the snapshot
 
-However, when using multiple machines, the snapshots across all machines need to be consistent - taken at the same time in order ot get a consistent view of the data
+However, when using <mark>multiple machines, the snapshots across all machines need to be consistent</mark> - taken at the same time in order ot get a consistent view of the data
 
-With multiple data centres, this is even harder, since there are high latencies between data centres, and so it's hard to reason about snapshot consistency
+With multiple data centres, this is even harder, since there are <mark>high latencies between data centres</mark>, and so it's hard to reason about snapshot consistency
 
 Therefore, we need external consistency - this means we have a consistent view of the database
 
-- This a synchronised snapshot read of the database
-- The effect of past transactions should be seen and he effect of future transactions should not be seen across all data centres
+- This a <mark>synchronised snapshot read of the database</mark>
+- The <mark>effect of past transactions should be seen</mark> and the <mark>effect of future transactions should not be seen</mark> across all data centres
 
 It's equivalent to linearisability
 
@@ -74,17 +74,17 @@ If transaction $T1$ commits before another transaction $T2$ starts, then $T1$'s 
 
 Any read that sees $T2$ must see $T1$
 
-It's the strongest consistency guarantee which can be achieved in practice
+It's the <mark>strongest consistency guarantee which can be achieved in practice</mark>
 
-Transactions that write use strict two phase locking (2PL)
+Transactions that write use strict <mark>two phase locking (2PL)</mark>
 
 Each transaction $T$ is assigned a timestamp $s$, and data written by $T$ is timestamped by $s$
 
-To synchronise snapshot, we use global wall-clock time
+To synchronise snapshot, we use <mark>global wall-clock time</mark>
 
 External Consistency therefore means:
 
-- Commit order respects the global wall-time order
+- <mark>Commit order respects the global wall-time order</mark>
 - Timestamp order respects the global wall-time order
 
 Since the timestamp order is equal to the commit order
@@ -93,19 +93,19 @@ Since the timestamp order is equal to the commit order
 
 Read locks are used on all data items what have been read
 
-- This is so a consistent snapshot is read
-- the locks are acquired at the leader
-- They read the latest version, not based on the timestamp
+- This is so a <mark>consistent snapshot is read</mark>
+- The locks are acquired at the leader
+- They <mark>read the latest version</mark>, not based on the timestamp
 
-Writes are buffered, and acquire write locks at commit time (when the preparation is done)
+<mark>Writes are buffered</mark>, and <mark>acquire write locks at commit time</mark> (when the preparation is done)
 
 The timestamp is assigned at commit time, based on globally-ordered timestamps, and the data version is written with the commit timestamp
 
-Write transactions follow a strict 2PL - the timestamp must be assigned while the locks are held
+Write transactions follow a strict 2PL - the <mark>timestamp must be assigned while the locks are held</mark>
 
-The timestamp is in the range from when locks are acquired to when they're released - this is the definitive time this transaction was committed, and its effects will be visible in the system after the locks are released
+The <mark>timestamp is in the range from when locks are acquired to when they're released</mark> - this is the definitive time this transaction was committed, and its effects will be visible in the system after the locks are released
 
-The timestamp order respects the global wall-time order, so the timestamp order is equal to the commit order
+The <mark>timestamp order respects the global wall-time order</mark>, so the timestamp order is equal to the commit order
 
 ## Clock Skew
 
@@ -117,17 +117,17 @@ This means the timestamps lead to a partial order,
 
 ## TrueTime
 
-This is the novel API behind Spanner's core innovation
+This is the <mark>novel API</mark> behind Spanner's core innovation
 
-It leverages hardware features such as GPS and Atomic Clocks
+It leverages hardware features such as <mark>GPS and Atomic Clocks</mark>
 
-They key methods in the API is `now()`: it not only returns the current system time, but also a value ($\varepsilon$) which tells the maximum uncertainty
+They key methods in the API is <mark>`now()`</mark>: it not only returns the <mark>current system time</mark>, but also a value ($\varepsilon$) which tells the <mark>maximum uncertainty</mark>
 
-Each data centre has a set of time master servers, and machines have time slave daemons
+Each data centre has a set of <mark>time master servers</mark>, and <mark>machines have time slave daemons</mark>
 
 The majority of time masters are fitted with GPS clocks, and a few others called Armageddon masters are fitted with atomic clocks
 
-The daemon polls a variety of masters and reaches a consensus about the correct timestamp - it syncs the clocks and uses the uncertainty to narrow down the actual time
+The <mark>daemon polls a variety of masters</mark> and reaches a <mark>consensus about the correct timestamp</mark> - it syncs the clocks and uses the uncertainty to narrow down the actual time
 
 Both GPS and Atomic clocks are used since they have different failure rates and scenarios - this reduces uncertainty
 
@@ -136,7 +136,7 @@ There are also two more API methods, which return booleans:
 - `After(t)` - returns `True` if `t` is definitely passed
 - `Before(t)` - returns `True` if `t` is definitely not arrived
 
-These both take into account uncertainty
+These both <mark>take into account uncertainty</mark>
 
 TrueTime uses these methods in concurrency control, and to serialise transactions
 
@@ -144,19 +144,19 @@ Therefore, the final results ia "Global wall-clock time" with bounded uncertaint
 
 ### TrueTime-supported Transactions
 
-Read-Write - requires locks
+<mark>Read-Write - requires locks</mark>
 
-Read-only - lock free
+<mark>Read-only - lock free</mark>
 
 - Requires a consistent snapshot of the data
 - Requires declaration before start of transaction
-- reads information that is up-to-date
+- Reads information that is up-to-date
 
-Snapshot-read - read information from the past by specifying timestamp or bound
+Snapshot-read - <mark>read information from the past</mark> by specifying timestamp or bound
 
 - Use specific timestamp from the past or timestamp bound so that data until that point will be read
-- The point in the past must be well defines
-- This is useful since Spanner is a multi-version database
+- The point in the past must be well defined
+- This is useful since Spanner is a <mark>multi-version database</mark>
 
 ### Timestamps + TrueTime
 
@@ -189,7 +189,7 @@ This is where multiple machines are all involved in a transaction
 
 ## System Architecture
 
-Spanner is split into zones, where each zone will fail independently (this is usually on the scale of one/few zones per data centre)
+Spanner is split into <mark>zones</mark>, where <mark>each zone will fail independently</mark> (this is usually on the scale of one/few zones per data centre)
 
 There is a universemaster and placement driver over all zones
 
@@ -199,55 +199,55 @@ Each zone has a zonemaster, as well as location proxies and spanservers
 
 Data is replicated across different data centres
 
-One of these data centres is the leader
+<mark>One of these data centres is the leader</mark>
 
-Each replica is associated with a Paxos group, a tablet and the data store (Colossus)
+Each replica is associated with a <mark>Paxos group</mark>, a tablet and the data store (Colossus)
 
-This group also has a participant leader, which will talk to other groups' participant leaders if a transaction is done across multiple Paxos groups
+This group also has a <mark>participant leader</mark>, which will talk to other groups' participant leaders if a transaction is done across multiple Paxos groups
 
 This participant leader has a transaction manager and a lock table
 
 ## Paxos Algorithm
 
-Paxos is a consensus algorithm
+Paxos is a <mark>consensus algorithm</mark>
 
 - The leader will receive the client's command
 - It then assigns it a new command user $i$
 - It runs the $i$th instance of the consensus algorithm in parallel
 
-A Paxos group is all of the machines involved in an instance of Paxos
+A <mark>Paxos group</mark> is <mark>all of the machines involved in an instance of Paxos</mark>
 
 Within a Paxos groups, the leader may fail and need re-election, but the safety properties are always guaranteed
 
-In spanner, tablets are replicated between data centres, and Paxos does the concurrency control between them
+In spanner, <mark>tablets are replicated between data centres</mark>, and <mark>Paxos does the concurrency control</mark> between them
 
-A transaction needs to be consistent across all of its replicas, and Paxos coordinates this
+A <mark>transaction needs to be consistent across all of its replicas</mark>, and Paxos coordinates this
 
-A transaction which involves multiple Paxos groups will use the transaction management machinery (participant leader and transaction manager) atop of the leader of the Paxos group to coordinate 2PC
+A transaction which involves multiple Paxos groups will use the <mark>transaction management machinery</mark> (participant leader and transaction manager) atop of the leader of the Paxos group to coordinate 2PC
 
-Updates need to be propagated to all members of the Paxos group
+Updates need to be <mark>propagated to all members of the Paxos group</mark>
 
-If a transaction only involves a single Paxos group, it can bypass the transaction manager and participant leader
+If a transaction only involves a <mark>single Paxos group</mark>, it can <mark>bypass the transaction manager and participant leader</mark>
 
 ## Data Chunks
 
-Data is stored in directories - which are analogous to buckets in [Bigtable](/notes/scalable-systems/bigtable)
+Data is stored in <mark>directories</mark> - which are analogous to buckets in [Bigtable](/notes/scalable-systems/bigtable)
 
-- They're the smallest unit of data placement
-- They're the smallest unit to define replication properties on
+- They're the <mark>smallest unit of data placement</mark>
+- They're the <mark>smallest unit to define replication properties on</mark>
 
-A directory can be sharded into fragments if it grows too large - this is done automatically
+A <mark>directory can be sharded into fragments</mark> if it grows too large - this is done <mark>automatically</mark>
 
 ## Evaluation
 
 This evaluated replication, transactions and availability
 
-It showed that the more Paxos groups which were involved in committing a transaction, the higher the latency, since 2PC made things more expensive
+It showed that the <mark>more Paxos groups</mark> which were involved in committing a transaction, the <mark>higher the latency</mark>, since 2PL made things more expensive
 
 For availability, it showed that the failure recovery was very good
 
-- If a follower in a Paxos group failed, there was no performance degradation
-- If a leader soft-failed (the leader cooperates) - there was no performance degradation
-- If a leader hard-failed - there was some degradation, but it recovered well - it relied on timeouts for the followers to realise
+- If a <mark>follower</mark> in a Paxos group failed, there was <mark>no performance degradation</mark>
+- If a <mark>leader soft-failed</mark> (the leader cooperates) - there was <mark>no performance degradation</mark>
+- If a <mark>leader hard-failed</mark> - there was <mark>some degradation</mark>, but it recovered well - it relied on timeouts for the followers to realise
 
-$\varepsilon$ is pretty stable, and only increases when the network link goes down, however there is quick recovery
+<mark>$\varepsilon$ is pretty stable</mark>, and only increases when the network link goes down, however there is quick recovery
