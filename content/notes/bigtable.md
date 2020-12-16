@@ -14,13 +14,13 @@ tags:
   - Google
 ---
 
-Bigtable is a Distributed Storage System for Structured Data, developed by Google
+Bigtable is a <mark>Distributed Storage System for Structured Data</mark>, developed by Google
 
 ## Why Bigtable?
 
-Google has lots of data which needs storing and processing, for example: web, satellite and user data
+Google has <mark>lots of data</mark> which needs storing and processing, for example: <mark>web, satellite and user data</mark>
 
-They also have many incoming requests coming for all of their services at any time
+They also have <mark>many incoming requests</mark> coming for all of their services at any time
 
 No commercial database system is big enough to handle this - even if there was, it would be extremely expensive, and may not have the best design choices for them, so they made Bigtable
 
@@ -28,102 +28,102 @@ No commercial database system is big enough to handle this - even if there was, 
 
 Some of the key building blocks used in Bigtable were:
 
-- Scheduler (Google WorkQueue)
-- Google File System
-- Chubby Lock Service
+- <mark>Scheduler</mark> (Google WorkQueue)
+- Google <mark>File System</mark>
+- Chubby <mark>Lock Service</mark>
 
 Some other pieces which run on tup of BigTable and are useful are:
 
 - Sawzall (declarative queries over data)
 - [MapReduce](/notes/scalable-systems/mapreduce)
 
-Using all of these building blocks, Bigtable buit a more application-friendly storage service
+Using all of these building blocks, Bigtable built a more application-friendly storage service
 
-### Google File System
+### Google <mark>File System</mark>
 
-This is a large-scale distributed file system, which stores the actual data in CSSTables
+This is a large-scale distributed file system, which <mark>stores the actual data in CSSTables</mark>
 
-It has a master, which is responsible for metadata
+It has a <mark>master</mark>, which is <mark>responsible for metadata</mark>
 
-It also has chunk servers, which are responsible for reading and writing large chunks of data
+It also has <mark>chunk servers</mark>, which are responsible for <mark>reading and writing large chunks of data</mark>
 
-Chunks are replicated on 3 machines, with the master responsible for ensuring that replicas exist
+Chunks are replicated on <mark>3 machines</mark>, with the master responsible for ensuring that replicas exist
 
-If a failure occurs and a replica is lost, then the master will pick a new chunk server and create a replica on that server
+If a <mark>failure occurs</mark> and a replica is lost, then the <mark>master will pick a new chunk server</mark> and create a <mark>replica on that server</mark>
 
 ### Chubby
 
-This is a locking/file/naming service
+This is a <mark>locking/file/naming service</mark>
 
-It gives a distributed system access to some strongly consistent configuration data that the service requires
+It gives a <mark>distributed system access</mark> to some <mark>strongly consistent configuration data</mark> that the service requires
 
 It's a strongly consistent data store
 
-It has coarse-grained locks, where a small amount of data can be stored in a lock
+It has <mark>coarse-grained locks</mark>, where a small amount of data can be stored in a lock
 
-Each lock has 5 replicas, with a majority vote needed for them to be active
+Each <mark>lock has 5 replicas</mark>, with a majority vote needed for them to be active
 
 It uses more replicas so that data loss doesn't happen in practice, as data is crucial
 
 ## Data model: A Big Map
 
-Bigtable is essentially a very large key-value store
+Bigtable is essentially a <mark>very large key-value store</mark>
 
-It has a 3-value key, consisting of: `<Row, Column, Timestamp>`
+It has a 3-value key, consisting of: <mark>`<Row, Column, Timestamp>`</mark>
 
-Each value is an uninterpreted array of bytes - no other data types are supported
+Each <mark>value is an uninterpreted array of bytes</mark> - no other data types are supported
 
-Each row has arbitrary columns, so there is no fixed schema
+Each <mark>row has arbitrary columns</mark>, so there is <mark>no fixed schema</mark>
 
-Columns are split into column families, which have the format `family:qualifier` - these families are stored close together to have good locality
+Columns are split into <mark>column families</mark>, which have the format <mark>`family:qualifier`</mark> - these families are <mark>stored close together to have good locality</mark>
 
 The family is heavyweight, and the quantifier is lightweight
 
-This means it's a column-oriented data store - rows are sparse
+This means it's a <mark>column-oriented data store - rows are sparse</mark>
 
-It also has a lookup, insert and delete API, where each read or write of data under a single row key is atomic - this means multiple columns of the same row can be updated in one transaction
+It also has a <mark>lookup, insert and delete API</mark>, where <mark>each read or write of data under a single row key is atomic</mark> - this means multiple columns of the same row can be updated in one transaction
 
 ## Comparison to a Relational Database
 
-- Bigtable has no table-wide integrity constraints
-- There are no multi-row transactions
-- The values are uninterpreted, which means there can be no aggregation over data (e.g. sum)
+- Bigtable has <mark>no table-wide integrity constraints</mark>
+- There are <mark>no multi-row transactions</mark>
+- The <mark>values are uninterpreted</mark>, which means there can be no aggregation over data (e.g. sum)
 - Immutable data (similar to versioning DBs) - timestamps are used to tell the difference
-  - It can be specified to either keep the last $N$ versions or last $N$ days, and the rest is garbage collected
+  - It can be specified to either keep the <mark>last $N$ versions or last $N$ days</mark>, and the rest is garbage collected
 - C++ functions are used, not SQL
-- Clients indicate which data to cache in memory
-- Data is stored lexicographically sorted
+- <mark>Clients indicate which data to cache</mark> in memory
+- Data is stored <mark>lexicographically sorted</mark>
   - Clients control locality by the naming of the rows and columns
 
 ## SSTable
 
-These are an abstraction used to store data
+These are an abstraction used to <mark>store data</mark>
 
-They're an immutable, sorted file of key-value pairs
+They're an <mark>immutable, sorted file of key-value pairs</mark>
 
-They consist of chunks of fixed-size (64KB) data and an index
+They consist of <mark>chunks of fixed-size</mark> (64KB) data and an <mark>index</mark>
 
-- The index is of block ranges, not values
-- The index is loaded into memory when the SSTable is opened
-- Lookup is a single disk seek using the given key
+- The <mark>index is of block ranges</mark>, not values
+- The <mark>index is loaded into memory</mark> when the SSTable is opened
+- <mark>Lookup is a single disk seek</mark> using the given key
 
 Another alternative is to load the SSTable into memory, so there is no disk lookup
 
 ## Tablet
 
-A tablet is a group of SSTables
+A <mark>tablet is a group of SSTables</mark>
 
-It contains some range of tows of a table, from a start value to an end value (since values are sorted)
+It contains some <mark>range of tows of a table</mark>, from a start value to an end value (since values are sorted)
 
-It's a unit of distribution and load balancing
+It's a <mark>unit of distribution and load balancing</mark>
 
 ## Table
 
-Multiple tablets make up a table
+<mark>Multiple tablets</mark> make up a table
 
-SSTables can be shared between tables
+<mark>SSTables can be shared</mark> between tables
 
-Tablets do not overlap, however SSTables may overlap (belong to two tables)
+Tablets <mark>do not overlap</mark>, however SSTables may overlap (belong to two tables)
 
 For example, one tablet may index keys from `aardvark` to `apple` and another from `applea` to `boat`
 
@@ -131,11 +131,11 @@ For example, one tablet may index keys from `aardvark` to `apple` and another fr
 
 ### Finding a Tablet
 
-The storage system is used to store it's own metadata - the job is to store user tables and metadata associated with those tables
+The storage system is used to <mark>store it's own metadata</mark> - the job is to store user tables and metadata associated with those tables
 
-A root chubby file is used to find the root tablet, and then there is a hierarchical organisation which is traversed to find the appropriate user table
+A <mark>root chubby file</mark> is used to find the root tablet, and then there is a <mark>hierarchical organisation</mark> which is traversed to find the appropriate user table
 
-The client library caches tablet locations, in order to prevent Chubby from becoming a bottleneck
+The client library <mark>caches tablet locations</mark>, in order to prevent Chubby from becoming a bottleneck
 
 A metadata table includes the log of all events pertaining to each tablet
 
@@ -143,37 +143,37 @@ A metadata table includes the log of all events pertaining to each tablet
 
 Tablet servers manage tablets, and there are multiple tablets per server
 
-- Each tablet is 100-200MBs
-- Each tablet lives at only one server
-- Tablet servers split tablets which get too big
+- Each <mark>tablet is 100-200MB</mark>
+- Each <mark>tablet lives at only one server</mark>
+- <mark>Tablet servers split tablets</mark> which get too big
 
-The master server is also responsible for load balancing and fault tolerance
+The <mark>master server</mark> is also responsible for <mark>load balancing and fault tolerance</mark>
 
-- It uses Chubby to monitor the health of tablet servers, and restarts failed servers
-  - If there is a particularly popular tablet, then the tablet server will be getting a lot of requests to it and potentially may be come overloaded
-  - therefore, it gives tablets to other servers, or even splits big tablets if this happens
-  - This is efficient since SSTables are immutable, and so nothing needs to be rewritten, just some pointers shuffled
-- GFS handles data replication
-- It's preferred to start a tablet server on the same machine the data is already at, since local IO operations are faster than network ones
+- It uses <mark>Chubby to monitor the health of tablet servers</mark>, and restarts failed servers
+  - If there is a particularly <mark>popular tablet</mark>, then the tablet server will be getting a lot of requests to it and potentially may be come overloaded
+  - Therefore, it <mark>gives tablets to other servers</mark>, or even <mark>splits big tablets</mark> if this happens
+  - This is <mark>efficient since SSTables are immutable</mark>, and so nothing needs to be rewritten, just some pointers shuffled
+- <mark>GFS handles data replication</mark>
+- It's preferred to start a <mark>tablet server on the same machine the data is already at</mark>, since local IO operations are faster than network ones
 
-Tablet servers are stateless
+<mark>Tablet servers are stateless</mark>
 
-- There is a mapping to tablets in the metadata
+- There is a <mark>mapping to tablets in the metadata</mark>
 - A new server can therefore easily take over if one fails
 
 ## Editing/Reading a Table
 
-Mutations are committed to a commit log in GFS (which is a sequential file)
+Mutations are committed to a <mark>commit log in GFS</mark> (which is a sequential file)
 
-- They are then applied to an in-memory version called a memtable
-- A memtable needs to be kept sorted, and so it's in memory as it's cheaper to do this in memory
-- For concurrency, each memtable row is copy-on-write
-- This is for fault-tolerance - a mutation should write to the commit log and THEN input into memtable
-- It can be used to rebuild on failure
+- They are <mark>then applied to an in-memory version called a memtable</mark>
+- A memtable needs to be <mark>kept sorted</mark>, and so it's in memory as it's <mark>cheaper to do this in memory</mark>
+- For concurrency, each <mark>memtable row is copy-on-write</mark>
+- This is for <mark>fault-tolerance</mark> - a mutation should write to the commit log and THEN input into memtable
+- It can be used to <mark>rebuild on failure</mark>
 
-Reads are applied to a merged view of SSTables and memtables
+<mark>Reads</mark> are applied to a <mark>merged view of SSTables and memtables</mark>
 
-- Reads are more expensive than writes
+- Reads are <mark>more expensive</mark> than writes
 - Reads and writes continue during a tablet split or merge
 - Reads have to access SSTables and memtables since the latest version of a key could be in either
 
@@ -181,42 +181,42 @@ Reads are applied to a merged view of SSTables and memtables
 
 ### Minor Compaction
 
-This is where a full memtable is converted into an SSTable, and a new memtable is started
+This is where a <mark>full memtable is converted into an SSTable</mark>, and a <mark>new memtable is started</mark>
 
-- This reduces memory usage
+- This <mark>reduces memory usage</mark>
 - It also reduces log traffic on restart, as the commit log can be discarded after disk write
 - The memtable is essentially just written to disk
 
 ### Merging Compaction
 
-This is where several overlapping SSTables are picked and new SSTables are written out without the overlap
+This is where <mark>several overlapping SSTables are picked</mark> and <mark>new SSTables are written out without the overlap</mark>
 
 - This reduces the number of SSTables
 - It's a good place to apply the "keep only N versions/for N days" policy, since it can garbage collect keys with timestamps older than the threshold, or where there are too many versions
 
 ### Major Compaction
 
-This is a merging compaction which only results in one SSTable
+This is a <mark>merging compaction which only results in one SSTable</mark>
 
-There are no deletion records, only live data
+There are <mark>no deletion records, only live data</mark>
 
 This is done on very popular keys with lots of updates, since the key range will get messy, and this compaction shrinks the key range
 
 ## Locality Groups
 
-Column families are grouped together into SSTables
+<mark>Column families are grouped together into SSTables</mark>
 
 - This avoids mingling data, i.e. page contents and page metadata
 - Some frequently accessed locality groups can be kept in memory
 
-Some locality groups can be compressed (sometimes 10:1 compression)
+Some <mark>locality groups can be compressed</mark> (sometimes 10:1 compression)
 
 - Since the data is similar, it should compress well, e.g. in different versions of the same HTML page, there are repeated strings
 - Some popular compression schemes are:
   - Long common strings across a large window
   - Standard compression across small 16KB windows
 
-Bloom filters are applied on locality groups
+<mark>Bloom filters</mark> are applied on locality groups
 
 - These are a probabilistic data structure for set membership to quickly decide where data lives
 - This avoids having to search the SSTable
@@ -236,13 +236,13 @@ Bloom filters are applied on locality groups
 
 Each number here are the number of requests executed per server per second
 
-This shows that sequential and random writes are significantly faster than reads
+This shows that <mark>sequential and random writes are significantly faster than reads</mark>
 
-This is because a read needs to read the SSTable and memtable, and may need to merge results
+This is because a<mark> read needs to read the SSTable and memtable</mark>, and may need to <mark>merge results</mark>
 
-When data is cached in memory, there is a much higher throughput for random reads, since it doesn't need to merge with the SSTable
+When <mark>data is cached in memory</mark>, there is a <mark>much higher throughput for random reads</mark>, since it doesn't need to merge with the SSTable
 
-Scans take advantage of the fact data is sorted and so it can read it linearly
+<mark>Scans</mark> take advantage of the fact <mark>data is sorted</mark> and so it can read it linearly
 
 ### Aggregate Rate
 
