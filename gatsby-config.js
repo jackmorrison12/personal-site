@@ -96,6 +96,7 @@ module.exports = {
               lineNumbers: true,
             },
           },
+          `gatsby-remark-bibliography`,
         ],
       },
     },

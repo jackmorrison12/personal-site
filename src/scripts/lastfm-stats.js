@@ -48,6 +48,7 @@ var request = lastfm.request("user.getRecentTracks", {
       try {
         var jsonString = fs.readFileSync("./src/data/lastfm.json")
         const lastfmdata = JSON.parse(jsonString)
+        // console.log(data.recenttracks.track[0])
         lastfmdata.recentTrack.name = data.recenttracks.track[0].name
         lastfmdata.recentTrack.url = data.recenttracks.track[0].url
         lastfmdata.recentTrack.artist =
