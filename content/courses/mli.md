@@ -4,8 +4,8 @@ baseurl: /notes/
 title: Machine Learning for Imaging
 code: "70014"
 slug: mli
-startdate: 2020-10-04T15:25:06.440Z
-enddate: 2020-12-18T15:25:06.440Z
+startdate: 2021-01-01T15:25:06.440Z
+enddate: 2020-03-20T15:25:06.440Z
 hidden: false
 hero: /img/privacy-engineering.png
 logo: /img/privacy-engineering-logo.png
