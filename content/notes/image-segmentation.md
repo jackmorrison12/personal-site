@@ -15,66 +15,66 @@ tags:
 
 ## What is Semantic Segmentation?
 
-It's where you split an image into regions
+It's where you <mark>split an image into regions</mark>
 
-A segmented region is also assigned a semantic meaning, e.g. in a body scan: 'liver' or 'kidney'
+A segmented region is also assigned a <mark>semantic meaning</mark>, e.g. in a body scan: 'liver' or 'kidney'
 
 It's useful for:
 
-- Quantitative analyses (e.g. measuring volume of the ventricular cavity)
-- Determining precise location and extent of an organ or certain type of tissue (e.g. a tumour)
+- <mark>Quantitative analyses</mark> (e.g. measuring volume of the ventricular cavity)
+- Determining <mark>precise location</mark> and extent of an organ or certain type of tissue (e.g. a tumour)
 - Creating 3D models used for simulation
 
 ## Challenges
 
-- Noise
-- Partial volume effects (due to coarse sampling, where pixels not aligned with object boundary)
-- Intensity inhomogeneities (varying contrast and intensities across te image plane)
-- Anisotropic resolution (different resolutions on different axis, common 3D scans in z plane)
-- Imaging artifacts (can be caused e.g. by metal in a CT scan)
-- Limited contrast (where different tissues have similar physical properties and thus intensity values)
-- Morphological variability (hard to incorporate meaningful prior information)
+- <mark>Noise</mark>
+- <mark>Partial volume effects</mark> (due to coarse sampling, where pixels not aligned with object boundary)
+- <mark>Intensity inhomogeneities</mark> (varying contrast and intensities across te image plane)
+- <mark>Anisotropic resolution</mark> (different resolutions on different axis, common 3D scans in z plane)
+- <mark>Imaging artifacts</mark> (can be caused e.g. by metal in a CT scan)
+- <mark>Limited contrast</mark> (where different tissues have similar physical properties and thus intensity values)
+- <mark>Morphological variability</mark> (hard to incorporate meaningful prior information)
 
 ## Evaluating Image Segmentation
 
 ### Ground Truth
 
-This is the reference a method can be compared against
+This is the <mark>reference</mark> a method can be compared against
 
-In practice, they are hard to obtain (especially in large volumes)
+In practice, they are <mark>hard to obtain</mark> (especially in large volumes)
 
 Instead, they can be made up using synthetic or simulated phantoms, or physical phantoms
 
 ### Gold Standard
 
-This is a segmentation manually annotated by a human expert
+This is a segmentation <mark>manually annotated by a human expert</mark>
 
 However, getting these has disadvantages:
 
-- It requires training
-- Is tedious and time consuming
-- Intra-observer variability (disagreement between same observer on different occasions)
-- Inter-observer variability (disagreement between observers)
+- It requires <mark>training</mark>
+- Is tedious and <mark>time consuming</mark>
+- <mark>Intra-observer variability</mark> (disagreement between same observer on different occasions)
+- <mark>Inter-observer variability</mark> (disagreement between observers)
 
 These can be remedied by:
 
-- Human observer can perform the same segmentation multiple times
-- A number of experts can perform segmentation
+- Human observer can perform the <mark>same segmentation multiple times</mark>
+- A <mark>number of experts</mark> can perform segmentation
 - Agreement/disagreement can be quantified
 
 ### How to Assess Performance?
 
-- Precision
+- <mark>Precision</mark>
   - is a description of random errors, a measure of statistical variability
   - the repeatability/reproducibility of the measurement
-- Accuracy
+- <mark>Accuracy</mark>
   - a description of systematic errors, a measure of statistical bias
-- Robustness
+- <mark>Robustness</mark>
   - degredation in performance with respect to varying noise levels or other imaging artefacts
 
 There are several ways of quantifying segmentation performance, in terms of agreement of its result with a reference gold standard
 
-A confusion matrix plots the true conditions against the predicted conditions, producing 4 cells:
+A <mark>confusion matrix</mark> plots the true conditions against the predicted conditions, producing 4 cells:
 
 - True Positive (a hit)
 - True Negative (a correct rejection)
@@ -83,126 +83,126 @@ A confusion matrix plots the true conditions against the predicted conditions, p
 
 From these, you can calculate many metrics, such as:
 
-- Accuracy = $\frac{TP + PN}{P + N}$
-- Precision = $\frac{TP}{TP + FP}$
-- Recall = $\frac{TP}{P}$
-- Specificity = $\frac{TN}{N}$
+- <mark>Accuracy</mark> = $\frac{TP + PN}{P + N}$
+- <mark>Precision</mark> = $\frac{TP}{TP + FP}$
+- <mark>Recall</mark> = $\frac{TP}{P}$
+- <mark>Specificity</mark> = $\frac{TN}{N}$
 
 In semantic segmentation, accuracy and specificity aren't really used, as if you add more background they just increase
 
-Therefore using precision and recall, you cal calculate the F1 score = $\frac{2TP}{2TP+FP+FN}$
+Therefore using <mark>precision and recall</mark>, you cal calculate the <mark>F1 score</mark> = $\frac{2TP}{2TP+FP+FN}$
 
 Overlap of reference and predicted segmentation is another evaluation method
 
-Jaccard Index can be calculated by $\frac{|A \cap B|}{|A \cup B|}$
+<mark>Jaccard Index</mark> can be calculated by $\frac{|A \cap B|}{|A \cup B|}$
 
-Dice's Coefficient can be calculated by $\frac{2|A \cap B|}{|A| + |B|}$
+<mark>Dice's Coefficient</mark> can be calculated by $\frac{2|A \cap B|}{|A| + |B|}$
 
 Dice's Coefficient is the most widely used measure for evaluating segmentation, and it is equivalent to F1 score
 
-However, som weaknesses are that translations and deformations can give the same score, so it's insensitive to shape changes
+However, some weaknesses are that translations and deformations can give the same score, so it's <mark>insensitive to shape changes</mark>
 
 Some other measures are:
 
-- Volume similarity = $1 - \frac{||A|-|B||}{|A|+|B|}$ = $1 - \frac{|FN - FP|}{2TP+FP+FN}$
-- Surface distance measures, such as:
-  - Hausdorff distance = $max(h(A,B), h(B,A))$ where $h(A,B) = \max\limits_{a \in A} \min\limits_{b \in B} ||a-b||$
-  - Average surface distance = $\frac{d(A,B)+d(B,A)}{2}$ where $d(A,B) = \frac{1}{N}\sum_{a\in A} \min\limits_{b \in B} ||a-b||$
+- <mark>Volume similarity</mark> = $1 - \frac{||A|-|B||}{|A|+|B|}$ = $1 - \frac{|FN - FP|}{2TP+FP+FN}$
+- <mark>Surface distance measures</mark>, such as:
+  - <mark>Hausdorff distance</mark> = $max(h(A,B), h(B,A))$ where $h(A,B) = \max\limits_{a \in A} \min\limits_{b \in B} ||a-b||$
+  - <mark>Average surface distance</mark> = $\frac{d(A,B)+d(B,A)}{2}$ where $d(A,B) = \frac{1}{N}\sum_{a\in A} \min\limits_{b \in B} ||a-b||$
 
 ## Segmentation Algorithms and Techniques
 
-### Thresholding
+### <mark>Thresholding</mark>
 
 This is where you select a threshold on the intensity range
 
-There is also UL thresholding where you select an upper AND a lower threshold
+There is also <mark>UL thresholding</mark> where you select an upper AND a lower threshold
 
 Advantages:
 
-- Fast
-- Simple
+- <mark>Fast</mark>
+- <mark>Simple</mark>
 
 Disadvantages:
 
-- Regions must be homogeneous and distinct
+- Regions must be <mark>homogeneous and distinct</mark>
 - Difficulty in finding consistent thresholds across images
 - Leakages, isolated pixels and 'rough' boundaries likely
 
 ### Region Growing
 
-This is where you start from a user selected seed point, and grow a region according to an intensity threshold
+This is where you start from a user selected seed point, and <mark>grow a region according to an intensity threshold</mark>
 
 Advantages:
 
-- Relatively fast
-- Yields connected region
+- Relatively <mark>fast</mark>
+- Yields <mark>connected region</mark>
 
 Disadvantages:
 
-- Regions must be homogeneous
+- Regions must be <mark>homogeneous</mark>
 - Leakages and 'rough' boundaries likely
-- Requires (user) input for seed points
+- Requires (user) input for <mark>seed points</mark>
 
-### Graph Cuts
+### <mark>Graph Cuts</mark>
 
 This is where segmentation is based on max-flow/min-cut algorithm
 
-It can take user seed brushes as input, and also has interactive corrections
+It can take <mark>user seed brushes as input</mark>, and also has interactive corrections
 
-It can also be used to segment multiple organs simultaneously
+It can also be used to <mark>segment multiple organs simultaneously</mark>
 
 Advantages:
 
-- Accurate
-- reasonably efficient, interactive
+- <mark>Accurate</mark>
+- Reasonably <mark>efficient, interactive</mark>
 
 Disadvantages:
 
-- Semi-automatic, requires user input
+- Semi-automatic, requires <mark>user input</mark>
 - Difficult to select tuning parameters
 
-### Atlas-Based Segmentation
+### <mark>Atlas-Based Segmentation</mark>
 
 An atlas is a prototype or exemplar of the anatomy being segmented
 
 The usually have:
 
-- geometric information about points, curves or surfaces
-- label information about voxels
+- <mark>geometric information</mark> about points, curves or surfaces
+- <mark>label information</mark> about voxels
 
-They're usually constructed from example data, from one subject or averaging over multiple
+They're usually <mark>constructed from example data</mark>, from one subject or averaging over multiple
 
-Segmentation using Registration is where atlases are used to propagate labels from atlases to scans by establishing a spatial transformation
+<mark>Segmentation using Registration</mark> is where atlases are used to propagate labels from atlases to scans by establishing a spatial transformation
 
-Multi-atlas label propagation is where multiple atlases are used to vote on what they think a pixel should be
+<mark>Multi-atlas label propagation</mark> is where multiple atlases are used to vote on what they think a pixel should be
 
 Advantages:
 
-- Robust and accurate
-- Yields plausible segmentations
-- Fully automatic
+- <mark>Robust and accurate</mark>
+- Yields <mark>plausible segmentations</mark>
+- Fully <mark>automatic</mark>
 
 Disadvantages:
 
-- Computationally expensive
-- Cannot deal well with abnormalities
+- Computationally <mark>expensive</mark>
+- Cannot deal well with <mark>abnormalities</mark>
 - Not suitable for tumour segmentation (as these aren't in atlases)
 
 ### Random Forests
 
-These are where many small tests are linked together in a tree to determine between tissue classes
+These are where <mark>many small tests are linked together</mark> in a tree to determine between tissue classes
 
 A test will extract some features, compare them to a threshold learned in training, and will follow the appropriate path of the tree
 
 Each leaf will have a decision
 
-Individual trees aren't very powerful as they give a noise output, but multiple combines give an accurate prediction
+Individual trees aren't very powerful as they give a noise output, but <mark>multiple combined give an accurate prediction</mark>
 
 Advantages:
 
-- Ensemble classifiers are robust and accurate
-- Computationally efficient
-- fully automatics
+- Ensemble classifiers are <mark>robust and accurate</mark>
+- Computationally <mark>efficient</mark>
+- Fully <mark>automatic</mark>
 
 Disadvantages:
 
@@ -211,40 +211,40 @@ Disadvantages:
 
 ## CNNs for segmentation
 
-Segmentation can be done via dense classification (classification on individual pixels)
+Segmentation can be done via <mark>dense classification</mark> (classification on individual pixels)
 
-However, this is very inefficient as we are doing lots of redundant computations (since we are sliding a window, there is a lot of calculation repeated)
+However, this is very <mark>inefficient</mark> as we are doing lots of redundant computations (since we are sliding a window, there is a lot of calculation repeated)
 
-Therefore, instead of having a fully connected layer, we change this to a convolutional layer
+Therefore, instead of having a fully connected layer, we change this to a <mark>convolutional layer</mark>
 
-This means we can pass in larger images, and we get a feature map out
+This means we <mark>can pass in larger images</mark>, and we get a feature map out
 
 ### Encoder-Decoder Networks
 
 These go beyond image classification (where we predict a class for each pixel)
 
-These produce an output the same size as the input, where the output is the segmentation
+These produce an <mark>output the same size as the input</mark>, where the output is the segmentation
 
-This is done using upsampling
+This is done using <mark>upsampling</mark>
 
-An example is U-Net
+An example is <mark>U-Net</mark>
 
-- This takes an image, and the encoder makes it smaller, until it gets to a low dimension expressive feature map
-- This is known as the bottleneck of the architecture
-- Then from here, the decoder upsamples the low resolution feature map into an output image gradually
-- It also has skip connections between layers of the same size in the encoder and decoder, in order to improve accuracy
+- This <mark>takes an image</mark>, and the encoder makes it smaller, until it gets to a <mark>low dimension expressive feature map</mark>
+- This is known as the <mark>bottleneck</mark> of the architecture
+- Then from here, the decoder upsamples the low resolution feature map into an <mark>output image</mark> gradually
+- It also has <mark>skip connections</mark> between layers of the same size in the encoder and decoder, in order to improve accuracy
 
 ### Going Deeper
 
-Deeper networks can represent more complex functions
+<mark>Deeper networks</mark> can represent more complex functions
 
 However, you can't just add more layers, as this uses too many parameters
 
-One way to do this is to only use layers with small kernels, since this reduces the number of parameters
+One way to do this is to only use <mark>layers with small kernels</mark>, since this reduces the number of parameters
 
 ### Multi-Scale Processing
 
-This is where more pathways are added which process downsamples images
+This is where <mark>more pathways</mark> are added which process downsamples images
 
 A network could take in a normal and low resolution image, and combine the output from both in the middle of the network
 
