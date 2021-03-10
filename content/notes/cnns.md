@@ -5,7 +5,7 @@ fullurl: " "
 logo: " "
 hero: " "
 course: mli
-title: CNNS
+title: CNNs
 slug: cnns
 topic: 2.3
 hidden: false
