@@ -23,7 +23,7 @@ An example of an application is <mark>Part-Of-Speech tagging</mark>
 
 | I    | saw  | the | boy  | on  | the | hill | with | a   | telescope | .     |
 | ---- | ---- | --- | ---- | --- | --- | ---- | ---- | --- | --------- | ----- |
-| PRON | VERB | DET | NOUN | ADP | SEP | NOUN | ADP  | SET | NOUN      | PUNCT |
+| PRON | VERB | DET | NOUN | ADP | DET | NOUN | ADP  | SET | NOUN      | PUNCT |
 
 Naive Bayes or Logistic Regression could be used for this, by having words and context words as features, but this will lead to issues with trade-off between size of the context and sparsity
 
