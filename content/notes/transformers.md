@@ -231,7 +231,7 @@ There are two main types:
 - <mark>Sentence-piece</mark>
   - Likelihood-based BPE + Unigram + Whitespace
   - Works for languages not space segmented (language agnostic)
-  - E.g.: `['_Machine', '_Learn', 'ning', '_makes', '_your', '_day']
+  - E.g.: `['_Machine', '_Learn', 'ning', '_makes', '_your', '_day']`
 
 Some key points:
 
