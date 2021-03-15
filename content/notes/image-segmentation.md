@@ -83,7 +83,7 @@ A <mark>confusion matrix</mark> plots the true conditions against the predicted 
 
 From these, you can calculate many metrics, such as:
 
-- <mark>Accuracy</mark> = $\frac{TP + PN}{P + N}$
+- <mark>Accuracy</mark> = $\frac{TP + TN}{P + N}$
 - <mark>Precision</mark> = $\frac{TP}{TP + FP}$
 - <mark>Recall</mark> = $\frac{TP}{P}$
 - <mark>Specificity</mark> = $\frac{TN}{N}$
