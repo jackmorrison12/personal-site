@@ -104,11 +104,11 @@ You can therefore jointly train it all, with 4 losses:
 
 This has good speed and accuracy, and is much easier to use
 
-## Mast R-CNN
+## Mask R-CNN
 
 This is the Faster R-CNN with FCN on RoIs
 
-This can therefore do segmentation for ach region or instance of an object
+This can therefore do segmentation for each region or instance of an object
 
 It labels each pixel in a region as an object or not an object
 
