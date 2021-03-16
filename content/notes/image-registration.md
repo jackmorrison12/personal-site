@@ -319,7 +319,7 @@ Some other alternatives are:
   - It automatically rectifies the digits (normalises them spatially) as downstream classification benefits from spatially normalised digits
 - <mark>End-to-end unsupervised deformable image registration with a CNN</mark>
   - This takes in a moving and fixed image, with the goal of making them look similar
-  - You extract image features with a NCC and use this to predict the transformation parameters,
+  - You extract image features with a CNN and use this to predict the transformation parameters,
   - Then the moving image is warped to look similar to the fixed image
   - Then a similarity metric is run and back propagation is done on the CNN
 - <mark>An unsupervised learning model for deformable image registration</mark>

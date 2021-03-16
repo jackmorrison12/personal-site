@@ -164,7 +164,7 @@ However, they all have two errors: <mark>bias and variance</mark>
 
 - This is where the <mark>predictions of a group</mark> of predictors are <mark>aggregated</mark>
 - This group of predictors is called an ensemble
-- A learning algorithm which uses multiple models, such as classifiers or experts, is called Ensemble LEarning
+- A learning algorithm which uses multiple models, such as classifiers or experts, is called Ensemble Learning
 - In many cases, the <mark>aggregated answer is better than the best individual prediction</mark> (for non-correlated ensembles)
 
 There are two types:
@@ -279,7 +279,7 @@ Entropy measures the level of impurity in a group of examples - higher entropy =
 
 The expected <mark>information gain is the change in entropy</mark> from a prior state to a state that takes some information as given
 
-In other words: Information gain - entropy(parent) - (weighted_average_entropy(children))
+In other words: Information gain - entropy(parent) - (weighted average entropy(children))
 
 The <mark>Gini index</mark>, on the other hand, indicates <mark>how mixed the classes are</mark> following the split
 

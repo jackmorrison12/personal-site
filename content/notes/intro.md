@@ -64,13 +64,13 @@ So overall, given a vector of input features $x$, we want to learn a predictor $
 
 $h_\Theta(\mathbf{x})=y$
 
-Using a training set $T = \{(\mathbf{x}^{(i)}, y^{(i)}\}_{i=1}^m$ with $m$ examples, the predictor is trained such that:
+Using a training set $T = \{(\mathbf{x}^{(i)}, y^{(i)})\}_{i=1}^m$ with $m$ examples, the predictor is trained such that:
 
 $\forall i[h_\Theta(\mathbf{x}^{(i)}) \approx y^{(i)}]$
 
 ### Regression
 
-For linear regression, $h_\Theta(x) = \Theta_0 + \Theta_i x$
+For linear regression, $h_\Theta(x) = \Theta_0 + \Theta_1 x$
 
 This allows us to <mark>parameterise a line</mark>
 
