@@ -325,7 +325,7 @@ Some other alternatives are:
 - <mark>An unsupervised learning model for deformable image registration</mark>
   - This instead uses a u-net, producing a dense displacement field
   - Then this spatial transform is applied to the moving image
-  - Thn the moved image is compared to the fixed one to get the loss function
+  - Then the moved image is compared to the fixed one to get the loss function
 
 These can also be combined with auxiliary information:
 
