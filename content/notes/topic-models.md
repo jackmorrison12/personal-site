@@ -217,7 +217,7 @@ It uses the <mark>reparameterisation trick:</mark>
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | <mark>Deterministic Neural Network</mark>                     | <mark>Generative</mark> Models                                                                               |
 | <mark>Non interpretable</mark>                                | <mark>Latent variables are interpretable</mark>                                                              |
-| Dimensionality Reduction based on r<mark>econstruction</mark> | Dimensionality Reduction based on the <mark>trade-off between reconstruction and prior regularisation</mark> |
+| Dimensionality Reduction based on <mark>reconstruction</mark> | Dimensionality Reduction based on the <mark>trade-off between reconstruction and prior regularisation</mark> |
 | Gradient back-propagation                                     | <mark>Stochastic</mark> gradient back-propagation                                                            |
 
 ### VAEs for Neural Topic Models
