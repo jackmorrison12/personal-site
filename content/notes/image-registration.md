@@ -81,7 +81,7 @@ There are linear transformations:
 
 - <mark>Identity</mark> \[0 dof\]
 - <mark>Rigid</mark> (rotation + translation) \[3/6 dof for 2D/3D\]
-- <mark>Similarity</mark> (rigid + uniform scaling) \[4/6 dof for 2D/3D\]
+- <mark>Similarity</mark> (rigid + uniform scaling) \[4/7 dof for 2D/3D\]
 - <mark>Affine</mark> (rigid + nonuniform scaling + shear) \[6/12 dof for 2D/3D\]
 
 And also non-linear transformations
@@ -222,14 +222,14 @@ We can then use:
   - This is the amount of information contained in image $I$
 - <mark>Joint entropy</mark>
   - $H(I,J) = - \sum\limits_i \sum\limits_j p(i,j) log \ p(i,j)$
-  - This is the amount of information contained int he combined image $I,J$
+  - This is the amount of information contained in the combined image $I,J$
   - This could be used for registration as it measure the amount of info we see in the joint intensity histogram, and we want to find the histogram with the least info, so we could minimise it
   - However, this doesn't work well in practice
 
 Therefore, we use <mark>mutual information</mark>:
 
 - $MI(I,J) = H(I) + H(J) - H(I,J)$
-- Which describes how well one image can be explained bu the other
+- Which describes how well one image can be explained by the other
 - This can be rewritten in terms of marginal and joint probabilities:
 - $MI(I,J) = \sum\limits_i\sum\limits_j p(i,j) log\frac{p(i,j)}{p(i)p(j)}$
 - Then, the dissimilarity measure is defined as $D_{MI}(I \cdot T, J) = - MI(I \cdot T, J)$
@@ -323,7 +323,7 @@ Some other alternatives are:
   - Then the moving image is warped to look similar to the fixed image
   - Then a similarity metric is run and back propagation is done on the CNN
 - <mark>An unsupervised learning model for deformable image registration</mark>
-  - This instead uses a u-net, producing a dense displacement field
+  - This instead uses a u-net, producing a dense displacement fieldz
   - Then this spatial transform is applied to the moving image
   - Then the moved image is compared to the fixed one to get the loss function
 
