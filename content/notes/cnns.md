@@ -87,7 +87,7 @@ It consisted of:
 - Activation function: <mark>tanh</mark>
 - <mark>Sparse connectivity</mark> between S2 and C3
 - <mark>MLP</mark> as final classifier
-- Sequence: convolution, subsampling, lnon-linearlity
+- Sequence: convolution, subsampling, non-linearlity
 
 It led to other architectures such as:
 

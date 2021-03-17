@@ -161,4 +161,134 @@ To evaluate LDA, we can use:
 
 ## Neural Topic Models
 
+### Autoencoders
+
+These use autoencoders
+
+Autoencoders take an input $x$, the encoder map it to a lower dimension latent space $h$, and then the decoder maps the lower dimension space back to the output $x$ again
+
+It's a type of artificial neural network used to learn efficient data representations in an unsupervised manner
+
+The aim is to learn a representation for a set of data, typically for dimensionality reduction
+
+- Dimensionality Reduction
+- Unsupervised Learning
+- Different raw data: image/text/audio etc.
+- Auto-encoder can be considered as non-linear PCA
+- Objective: $\mathcal{L}(x,\hat{x}) = ||x = \hat{x}||$
+
+### Variational Autoencoders
+
+In a VAE, the encoder:
+
+1. Takes the input $x$ and maps it to a lower dimension space $x \rightarrow h$
+2. Samples $z$ from a normal distribution $z \sim \mathcal{N}(\mu(h), \sigma(h))$
+
+The decoder them maps from the lower dimensional space $z$ to $x$
+
+They are generative models, whose posterior is approximated by a neural network, forming an autoencoder like architecture that is trained to minimise the reconstruction error between the encoded inputs and generated outputs
+
+- Generative models
+- Gaussian KLD regularises the latent layer
+- Ability to estimate uncertainty
+- Trained by stochastic gradient back-propagation
+- Objective: $\mathcal{L}(x,\hat{x}) = ||x - \hat{x}|| + KLD(q(z|x)||p(x))$
+- This can also be written as: $- \mathbb{E}_{q(z|x)}[log\ p(x|z)] + KLD(q(z|x)||p(z))$
+
+We can also have families of autoencoders, where the loss is:
+
+$\mathcal{L} = \mathbb{E}_{q(z|x)}[log\ p(x|z)] +- \alpha \cdot KLD(q(z|x)||p(z))$
+
+When $\alpha$ is smaller, there is more focus on the reconstruction error, leading to better representation learning
+
+When $\alpha$ is larger, there is more focus on KLD, which leads to better generalisation ability on the data
+
+If $\alpha = 0$, then it's similar to a deterministic autoencoder (only uses reconstruction error)
+
+Therefore, the VAE is trading off representation learning and generalisation ability
+
+It uses the reparameterisation trick:
+
+- If the sampleing of $z$ is done in the stochastic later, then it's hard to da a backwards pass, as this blocks gradients
+- Therefore, the value of $z$ is now $\mu + \varepsilon \cdot \sigma$, where $\varepsilon$ comes from another input to $z$, and it's sampled from a normal distribution $\mathcal{N}(0,I)$
+- This means that this now doesn't block anything, and the values of $\mu$ and $\sigma$ which come from the encoder can learn
+
+### Auto-encoder vs VAE
+
+| Auto-Encoder                                     | Variational Auto-Encoder                                                                        |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| Deterministic Neural Network                     | Generative Models                                                                               |
+| Non interpretable                                | Latent variables are interpretable                                                              |
+| Dimensionality Reduction based on reconstruction | Dimensionality Reduction based on the trade-off between reconstruction and prior regularisation |
+| Gradient back-propagation                        | Stochastic gradient back-propagation                                                            |
+
+### VAEs for Neural Topic Models
+
+To generate neural topic models, the input of the VAE should be words $w$
+
+These are mapped to $h$, and from these $z$ are sampled
+
+These $z$ are interpreted as Latent Topics, which is what we want to discover
+
+We can then reconstruct the words $w$ from these latent topics $z$
+
+The encoder:
+
+- Takes in bag-of-words $w$
+- Maps to lower dimension bag-of-embeddings by MLP layer
+- Adds another MLP later to get better representations
+- Then maps to another layer of $\mu$ and $\sigma$, which are reasonable parameters for a Gaussian distribution
+- Then from here, $z$ are sampled from this layer using the formula $z = \mu + \varepsilon \cdot \sigma$, where $\varepsilon \sim \mathcal{N}(0,I)$
+
+The decoder:
+
+- The decoder maps from the sample $z$ back to the high dimensional dimension space (bag-of-words)
+- Example 1: It uses a softmax decoder
+  - $log\ p(w|z) = log\ softmax(z \cdot W^T)$
+  - The conditional probability over words (decoder) is modelled by multinomial logistic regression and shared across documents
+  - Reconstruction error is the cross entropy sum of all the words
+- Example 2: It uses a mixture of multinomials
+  - $log\ p(w_n|\beta,\hat{\theta}) = log \sum_{z_n}[p(w_n|\beta_{z_n})p(z_n|\hat{\theta})] = log(\hat{\theta} \cdot \beta)$
+  - Here, the latent topics $z$ are integrated out
+  - This aligned with the conventional concept of topic models (using a mixture of multinomials)
+
+The KL-Divergence between two multivariate Gaussian distributions are mathematically tractable
+
+The VAE take discrete output and returns discrete outputs:
+
+- $p(w|z)$ is the topic distribution over words
+- $p(z|w)$ is the document distribution over topics
+
+## NTM vs LDA
+
+| NTM                                                    | LDA                                                                   |
+| ------------------------------------------------------ | --------------------------------------------------------------------- |
+| Gaussian Prior                                         | Dirichlet Prior                                                       |
+| Neural variational inference (gradient backpropgation) | Mean field variational inference, Gibbs sampling (VEM/MCMC sampling)) |
+| Auto-encoding neural structure                         | Probabilistic distributions                                           |
+| No restriction on extending new info                   | Extensions are limited to conjugate models                            |
+| Testing on new documents: one pass through encoder     | Testing on new documents: re-process all documents                    |
+
+NTM combined both the merits of probabilistic models and neural networks
+
+### NTM with meta info
+
+NTM can also take meta information, such as authors, time, and geographical locations
+
+The latent variable then captures all of this information too, and can reconstruct it all back
+
+### Sequence VAE
+
+Posterior collapse:
+
+- Gradient vanishment (attentions cannot go through the latent layer)
+- KLD is easier to optimise than reconstruction error
+- Amortisation gap (the gap between the log-likelihood and the ELBO)
+
+Measures to alleviate the issue:
+
+- Annealing KLD
+- Word dropout
+- Stochastic variational inference
+
 
