@@ -210,9 +210,9 @@ Back-propagation is done through time (BPTT)
 - Gradient of loss will <mark>flow all the way back to t=0</mark>
 - It naturally happens when BP is applied to RNNs
 
-For language modelling, every timestep has a true label, i.e. the next word that we are tryying to predict
+For language modelling, every timestep has a true label, i.e. the next word that we are trying to predict
 
-There are <mark>multiple losses per sequence</mark>, and they are <mark>added together </mark>to form the sequence loss
+There are <mark>multiple losses per sequence</mark>, and they are <mark>added together</mark> to form the sequence loss
 
 The LM loss is the sum of cross-entropy losses for each prediction:
 
