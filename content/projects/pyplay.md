@@ -7,7 +7,7 @@ projecttype: Hackathon
 homepage: false
 cv: false
 featured: false
-hidden: false
+hidden: true
 hero: /img/pyplay-logo.png
 banner: /img/pyplay-banner.png
 description: An app to teach young coders the basics of Python

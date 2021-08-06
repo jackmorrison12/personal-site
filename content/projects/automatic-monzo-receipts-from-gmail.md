@@ -7,7 +7,7 @@ projecttype: Hackathon
 homepage: false
 cv: false
 featured: false
-hidden: false
+hidden: true
 hero: /img/monzo-receipts-logo.png
 banner: /img/monzo-receipts-banner.png
 description: Integrating Gmail receipts into the Monzo app

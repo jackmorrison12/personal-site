@@ -7,7 +7,7 @@ projecttype: School Project
 homepage: false
 cv: false
 featured: false
-hidden: false
+hidden: true
 hero: /img/epq-logo.png
 banner: /img/epq-banner.png
 description: An essay discussing the validity of computer-assisted proofs

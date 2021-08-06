@@ -5,7 +5,7 @@ title: WACC
 slug: wacc
 projecttype: Uni Project
 homepage: false
-cv: true
+cv: false
 featured: false
 hidden: false
 hero: /img/wacc-logo.png

@@ -4,7 +4,7 @@ baseurl: "/projects/"
 title: Burst My Bubble
 slug: burst-my-bubble
 projecttype: Uni Project
-homepage: true
+homepage: false
 cv: true
 featured: true
 hidden: false

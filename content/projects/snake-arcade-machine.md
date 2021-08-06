@@ -6,7 +6,7 @@ slug: snake
 projecttype: Uni Project
 homepage: false
 cv: false
-featured: true
+featured: false
 hidden: false
 hero: /img/snake-logo.png
 banner: /img/snake-banner.png
