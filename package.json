@@ -15,7 +15,7 @@
     "@progress/kendo-drawing": "^1.7.0",
     "@progress/kendo-react-pdf": "^3.14.0",
     "bibtex-parse-js": "0.0.24",
-    "gatsby": "^2.21.0",
+    "gatsby": "^2.32.13",
     "gatsby-cli": "^2.12.36",
     "gatsby-image": "^2.4.0",
     "gatsby-plugin-advanced-sitemap": "^1.5.6",
